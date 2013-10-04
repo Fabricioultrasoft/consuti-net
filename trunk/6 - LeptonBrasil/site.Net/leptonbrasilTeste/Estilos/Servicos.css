@@ -1,0 +1,31 @@
+﻿#imagem
+{
+    text-align: left;
+}
+
+#titulo
+{
+    text-align: left;
+    margin-left: 20px;
+    text-decoration: undeline;
+    font-size: medium;
+}
+
+#texto
+{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#contentServicos
+{
+     background-image: url('../Graficos/BannInfServic.png');
+     background-position:bottom;
+     background-repeat:no-repeat;
+}
+
+#exibeImageServ
+{
+    height: 330px;
+}
+    

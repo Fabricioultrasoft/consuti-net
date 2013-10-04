@@ -1,0 +1,8 @@
+C:\Documents and Settings\cristian.gomes\Desktop\ProGeS - programa de gerenciamento de senhas\ProgramaForm\ProGeS\ProGeS\bin\Debug\ProGeS.exe
+C:\Documents and Settings\cristian.gomes\Desktop\ProGeS - programa de gerenciamento de senhas\ProgramaForm\ProGeS\ProGeS\bin\Debug\ProGeS.pdb
+C:\Documents and Settings\cristian.gomes\Desktop\ProGeS - programa de gerenciamento de senhas\ProgramaForm\ProGeS\ProGeS\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\cristian.gomes\Desktop\ProGeS - programa de gerenciamento de senhas\ProgramaForm\ProGeS\ProGeS\obj\Debug\ProGeS.PROGES.resources
+C:\Documents and Settings\cristian.gomes\Desktop\ProGeS - programa de gerenciamento de senhas\ProgramaForm\ProGeS\ProGeS\obj\Debug\ProGeS.Properties.Resources.resources
+C:\Documents and Settings\cristian.gomes\Desktop\ProGeS - programa de gerenciamento de senhas\ProgramaForm\ProGeS\ProGeS\obj\Debug\ProGeS.csproj.GenerateResource.Cache
+C:\Documents and Settings\cristian.gomes\Desktop\ProGeS - programa de gerenciamento de senhas\ProgramaForm\ProGeS\ProGeS\obj\Debug\ProGeS.exe
+C:\Documents and Settings\cristian.gomes\Desktop\ProGeS - programa de gerenciamento de senhas\ProgramaForm\ProGeS\ProGeS\obj\Debug\ProGeS.pdb

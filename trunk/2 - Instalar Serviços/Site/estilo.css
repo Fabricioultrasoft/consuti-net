@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+#formulario{
+	border-right-style:dashed;
+	border-right-width:thin;
+}
+
+#portifolio{
+	float:left;
+}

@@ -1,0 +1,16 @@
+﻿#tblMenu
+{
+    width: 140px;
+    color: #1E6F99;
+    font-family: Bradley Hand ITC;
+    font-weight: 500;
+    font-size: medium;
+    background-color: transparent;
+    background-repeat: repeat;
+}
+
+.style1
+{
+    width: 25px;
+    text-align: right;
+}

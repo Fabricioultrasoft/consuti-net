@@ -1,0 +1,10 @@
+E:\Meus Documentos\ConsuTI\Clientes\F1 - QueroSaberOnde\QSO_Protótipo\QSO_Protótipo\bin\QSO_Protótipo.dll
+E:\Meus Documentos\ConsuTI\Clientes\F1 - QueroSaberOnde\QSO_Protótipo\QSO_Protótipo\bin\QSO_Protótipo.pdb
+E:\Meus Documentos\ConsuTI\Clientes\F1 - QueroSaberOnde\QSO_Protótipo\QSO_Protótipo\obj\Debug\ResolveAssemblyReference.cache
+E:\Meus Documentos\ConsuTI\Clientes\F1 - QueroSaberOnde\QSO_Protótipo\QSO_Protótipo\obj\Debug\QSO_Protótipo.dll
+E:\Meus Documentos\ConsuTI\Clientes\F1 - QueroSaberOnde\QSO_Protótipo\QSO_Protótipo\obj\Debug\QSO_Protótipo.pdb
+D:\F1 - QueroSaberOnde\QSO_Protótipo\QSO_Protótipo\bin\QSO_Protótipo.dll
+D:\F1 - QueroSaberOnde\QSO_Protótipo\QSO_Protótipo\bin\QSO_Protótipo.pdb
+D:\F1 - QueroSaberOnde\QSO_Protótipo\QSO_Protótipo\obj\Debug\ResolveAssemblyReference.cache
+D:\F1 - QueroSaberOnde\QSO_Protótipo\QSO_Protótipo\obj\Debug\QSO_Protótipo.dll
+D:\F1 - QueroSaberOnde\QSO_Protótipo\QSO_Protótipo\obj\Debug\QSO_Protótipo.pdb

@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{13A28AD2-FE56-4E14-B59B-F86A0CDE3C0E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProGeS</RootNamespace>
+    <AssemblyName>ProGeS</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UserLogin\cadastrarLogin.cs" />
+    <Compile Include="Senhas\desprotegerSenha.cs" />
+    <Compile Include="Senhas\dicaSenhaLogin.cs" />
+    <Compile Include="UserLogin\FormAlterarDica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLogin\FormAlterarDica.Designer.cs">
+      <DependentUpon>FormAlterarDica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin\FormAlteraSenhaLogSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLogin\FormAlteraSenhaLogSistema.Designer.cs">
+      <DependentUpon>FormAlteraSenhaLogSistema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin\FormCadLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLogin\FormCadLogin.Designer.cs">
+      <DependentUpon>FormCadLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ajuda\FormCreditos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajuda\FormCreditos.Designer.cs">
+      <DependentUpon>FormCreditos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLogin\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Senhas\FormCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Senhas\FormCadastro.Designer.cs">
+      <DependentUpon>FormCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Senhas\FormPesquisarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Senhas\FormPesquisarSenha.Designer.cs">
+      <DependentUpon>FormPesquisarSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Senhas\FormCriptografia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Senhas\FormCriptografia.Designer.cs">
+      <DependentUpon>FormCriptografia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ajuda\FormVersao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajuda\FormVersao.Designer.cs">
+      <DependentUpon>FormVersao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin\Login.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UserLogin\FormAlterarDica.resx">
+      <DependentUpon>FormAlterarDica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLogin\FormAlteraSenhaLogSistema.resx">
+      <DependentUpon>FormAlteraSenhaLogSistema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLogin\FormCadLogin.resx">
+      <DependentUpon>FormCadLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ajuda\FormCreditos.resx">
+      <DependentUpon>FormCreditos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLogin\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Senhas\FormCadastro.resx">
+      <DependentUpon>FormCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Senhas\FormPesquisarSenha.resx">
+      <DependentUpon>FormPesquisarSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Senhas\FormCriptografia.resx">
+      <DependentUpon>FormCriptografia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ajuda\FormVersao.resx">
+      <DependentUpon>FormVersao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Senhas\FormSenhaAdd.resx">
+      <DependentUpon>FormSenhaAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsrCtrlMenuPrinc.resx">
+      <DependentUpon>UsrCtrlMenuPrinc.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Senhas\protegerSenha.cs" />
+    <Compile Include="retornaDadosDoArquivo.cs" />
+    <Compile Include="Senhas\FormSenhaAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Senhas\FormSenhaAdd.Designer.cs">
+      <DependentUpon>FormSenhaAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsrCtrlMenuPrinc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsrCtrlMenuPrinc.Designer.cs">
+      <DependentUpon>UsrCtrlMenuPrinc.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cachorro-de-Oculos_1202_1024x768.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cachorro-de-Oculos_1202_1024x7681.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pesquisar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\novaSenha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\novaSenha1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editarSenha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_white_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_white_text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_white_database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bomb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\script.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thumb_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plugin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_white_csharp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\award_star_gold_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Relatorios\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,17 @@
+﻿#header
+{
+    height: 200px;
+    background-color: #DEE1E7;
+}
+
+BODY
+{
+    background-color: #EDEDED;
+    width: 1024px;
+    margin: 0 auto;
+}
+#footer
+{
+    float:left;
+}
+

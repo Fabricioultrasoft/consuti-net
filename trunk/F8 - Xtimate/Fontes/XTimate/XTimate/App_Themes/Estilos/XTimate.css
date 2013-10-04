@@ -1,0 +1,93 @@
+﻿.Header
+{   
+    height: 90px;
+    padding: 5px;
+}
+
+.ColunaEsquerda
+{
+    text-align: right;
+}
+
+.ColunaDireita
+{
+    text-align: left;
+}
+
+.Formularios
+{
+    margin: 0 auto;
+}
+
+.AjustaValidator
+{
+    color: #FF0000;
+}
+
+.SubMenu
+{
+    padding: 0px 0px 0px 0px;
+    font: normal 11px "Tahoma";
+    border: 1px solid #cccccc;
+    border-top: none;
+}
+
+.itemMenu
+{
+    padding: 0px 10px;
+    font-weight: bold;
+    font-size: 10px;
+    color: #7b533f;
+    float: left;
+}
+
+input
+{
+    margin: 2px;
+    border: 1px solid #9DB5B3;
+    padding: 3px;
+}
+
+input[type=submit]
+{
+    padding: 3px 5px 3px 5px;
+    color: #003366;
+    font-family: "Georgia";
+    width: 100px;
+}
+
+fieldset
+{
+    border: 1px solid #336699;
+}
+
+legend
+{
+    padding: 0.2em 0.5em;
+    border: 1px solid #336699;
+    color: #003366;
+    font-size: 90%;
+    background-color: #F0F0F0;
+}
+
+a
+{
+    color: #003366;
+}
+
+body
+{
+    color: #003366;
+    font-family: "Georgia";
+    font-size: small;
+    background-color: #9DB5B3;
+}
+
+.modalBackground
+{
+    position:fixed; 
+    background-color:#000; 
+    filter:alpha(opacity=50); 
+    opacity:0.5;  
+
+}

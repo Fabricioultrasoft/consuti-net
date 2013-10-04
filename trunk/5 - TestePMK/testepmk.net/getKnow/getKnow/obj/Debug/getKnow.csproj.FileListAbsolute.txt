@@ -1,0 +1,5 @@
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\getKnow\getKnow\bin\getKnow.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\getKnow\getKnow\bin\getKnow.pdb
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\getKnow\getKnow\obj\Debug\ResolveAssemblyReference.cache
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\getKnow\getKnow\obj\Debug\getKnow.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\getKnow\getKnow\obj\Debug\getKnow.pdb

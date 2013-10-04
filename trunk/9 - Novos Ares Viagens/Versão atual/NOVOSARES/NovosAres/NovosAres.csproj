@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8587F9EB-C86A-4B8D-9E5D-39C57B874745}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NovosAres</RootNamespace>
+    <AssemblyName>NovosAres</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Ajax\AjaxControlToolkitBinary\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CKEditor.NET">
+      <HintPath>..\NovosAres.Blog\bin\CKEditor.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=5.2.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 5.2.5\Binaries\.NET 2.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Adm\AntesViajar.aspx" />
+    <Content Include="Adm\DepoimentosAdm.aspx" />
+    <Content Include="Adm\EditViagensAdm.aspx" />
+    <Content Include="Adm\EmailMarketingAdm.aspx" />
+    <Content Include="Adm\ImagensAdm.aspx" />
+    <Content Include="Adm\SejaBemVindo.aspx" />
+    <Content Include="Adm\UserAdm.aspx" />
+    <Content Include="Adm\ViagensAdm.aspx" />
+    <Content Include="Contato\Default.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Depoimentos\Depoimentos.aspx" />
+    <Content Include="Empresa\Default.aspx" />
+    <Content Include="Estilos\Contato.css" />
+    <Content Include="Estilos\Depoimentos.css" />
+    <Content Include="Estilos\Home.css" />
+    <Content Include="Estilos\Institucional.css" />
+    <Content Include="Estilos\integraFacebook.css" />
+    <Content Include="Estilos\IntegraTwitter.css" />
+    <Content Include="Estilos\MasterExterna.css" />
+    <Content Include="Estilos\MenuPrincipal.css" />
+    <Content Include="Graficos\ADD_32x32.png" />
+    <Content Include="Graficos\arrowLeft.png" />
+    <Content Include="Graficos\arrowRight.png" />
+    <Content Include="Graficos\BackBlueTransparent.png" />
+    <Content Include="Graficos\BackOrangeTransparent.png" />
+    <Content Include="Graficos\backTransparente.png" />
+    <Content Include="Graficos\facebook.png" />
+    <Content Include="Graficos\FAIL_32x32.png" />
+    <Content Include="Graficos\FundoSite\Fundo1.jpg" />
+    <Content Include="Graficos\FundoSite\Fundo2.jpg" />
+    <Content Include="Graficos\FundoSite\Fundo3.jpg" />
+    <Content Include="Graficos\FundoSite\Fundo4.jpg" />
+    <Content Include="Graficos\FundoSite\Fundo5.jpg" />
+    <Content Include="Graficos\ImgsBlogs\cachorro-wallpaper.jpg" />
+    <Content Include="Graficos\logo.png" />
+    <Content Include="Graficos\twitter64.png" />
+    <Content Include="Informacoes\Default.aspx" />
+    <Content Include="Scripts\jquery-1.5.2.js" />
+    <Content Include="Scripts\jquery.selectboxes.min.js" />
+    <Content Include="Service\Destinos.asmx" />
+    <Content Include="Viagens\Default.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebUserControl\Depoimentos.ascx" />
+    <Content Include="WebUserControl\IntegraFaceBook.ascx" />
+    <Content Include="WebUserControl\IntegraTwitter.ascx" />
+    <Content Include="WebUserControl\MenuPrincipal.ascx" />
+    <Content Include="WebUserControl\wucDescricao.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adm\AntesViajar.aspx.cs">
+      <DependentUpon>AntesViajar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adm\AntesViajar.aspx.designer.cs">
+      <DependentUpon>AntesViajar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adm\DepoimentosAdm.aspx.cs">
+      <DependentUpon>DepoimentosAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adm\DepoimentosAdm.aspx.designer.cs">
+      <DependentUpon>DepoimentosAdm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adm\EditViagensAdm.aspx.cs">
+      <DependentUpon>EditViagensAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adm\EditViagensAdm.aspx.designer.cs">
+      <DependentUpon>EditViagensAdm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adm\EmailMarketingAdm.aspx.cs">
+      <DependentUpon>EmailMarketingAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adm\EmailMarketingAdm.aspx.designer.cs">
+      <DependentUpon>EmailMarketingAdm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adm\ImagensAdm.aspx.cs">
+      <DependentUpon>ImagensAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adm\ImagensAdm.aspx.designer.cs">
+      <DependentUpon>ImagensAdm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adm\Interna.Master.cs">
+      <DependentUpon>Interna.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adm\Interna.Master.designer.cs">
+      <DependentUpon>Interna.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Adm\SejaBemVindo.aspx.cs">
+      <DependentUpon>SejaBemVindo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adm\SejaBemVindo.aspx.designer.cs">
+      <DependentUpon>SejaBemVindo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adm\UserAdm.aspx.cs">
+      <DependentUpon>UserAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adm\UserAdm.aspx.designer.cs">
+      <DependentUpon>UserAdm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adm\ViagensAdm.aspx.cs">
+      <DependentUpon>ViagensAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adm\ViagensAdm.aspx.designer.cs">
+      <DependentUpon>ViagensAdm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Banco\BdAntesViajar.cs" />
+    <Compile Include="Banco\BdDestinos.cs" />
+    <Compile Include="Banco\BdSejaBemVindo.cs" />
+    <Compile Include="Banco\BdUsuario.cs" />
+    <Compile Include="Contato\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contato\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Depoimentos\Depoimentos.aspx.cs">
+      <DependentUpon>Depoimentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Depoimentos\Depoimentos.aspx.designer.cs">
+      <DependentUpon>Depoimentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresa\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresa\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Externa.Master.cs">
+      <DependentUpon>Externa.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Externa.Master.designer.cs">
+      <DependentUpon>Externa.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Extras\InfraSite.cs" />
+    <Compile Include="Informacoes\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Informacoes\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\Destinos.asmx.cs">
+      <DependentUpon>Destinos.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viagens\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viagens\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\Depoimentos.ascx.cs">
+      <DependentUpon>Depoimentos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\Depoimentos.ascx.designer.cs">
+      <DependentUpon>Depoimentos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\IntegraFaceBook.ascx.cs">
+      <DependentUpon>IntegraFaceBook.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\IntegraFaceBook.ascx.designer.cs">
+      <DependentUpon>IntegraFaceBook.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\IntegraTwitter.ascx.cs">
+      <DependentUpon>IntegraTwitter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\IntegraTwitter.ascx.designer.cs">
+      <DependentUpon>IntegraTwitter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\MenuPrincipal.ascx.cs">
+      <DependentUpon>MenuPrincipal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\MenuPrincipal.ascx.designer.cs">
+      <DependentUpon>MenuPrincipal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\wucDescricao.ascx.cs">
+      <DependentUpon>wucDescricao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\wucDescricao.ascx.designer.cs">
+      <DependentUpon>wucDescricao.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Externa.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Adm\Interna.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Adm\ImagemDestinos\" />
+    <Folder Include="Adm\ManualAntesViajar\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5619</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

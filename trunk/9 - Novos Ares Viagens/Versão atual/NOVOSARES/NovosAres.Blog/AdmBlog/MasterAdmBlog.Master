@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterAdmBlog.master.cs"
+    Inherits="NovosAres.Blog.AdmBlog.MasterAdmBlog" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="Master.css" rel="Stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript" language="javascript">
+        function mouseDentro(id) {
+            document.getElementById(id).src = '../Graficos/LatBlogLink.png';
+            document.getElementById('ctl00_pnlAbaVoltarSite').style.backgroundImage = "url(../Graficos/FundoAbaVoltar.png)";
+        }
+
+        function mouseFora(id) {
+            document.getElementById(id).src = '../Graficos/LatBlogLink2.png';
+            document.getElementById('ctl00_pnlAbaVoltarSite').style.backgroundImage = "url(../Graficos/FundoAbaVoltar2.png)";
+        }
+        function aumenta(obj) {
+            obj.height = obj.height * 1.1;
+            obj.width = obj.width * 1.1;
+        }
+        function diminui(obj) {
+            obj.height = 107;
+            obj.width = 30;
+        }
+    </script>
+</head>
+<body style="height: 100%">
+    <form id="form1" runat="server">
+    <div class="fundoSite">
+        <div class="corpoSite">
+            <div class="lateralEsquerda">
+                <div id="img2">
+                    <asp:Image ID="imgImage2" runat="server" ImageUrl="~/Graficos/blogLateral2.png" />
+                </div>
+                <div id="link">
+                    <asp:ImageButton ID="imgBtnLinkBlog" ImageUrl="~/Graficos/LatBlogLink2.png" runat="server"
+                        onmouseover="mouseDentro('ctl00_imgBtnLinkBlog')" onmouseout="mouseFora('ctl00_imgBtnLinkBlog')"
+                        OnClick="imgBtnLinkBlog_Click" CausesValidation="False" /></div>
+                <div id="img">
+                    <asp:Image ID="imgImage" runat="server" ImageUrl="~/Graficos/blogLateral.png" />
+                </div>
+            </div>
+            <div class="abaVoltarSite">
+                <asp:Panel ID="pnlAbaVoltarSite" BackImageUrl="~/Graficos/FundoAbaVoltar2.png" CssClass="backNonRepeat"
+                    runat="server" BorderWidth="0" BorderStyle="None">
+                    &nbsp;
+                    <asp:ImageButton ID="imgBtnVoltarSite" ImageUrl="~/Graficos/GoBack.png" ImageAlign="Bottom"
+                        runat="server" OnClick="imgBtnVoltarSite_Click" CausesValidation="False" />
+                    <asp:LinkButton ID="lbtnVoltarSite" Height="40px" CssClass="linkAbaVoltarSite" Font-Underline="false"
+                        runat="server" OnClick="lbtnVoltarSite_Click" CausesValidation="False" onmouseover="mouseDentro('ctl00_imgBtnLinkBlog')"
+                        onmouseout="mouseFora('ctl00_imgBtnLinkBlog')">Voltar para o site Novos Ares</asp:LinkButton>
+                </asp:Panel>
+            </div>
+            <div class="conteudoBlog">
+                <asp:Panel ID="pnlConteudo" runat="server" CssClass="pnlConteudo" Height="680px">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <br />
+                </asp:Panel>
+                <cc1:RoundedCornersExtender ID="pnlConteudo_RoundedCornersExtender" runat="server"
+                    Enabled="True" TargetControlID="pnlConteudo" BorderColor="Gray" Radius="15">
+                </cc1:RoundedCornersExtender>
+            </div>
+            <div class="lateralDireita">
+                <div id="logo">
+                    <asp:Image ID="imgLogoNovosAres" runat="server" ImageUrl="~/Graficos/logo.png" Height="240px"
+                        Width="180px" Style="margin-left: 12px" />
+                </div>
+                <div class="menuBlog">
+                    <asp:Panel ID="pnlMenuBlog" runat="server" Height="150px" Width="170px" BackColor="White">
+                        <div class="itensMenuBlog">
+                            Menu Administração<div id="opcoesMenu"><br />
+                                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:ImageButton ID="imgBtnCadPost" runat="server" 
+                                    ImageUrl="~/Graficos/add.png" ImageAlign="Middle" 
+                                    onclick="imgBtnCadPost_Click" CausesValidation="False"/>
+                                &nbsp;
+                                <asp:LinkButton ID="lbtnCadPost" runat="server" onclick="lbtnCadPost_Click" 
+                                    CausesValidation="False">Cadastrar Post</asp:LinkButton>
+                                <br />
+                            </div>
+                        </div>
+                    </asp:Panel>
+                    <cc1:RoundedCornersExtender ID="pnlMenuBlog_RoundedCornersExtender" runat="server"
+                        BorderColor="Gray" Enabled="True" TargetControlID="pnlMenuBlog" Radius="15">
+                    </cc1:RoundedCornersExtender>
+                </div>
+            </div>
+            <br />
+        </div>
+    </div>
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    </form>
+</body>
+</html>

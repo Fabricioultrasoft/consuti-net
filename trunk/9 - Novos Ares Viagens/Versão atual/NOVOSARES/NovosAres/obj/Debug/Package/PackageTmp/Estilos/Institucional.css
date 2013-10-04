@@ -1,0 +1,22 @@
+﻿#tituloPag
+{
+    text-align: center;
+}
+
+.telaContato
+{
+    color: White;
+}
+
+.btnContato
+{
+    border: 1px solid white;    
+    color: White;
+    background-color: Orange;
+}
+
+#textoInstitucional
+{    
+    width: 90%;
+    margin: 0 auto;
+}

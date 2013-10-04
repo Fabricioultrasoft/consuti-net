@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1CA240E9-D037-4E2C-8E85-56EF86497960}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>leptonbrasil</RootNamespace>
+    <AssemblyName>leptonbrasil</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.30930.28736, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Programação\DotNet\Ajax\AjaxControlToolkitBinary\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=5.2.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Contato\Default.aspx" />
+    <Content Include="Estilos\Contato.css" />
+    <Content Include="Estilos\Geral.css" />
+    <Content Include="Estilos\Home.css" />
+    <Content Include="Estilos\Institucional.css" />
+    <Content Include="Estilos\LeptonAdm.css" />
+    <Content Include="Estilos\Localizacao.css" />
+    <Content Include="Estilos\MenuPrincipal.css" />
+    <Content Include="Estilos\Noticias.css" />
+    <Content Include="Estilos\Servicos.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Graficos\Add_64x64.png" />
+    <Content Include="Graficos\backTransparente.png" />
+    <Content Include="Graficos\BannInfServic.png" />
+    <Content Include="Graficos\Contact.jpg" />
+    <Content Include="Graficos\ContatoMenu.png" />
+    <Content Include="Graficos\cp_button.png" />
+    <Content Include="Graficos\Excluir32.png" />
+    <Content Include="Graficos\EmailContato.png" />
+    <Content Include="Graficos\footer-fade.jpg" />
+    <Content Include="Graficos\FundoSite.jpg" />
+    <Content Include="Graficos\HomeMenu.png" />
+    <Content Include="Graficos\inf.jpg" />
+    <Content Include="Graficos\Instit.jpg" />
+    <Content Include="Graficos\LocalizacaoMenu.png" />
+    <Content Include="Graficos\LogoLeptonTransp2.png" />
+    <Content Include="Graficos\Logomarca.png" />
+    <Content Include="Graficos\LogoMenu.png" />
+    <Content Include="Graficos\NomeLepton.jpg" />
+    <Content Include="Graficos\NoticiasMenu.png" />
+    <Content Include="Graficos\Pagina_Inicial_do_web_site.jpg" />
+    <Content Include="Graficos\Alterar32.png" />
+    <Content Include="Graficos\Param128.png" />
+    <Content Include="Graficos\params.png" />
+    <Content Include="Graficos\sair.png" />
+    <Content Include="Graficos\serv.jpg" />
+    <Content Include="Graficos\ServicosMenu.png" />
+    <Content Include="Institucional\Default.aspx" />
+    <Content Include="JavaScripts\atomo.js" />
+    <Content Include="JavaScripts\MenuPrincipal.js" />
+    <Content Include="LeptonAdm\Default.aspx" />
+    <Content Include="LeptonAdm\Painel\AdmInstitucional\Default.aspx" />
+    <Content Include="LeptonAdm\Painel\AdmNoticias\Default.aspx" />
+    <Content Include="LeptonAdm\Painel\AdmParametros\Default.aspx" />
+    <Content Include="LeptonAdm\Painel\AdmServicos\Default.aspx" />
+    <Content Include="LeptonAdm\Painel\Default.aspx" />
+    <Content Include="LeptonAdm\Painel\Estilos\AdmInstitucional.css" />
+    <Content Include="LeptonAdm\Painel\Estilos\AdmNoticias.css" />
+    <Content Include="LeptonAdm\Painel\Estilos\AdmServicos.css" />
+    <Content Include="LeptonAdm\Painel\Estilos\AdmParametros.css" />
+    <Content Include="LeptonAdm\Painel\Estilos\MenuPrincipalAdm.css" />
+    <Content Include="LeptonAdm\Painel\WebUserControls\wucMenuAdm.ascx" />
+    <Content Include="Localizacao\Default.aspx" />
+    <Content Include="Noticias\Default.aspx" />
+    <Content Include="Servicos\Default.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Default.aspx" />
+    <Content Include="WebUserControls\MenuPrincipal.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Banco\MyBdAdmServicos.cs" />
+    <Compile Include="Banco\MyBdInstitucional.cs" />
+    <Compile Include="Banco\MyBdNoticias.cs" />
+    <Compile Include="Banco\MyBdParametros.cs" />
+    <Compile Include="Banco\MyBdUsuario.cs" />
+    <Compile Include="Contato\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contato\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ferramentas\Correio.cs" />
+    <Compile Include="Institucional\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Institucional\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeptonAdm\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeptonAdm\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeptonAdm\Painel\AdmInstitucional\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeptonAdm\Painel\AdmInstitucional\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeptonAdm\Painel\AdmMaster.Master.cs">
+      <DependentUpon>AdmMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeptonAdm\Painel\AdmMaster.Master.designer.cs">
+      <DependentUpon>AdmMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LeptonAdm\Painel\AdmNoticias\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeptonAdm\Painel\AdmNoticias\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeptonAdm\Painel\AdmParametros\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeptonAdm\Painel\AdmParametros\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeptonAdm\Painel\AdmServicos\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeptonAdm\Painel\AdmServicos\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeptonAdm\Painel\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeptonAdm\Painel\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeptonAdm\Painel\WebUserControls\wucMenuAdm.ascx.cs">
+      <DependentUpon>wucMenuAdm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeptonAdm\Painel\WebUserControls\wucMenuAdm.ascx.designer.cs">
+      <DependentUpon>wucMenuAdm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Localizacao\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Localizacao\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master.Master.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master.Master.designer.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Noticias\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Noticias\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Servicos\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Servicos\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\MenuPrincipal.ascx.cs">
+      <DependentUpon>MenuPrincipal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\MenuPrincipal.ascx.designer.cs">
+      <DependentUpon>MenuPrincipal.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LeptonAdm\Painel\AdmMaster.Master" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1085</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

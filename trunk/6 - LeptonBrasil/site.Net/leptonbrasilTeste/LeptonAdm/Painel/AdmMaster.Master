@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdmMaster.master.cs"
+    Inherits="leptonbrasil.LeptonAdm.Painel.AdmMaster" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<%@ Register Src="WebUserControls/wucMenuAdm.ascx" TagName="wucMenuAdm" TagPrefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <link rel="shortcut icon" href="~/favicon.ico" />
+    <title></title>
+    <link rel="Stylesheet" href="~/Estilos/Geral.css" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="todoConteudo">
+        <div id="header">
+            <div class="PartsTopDown">
+                <div id="ImgNome" class="style5">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:ImageButton ID="ImgBtnNome" runat="server" ImageUrl="~/Graficos/NomeLepton.jpg"
+                        OnClick="ImgBtnNome_Click" CausesValidation="False" Width="235px" Height="70px" />
+                    <br />
+                    <br />
+                </div>
+                <div id="divLogoff" style="margin-top: -40px; text-align: right; color: #0066FF;">
+                    <strong>Usuário Logado:</strong>
+                    <asp:Literal ID="liUsuarioLogado" runat="server"></asp:Literal>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Sair:</strong>
+                    <asp:ImageButton ID="imgBtnSair" runat="server" ImageUrl="~/Graficos/sair.png" ImageAlign="Bottom"
+                        OnClick="imgBtnSair_Click" /></div>
+            </div>
+            <div id="LinhaPage">
+            </div>
+        </div>
+        <div id="corpo">
+            <div id="internaCorpo2">
+                <div id="menu">
+                    <uc1:wucMenuAdm ID="wucMenuAdm1" runat="server" ></uc1:wucMenuAdm>
+                </div>
+                <div id="content">
+                    <div id="tituloPagina">
+                        <asp:Label ID="lblTituloPagina" runat="server" Text=""></asp:Label></div>
+                    <asp:Panel ID="contentPlacePanel" runat="server" BackColor="White" Height="800px">
+                        <div>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </asp:Panel>
+                    <cc1:RoundedCornersExtender ID="contentPlacePanel_RoundedCornersExtender" runat="server"
+                        Enabled="True" TargetControlID="contentPlacePanel" BorderColor="30, 111, 153">
+                    </cc1:RoundedCornersExtender>
+                </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+    </div>
+    <div id="Footer">
+        <div id="conteudoFooter" class="centraliza">
+            <div id="FooterCopy">
+                <br />
+            </div>
+            <div id="developed">
+                <span class="style4">Desenvolvido por</span><br />
+                <asp:ImageButton ID="ImageButton1" runat="server" AlternateText="Desenvolvido por ConsuTI.net"
+                    ImageUrl="~/Graficos/Logomarca.png" OnClick="ImageButton1_Click" />
+            </div>
+            <div id="footerInfos">
+                <br />
+            </div>
+            <asp:ScriptManager ID="ScriptManager1" runat="server">
+            </asp:ScriptManager>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

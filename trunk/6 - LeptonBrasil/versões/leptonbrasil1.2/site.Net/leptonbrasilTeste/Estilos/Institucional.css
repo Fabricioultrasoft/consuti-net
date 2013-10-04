@@ -1,0 +1,31 @@
+﻿#imagem
+{
+    text-align: left;
+    width: 100%;
+}
+
+#titulo
+{
+    text-align: left;
+    margin-left: 20px;
+    text-decoration: undeline;
+    font-size: medium;
+}
+
+#textoInstitucional
+{
+    margin-left: 20px;
+    margin-right: 20px;        
+}
+
+#contentInstitucional
+{
+    background-image: url('../Graficos/BannInfInstit.png');
+     background-position:bottom;
+     background-repeat:no-repeat;   
+}
+
+#exibeImageInstit
+{
+    height: 455px;
+}

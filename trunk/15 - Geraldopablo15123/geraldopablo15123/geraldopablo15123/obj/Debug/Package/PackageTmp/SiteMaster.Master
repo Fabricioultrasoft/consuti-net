@@ -1,0 +1,125 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMaster.master.cs"
+    Inherits="geraldopablo15123.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="Stylesheet" href="Styles/Site.css" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            font-family: Verdana;
+            font-size: xx-large;
+        }
+        .style2
+        {
+            font-size: 35pt;
+            color: #FF0000;
+        }
+        .style4
+        {
+            font-size: x-large;
+        }
+        .style5
+        {
+            font-size: xx-large;
+        }
+        .style6
+        {
+            font-size: large;
+        }
+        .style7
+        {
+            font-family: Verdana;
+            font-size: 40pt;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="background-color: White; height: 1000px">
+        <div id="header">
+            <div style="float: left; width: 15%; text-align: center;">
+                <asp:ImageButton ID="imgFotoHead" runat="server" ImageUrl="~/Imagens/FotoPablo.jpg"
+                    OnClick="imgFotoHead_Click" CausesValidation="false" />
+            </div>
+            <div style="float: right; width: 84%; text-align: center">
+                <strong><span class="style1">
+                    <br />
+                </span><span class="style7">GERALDO PABLO</span></strong>
+                <br />
+                <span class="style2"><strong>Vereador 15123</strong></span>
+                <br />
+                <span><span class="style4"><strong>BRASILÂNDIA DE MINAS - 2012</strong></span> </span>
+            </div>
+        </div>
+        <hr style="float: left; width: 100%; margin: 0;" />
+        <div id="content">
+            <div style="float: left; width: 15%; text-align: center; border-right: 1px solid grey">
+                <span class="style4"><strong>Prefeito 15</strong></span><br />
+                <span class="style5"><strong>Osvaldo<br />
+                    dos<br />
+                    Santos</strong></span>
+                <br />
+                <span class="style6">“Osvaldo do Posto”</span><br class="style6" />
+                <span class="style6">Vice – Sandra Ruivo</span>
+                <asp:ImageButton ID="imgBtnPmdb" runat="server" 
+                    ImageUrl="~/Imagens/logo_pmdb.png" CausesValidation="false" />
+                <div style="text-align: justify; margin-left: 7px; margin-right: 3px; font-size: small;">
+                    <br />
+                    <br />
+                    <div>
+                        Ouça o <a href="Geraldo%20Pablo%2015123.mp3">Jingue</a> da nossa campanha.</div>
+                    <hr />
+                    <div>
+                        Leia a nossa "<a href="Carta%20Aberta%2015123.pdf">Carta Aberta</a>".</div>
+                    <hr />
+                    <div>
+                        Veja o <a href="ResumoSiteGeraldopablo15123.pdf">Resumo</a> do nosso site.</div>                    
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div style="float: right; width: 84%;">
+                <div id="menu" style="border-bottom: 1px solid grey">
+                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" Width="98%" BackColor="#FFFFFF"
+                        DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="11pt" ForeColor="#284E98"
+                        StaticSubMenuIndent="10px">
+                        <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <DynamicMenuItemStyle HorizontalPadding="15px" VerticalPadding="20px" />
+                        <DynamicMenuStyle BackColor="#B5C7DE" />
+                        <DynamicSelectedStyle BackColor="#FFFFFF" />
+                        <Items>
+                            <asp:MenuItem Text=">>Lançamento da Candidatura" Value="Lançamento da Candidatura"
+                                NavigateUrl="~/LancamentoCandidatura" ToolTip="Página Lançamento da Candidatura">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text=">>Atual Realidade da Cidade" Value="Atual Realidade da Cidade"
+                                NavigateUrl="~/AtualRealidade" ToolTip="Página Atual Realidade da Cidade"></asp:MenuItem>
+                            <asp:MenuItem Text=">>Plano de Ação" Value="Plano de Ação" NavigateUrl="~/PlanoAcao"
+                                ToolTip="Página Plano de Ação"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Contato" Text="&gt;&gt;Contato" ToolTip="Página Contato"
+                                Value="Contato"></asp:MenuItem>
+                        </Items>
+                        <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <StaticMenuItemStyle HorizontalPadding="20px" VerticalPadding="2px" />
+                        <StaticSelectedStyle BackColor="#FFFFFF" />
+                    </asp:Menu>
+                </div>
+                <br />
+                <div style="margin-left: 20px; margin-right: 20px">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+    </div>
+    </form>
+</body>
+</html>

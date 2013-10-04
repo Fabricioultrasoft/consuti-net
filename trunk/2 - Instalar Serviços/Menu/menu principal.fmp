@@ -1,0 +1,67 @@
+<TEMPLATE APPNAME="FLASHMENU" VER_NUMBER="2" VER_LOWNUMBER="2" TYPE="4" SWF_NAME="banner_automove" SUB_LEVEL="1" CATALOG="5" SWF_SHOWNAME="banner_automove" WIDTH="750" HEIGHT="120" BGCOLOR="clWhite" FLASHBGCOLOR="clWhite" TRANSPARENT="true">
+	<GROUP_ATTRIBUTE>
+		<PARAM ID="1" DF_VALUE="new item"/>
+		<PARAM ID="2" DF_VALUE=""/>
+		<PARAM ID="3" DF_VALUE="_blank,_parent,_self,_top"/>
+		<PARAM ID="50">
+			<PARAM ID="51" DF_VALUE="undefined"/>
+			<PARAM ID="52" DF_VALUE="Verdana"/>
+			<PARAM ID="53" DF_VALUE="0x000000"/>
+			<PARAM ID="54" DF_VALUE="11"/>
+			<PARAM ID="55" DF_VALUE="false"/>
+			<PARAM ID="56" DF_VALUE="false"/>
+			<PARAM ID="57" DF_VALUE="false"/>
+			<PARAM ID="58" DF_VALUE="left,center,right"/>
+			<PARAM ID="59" DF_VALUE="3"/>
+			<PARAM ID="60" DF_VALUE="3"/>
+		</PARAM>
+		<PARAM ID="70">
+			<PARAM ID="71" DF_VALUE="undefined"/>
+			<PARAM ID="72" DF_VALUE="Verdana"/>
+			<PARAM ID="73" DF_VALUE="0x000000"/>
+			<PARAM ID="74" DF_VALUE="11"/>
+			<PARAM ID="75" DF_VALUE="false"/>
+			<PARAM ID="76" DF_VALUE="false"/>
+			<PARAM ID="77" DF_VALUE="false"/>
+			<PARAM ID="78" DF_VALUE="left,center,right"/>
+			<PARAM ID="79" DF_VALUE="0"/>
+			<PARAM ID="80" DF_VALUE="0"/>
+		</PARAM>
+		<PARAM ID="90">
+			<PARAM ID="92" DF_VALUE="verdana"/>
+			<PARAM ID="93" DF_VALUE="0x000000"/>
+			<PARAM ID="94" DF_VALUE="12"/>
+			<PARAM ID="95" DF_VALUE="false"/>
+			<PARAM ID="96" DF_VALUE="false"/>
+			<PARAM ID="97" DF_VALUE="false"/>
+			<PARAM ID="98" DF_VALUE="left,center,right"/>
+			<PARAM ID="99" DF_VALUE="0xffffff"/>
+		</PARAM>
+		<PARAM ID="100" DF_VALUE="0xcccccc"/>
+		<PARAM ID="101" DF_VALUE=""/>
+	</GROUP_ATTRIBUTE>
+	<GROUP_MENU>
+		<PARAM ID="410" DF_VALUE="true"/>
+		<PARAM ID="411" DF_VALUE="$004080FF"/>
+		<PARAM ID="412" DF_VALUE="true"/>
+		<PARAM ID="413" DF_VALUE="$004080FF"/>
+		<PARAM ID="414" DF_VALUE="120"/>
+		<PARAM ID="415" DF_VALUE="20"/>
+		<PARAM ID="416" DF_VALUE="true"/>
+		<PARAM ID="417" DF_VALUE="20"/>
+		<PARAM ID="418" DF_VALUE="1"/>
+		<PARAM ID="419" DF_VALUE="125"/>
+		<PARAM ID="420" DF_VALUE="V:\ConsuTI\Clientes\2 - Instalar Serviços\Site\Menu\hover.mp3"/>
+	</GROUP_MENU>
+	<GROUP_SIZE>
+		<PARAM ID="140" DF_VALUE="750"/>
+		<PARAM ID="141" DF_VALUE="120"/>
+	</GROUP_SIZE>
+	<GROUP_PAGE>
+		<PARAM ID="143" DF_VALUE="clWhite"/>
+		<PARAM ID="144" DF_VALUE="clWhite"/>
+		<PARAM ID="145" DF_VALUE="true"/>
+	</GROUP_PAGE>
+	<MENU>
+		<item name="Atendemos as necessidades específicas de cada um de nossos clientes" url="index.php" callback="onClick" subTitle="Home" subTitle_font="Berlin Sans FB Demi" subTitle_color="clWhite" subTitle_size="17" subTitle_bold="true" subTitle_italic="false" subTitle_underline="false" subTitle_align="center" subTitle_x_offset="0" subTitle_y_offset="0" title=" " title_font="verdana" title_color="0x0000cc" title_size="11" title_bold="true" title_italic="false" title_underline="false" title_align="center" title_x_offset="0" title_y_offset="5" menu_font="Century Schoolbook" menu_color="clMaroon" menu_size="13" menu_bold="true" menu_italic="false" menu_underline="false" menu_align="left" menu_bgcolor="clSilver" bar_color="$003778FF" image="MapaMenu.jpg"/><item name="Solicite um dos nossos serviços em sistema de agendamentos." url="agenda.php" callback="onClick" subTitle="Agenda" subTitle_font="Berlin Sans FB Demi" subTitle_color="clWhite" subTitle_size="17" subTitle_bold="true" subTitle_italic="false" subTitle_underline="false" subTitle_align="center" subTitle_x_offset="0" subTitle_y_offset="0" title=" " title_font="Arial" title_color="clHighlight" title_size="11" title_bold="true" title_italic="false" title_underline="false" title_align="center" title_x_offset="0" title_y_offset="5" menu_font="Century Schoolbook" menu_color="clMaroon" menu_size="13" menu_bold="true" menu_italic="false" menu_underline="false" menu_align="left" menu_bgcolor="$00CACACA" bar_color="$001C8DFF" image="agenda.jpg"/><item name="Confira aqui todos nossos produtos e serviços." url="servicos.php" callback="onClick" subTitle="Serviços" subTitle_font="Berlin Sans FB Demi" subTitle_color="clWhite" subTitle_size="17" subTitle_bold="true" subTitle_italic="false" subTitle_underline="false" subTitle_align="center" subTitle_x_offset="0" subTitle_y_offset="0" title=" " title_font="Arial" title_color="clGreen" title_size="11" title_bold="true" title_italic="false" title_underline="false" title_align="center" title_x_offset="0" title_y_offset="5" menu_font="Century Schoolbook" menu_color="clMaroon" menu_size="13" menu_bold="true" menu_italic="false" menu_underline="false" menu_align="left" menu_bgcolor="$00D7D7D7" bar_color="$00359AFF" image="ferramentas.jpg"/><item name="Conheça a Instalar e venha ser nosso parceiro, só falta você!" url="empresa.php" callback="onClick" subTitle="Institucional" subTitle_font="Berlin Sans FB Demi" subTitle_color="clWhite" subTitle_size="17" subTitle_bold="true" subTitle_italic="false" subTitle_underline="false" subTitle_align="center" subTitle_x_offset="0" subTitle_y_offset="0" title=" " title_font="Arial" title_color="clPurple" title_size="11" title_bold="true" title_italic="false" title_underline="false" title_align="center" title_x_offset="0" title_y_offset="5" menu_font="Century Schoolbook" menu_color="clMaroon" menu_size="13" menu_bold="true" menu_italic="false" menu_underline="false" menu_align="left" menu_bgcolor="$00E0E0E0" bar_color="$004FA7FF" image="empresa.jpg"/><item name="Clique aqui e faça contato conosco, estamos a seu dispor." url="contato.php" callback="onClick" subTitle="Contato" subTitle_font="Berlin Sans FB Demi" subTitle_color="clWhite" subTitle_size="17" subTitle_bold="true" subTitle_italic="false" subTitle_underline="false" subTitle_align="center" subTitle_x_offset="0" subTitle_y_offset="0" title=" " title_font="Century Schoolbook" title_color="clMaroon" title_size="13" title_bold="true" title_italic="false" title_underline="false" title_align="center" title_x_offset="0" title_y_offset="5" menu_font="Century Schoolbook" menu_color="clMaroon" menu_size="13" menu_bold="true" menu_italic="false" menu_underline="false" menu_align="left" menu_bgcolor="$00F0F0F0" bar_color="$0084C1FF" image="contato.jpg"/></MENU>
+</TEMPLATE>

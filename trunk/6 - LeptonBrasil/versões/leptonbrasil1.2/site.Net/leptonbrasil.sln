@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "leptonbrasil", "leptonbrasil\leptonbrasil.csproj", "{1CA240E9-D037-4E2C-8E85-56EF86497960}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "leptonbrasilTeste", "leptonbrasilTeste\leptonbrasilTeste.csproj", "{F56EED09-8B08-45D7-9392-F561F8A72077}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CA240E9-D037-4E2C-8E85-56EF86497960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CA240E9-D037-4E2C-8E85-56EF86497960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CA240E9-D037-4E2C-8E85-56EF86497960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CA240E9-D037-4E2C-8E85-56EF86497960}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F56EED09-8B08-45D7-9392-F561F8A72077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F56EED09-8B08-45D7-9392-F561F8A72077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F56EED09-8B08-45D7-9392-F561F8A72077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F56EED09-8B08-45D7-9392-F561F8A72077}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

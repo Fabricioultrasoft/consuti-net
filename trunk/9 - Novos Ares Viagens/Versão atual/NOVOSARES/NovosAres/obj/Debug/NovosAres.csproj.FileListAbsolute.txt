@@ -1,0 +1,40 @@
+C:\Users\Felipe\Desktop\Projetos\NOVOSARES\NovosAres\bin\NovosAres.dll
+C:\Users\Felipe\Desktop\Projetos\NOVOSARES\NovosAres\bin\NovosAres.pdb
+C:\Users\Felipe\Desktop\Projetos\NOVOSARES\NovosAres\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Felipe\Desktop\Projetos\NOVOSARES\NovosAres\obj\Debug\NovosAres.dll
+C:\Users\Felipe\Desktop\Projetos\NOVOSARES\NovosAres\obj\Debug\NovosAres.pdb
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\NovosAres\bin\NovosAres.dll
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\NovosAres\bin\NovosAres.pdb
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\NovosAres\bin\AjaxControlToolkit.dll
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\NovosAres\bin\AjaxControlToolkit.pdb
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\NovosAres\bin\ar\AjaxControlToolkit.resources.dll
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\NovosAres\bin\cs\AjaxControlToolkit.resources.dll
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\NovosAres\bin\de\AjaxControlToolkit.resources.dll
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\NovosAres\bin\es\AjaxControlToolkit.resources.dll
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\NovosAres\bin\fr\AjaxControlToolkit.resources.dll
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\NovosAres\bin\he\AjaxControlToolkit.resources.dll
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\NovosAres\bin\hi\AjaxControlToolkit.resources.dll
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\NovosAres\bin\it\AjaxControlToolkit.resources.dll
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\NovosAres\bin\ja\AjaxControlToolkit.resources.dll
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\NovosAres\bin\ko\AjaxControlToolkit.resources.dll
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\NovosAres\bin\nl\AjaxControlToolkit.resources.dll
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\NovosAres\bin\pt\AjaxControlToolkit.resources.dll
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\NovosAres\bin\ru\AjaxControlToolkit.resources.dll
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\NovosAres\bin\tr-TR\AjaxControlToolkit.resources.dll
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\NovosAres\bin\zh-CHS\AjaxControlToolkit.resources.dll
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\NovosAres\bin\zh-CHT\AjaxControlToolkit.resources.dll
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\NovosAres\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\NovosAres\obj\Debug\NovosAres.dll
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\NovosAres\obj\Debug\NovosAres.pdb
+C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\9 - Novos Ares Viagens\Versão atual\NOVOSARES\NovosAres\bin\NovosAres.dll
+C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\9 - Novos Ares Viagens\Versão atual\NOVOSARES\NovosAres\bin\NovosAres.pdb
+C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\9 - Novos Ares Viagens\Versão atual\NOVOSARES\NovosAres\bin\CKEditor.NET.dll
+C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\9 - Novos Ares Viagens\Versão atual\NOVOSARES\NovosAres\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\9 - Novos Ares Viagens\Versão atual\NOVOSARES\NovosAres\obj\Debug\NovosAres.dll
+C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\9 - Novos Ares Viagens\Versão atual\NOVOSARES\NovosAres\obj\Debug\NovosAres.pdb
+D:\ConsuTI\Repositorio\9 - Novos Ares Viagens\Versão atual\NOVOSARES\NovosAres\bin\NovosAres.dll
+D:\ConsuTI\Repositorio\9 - Novos Ares Viagens\Versão atual\NOVOSARES\NovosAres\bin\NovosAres.pdb
+D:\ConsuTI\Repositorio\9 - Novos Ares Viagens\Versão atual\NOVOSARES\NovosAres\bin\CKEditor.NET.dll
+D:\ConsuTI\Repositorio\9 - Novos Ares Viagens\Versão atual\NOVOSARES\NovosAres\obj\Debug\ResolveAssemblyReference.cache
+D:\ConsuTI\Repositorio\9 - Novos Ares Viagens\Versão atual\NOVOSARES\NovosAres\obj\Debug\NovosAres.dll
+D:\ConsuTI\Repositorio\9 - Novos Ares Viagens\Versão atual\NOVOSARES\NovosAres\obj\Debug\NovosAres.pdb

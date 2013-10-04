@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Externa.Master.cs" Inherits="NovosAres.MasterExterna" %>
+
+<%@ Register Src="WebUserControl/MenuPrincipal.ascx" TagName="MenuPrincipal" TagPrefix="uc1" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<%@ Register Src="WebUserControl/Depoimentos.ascx" TagName="Depoimentos" TagPrefix="uc2" %>
+<%@ Register src="WebUserControl/IntegraFaceBook.ascx" tagname="IntegraFaceBook" tagprefix="uc3" %>
+<%@ Register src="WebUserControl/IntegraTwitter.ascx" tagname="IntegraTwitter" tagprefix="uc4" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="Stylesheet" type="text/css" href="Estilos/MasterExterna.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="limiteSite">
+        <asp:Panel ID="pnlConteudoPagina" runat="server" Width="1280px" Height="800px">
+            <div>
+                <div id="menuEsquerda">
+                    <br />
+                    <asp:ImageButton ID="imgBtnLogo" runat="server" ImageAlign="Middle" 
+                        ImageUrl="~/Graficos/logo.png" onclick="imgBtnLogo_Click" 
+                        CausesValidation="False" />
+                    <br />
+                    <br />
+                    <div id="menuPrincipal">
+                        <asp:Panel ID="pnlMenu" runat="server" Width="290px" HorizontalAlign="Center" BackColor="Orange">
+                            <uc1:MenuPrincipal ID="MenuPrincipal1" runat="server" />
+                        </asp:Panel>
+                        <cc1:RoundedCornersExtender ID="pnlMenu_RoundedCornersExtender" runat="server" Corners="Right"
+                            Enabled="True" TargetControlID="pnlMenu" BorderColor="White" Radius="10">
+                        </cc1:RoundedCornersExtender>
+                    </div>
+                </div>
+                <div id="conteudoSite">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </asp:Panel>
+        <div id="divTwitter">
+            <uc4:IntegraTwitter ID="IntegraTwitter1" runat="server" />
+        </div>
+        <div id="divDepoimentos">
+            <uc2:Depoimentos ID="Depoimentos1" runat="server" />
+        </div>
+        <div id="divFaceBook">            
+            <uc3:IntegraFaceBook ID="IntegraFaceBook1" runat="server" />            
+        </div>
+    </div>
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    </form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="" title="SIREF"  description="">
+    <siteMapNode title="Cadastros">
+      <siteMapNode title="Projeto" url="~/Site/Projetos/Consultar.aspx" description="Cadastro de projetos" />
+      <siteMapNode title="Tipos de Itens de Trabalho" url="~/Site/TiposItensTrabalho/Consultar.aspx" description="Casdastro de tipos de itens de trabalho" />
+      <siteMapNode title="Itens de Trabalho" url="~/Site/ItensTrabalho/Consultar.aspx" description="Casdastro de itens de trabalho" />
+      <siteMapNode title="Tipos de Estimativa" url="~/Site/TiposEtimativa/Consultar.aspx" description="Casdastro de tipos de estimativa" />
+    </siteMapNode>
+    <siteMapNode title="Estimativa">
+      <siteMapNode title="Gerar Estimativa" url="~/Site/Estimativas/Gerar.aspx" description="Gerar estimativa para projeto" />
+      <siteMapNode title="Histórico de Estimativas" url="~/Site/Estimativas/Historico.aspx" description="Consulta de histórico de estimativas" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

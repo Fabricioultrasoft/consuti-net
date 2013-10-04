@@ -1,0 +1,81 @@
+﻿body
+{
+    margin: 20px auto 30px auto;
+    width: 800px;
+    height: 500px;
+}
+
+hr
+{
+    color: Green;
+    width: 760px;
+    border-style: ridge;
+}
+
+.tituloRelatorio
+{
+    text-decoration: underline;
+    font-size:medium;
+    text-align: center;
+}
+
+#dadosPessoais1
+{
+    float: left;
+    text-align: left;
+    width: 49%;
+}
+
+#dadosPessoais2
+{
+    float: right;
+    text-align: left;
+    width: 49%;
+}
+
+#dadosEndereco2
+{
+    float: right;
+    text-align: left;
+    width: 29%;
+}
+
+#dadosEndereco1
+{
+    float: left;
+    text-align: left;
+    width: 69%;
+}
+
+.NomeCliente
+{
+    text-align: center;
+    font-family: Comic Sans MS;
+    font-size: 20pt;
+    color: Green;
+}
+
+.EmailCliente
+{
+    text-align: center;
+    font-family: Comic Sans MS;
+    font-size: 12pt;
+    color: Green;
+}
+
+#tituloRelatório
+{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.EmitidoEm
+{
+    font-size: 8pt;
+    text-align: right;
+    width: 780px;
+}
+ze: 8pt;
+    text-align:right;
+    width: 780px;
+}

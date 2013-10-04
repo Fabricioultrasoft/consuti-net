@@ -1,0 +1,18 @@
+td{font-family:Tahoma;font-size:11px;color:#000000}
+a       {font-size: 11px; COLOR: #000000; text-decoration:none; FONT-WEIGHT: bold;}
+a:hover	{font-size: 11px; COLOR: #800000; text-decoration:none; FONT-WEIGHT: bold;}
+.date{font-family:Tahoma;font-size:10px;color:#787878;font-weight:bold;padding-left:10px;padding-top:10px;}
+.cap{font-family:Tahoma;font-size:10px;color:#FFAA00;font-weight:bold;padding-left:10px;padding-top:2px;}
+.style2 {font-family: Tahoma; font-size: 16px; color: #CA8415; font-weight: bold; padding-left: 10px; padding-top: 10px; }
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.default_menu_item{
+  background:url(images/m08.jpg);
+}
+.home_menu_item{
+  background:url(images/m01.jpg) ;
+}

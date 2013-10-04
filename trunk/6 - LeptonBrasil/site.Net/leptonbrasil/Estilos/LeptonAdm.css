@@ -1,0 +1,21 @@
+﻿#login
+{
+    width:502px;
+    margin: auto auto 0 auto;
+}
+
+#campos
+{
+    width:250px;
+    margin: 0 auto 0 auto;
+}
+
+#botoes
+{
+    text-align: center;
+}
+
+.alinhaCentro
+{
+    text-align:center;
+}
