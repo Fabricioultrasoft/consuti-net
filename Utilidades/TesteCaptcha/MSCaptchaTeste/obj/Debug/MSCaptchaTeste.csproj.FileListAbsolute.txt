@@ -1,0 +1,7 @@
+C:\Users\cristiangomes\documents\visual studio 2010\Projects\TesteCaptcha\MSCaptchaTeste\bin\MSCaptchaTeste.dll
+C:\Users\cristiangomes\documents\visual studio 2010\Projects\TesteCaptcha\MSCaptchaTeste\bin\MSCaptchaTeste.pdb
+C:\Users\cristiangomes\documents\visual studio 2010\Projects\TesteCaptcha\MSCaptchaTeste\bin\MSCaptcha.dll
+C:\Users\cristiangomes\documents\visual studio 2010\Projects\TesteCaptcha\MSCaptchaTeste\bin\MSCaptcha.xml
+C:\Users\cristiangomes\documents\visual studio 2010\Projects\TesteCaptcha\MSCaptchaTeste\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\cristiangomes\documents\visual studio 2010\Projects\TesteCaptcha\MSCaptchaTeste\obj\Debug\MSCaptchaTeste.dll
+C:\Users\cristiangomes\documents\visual studio 2010\Projects\TesteCaptcha\MSCaptchaTeste\obj\Debug\MSCaptchaTeste.pdb
