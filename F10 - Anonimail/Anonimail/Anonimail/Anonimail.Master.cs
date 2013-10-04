@@ -24,7 +24,7 @@ namespace Anonimail
                 EnviarEmailConfirmaBloqueio(codDesbloqueio, BloquearEmailTextBox.Text);
                 ExibeMensagemPopUp("E-mail " + BloquearEmailTextBox.Text + " bloqueado com sucesso!");
             }
-            catch (MySqlException ex)
+            catch (MySqlException)
             {
                 ExibeMensagemPopUp("O e-mail " + BloquearEmailTextBox.Text + " já está bloqueado.");
             }
