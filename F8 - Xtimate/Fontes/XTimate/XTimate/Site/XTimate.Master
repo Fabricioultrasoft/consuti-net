@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="XTimate.master.cs" Inherits="XTimate.Site.XTimate" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="Stylesheet" href="../App_Themes/Estilos/XTimate.css" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="width: 900px; margin: 0 auto">
+        <div class="Header">
+            <asp:ImageButton ID="Image1" runat="server" ImageUrl="~/App_Themes/Imagens/FundoHead.png"
+                BorderWidth="0" Style="margin-left: -10px" />
+        </div>
+        <div style="background-color: White; margin-top: 8px">
+            <br />
+            <div id="menu">
+                <div style="float: right; text-align: right; margin: 2px 5px 0 0">
+                    Bem Vindo(a)
+                    <asp:Literal ID="NomeLiteral" runat="server"></asp:Literal>!<asp:ImageButton ID="ImageButton1"
+                        runat="server" /></div>
+                <asp:Menu ID="menu1" runat="server" RenderingMode="Table" DataSourceID="datasource"
+                    Orientation="Horizontal" EnableTheming="True" StaticBottomSeparatorImageUrl=""
+                    StaticEnableDefaultPopOutImage="False" DynamicEnableDefaultPopOutImage="False"
+                    StaticMenuItemStyle-CssClass="itemMenu" DynamicMenuItemStyle-CssClass="SubMenu"
+                    StaticDisplayLevels="1" SkipLinkText="" DynamicMenuStyle-CssClass="adjustedZIndex"
+                    Style="margin-left: 16px; position: absolute">
+                    <StaticMenuItemStyle CssClass="itemMenu" />
+                    <DynamicMenuItemStyle CssClass="SubMenu" />
+                </asp:Menu>
+                <asp:SiteMapDataSource ID="datasource" runat="server" ShowStartingNode="False" />
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <br />
+            <br />
+        </div>
+    </div>
+    <div id="footer">
+    </div>
+    </form>
+</body>
+</html>

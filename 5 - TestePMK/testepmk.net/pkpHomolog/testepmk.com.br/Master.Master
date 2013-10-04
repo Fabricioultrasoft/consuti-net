@@ -1,0 +1,235 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="testePMK.com.br.Master" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="icon" type="image/png" href="Graficos/favicon.ico" />
+    <link rel = "shortcut icon" type = "image / x-icon" href = "favicon.ico"/>
+
+    <!-- meta tags de pesquisa -->
+    <meta name="author" content="Cristian Gomes - ConsuTI.net" />
+    <meta name="description" content="Esta é a loja virtual da Eber Móveis profissionais. Aqui você encontra as mais novas tecnologias em teste PMK do país!" />
+    <meta name="keywords" content="PMK, teste pmk, eber, mesa pmk, conjunto pmk, psicotécnico, mesaPMK, eber moveis profissionais, exame psicotécnico" />
+    <meta name="URL" content="http://www.testepmk.com.br" />
+    <meta name="language" content="portuguese" />
+    <meta name="robots" content="INDEX, FOLLOW" />
+    <meta name="reply-to" content="consuti@consuti.net" />
+    <meta name="document-rating" content="General" />
+    <meta name="document-state" content="Dynamic" />
+    <meta http-equiv="Content-Language" content="PT-BR" />
+    <meta name="Publisher-Email" content="cristian@consuti.net" />
+    <meta name="Contributors" content="Equipe Consuti.net" />
+    <meta name="Page-Topic" content="testepmk" />
+    <!-- meta tags de pesquisa -->
+    <link href="~/Estilos.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style6
+        {
+            font-size: small;
+        }
+        .style7
+        {
+            font-size: xx-small;
+        }
+        #form1
+        {
+            margin-top: 0px;
+        }
+    </style>
+    <!-- google analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-15514897-5']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    <!-- google analytics -->
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="page">
+        <asp:Panel ID="PnlPrinc" runat="server" Height="1190px" Width="1030px" Style="margin-top: 0px"
+            BackColor="White" BorderWidth="0px" BorderColor="Green">
+            <div class="header" style="border-width: 0px">
+                <div style="text-align: right; color: #FFFFFF; font-weight: 700; font-size: medium;
+                    width: 1010px;">
+                    Olá
+                    <asp:Literal ID="lituser" runat="server"></asp:Literal>
+                    !</div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <div style="width: 1030px; margin-top: 0px;">
+                    <div style="text-align: left; width: 421px; float: right; margin-left: 0px;">
+                        &nbsp;
+                        <asp:ImageButton ID="imgBtnEmpresa" runat="server" CausesValidation="False" ImageAlign="Baseline"
+                            ImageUrl="~/Graficos/logo.png" OnClick="imgBtnEmpresa_Click" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:ImageButton ID="imgBtnPedidos" runat="server" CausesValidation="False" ImageAlign="Baseline"
+                            ImageUrl="~/Graficos/compras.png" OnClick="imgBtnPedidos_Click" />
+                        &nbsp;&nbsp;&nbsp; &nbsp;
+                        <asp:ImageButton ID="imgBtnContato" runat="server" CausesValidation="False" ImageAlign="Baseline"
+                            ImageUrl="~/Graficos/contato.png" OnClick="imgBtnContato_Click" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                        <asp:ImageButton ID="imgBtnLocaliza" runat="server" CausesValidation="False" ImageAlign="Baseline"
+                            ImageUrl="~/Graficos/localizacao.png" OnClick="imgBtnLocaliza_Click" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                        <asp:ImageButton ID="imgbtnLogin" runat="server" CausesValidation="False" ImageAlign="Baseline"
+                            ImageUrl="~/Graficos/login.png" OnClick="imgbtnLogin_Click" />
+                        &nbsp;&nbsp;
+                        <asp:ImageButton ID="ImgbtnHome" runat="server" CausesValidation="False" Height="32px"
+                            ImageUrl="~/Graficos/Home32x32.png" OnClick="ImgbtnHome_Click" ToolTip="Página Inicial"
+                            ImageAlign="Baseline" />
+                        &nbsp;&nbsp;
+                        <asp:ImageButton ID="imgBtnVoltar" runat="server" CausesValidation="False" Height="32px"
+                            ImageUrl="~/Graficos/Voltar_32x32.png" ToolTip="Voltar" ImageAlign="Baseline" />
+                        &nbsp;<br />
+                        <asp:LinkButton ID="lbtnEmpresa" runat="server" CausesValidation="False" CssClass="style6"
+                            OnClick="lbtnEmpresa_Click">Empresa</asp:LinkButton>
+                        &nbsp;&nbsp;
+                        <asp:LinkButton ID="lbtnPedidos" runat="server" CausesValidation="False" CssClass="style6"
+                            OnClick="lbtnPedidos_Click">Pedidos</asp:LinkButton>
+                        &nbsp;&nbsp;
+                        <asp:LinkButton ID="lbtnContato" runat="server" CausesValidation="False" CssClass="style6"
+                            OnClick="lbtnContato_Click">Contato</asp:LinkButton>
+                        &nbsp;&nbsp;
+                        <asp:LinkButton ID="lbtnLocaliza" runat="server" CausesValidation="False" CssClass="style6"
+                            OnClick="lbtnLocaliza_Click">Localização</asp:LinkButton>
+                        &nbsp;&nbsp;
+                        <asp:LinkButton ID="lbtnLogin" runat="server" CausesValidation="False" CssClass="style6"
+                            OnClick="lbtnLogin_Click">Login</asp:LinkButton>
+                        &nbsp;&nbsp;
+                        <asp:LinkButton ID="LbtnHome" runat="server" CausesValidation="False" OnClick="LbtnHome_Click">Home</asp:LinkButton>
+                        &nbsp;&nbsp;
+                        <asp:LinkButton ID="LbtnVoltar" runat="server" CausesValidation="False">Voltar</asp:LinkButton>
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                </div>
+                <div id="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <br />
+            </div>
+            <div class="promocoes" style="border-bottom: 1px solid Green;">
+                <iframe src="statusCarrinho.aspx" frameborder="0" style="border-style: none; margin: 0px 0px 0px 0px;
+                    border-color: inherit; height: 150px; width: 360px;" scrolling="no"></iframe>
+            </div>
+            <asp:Panel ID="PnlIndique" runat="server" CssClass="promocoes" Width="360px" Height="210px"
+                BackColor="#ccffcc">
+                <div style="text-align: center">
+                    <br />
+                    <div style="text-align: left; margin-left: 20px">
+                    <asp:Image ID="imgIndique" runat="server" ImageUrl="~/Graficos/indique.png" ImageAlign="Middle"
+                        AlternateText="Indique este site a um Amigo!" />
+                    &nbsp;<span class="categoria">Indique este site a um amigo:</span></div>
+                    <div style="text-align: left; margin-left: 15px; font-weight: 700;">
+                        <br />
+                        Seu Nome:&nbsp; &nbsp;&nbsp;&nbsp;
+                        <asp:TextBox ID="TxbNome" runat="server" Width="230px"></asp:TextBox><br />
+                        Nome Amigo:
+                        <asp:TextBox ID="txbNomeAmigo" runat="server" Width="230px" Style="margin-top: 10px"></asp:TextBox><br />
+                        Email Amigo:&nbsp;
+                        <asp:TextBox ID="TxbEmailAmigo" runat="server" Width="230px" Style="margin-top: 10px"></asp:TextBox><br />
+                    </div>
+                    <div>
+                        <br />
+                        <asp:Button ID="btnEnviaIndicacao" runat="server" Text="Enviar" Width="100px" CausesValidation="False"
+                            OnClick="btnEnviaIndicacao_Click" /></div>
+                    <br />
+                </div>
+            </asp:Panel>
+            <asp:Panel ID="Panel1" runat="server" CssClass="promocoes" Height="520px" Width="370px"
+                BackImageUrl="~/Graficos/fundoPromoc.jpg">
+                <div style="text-align: center">
+                    <br />
+                    <br />
+                    <asp:Label ID="lblTituPtomoc" runat="server" Text="" Style="text-align: center; font-family: Corbel;
+                        font-size: large; font-weight: 700"></asp:Label>
+                    <br />
+                </div>
+                <div style="text-align: center">
+                    <br />
+                    <asp:Image ID="imgBannPromocao" runat="server" Height="300px" Width="300px" />
+                    <br />
+                    <br />
+                </div>
+                <div style="width: 330px; margin-left: 15px">
+                    &nbsp;<asp:Label ID="lblDescrPromocao" runat="server" Text=""></asp:Label>
+                </div>
+            </asp:Panel>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </asp:Panel>
+        
+        
+    </div>
+    <div id="BannerFormaPags">
+                
+                <asp:ImageButton ID="imgPagSeguroLogo" runat="server" ImageUrl="~/Graficos/pagSeguroLogo.jpg"
+                    AlternateText="Pague com PagSeguro - é rápido, grátis e seguro!" ToolTip="Pague com PagSeguro - é rápido, grátis e seguro!" />
+                &nbsp;&nbsp;&nbsp;&nbsp;<asp:Image ID="imgbtnCompraSegura" runat="server" ImageUrl="~/Graficos/compSegura.png"
+                    AlternateText="Este site utiliza as mais modernas tecnologias de segurança. Compre tranquilo."
+                    ToolTip="Este site utiliza as mais modernas tecnologias de segurança. Compre tranquilo." />
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:ImageButton ID="imgBtnsecure" runat="server" ImageUrl="~/Graficos/selo.png"
+                    AlternateText="Tecnologias de segurança assinadas pela LocaWeb e COMODO" ToolTip="Tecnologias de segurança assinadas pela LocaWeb e COMODO" />
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/Graficos/todos_animado_550_50.gif"
+                    BorderWidth="0px" AlternateText="Este site aceita pagamentos com Visa, MasterCard, Diners, American Express, Hipercard, Aura, Bradesco, Itaú, Unibanco, Banco do Brasil, Banrisul, saldo em conta PagSeguro e boleto."
+                    ToolTip="Este site aceita pagamentos com Visa, MasterCard, Diners, American Express, Hipercard, Aura, Bradesco, Itaú, Unibanco, Banco do Brasil, Banrisul, saldo em conta PagSeguro e boleto." />
+            </div>
+    <hr style="margin-bottom: 0px" /> <div style="background-color:#ccffcc">
+    <div class="footer">
+        <div style="float: left; width: 70%; text-align: left;">
+            2010 - 2011&nbsp;<a>Teste PMK</a> &copy - Todos os Direitos Reservados
+            <br />
+            <br />
+            <div class="tituloTela" 
+                style="text-align: center; width: 30%; float:right; margin-right: 100px;">
+            <br />
+                <strong>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server" />
+                </strong>
+            </div>
+            &nbsp;&nbsp;&nbsp; Televendas:<br />
+            <strong>(31) 8805-1820<br />
+                (31) 3327-6893</strong><br />
+            Éber Móveis Profissionais<br />
+            CNPJ 11.107.625/0001-73<br />
+            Inscr. Estadual 001.379.186-0097
+        </div>
+        <div id="developed">
+            Desenvolvido por<br />
+            <a href="http://www.consuti.net">
+                <img alt="Desenvolvido por ConsuTI.net" src="Graficos/Logomarca.png" style="border-width: 0px" /></a><br />
+            <div style="text-align: right;">
+                <span class="style7">
+                    <br />
+                    Navegador Recomendado: Internet Explorer 7 ou superior<br />
+                    Resolução Mínima Recomendada: 1152 x 864</span></div>
+        </div>
+        &nbsp;</div><br /><br /><br /><br /><br /><br /><br />
+        </div> 
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    </form>
+</body>
+</html>

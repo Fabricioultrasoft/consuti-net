@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\ConsuTI\Repositorio\F10 - Anonimail\publish" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="09/17/2013 22:28:42" />
+    <file relUrl="Responder.aspx" publishTime="09/17/2013 22:21:07" />
+    <file relUrl="Imagens/logo16.ico" publishTime="09/16/2013 01:26:40" />
+    <file relUrl="Imagens/logo64.png" publishTime="09/16/2013 01:26:39" />
+    <file relUrl="Imagens/miniLogo.png" publishTime="09/16/2013 01:26:40" />
+    <file relUrl="Imagens/indicator.gif" publishTime="09/16/2013 01:26:39" />
+    <file relUrl="DesbloquearEmail/Externa.Master" publishTime="09/16/2013 19:51:20" />
+    <file relUrl="DesbloquearEmail/Default.aspx" publishTime="09/16/2013 19:48:48" />
+    <file relUrl="Imagens/logo16.png" publishTime="09/16/2013 01:26:40" />
+    <file relUrl="Imagens/bg-gradient.gif" publishTime="09/16/2013 01:26:40" />
+    <file relUrl="bin/Anonimail.dll" publishTime="09/17/2013 22:19:02" />
+    <file relUrl="Imagens/logo32.png" publishTime="09/16/2013 01:26:40" />
+    <file relUrl="Imagens/logo40.png" publishTime="09/16/2013 01:26:40" />
+    <file relUrl="Estilos/Estilos.css" publishTime="09/17/2013 22:23:44" />
+    <file relUrl="Contato.aspx" publishTime="09/16/2013 19:47:43" />
+    <file relUrl="Anonimail.Master" publishTime="09/17/2013 22:18:09" />
+    <file relUrl="bin/Anonimail.pdb" publishTime="09/17/2013 22:19:02" />
+    <file relUrl="Default.aspx" publishTime="09/17/2013 22:08:21" />
+    <file relUrl="bin/AjaxControlToolkit.dll" publishTime="09/30/2009 15:57:54" />
+  </publishProfile>
+</publishData>

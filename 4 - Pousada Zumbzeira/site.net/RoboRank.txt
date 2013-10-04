@@ -1,0 +1,61 @@
+using System;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading;
+using NUnit.Framework;
+using Selenium;
+
+namespace SeleniumTests
+{
+	[TestFixture]
+	public class Untitled
+	{
+		private ISelenium selenium;
+		private StringBuilder verificationErrors;
+		
+		[SetUp]
+		public void SetupTest()
+		{
+			selenium = new DefaultSelenium("localhost", 4444, "*chrome", "http://www.google.com.br/");
+			selenium.Start();
+			verificationErrors = new StringBuilder();
+		}
+		
+		[TearDown]
+		public void TeardownTest()
+		{
+			try
+			{
+				selenium.Stop();
+			}
+			catch (Exception)
+			{
+				// Ignore errors if unable to close the browser
+			}
+			Assert.AreEqual("", verificationErrors.ToString());
+		}
+		
+		[Test]
+		public void TheUntitledTest()
+		{
+			selenium.SetSpeed("3000");
+			selenium.Open("/");
+			selenium.Type("q", "zumbzeira");
+			selenium.Click("btnG");
+			selenium.Click("//ol[@id='rso']/li[4]/h3/a/em");
+			selenium.WaitForPageToLoad("30000");
+			selenium.Open("http://www.consuti.net");
+			selenium.Open("/");
+			selenium.Type("q", "pousadazumbzeira");
+			selenium.Click("btnG");
+			selenium.Click("link=Zumbzeira - Contato");
+			selenium.WaitForPageToLoad("30000");
+			selenium.Open("http://www.consuti.net");
+			selenium.Open("/");
+			selenium.Type("q", "pousada zumbzeira");
+			selenium.Click("btnG");
+			selenium.Click("//ol[@id='rso']/li[3]/h3/a/em");
+			selenium.WaitForPageToLoad("30000");
+		}
+	}
+}

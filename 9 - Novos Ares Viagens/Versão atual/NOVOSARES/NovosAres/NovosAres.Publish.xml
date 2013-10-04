@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\Users\Cristian Gomes\Desktop\novosAres" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Adm/ImagensAdm.aspx" publishTime="03/29/2011 23:10:05" />
+    <file relUrl="Graficos/ImgsBlogs/cachorro-wallpaper.jpg" publishTime="05/15/2011 23:45:04" />
+    <file relUrl="Graficos/arrowLeft.png" publishTime="08/18/2011 21:59:29" />
+    <file relUrl="Graficos/FAIL_32x32.png" publishTime="04/23/2011 08:02:11" />
+    <file relUrl="Estilos/Home.css" publishTime="08/15/2011 19:18:03" />
+    <file relUrl="Estilos/MenuPrincipal.css" publishTime="08/18/2011 19:48:16" />
+    <file relUrl="Graficos/backTransparente.png" publishTime="07/18/2011 12:03:56" />
+    <file relUrl="Adm/Interna.Master" publishTime="04/13/2011 21:35:46" />
+    <file relUrl="Graficos/FundoSite/Fundo1.jpg" publishTime="08/15/2011 18:15:21" />
+    <file relUrl="Adm/UserAdm.aspx" publishTime="03/30/2011 22:29:28" />
+    <file relUrl="bin/CKEditor.NET.dll" publishTime="04/22/2011 12:36:20" />
+    <file relUrl="Graficos/logo.png" publishTime="08/15/2011 18:43:11" />
+    <file relUrl="Informacoes/Default.aspx" publishTime="08/18/2011 19:50:46" />
+    <file relUrl="Scripts/jquery.selectboxes.min.js" publishTime="04/19/2011 22:44:16" />
+    <file relUrl="Adm/SejaBemVindo.aspx" publishTime="05/05/2011 20:53:52" />
+    <file relUrl="Estilos/IntegraTwitter.css" publishTime="08/19/2011 20:29:27" />
+    <file relUrl="Adm/EditViagensAdm.aspx" publishTime="05/05/2011 21:12:11" />
+    <file relUrl="Viagens/Default.aspx" publishTime="08/18/2011 19:50:36" />
+    <file relUrl="Depoimentos/Depoimentos.aspx" publishTime="03/29/2011 23:10:06" />
+    <file relUrl="Adm/AntesViajar.aspx" publishTime="05/05/2011 20:29:09" />
+    <file relUrl="bin/AjaxControlToolkit.dll" publishTime="09/30/2009 15:57:54" />
+    <file relUrl="Estilos/Institucional.css" publishTime="08/22/2011 01:18:16" />
+    <file relUrl="WebUserControl/MenuPrincipal.ascx" publishTime="08/20/2011 20:24:08" />
+    <file relUrl="Default.aspx" publishTime="08/15/2011 19:18:21" />
+    <file relUrl="Estilos/MasterExterna.css" publishTime="08/21/2011 20:53:06" />
+    <file relUrl="Externa.Master" publishTime="08/21/2011 20:32:25" />
+    <file relUrl="Empresa/Default.aspx" publishTime="08/22/2011 01:24:43" />
+    <file relUrl="WebUserControl/Depoimentos.ascx" publishTime="08/20/2011 20:25:33" />
+    <file relUrl="Graficos/ADD_32x32.png" publishTime="04/23/2011 08:01:56" />
+    <file relUrl="Contato/Default.aspx" publishTime="08/21/2011 20:59:22" />
+    <file relUrl="WebUserControl/wucDescricao.ascx" publishTime="04/13/2011 23:06:35" />
+    <file relUrl="WebUserControl/IntegraFaceBook.ascx" publishTime="08/22/2011 01:40:02" />
+    <file relUrl="bin/NovosAres.dll" publishTime="08/22/2011 01:23:59" />
+    <file relUrl="bin/NovosAres.pdb" publishTime="08/22/2011 01:23:58" />
+    <file relUrl="Graficos/twitter64.png" publishTime="08/19/2011 20:12:22" />
+    <file relUrl="Adm/EmailMarketingAdm.aspx" publishTime="03/29/2011 23:10:05" />
+    <file relUrl="Service/Destinos.asmx" publishTime="04/19/2011 01:33:42" />
+    <file relUrl="Graficos/BackBlueTransparent.png" publishTime="08/18/2011 21:33:49" />
+    <file relUrl="Web.config" publishTime="08/22/2011 01:43:52" />
+    <file relUrl="Scripts/jquery-1.5.2.js" publishTime="04/19/2011 22:46:51" />
+    <file relUrl="Graficos/facebook.png" publishTime="08/19/2011 20:23:46" />
+    <file relUrl="Graficos/arrowRight.png" publishTime="08/18/2011 21:59:03" />
+    <file relUrl="Estilos/Depoimentos.css" publishTime="08/19/2011 19:48:26" />
+    <file relUrl="Estilos/integraFacebook.css" publishTime="08/19/2011 20:29:27" />
+    <file relUrl="Adm/ViagensAdm.aspx" publishTime="05/10/2011 02:56:47" />
+    <file relUrl="Estilos/Contato.css" publishTime="08/21/2011 20:25:37" />
+    <file relUrl="WebUserControl/IntegraTwitter.ascx" publishTime="08/19/2011 20:29:27" />
+    <file relUrl="Graficos/BackOrangeTransparent.png" publishTime="08/21/2011 19:59:39" />
+    <file relUrl="Adm/DepoimentosAdm.aspx" publishTime="03/29/2011 23:10:05" />
+  </publishProfile>
+</publishData>

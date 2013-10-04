@@ -1,0 +1,10 @@
+C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\9 - Novos Ares Viagens\Versão atual\NOVOSARES\NovosAres.Blog\bin\NovosAres.Blog.dll
+C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\9 - Novos Ares Viagens\Versão atual\NOVOSARES\NovosAres.Blog\bin\NovosAres.Blog.pdb
+C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\9 - Novos Ares Viagens\Versão atual\NOVOSARES\NovosAres.Blog\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\9 - Novos Ares Viagens\Versão atual\NOVOSARES\NovosAres.Blog\obj\Debug\NovosAres.Blog.dll
+C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\9 - Novos Ares Viagens\Versão atual\NOVOSARES\NovosAres.Blog\obj\Debug\NovosAres.Blog.pdb
+D:\ConsuTI\Repositorio\9 - Novos Ares Viagens\Versão atual\NOVOSARES\NovosAres.Blog\bin\NovosAres.Blog.dll
+D:\ConsuTI\Repositorio\9 - Novos Ares Viagens\Versão atual\NOVOSARES\NovosAres.Blog\bin\NovosAres.Blog.pdb
+D:\ConsuTI\Repositorio\9 - Novos Ares Viagens\Versão atual\NOVOSARES\NovosAres.Blog\obj\Debug\ResolveAssemblyReference.cache
+D:\ConsuTI\Repositorio\9 - Novos Ares Viagens\Versão atual\NOVOSARES\NovosAres.Blog\obj\Debug\NovosAres.Blog.dll
+D:\ConsuTI\Repositorio\9 - Novos Ares Viagens\Versão atual\NOVOSARES\NovosAres.Blog\obj\Debug\NovosAres.Blog.pdb

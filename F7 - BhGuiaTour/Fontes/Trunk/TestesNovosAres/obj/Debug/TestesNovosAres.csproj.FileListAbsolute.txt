@@ -1,0 +1,20 @@
+C:\Users\Felipe\Desktop\Projetos\NOVOSARES\TestesNovosAres\bin\Debug\TestesNovosAres.dll
+C:\Users\Felipe\Desktop\Projetos\NOVOSARES\TestesNovosAres\bin\Debug\TestesNovosAres.pdb
+C:\Users\Felipe\Desktop\Projetos\NOVOSARES\TestesNovosAres\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Felipe\Desktop\Projetos\NOVOSARES\TestesNovosAres\obj\Debug\TestesNovosAres.dll
+C:\Users\Felipe\Desktop\Projetos\NOVOSARES\TestesNovosAres\obj\Debug\TestesNovosAres.pdb
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\TestesNovosAres\bin\Debug\TestesNovosAres.dll
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\TestesNovosAres\bin\Debug\TestesNovosAres.pdb
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\TestesNovosAres\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\TestesNovosAres\obj\Debug\TestesNovosAres.dll
+C:\Users\Cristian Gomes\Desktop\NOVOSARES\TestesNovosAres\obj\Debug\TestesNovosAres.pdb
+C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\9 - Novos Ares Viagens\Versão atual\NOVOSARES\TestesNovosAres\bin\Debug\TestesNovosAres.dll
+C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\9 - Novos Ares Viagens\Versão atual\NOVOSARES\TestesNovosAres\bin\Debug\TestesNovosAres.pdb
+C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\9 - Novos Ares Viagens\Versão atual\NOVOSARES\TestesNovosAres\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\9 - Novos Ares Viagens\Versão atual\NOVOSARES\TestesNovosAres\obj\Debug\TestesNovosAres.dll
+C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\9 - Novos Ares Viagens\Versão atual\NOVOSARES\TestesNovosAres\obj\Debug\TestesNovosAres.pdb
+D:\ConsuTI\Repositorio\9 - Novos Ares Viagens\Versão atual\NOVOSARES\TestesNovosAres\bin\Debug\TestesNovosAres.dll
+D:\ConsuTI\Repositorio\9 - Novos Ares Viagens\Versão atual\NOVOSARES\TestesNovosAres\bin\Debug\TestesNovosAres.pdb
+D:\ConsuTI\Repositorio\9 - Novos Ares Viagens\Versão atual\NOVOSARES\TestesNovosAres\obj\Debug\ResolveAssemblyReference.cache
+D:\ConsuTI\Repositorio\9 - Novos Ares Viagens\Versão atual\NOVOSARES\TestesNovosAres\obj\Debug\TestesNovosAres.dll
+D:\ConsuTI\Repositorio\9 - Novos Ares Viagens\Versão atual\NOVOSARES\TestesNovosAres\obj\Debug\TestesNovosAres.pdb

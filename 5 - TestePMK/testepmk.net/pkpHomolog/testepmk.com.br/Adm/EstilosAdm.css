@@ -1,0 +1,113 @@
+﻿body
+{
+    background-image: url(../Graficos/FundoSite.jpg);
+    font-size: .80em;
+    font-family: "Helvetica Neue" , "Lucida Grande" , "Segoe UI" , Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: Green;
+}
+
+#DivLogin
+{
+    width: 200px;
+    text-align: left;
+    margin: 20px auto auto auto;
+}
+
+.Centralizar
+{
+    margin: 0 auto 0 auto;
+}
+
+.alinhaPreco
+{
+    text-align:right;
+}
+
+.Titulo
+{
+    font-family: Courier New;
+    font-size: xx-large;
+}
+
+.page
+{
+    width: 900px;
+    margin: 0px auto 0px auto;
+    background-color: White;
+}
+
+
+/* Accordion */
+.accordionHeader
+{
+    border: 1px solid #FFFFFF;
+    color: white;
+    background-color: #1D6B46;
+      font-family: Arial, Sans-Serif;
+      font-size: 12px;
+      font-weight: bold;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.accordionHeaderSelected
+{
+    border: 1px solid #2F4F4F;
+    color: white;
+    background-color: #1D6B46;
+      font-family: Arial, Sans-Serif;
+      font-size: 12px;
+      font-weight: bold;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.accordionContent
+{
+	background-image:url(../Graficos/FundoMenu.png);       
+    border-top: none;
+    padding: 5px;
+    padding-top: 10px;    
+}
+
+#menu
+{
+    float: left;
+    font-size: 20px;
+    text-align:left;
+    margin-top: 8%;
+    width:25%;
+    height:200px;
+    background-color: Transparent;    
+}
+
+.BannerTop
+{
+    background-image: url('../Graficos/BannTopAdm.jpg');
+    background-repeat:no-repeat;
+    background-position:center;
+    height: 184px;
+}
+
+.subTitulo
+{
+    text-align:center;
+}
+
+#progresso
+{
+    width:508px;
+    text-align:center;
+}
+
+.campoObrigatorio
+{
+    background-color:#FED0C0;
+}
+
+.campoNaoObrigatorio
+{
+    background-color:#CCFFCC;
+}

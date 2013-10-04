@@ -1,0 +1,139 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdmMaster.master.cs"
+    Inherits="testePMK.com.br.Adm.AdmMaster" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+<link rel="icon" type="image/png" href="../Graficos/favicon.ico" />
+ <link rel = "shortcut icon" type = "image / x-icon" href = "../favicon.ico"/>
+    <title></title>
+    <link href="~/Adm/EstilosAdm.css" rel="stylesheet" type="text/css" />
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <br />
+    <br />
+    <asp:Panel ID="PnlConteudo" runat="server" CssClass="page" Height="950px">
+        <div class="BannerTop">
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <div style="width: 880px; margin-top: 10px;">
+                <div style="text-align: center; width: 150px; float: right">
+                    <asp:ImageButton ID="imgBtnVoltar" runat="server" ImageUrl="../Graficos/Voltar_32x32.png"
+                        Height="32px" CausesValidation="False" />
+                    &nbsp;&nbsp;
+                    <asp:ImageButton ID="ImgbtnHome" runat="server" ImageUrl="../Graficos/Home32x32.png"
+                        Height="32px" CausesValidation="False" OnClick="ImgbtnHome_Click" />
+                    &nbsp;&nbsp;
+                    <asp:ImageButton ID="ImgBtnSair" runat="server" CausesValidation="False" Height="32px"
+                        ImageUrl="../Graficos/Sair32x32.png" OnClick="ImgBtnSair_Click" />
+                    <br />
+                    <asp:LinkButton ID="LbtnVoltar" runat="server" CausesValidation="False">Voltar</asp:LinkButton>
+                    &nbsp;&nbsp;
+                    <asp:LinkButton ID="LbtnHome" runat="server" CausesValidation="False" OnClick="LbtnHome_Click">Home</asp:LinkButton>
+                    &nbsp;&nbsp;
+                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" OnClick="LinkButton1_Click">Sair</asp:LinkButton>
+                    &nbsp;
+                </div>
+                <br />
+                <div style="text-align: center; float: right; width: 39%">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
+                </div>
+            </div>
+        </div>
+        <div style="float: left">
+            <cc1:Accordion ID="Accordion1" runat="server" FadeTransitions="true" AutoSize="None"
+                ContentCssClass="accordionContent" FramesPerSecond="40" HeaderCssClass="accordionHeader"
+                RequireOpenedPane="False" SuppressHeaderPostbacks="True" Width="150px" Style="margin-left: 50px;
+                margin-top: 1px; color: #FFFFFF;">
+                <Panes>
+                    <cc1:AccordionPane ID="AccordionPane2" runat="server">
+                        <Header>
+                            Banners</Header>
+                        <Content>
+                            <asp:LinkButton ID="LinkButtonAtualizarBanner" runat="server" CausesValidation="false"
+                                ForeColor="White" Font-Underline="False" OnClick="LinkButtonAtualizarBanner_Click">Atualizar</asp:LinkButton>
+                            <br />
+                        </Content>
+                    </cc1:AccordionPane>
+                    <cc1:AccordionPane ID="AccordionPane7" runat="server">
+                        <Header>
+                            Categorias de Produtos</Header>
+                        <Content>
+                            <asp:LinkButton ID="LinkButtonAlterCatProd" runat="server" CausesValidation="false"
+                                ForeColor="White" Font-Underline="False" OnClick="LinkButtonAlterCatProd_Click">Alterar/Excluir</asp:LinkButton><br />
+                            <asp:LinkButton ID="LinkButtonCatProds" runat="server" CausesValidation="false" ForeColor="White"
+                                Font-Underline="False" OnClick="LinkButtonCatProds_click">Cadastrar</asp:LinkButton><br />
+                        </Content>
+                    </cc1:AccordionPane>
+                    <cc1:AccordionPane ID="AccordionPane3" runat="server">
+                        <Header>
+                            Pedidos</Header>
+                        <Content>
+                            <asp:LinkButton ID="LinkButtonStatusPedidos" runat="server" CausesValidation="false"
+                                ForeColor="White" Font-Underline="False" OnClick="LinkButtonStatusPedidos_Click">Alterar Status</asp:LinkButton><br />
+                        </Content>
+                    </cc1:AccordionPane>
+                    <cc1:AccordionPane ID="AccordionPane1" runat="server">
+                        <Header>
+                            Produtos</Header>
+                        <Content>
+                            <asp:LinkButton ID="LinkButtonEditarProdutos" runat="server" CausesValidation="false"
+                                ForeColor="White" Font-Underline="False" OnClick="LinkButtonEditarProdutos_Click">Alterar/Excluir</asp:LinkButton><br />
+                            <asp:LinkButton ID="LinkButtonCadastrarProdutos" runat="server" CausesValidation="false"
+                                ForeColor="White" Font-Underline="False" OnClick="LinkButtonCadastrarProdutos_Click">Cadastrar</asp:LinkButton><br />
+                            <asp:LinkButton ID="LinkButtonEstoque" runat="server" CausesValidation="false" ForeColor="White"
+                                Font-Underline="False" OnClick="LinkButtonEstoque_Click">Estoque</asp:LinkButton><br />
+                        </Content>
+                    </cc1:AccordionPane>
+                    <cc1:AccordionPane ID="AccordionPane5" runat="server">
+                        <Header>
+                            Relatórios</Header>
+                        <Content>
+                            <asp:LinkButton ID="LinkButtonRelClientes" runat="server" CausesValidation="false"
+                                ForeColor="White" Font-Underline="False" OnClick="LinkButtonRelClientes_Click">Clientes</asp:LinkButton><br />
+                            <asp:LinkButton ID="LinkButtonRelEstoque" runat="server" CausesValidation="false"
+                                ForeColor="White" Font-Underline="False" OnClick="LinkButtonRelEstoque_Click">Estoque</asp:LinkButton><br />
+                            <asp:LinkButton ID="LinkButtonRelVendas" runat="server" CausesValidation="false"
+                                ForeColor="White" Font-Underline="False" OnClick="LinkButtonRelVendas_Click">Vendas</asp:LinkButton><br />
+                        </Content>
+                    </cc1:AccordionPane>
+                    <cc1:AccordionPane ID="AccordionPane6" runat="server">
+                        <Header>
+                            Usuário</Header>
+                        <Content>
+                            <asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="false" ForeColor="White"
+                                Font-Underline="False" OnClick="LinkButton2_Click">Acesso</asp:LinkButton><br />
+                        </Content>
+                    </cc1:AccordionPane>                    
+                </Panes>
+            </cc1:Accordion>
+            <!-- fim do Menu  -->
+            <br />
+        </div>
+        <div style="width: 67%; float: left; margin-left: 60px;">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+    </asp:Panel>
+    <cc1:RoundedCornersExtender ID="PnlConteudo_RoundedCornersExtender" runat="server"
+        Enabled="True" TargetControlID="PnlConteudo" Color="White" BorderColor="White">
+    </cc1:RoundedCornersExtender>
+    <cc1:DropShadowExtender ID="PnlConteudo_DropShadowExtender" runat="server" Enabled="True"
+        TargetControlID="PnlConteudo" Rounded="True" Opacity="1" Width="7">
+    </cc1:DropShadowExtender>
+    <div class="footer">
+        <br />
+    </div>
+    <asp:ScriptManager ID="Scriptmanager1" runat="server">
+    </asp:ScriptManager>
+    </form>
+</body>
+</html>

@@ -1,0 +1,5 @@
+C:\Users\Maicon\Documents\Visual Studio 2008\Projects\QSO\QSO\bin\QSO.dll
+C:\Users\Maicon\Documents\Visual Studio 2008\Projects\QSO\QSO\bin\QSO.pdb
+C:\Users\Maicon\Documents\Visual Studio 2008\Projects\QSO\QSO\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Maicon\Documents\Visual Studio 2008\Projects\QSO\QSO\obj\Debug\QSO.dll
+C:\Users\Maicon\Documents\Visual Studio 2008\Projects\QSO\QSO\obj\Debug\QSO.pdb

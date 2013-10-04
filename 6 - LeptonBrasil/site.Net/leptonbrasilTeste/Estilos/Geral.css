@@ -1,0 +1,181 @@
+﻿html, body, #todoConteudo, #form1
+{
+    height: 100%;
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    padding: 0;
+}
+
+body
+{
+    background-image: url('../Graficos/FundoSite.jpg');
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#header
+{
+    background-color: White;
+}
+
+#corpo
+{
+    margin: 0px auto 0px auto;
+    width: 900px;
+    background-color: transparent;
+    background-image: url('../Graficos/backTransparente.png');
+    background-repeat: repeat;
+    font-family: Arial;
+}
+
+.PartsTopDown
+{
+    margin: 0px auto 0px auto;
+    width: 900px;
+    height: 80px;
+}
+
+#LinhaPage
+{
+    height: 5px;
+    width: 100%;
+    background-color: #1E6F99;
+    margin-top: 2px;
+}
+
+#Footer
+{
+    height: 120px;
+    background-image: url('../Graficos/footer-fade.jpg');
+    background-repeat: repeat-x;
+    margin-top: -120px;
+    font-family: Lucida Console;
+    text-transform: uppercase;
+}
+
+#footerInfos
+{
+    font-size: 10pt;
+}
+
+#menu
+{
+    float: left;
+    width: 164px;
+    border-right: 0px dotted #1E6F99;
+}
+
+#conteudoFooter
+{
+    width: 900px;
+    color: Black;
+}
+
+#FooterCopy
+{
+    text-align: center;
+    padding-top: 3px;
+}
+
+.alinhaTopo
+{
+    margin-bottom: -95px;
+}
+
+
+#tituloPagina
+{
+    font-size: 24pt;
+    color: #1E6F99;
+    font-family: Bradley Hand ITC;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    background-color: transparent;
+    text-align: center;
+}
+
+#developed
+{
+    float: right;
+    text-align: right;
+    width: 25%;
+    height: 85px;
+    margin-top: -5px;
+}
+
+.centraliza
+{
+    margin: 0 auto;
+}
+
+#content
+{
+    background-color: White;
+    float: right;
+    width: 695px;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-right: 20px;
+    background-color: transparent;
+    background-repeat: repeat;
+    height: 640px;
+}
+
+#ImgNome
+{
+    text-align: left;
+}
+
+#internaCorpo
+{
+    height: 650px;
+    background-color: transparent;
+    background-repeat: repeat;
+}
+
+#internaCorpo2
+{
+    height: 850px;
+    background-color: transparent;
+    background-repeat: repeat;
+}
+
+.margemInterna
+{
+    padding: 5px;
+}
+
+#screen
+{
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    width: 20%;
+    height: 120px;
+    background-color: transparent;
+    overflow: visible;
+}
+
+#screen .plo
+{
+    position: absolute;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: arial;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.style4
+{
+    font-size: xx-small;
+}
+.style5
+{
+    text-align: right;
+}

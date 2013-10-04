@@ -1,0 +1,54 @@
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\testePMK.com.br.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\testePMK.com.br.pdb
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\testePMK.com.br\testePMK.com.br\obj\Debug\ResolveAssemblyReference.cache
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\testePMK.com.br\testePMK.com.br\obj\Debug\testePMK.com.br.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\testePMK.com.br\testePMK.com.br\obj\Debug\testePMK.com.br.pdb
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\AjaxControlToolkit.pdb
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\ar\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\cs\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\de\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\es\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\fr\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\he\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\hi\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\it\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\ja\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\ko\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\nl\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\pt\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\ru\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\tr-TR\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\zh-CHS\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - MesaPMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\zh-CHT\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\testePMK.com.br.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\testePMK.com.br.pdb
+E:\Meus Documentos\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\AjaxControlToolkit.pdb
+E:\Meus Documentos\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\ar\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\cs\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\de\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\es\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\fr\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\he\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\hi\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\it\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\ja\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\ko\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\nl\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\pt\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\ru\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\tr-TR\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\zh-CHS\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\zh-CHT\AjaxControlToolkit.resources.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\obj\Debug\ResolveAssemblyReference.cache
+E:\Meus Documentos\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\obj\Debug\testePMK.com.br.dll
+E:\Meus Documentos\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\obj\Debug\testePMK.com.br.pdb
+K:\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\testePMK.com.br.dll
+K:\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\testePMK.com.br.pdb
+K:\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\obj\Debug\ResolveAssemblyReference.cache
+K:\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\obj\Debug\testePMK.com.br.dll
+K:\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\obj\Debug\testePMK.com.br.pdb
+C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\testePMK.com.br.dll
+C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\testePMK.com.br.pdb
+C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\obj\Debug\testePMK.com.br.dll
+C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\obj\Debug\testePMK.com.br.pdb

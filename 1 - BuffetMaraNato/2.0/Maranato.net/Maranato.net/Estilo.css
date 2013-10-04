@@ -1,0 +1,55 @@
+﻿body
+{
+	background-color: Transparent;
+	background-image: url('Graficos/fundo.jpg');
+	background-repeat: repeat-y;
+	background-color:White;
+	font-family: "Adobe Garamond Pro";
+	
+}
+
+#conteudoMaster
+{
+	margin-left: 15%;
+	width: 900px;
+	text-align: center;
+}
+
+#rodape
+{
+	margin-left:0%;
+	width:100%;
+}
+
+#menuPrincipal
+{
+	text-align:left;
+}
+
+#conteudo
+{
+		
+}
+
+#CphMaster
+{
+	text-align:center;
+	position:inherit;
+}
+
+#bannerSuperior
+{
+	width:800px;
+	height:240px;	
+	margin-left:0%;
+}
+
+#contents
+{
+	float:right;
+    text-align:left;
+    margin-top: 2%;
+    width:655px;
+    border-right: solid 0.5px Red;	
+    border-bottom: solid 0.5px Red;
+}

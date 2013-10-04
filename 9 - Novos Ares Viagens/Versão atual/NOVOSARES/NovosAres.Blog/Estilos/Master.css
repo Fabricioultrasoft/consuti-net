@@ -1,0 +1,170 @@
+﻿body
+{
+    margin: 0;
+    height: 100%;
+}
+
+.completaFundo
+{
+    background-color: #0080FF;
+}
+
+.fundoSite
+{
+    background-image: url('../Graficos/fundoBlog.png');
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 659px;
+    margin-bottom: 0px;
+}
+.corpoSite
+{
+    margin: 0 auto;
+    width: 1200px;
+    height: 559px;
+}
+
+.lateralEsquerda
+{
+    float: left;
+    width: 30px;
+    height: 500px;
+    margin-top: 55px;
+    text-align: center;
+}
+
+.lateralDireita
+{
+    float: right;
+    width: 250px;
+    height: 500px;
+}
+
+.conteudoBlog
+{
+    float: left;
+    width: 889px;
+    height: 500px;
+    margin-left: 10px;
+    margin-bottom: 36px;
+}
+
+.abaVoltarSite
+{
+    font-size: large;
+    width: 300px;
+    float: left;
+    text-align: left;
+    padding-top: 5px;
+    height: 30px;
+}
+
+#pnlAbaVoltarSite
+{
+    background-repeat: no-repeat;
+}
+
+.linkAbaVoltarSite
+{
+    margin-top: 7px;
+    margin-left: 5px;
+    color: White;
+    font-weight: 700;
+    text-align: center;
+}
+
+#logo
+{
+    width: 100%;
+    text-align: center;
+}
+
+.menuBlog
+{
+    padding: 10px 10px 10px 10px;
+    height: 210px;
+    width: 160px;
+    margin: 0 auto;
+}
+
+.itensMenuBlog
+{
+    text-align: center;
+    color: Gray;
+}
+
+#opcoesMenu
+{
+    color: #0080FF;
+    text-decoration: none;
+    width: 170px;
+}
+
+.buscaBlog
+{
+    text-align: left;
+    color: White;
+    padding: 10px 10px 10px 10px;
+    font-weight: bold;
+}
+
+.txbBusca
+{
+    border: 0 none white;
+    width: 90%;
+    margin-left: 10px;
+}
+
+.rodaPe
+{
+    color: White;
+    width: 100%;
+    text-align: center;
+}
+
+.pnlConteudo
+{
+    width: 100%;
+    height: 500px;
+    background-color: White;
+}
+
+.backNonRepeat
+{
+    background-repeat: no-repeat;
+}
+
+#facesFaceBook
+{
+    float: left;
+    width: 682px;
+    height: 65px;
+}
+
+#rodapeIntegra
+{    
+    margin: 0 auto;
+    width: 1200px;
+    height: 65px;
+}
+
+#followTwitter
+{
+    text-align: center;
+    float: left;
+    width: 180px;
+    height: 65px;
+    margin: 0 0 0 25px;
+}
+
+#sigaTwitter
+{
+    float: right;
+    text-align: center;
+    color: #0080FF;
+    font-size: x-large;
+    height: 65px;
+    width: 104px;
+}
+

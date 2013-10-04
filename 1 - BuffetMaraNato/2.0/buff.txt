@@ -1,0 +1,18 @@
+telas:
+contato
+localização
+produtos (subcategorias)
+serviços
+institucional
+GALERIA DE FOTOS
+area administrativa
+Orçamentos
+mensagens
+
+
+tabelas:
+doces
+salgados
+bolos
+mensagens
+histórico de pedidos

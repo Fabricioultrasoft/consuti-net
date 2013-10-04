@@ -1,0 +1,12 @@
+input {
+background-color: #FFFAFA; font-size:12px ; font-family:Arial, Helvetica, sans-serif; border: 1px solid #00BFFF;
+}
+A:link {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: underline; 
+}
+A:visited {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: underline;
+}
+A:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: underline overline;  
+}

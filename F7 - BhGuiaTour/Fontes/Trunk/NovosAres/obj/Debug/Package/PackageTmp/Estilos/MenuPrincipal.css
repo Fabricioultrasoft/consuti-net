@@ -1,0 +1,29 @@
+﻿#quemSomos, #viagens, #antesViajar
+{
+    border-bottom: 2px solid white;   
+}
+
+#faleComAGente, #quemSomos, #viagens, #antesViajar
+{
+    color: White;
+    padding: 5px;
+}
+
+#contentMenu
+{
+    font-size: 16pt;
+    background-color: Orange;
+    padding-right: 15px;
+    width: 272px;    
+}
+
+a:hover
+{
+    color: Red;
+}
+
+a
+{
+    color: White;
+    text-decoration: none;
+}

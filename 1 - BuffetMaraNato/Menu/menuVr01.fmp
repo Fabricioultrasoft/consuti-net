@@ -1,0 +1,50 @@
+<TEMPLATE APPNAME="123FLASHMENU" VER_NUMBER="2" VER_LOWNUMBER="2" TYPE="1" SWF_NAME="drop-down" SUB_LEVEL="0" CATALOG="2" SWF_SHOWNAME="drop-down" WIDTH="700" HEIGHT="150" BGCOLOR="clWhite" FLASHBGCOLOR="clBlack" TRANSPARENT="true">
+	<GROUP_ATTRIBUTE>
+		<PARAM ID="1" DF_VALUE="new item"/>
+		<PARAM ID="2" DF_VALUE=""/>
+		<PARAM ID="3" DF_VALUE="_blank,_parent,_self,_top"/>
+	</GROUP_ATTRIBUTE>
+	<GROUP_MENU>
+		<PARAM ID="1" DF_VALUE="140"/>
+		<PARAM ID="2" DF_VALUE="22"/>
+		<PARAM ID="3" DF_VALUE="0"/>
+		<PARAM ID="4" DF_VALUE="Arial"/>
+		<PARAM ID="5" DF_VALUE="11"/>
+		<PARAM ID="7" DF_VALUE="false"/>
+		<PARAM ID="22" DF_VALUE="false"/>
+		<PARAM ID="8" DF_VALUE="left,center,right"/>
+		<PARAM ID="9" DF_VALUE="0"/>
+		<PARAM ID="10" DF_VALUE="0"/>
+		<PARAM ID="11" DF_VALUE="true"/>
+		<PARAM ID="13" DF_VALUE="clRed"/>
+		<GROUP_PARAM ID="282">
+			<PARAM ID="260" DF_VALUE="clMaroon"/>
+			<PARAM ID="262" DF_VALUE="clBlack"/>
+			<PARAM ID="287" DF_VALUE="clWhite"/>
+			<PARAM ID="288" DF_VALUE="clYellow"/>
+		</GROUP_PARAM>
+		<GROUP_PARAM ID="283">
+			<PARAM ID="267" DF_VALUE="clMaroon"/>
+			<PARAM ID="269" DF_VALUE="clRed"/>
+			<PARAM ID="291" DF_VALUE="clYellow"/>
+			<PARAM ID="295" DF_VALUE="clYellow"/>
+		</GROUP_PARAM>
+		<PARAM ID="348" DF_VALUE=""/>
+		<PARAM ID="349" DF_VALUE=""/>
+		<PARAM ID="20" DF_VALUE="70"/>
+		<PARAM ID="17" DF_VALUE="false"/>
+		<PARAM ID="150" DF_VALUE="false"/>
+		<PARAM ID="253" DF_VALUE="V:\ConsuTI\BuffetMaraNato\Logo\Graphic1.jpg"/>
+	</GROUP_MENU>
+	<GROUP_SIZE>
+		<PARAM ID="140" DF_VALUE="700"/>
+		<PARAM ID="141" DF_VALUE="150"/>
+	</GROUP_SIZE>
+	<GROUP_PAGE>
+		<PARAM ID="143" DF_VALUE="clWhite"/>
+		<PARAM ID="144" DF_VALUE="clBlack"/>
+		<PARAM ID="145" DF_VALUE="true"/>
+	</GROUP_PAGE>
+	<MENU>
+		<item name="Principal" url="index.php" callback="onClick"/><item name="Produtos" callback="onClick"><item name="Bolos" url="bolos.php" callback="onClick"/><item name="Doces" url="doces.php" callback="onClick"/><item name="Salgados" url="salgados.php" callback="onClick"/></item><item name="Encomende" callback="onClick"><item name="Como funciona" url="tutorial.php" callback="onClick"/><item name="Faça sua encomenda" url="encomende.php" callback="onClick"/></item><item name="Eventos" callback="onClick"><item name="Café da manhã" url="cafe.php" callback="onClick"/><item name="Infantil" url="infantil.php" callback="onClick"/></item><item name="A Empresa" callback="onClick"><item name="Formas de Pagamento" url="pagamento.php" callback="onClick"/><item name="Galeria de Fotos" url="fotos.php" callback="onClick"/><item name="Mensagens" url="mensagens.php" callback="onClick"/><item name="Nossa Gente" url="NossaGente.php" callback="onClick"/></item></MENU>
+</TEMPLATE>

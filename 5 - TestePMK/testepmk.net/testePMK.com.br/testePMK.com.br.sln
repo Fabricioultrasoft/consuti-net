@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testePMK.com.br", "testePMK.com.br\testePMK.com.br.csproj", "{FA59B8C1-0D84-4F60-9C22-345C16328E4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA59B8C1-0D84-4F60-9C22-345C16328E4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA59B8C1-0D84-4F60-9C22-345C16328E4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA59B8C1-0D84-4F60-9C22-345C16328E4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA59B8C1-0D84-4F60-9C22-345C16328E4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

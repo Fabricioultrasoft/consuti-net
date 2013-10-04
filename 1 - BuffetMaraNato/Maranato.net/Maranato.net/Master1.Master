@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master1.master.cs" Inherits="Maranato.net.Master1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+
+
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="Stylesheet" href="estilo.css" media="screen" />
+    </head>
+<body>
+    <form id="form1" runat="server" >
+    <div id="conteudoMaster">
+        
+        <div> 
+            <div id="menuPrincipal">
+                <div id="bannerSuperior">
+                    <a style="border-width:0px; border-color:White" href="../Default.aspx">
+                    <img alt="BuffetMaranato" src="../Graficos/BannSuperior.png" 
+                        style="background-color: #FFFFFF; border-width:0px" /></a>
+                </div>
+                
+                <div id="contents">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"  >               
+            
+                         </asp:ContentPlaceHolder>
+                         </div>
+                         
+                <br />
+                <object style="height: 175px;  width: 240px;" id="menu" >
+                    <param name="ban2" value="../Graficos/menuPrincipal.swf" />
+                    <param name="quality" value="high" />
+                    <param name="wmode" value="TRANSPARENT" />
+                    <embed src="../Graficos/menuPrincipal.swf" wmode="transparent" quality="high" bgcolor="" height="175px"; width="240px;"/>
+                </object>
+        </div>            
+            </div>
+        <div id="rodape">        
+            
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            
+            <br />
+            
+            <object style="height: 160px; width: 450px;" id="bannerInferior" >
+            <param name="ban2" value="../Graficos/bannerInferior.swf" />
+            <param name="quality" value="high" />
+            <param name="wmode" value="TRANSPARENT" />
+            <embed src="../Graficos/bannerInferior.swf" quality="high" bgcolor="" width="450px" height="160"/>
+            </object>
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            2009 - 2010 Buffet Maranato&copy; - All Rights Reserved
+            <div style="float:right">
+            Desenvolvido por<br />
+                <a href="http://www.consuti.net" > <img alt="ConsuTI.net" style="border-style:none" src="../Graficos/Consuti.png" /></a></div>
+            </div>
+        
+    </div>
+    </form>
+</body>
+</html>

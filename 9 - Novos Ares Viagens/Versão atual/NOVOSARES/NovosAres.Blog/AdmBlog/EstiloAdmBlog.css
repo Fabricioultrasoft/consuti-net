@@ -1,0 +1,109 @@
+﻿body
+{
+    margin: 0;
+}
+
+.estiloTxb
+{
+    background-color: #CEE7FF;
+    width: 400px;
+}
+
+.tituloForm
+{
+    text-align: center;
+}
+
+.formCadastroPost
+{
+    padding: 10px 10px 10px 10px;
+    margin-left: 30px;
+}
+
+.loginAdmBlog
+{
+    width: 400px;
+    margin: auto auto;
+}
+
+.fundoSite
+{
+    background-image: url(../Graficos/fundoBlog.png);
+    background-position: bottom;
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 100%;
+}
+.corpoSite
+{
+    margin: 0 auto;
+    width: 1000px;
+    height: 429px;
+}
+
+.lateralEsquerda
+{
+    float: left;
+    width: 30px;
+    height: 327px;
+    margin-top: 55px;
+    text-align:center;
+}
+
+.lateralDireita
+{
+    float: right;
+    width: 250px;
+    height: 393px;
+}
+
+.conteudoBlog
+{
+    float: left;
+    width: 689px;
+    height: 352px;
+    margin-left: 10px;
+}
+
+.abaVoltarSite
+{
+    font-size: large;
+    width: 300px;
+    float: left;
+    text-align: left;
+    padding-top: 3px;
+    height: 25px;
+}
+
+.linkAbaVoltarSite
+{
+    color: White;
+    font-weight: 700;
+    text-align: center;
+    margin-left: 0px;
+}
+
+#logo
+{
+    width: 100%;
+    text-align: center;
+}
+
+.menuBlog
+{
+    padding: 10px 10px 10px 10px;
+    height: 300px;
+}
+
+.itensMenuBlog
+{
+    text-align: center;
+    color: Gray;
+}
+
+#btns
+{
+    text-align: center;
+    margin-bottom: 0px;
+}
+

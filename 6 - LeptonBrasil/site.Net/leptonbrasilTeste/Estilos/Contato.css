@@ -1,0 +1,32 @@
+﻿#elementosForm
+{
+    width: 450px;
+    margin: 0px auto 0px auto;
+    background-color: #FFFFFF;
+}
+
+#ConteudoContato
+{
+    margin-left: 20px;
+}
+
+#btnsForm
+{
+    text-align: center;
+}
+
+#imgEmailEsquerda
+{
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-left: 97px;
+}
+
+#imgEmailDireita
+{
+    float: right;
+    width: 520px;
+    height: 50px;
+    vertical-align:text-bottom;
+}

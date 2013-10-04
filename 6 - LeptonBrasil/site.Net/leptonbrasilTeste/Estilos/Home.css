@@ -1,0 +1,23 @@
+﻿#subtituloHome
+{
+    text-align: center;
+}
+
+#tblMenuHome
+{
+    margin: -30px auto;
+    background-color: White;
+}
+
+#imagemApresentacao
+{
+    text-align: center;
+    height: 316px;
+    margin-top: -2px;
+    padding-bottom: 10px;
+}
+
+#menuHome
+{
+    background-color: White;
+}

@@ -1,0 +1,160 @@
+﻿body
+{
+	background: url(imagens/Fundo.jpg);
+	border: 0;
+	margin: 0;
+	padding: 0;
+
+}
+
+#form1
+{
+ margin-left:202px;
+ margin-right:200px;
+ width: 802px;
+ background-color:White;
+	height: 807px;
+}
+
+#menu {
+	list-style: none;
+	padding: 0;
+	width: 770px;
+	height: 210px;
+	background: url(imagens/menu-bg.jpg) no-repeat;
+	margin-right: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 9px;
+}
+#menu span {
+	display: none;
+	position: absolute;
+}
+#menu a {
+	display: block;
+	text-indent: -900%;
+	position: absolute;
+	outline: none;
+}
+#menu a:hover {
+	background-position: left bottom;
+}
+#menu a:hover span{
+	display: block;
+}
+#menu .home {
+	width: 144px;
+	height: 58px;
+	background: url(imagens/home.gif) no-repeat;
+	left: 250px;
+	top: 42px;
+}
+#menu .home span {
+	width: 86px;
+	height: 14px;
+	background: url(imagens/home-over.gif) no-repeat;
+	left: 28px;
+	top: -20px;
+}
+#menu .about {
+	width: 131px;
+	height: 51px;
+	background: url(imagens/Contato.gif) no-repeat;
+	left: 781px;
+	top: 47px;
+}
+#menu .about span {
+	width: 40px;
+	height: 12px;
+	background: url(imagens/about-over.gif) no-repeat;
+	left: 44px;
+	top: 54px;
+}
+#menu .rss {
+	width: 112px;
+	height: 47px;
+	background: url(imagens/rss.gif) no-repeat;
+	left: 502px;
+	top: 132px;
+}
+#menu .rss span {
+	width: 92px;
+	height: 20px;
+	background: url(imagens/rss-over.gif) no-repeat;
+	left: 26px;
+	top: -20px;
+}
+
+#oque
+ {
+ 	 margin-left:150px;
+
+ 	 
+ 	 
+ }
+ #onde
+ {
+ 	margin-left:150px;
+
+ }
+ #funcionamento
+ {
+
+	text-align:left;
+	margin-top:20px;
+	width: 362px;
+	height: 214px;
+	float:left;
+	border:5px solid #999;-moz-border-radius:5px;-webkit-border-radius:5px;
+	margin-left: 3px;
+}
+ #domferi
+ {
+	text-align:left;
+	float:left;
+	width: 363px;
+	height: 183px;
+	border:5px solid #999;-moz-border-radius:5px;-webkit-border-radius:5px;
+	margin-left: -5px;
+	margin-top: 28px;
+}
+ #site
+ {
+
+	text-align:left;
+	float:right;
+	width: 417px;
+	height: 104px;
+	border:5px solid #999;-moz-border-radius:5px;-webkit-border-radius:5px;
+	}
+ #email
+ {
+
+ 	text-align:left;
+ 	float:right;
+	width: 417px;
+	height: 104px;
+	border:5px solid #999;-moz-border-radius:5px;-webkit-border-radius:5px;
+	}
+ #pagto
+ {
+
+ 	text-align:left;
+ 	float:right;
+	width: 416px;
+	height: 179px;
+    border:5px solid #999;-moz-border-radius:5px;-webkit-border-radius:5px;
+
+}
+ #buscar
+ {
+ 	margin-left:340px;
+ 	margin-top:240px;
+
+ }
+#ContentPlaceHolder1
+{
+	text-align:center;
+	background-color:White;
+}

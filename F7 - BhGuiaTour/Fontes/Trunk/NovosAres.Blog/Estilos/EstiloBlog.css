@@ -1,0 +1,64 @@
+﻿body
+{
+}
+
+.botoesNavegacao
+{
+    float: right;
+    width:32px
+}
+
+.botaoNavVoltar
+{
+    text-align: center;
+    margin-top:618px;
+}
+
+.botaoNavAvancar
+{
+    float: right;    
+    text-align: center;
+}
+
+#localPost
+{
+    border-left: 5px solid #0080FF;
+    width: 150px;
+    float: right;
+    color: #0080FF;        
+}
+
+#textoTitulo
+{
+    width:730px;
+    float: left;
+    text-align: right;
+    font-size: x-large;
+    color: #0080FF;
+}
+
+#textoPost
+{
+    text-align:left;
+    margin-left:20px;
+    padding: 15px;
+}
+
+#rodapeIntegracao
+{
+    width: 100%;
+}
+
+#integraTwitter
+{
+    width:30%;
+    float: right;
+    text-align: center;
+}
+
+#integraFace
+{
+    width: 69%;
+    float: left;
+    text-align: center;
+}

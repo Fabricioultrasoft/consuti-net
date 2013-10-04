@@ -1,0 +1,5 @@
+E:\Meus Documentos\ConsuTI\Clientes\3 - BrasilandiaDeMinas\BrasilandiaDeMinas\BrasilandiaDeMinas\bin\BrasilandiaDeMinas.dll
+E:\Meus Documentos\ConsuTI\Clientes\3 - BrasilandiaDeMinas\BrasilandiaDeMinas\BrasilandiaDeMinas\bin\BrasilandiaDeMinas.pdb
+E:\Meus Documentos\ConsuTI\Clientes\3 - BrasilandiaDeMinas\BrasilandiaDeMinas\BrasilandiaDeMinas\obj\Debug\ResolveAssemblyReference.cache
+E:\Meus Documentos\ConsuTI\Clientes\3 - BrasilandiaDeMinas\BrasilandiaDeMinas\BrasilandiaDeMinas\obj\Debug\BrasilandiaDeMinas.dll
+E:\Meus Documentos\ConsuTI\Clientes\3 - BrasilandiaDeMinas\BrasilandiaDeMinas\BrasilandiaDeMinas\obj\Debug\BrasilandiaDeMinas.pdb

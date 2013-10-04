@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TTR.master.cs" Inherits="TTR.Site.TTR" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="Stylesheet" href="../../Layout/Estilos/ResultadoBusca.css" type="text/css" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="text-align: right; margin: 0 20px;">
+        <asp:LinkButton ID="LoginLinkButton" runat="server">Login</asp:LinkButton>
+    </div>
+    <div>
+        <div style="margin: 50px auto 20px; text-align: center">
+            <asp:ImageButton ID="LogoImageButton" runat="server" ImageUrl="~/Layout/Imgs/Logo.png" />
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,5 @@
+E:\Meus Documentos\ConsuTI\Clientes\F1 - QueroSaberOnde\QueroSaberOnde.com.br\QSO\bin\QSO.dll
+E:\Meus Documentos\ConsuTI\Clientes\F1 - QueroSaberOnde\QueroSaberOnde.com.br\QSO\bin\QSO.pdb
+E:\Meus Documentos\ConsuTI\Clientes\F1 - QueroSaberOnde\QueroSaberOnde.com.br\QSO\obj\Debug\ResolveAssemblyReference.cache
+E:\Meus Documentos\ConsuTI\Clientes\F1 - QueroSaberOnde\QueroSaberOnde.com.br\QSO\obj\Debug\QSO.dll
+E:\Meus Documentos\ConsuTI\Clientes\F1 - QueroSaberOnde\QueroSaberOnde.com.br\QSO\obj\Debug\QSO.pdb

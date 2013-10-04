@@ -1,0 +1,42 @@
+﻿input[type=text]
+{
+    border: 1px solid #0080C0;
+}
+
+input[type=submit]
+{
+    border: 1px solid #0080C0;
+}
+
+.imgResultadoBusca
+{
+    width: 100px;
+    height: 100px;
+    float: left;
+    padding: 5px;
+}
+
+.detalhesResultadoBusca
+{
+    width: 600px;
+    float: right;
+}
+
+.itemLista
+{
+    width: 710px;
+    margin: 15px;
+}
+
+.buscaTrocaButton
+{
+    font-family: Comic Sans MS;
+    font-size: 14pt;
+}
+
+.buscaTrocaTextBox
+{
+    padding: 5px;
+    font-family: Comic Sans MS;
+    font-size: 14pt;
+}
