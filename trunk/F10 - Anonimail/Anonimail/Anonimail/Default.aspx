@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="Anonimail.Master" AutoEventWireup="true"
     CodeBehind="Default.aspx.cs" Inherits="Anonimail.WebForm1" %>
-
 <%@ Register Namespace="Anonimail.Utilitarios" TagPrefix="custom" %>
+<%@ Register Assembly="MSCaptcha" Namespace="MSCaptcha" TagPrefix="cc2" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .style1
@@ -43,7 +44,8 @@
                     E-mail Destino:
                 </td>
                 <td class="style2">
-                    <asp:TextBox ID="EmailDestinoTextBox" runat="server" Width="250px" MaxLength="100" TabIndex="1"></asp:TextBox>
+                    <asp:TextBox ID="EmailDestinoTextBox" runat="server" Width="250px" MaxLength="100"
+                        TabIndex="1"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -54,7 +56,8 @@
                     Email Resposta:
                 </td>
                 <td class="style2">
-                    <asp:TextBox ID="EmailRespostaTextBox" runat="server" Width="250px" MaxLength="100" TabIndex="2"></asp:TextBox>
+                    <asp:TextBox ID="EmailRespostaTextBox" runat="server" Width="250px" MaxLength="100"
+                        TabIndex="2"></asp:TextBox>
                     &nbsp;<span class="style3">(apenas se desejar receber uma resposta)</span>
                 </td>
             </tr>
@@ -75,7 +78,8 @@
                     &nbsp;
                 </td>
                 <td class="style2" style="vertical-align: top; padding-top: 5px">
-                    <custom:CustomEditor ID="TextoTextBox" runat="server" Height="310px" Width="550px" CssClass="CustomEditor" TabIndex="4" />
+                    <custom:CustomEditor ID="TextoTextBox" runat="server" Height="310px" Width="550px"
+                        CssClass="CustomEditor" TabIndex="4" />
                 </td>
             </tr>
         </table>
@@ -85,6 +89,21 @@
             <asp:Button ID="EnviarButton" runat="server" Text="Enviar" CausesValidation="true"
                 Width="110px" CssClass="button" Style="margin-left: 10px; margin-right: 11px"
                 OnClick="EnviarButton_Click" TabIndex="6" />
+        </div>
+        <div>
+            <div>
+                <cc2:captchacontrol id="Captcha1" runat="server" captchabackgroundnoise="Low" captchalength="5"
+                    captchaheight="60" captchawidth="200" captchalinenoise="None" captchamintimeout="5"
+                    captchamaxtimeout="240" fontcolor="#529E00" />
+            </div>
+            <asp:TextBox ID="txtCaptcha" runat="server"></asp:TextBox>
+            <br />
+            <asp:Button ID="btnVerify" runat="server" Text="Verify" OnClick="btnVerify_Click" />
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*Required"
+                ControlToValidate="txtCaptcha"></asp:RequiredFieldValidator>
+            <br />
+            <br />
+            <asp:Label ID="lblMessage" runat="server" Font-Names="Arial" Text=""></asp:Label>
         </div>
     </asp:Panel>
 </asp:Content>

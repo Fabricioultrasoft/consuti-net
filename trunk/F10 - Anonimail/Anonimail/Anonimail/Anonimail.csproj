@@ -37,8 +37,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\AjaxControlToolkit.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="MySql.Data, Version=5.2.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MSCaptcha">
+      <HintPath>libs\MSCaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
