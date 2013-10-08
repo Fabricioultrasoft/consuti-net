@@ -1,8 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="Anonimail.Master" AutoEventWireup="true"
-    CodeBehind="Default.aspx.cs" Inherits="Anonimail.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="Anonimail.Master" CodeBehind="Default.aspx.cs"
+    Inherits="Anonimail.WebForm1" AutoEventWireup="true" %>
+
 <%@ Register Namespace="Anonimail.Utilitarios" TagPrefix="custom" %>
 <%@ Register Assembly="MSCaptcha" Namespace="MSCaptcha" TagPrefix="cc2" %>
-
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc3" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .style1
@@ -90,20 +91,37 @@
                 Width="110px" CssClass="button" Style="margin-left: 10px; margin-right: 11px"
                 OnClick="EnviarButton_Click" TabIndex="6" />
         </div>
-        <div>
-            <div>
-                <cc2:captchacontrol id="Captcha1" runat="server" captchabackgroundnoise="Low" captchalength="5"
-                    captchaheight="60" captchawidth="200" captchalinenoise="None" captchamintimeout="5"
-                    captchamaxtimeout="240" fontcolor="#529E00" />
-            </div>
-            <asp:TextBox ID="txtCaptcha" runat="server"></asp:TextBox>
-            <br />
-            <asp:Button ID="btnVerify" runat="server" Text="Verify" OnClick="btnVerify_Click" />
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*Required"
-                ControlToValidate="txtCaptcha"></asp:RequiredFieldValidator>
-            <br />
-            <br />
-            <asp:Label ID="lblMessage" runat="server" Font-Names="Arial" Text=""></asp:Label>
-        </div>
+        <asp:Panel ID="captchaPanel" runat="server" BackColor="White" Width="300px" Height="150px"
+            BorderColor="Green" BorderWidth="1px">
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+                <ContentTemplate>
+                    <div style="margin-bottom: 10px; padding-top: 10px">
+                        <cc2:CaptchaControl ID="Captcha1" runat="server" CaptchaBackgroundNoise="Low" CaptchaLength="5"
+                            CaptchaHeight="60" CaptchaWidth="200" CaptchaLineNoise="None" CaptchaMinTimeout="5"
+                            CaptchaMaxTimeout="240" FontColor="#529E00" />
+                    </div>
+                    <div style="text-align: left; margin-left: 10px; width: 280px">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*"
+                            ControlToValidate="txtCaptcha">
+                        </asp:RequiredFieldValidator>Código Verificador:
+                        <asp:TextBox ID="txtCaptcha" runat="server" MaxLength="5" Text="ver no SCA como funfa" Width="100px"></asp:TextBox>
+                    </div>
+                    <div style="text-align: right; margin-right: 10px; margin-top: 10px">
+                        <asp:Button ID="btnVerify" runat="server" Text="Enviar" CssClass="button" Width="75px"
+                            OnClientClick="btnVerify_Click1" CausesValidation="true" />
+                        &nbsp;&nbsp;
+                        <asp:Button ID="CancelarButton" runat="server" Text="Cancelar" CssClass="button"
+                            Width="75px" OnClick="CancelarButton_Click" CausesValidation="false" />
+                    </div>
+                    <br />
+                    <br />
+                    <asp:Label ID="lblMessage" runat="server" Font-Names="Arial" Text=""></asp:Label>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </asp:Panel>
+        <cc3:ModalPopupExtender ID="captchaPanel_ModalPopupExtender" runat="server" DynamicServicePath=""
+            Enabled="True" TargetControlID="EnviarButton" PopupControlID="captchaPanel" DropShadow="true"
+            BackgroundCssClass="modalBackground">
+        </cc3:ModalPopupExtender>
     </asp:Panel>
 </asp:Content>

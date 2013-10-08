@@ -285,3 +285,21 @@ input[type='text'], textarea
     font-style: italic;
     color: #87ae12;
 }
+
+.modalBackground
+{
+      background-color: Green;
+      filter: alpha(opacity=50);
+      opacity: 0.5;
+}
+ 
+.modalPopup
+{
+      background-color:#ffffdd;
+      border-width:3px;
+      border-style:solid;
+      border-color:Gray;
+      padding:5px;
+      width: 350px;
+      height:300px;
+}

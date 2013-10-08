@@ -112,6 +112,24 @@ namespace Anonimail {
         protected global::System.Web.UI.WebControls.Button EnviarButton;
         
         /// <summary>
+        /// captchaPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel captchaPanel;
+        
+        /// <summary>
+        /// UpdatePanel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        
+        /// <summary>
         /// Captcha1 control.
         /// </summary>
         /// <remarks>
@@ -119,6 +137,15 @@ namespace Anonimail {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::MSCaptcha.CaptchaControl Captcha1;
+        
+        /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
         /// txtCaptcha control.
@@ -139,13 +166,13 @@ namespace Anonimail {
         protected global::System.Web.UI.WebControls.Button btnVerify;
         
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// CancelarButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.Button CancelarButton;
         
         /// <summary>
         /// lblMessage control.
@@ -155,5 +182,14 @@ namespace Anonimail {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMessage;
+        
+        /// <summary>
+        /// captchaPanel_ModalPopupExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ModalPopupExtender captchaPanel_ModalPopupExtender;
     }
 }

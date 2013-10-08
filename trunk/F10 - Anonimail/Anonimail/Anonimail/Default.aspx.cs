@@ -46,21 +46,6 @@ namespace Anonimail
 
         }
 
-        protected void btnVerify_Click(object sender, EventArgs e)
-        {
-            Captcha1.ValidateCaptcha(txtCaptcha.Text.Trim());
-            if (Captcha1.UserValidated)
-            {
-                lblMessage.ForeColor = System.Drawing.Color.Green;
-                lblMessage.Text = "Valid";
-            }
-            else
-            {
-                lblMessage.ForeColor = System.Drawing.Color.Red;
-                lblMessage.Text = "InValid";
-            }
-        }
-
         /// <summary>
         /// Salva o anonimail no banco e envia para o destinatário
         /// </summary>
@@ -90,6 +75,26 @@ namespace Anonimail
                 TituloTextBox.Text =
                 EmailDestinoTextBox.Text =
                 EmailRespostaTextBox.Text = string.Empty;
+        }
+
+        protected void btnVerify_Click1(object sender, EventArgs e)
+        {
+            Captcha1.ValidateCaptcha(txtCaptcha.Text.Trim());
+            if (Captcha1.UserValidated)
+            {
+                txtCaptcha.Text = string.Empty;
+                captchaPanel_ModalPopupExtender.Hide();
+            }
+            else
+            {
+                UpdatePanel1.Update();
+            }
+        }
+
+        protected void CancelarButton_Click(object sender, EventArgs e)
+        {
+            txtCaptcha.Text = string.Empty;
+            captchaPanel_ModalPopupExtender.Hide();
         }
     }
 }
