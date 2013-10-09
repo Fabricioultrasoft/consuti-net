@@ -157,6 +157,15 @@ namespace Anonimail {
         protected global::System.Web.UI.WebControls.TextBox txtCaptcha;
         
         /// <summary>
+        /// lblMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
+        
+        /// <summary>
         /// btnVerify control.
         /// </summary>
         /// <remarks>
@@ -173,15 +182,6 @@ namespace Anonimail {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button CancelarButton;
-        
-        /// <summary>
-        /// lblMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMessage;
         
         /// <summary>
         /// captchaPanel_ModalPopupExtender control.

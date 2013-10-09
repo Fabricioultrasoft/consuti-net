@@ -91,7 +91,7 @@
                 Width="110px" CssClass="button" Style="margin-left: 10px; margin-right: 11px"
                 OnClick="EnviarButton_Click" TabIndex="6" />
         </div>
-        <asp:Panel ID="captchaPanel" runat="server" BackColor="White" Width="300px" Height="150px"
+        <asp:Panel ID="captchaPanel" runat="server" BackColor="White" Width="350px" Height="150px"
             BorderColor="Green" BorderWidth="1px">
             <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
                 <ContentTemplate>
@@ -100,22 +100,23 @@
                             CaptchaHeight="60" CaptchaWidth="200" CaptchaLineNoise="None" CaptchaMinTimeout="5"
                             CaptchaMaxTimeout="240" FontColor="#529E00" />
                     </div>
-                    <div style="text-align: left; margin-left: 10px; width: 280px">
+                    <div style="text-align: left; margin-left: 10px; width: 330px">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*"
                             ControlToValidate="txtCaptcha">
                         </asp:RequiredFieldValidator>Código Verificador:
-                        <asp:TextBox ID="txtCaptcha" runat="server" MaxLength="5" Text="ver no SCA como funfa" Width="100px"></asp:TextBox>
+                        <asp:TextBox ID="txtCaptcha" runat="server" MaxLength="5" Text="" Width="100px"></asp:TextBox>
+                        <span style="font-size: 8pt; color: Red">
+                            <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label></span>
                     </div>
                     <div style="text-align: right; margin-right: 10px; margin-top: 10px">
                         <asp:Button ID="btnVerify" runat="server" Text="Enviar" CssClass="button" Width="75px"
-                            OnClientClick="btnVerify_Click1" CausesValidation="true" />
+                            CausesValidation="true" OnClick="btnVerify_Click" />
                         &nbsp;&nbsp;
                         <asp:Button ID="CancelarButton" runat="server" Text="Cancelar" CssClass="button"
                             Width="75px" OnClick="CancelarButton_Click" CausesValidation="false" />
                     </div>
                     <br />
                     <br />
-                    <asp:Label ID="lblMessage" runat="server" Font-Names="Arial" Text=""></asp:Label>
                 </ContentTemplate>
             </asp:UpdatePanel>
         </asp:Panel>

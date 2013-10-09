@@ -6,7 +6,7 @@ using Anonimail.Utilitarios;
 namespace Anonimail
 {
     public partial class WebForm1 : PageBase
-    {
+    {   
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -77,7 +77,13 @@ namespace Anonimail
                 EmailRespostaTextBox.Text = string.Empty;
         }
 
-        protected void btnVerify_Click1(object sender, EventArgs e)
+        protected void CancelarButton_Click(object sender, EventArgs e)
+        {
+            txtCaptcha.Text = string.Empty;
+            captchaPanel_ModalPopupExtender.Hide();
+        }
+
+        protected void btnVerify_Click(object sender, EventArgs e)
         {
             Captcha1.ValidateCaptcha(txtCaptcha.Text.Trim());
             if (Captcha1.UserValidated)
@@ -87,14 +93,10 @@ namespace Anonimail
             }
             else
             {
+                txtCaptcha.Text = string.Empty;
+                lblMessage.Text = "Código Inválido!";
                 UpdatePanel1.Update();
             }
-        }
-
-        protected void CancelarButton_Click(object sender, EventArgs e)
-        {
-            txtCaptcha.Text = string.Empty;
-            captchaPanel_ModalPopupExtender.Hide();
         }
     }
 }
