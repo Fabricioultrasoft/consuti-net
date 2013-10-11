@@ -68,6 +68,7 @@
     <Content Include="DesbloquearEmail\Default.aspx" />
     <Content Include="Responder.aspx" />
     <Content Include="Contato.aspx" />
+    <Content Include="Scripts\JSAnonimail.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

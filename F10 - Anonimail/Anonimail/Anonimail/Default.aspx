@@ -69,7 +69,8 @@
                     Titulo do E-mail:
                 </td>
                 <td class="style2">
-                    <asp:TextBox ID="TituloTextBox" runat="server" Width="550px" MaxLength="100" TabIndex="3"></asp:TextBox>
+                    <asp:TextBox ID="TituloTextBox" runat="server" Width="550px" MaxLength="100" onkeyup="Contador(this)"
+                        TabIndex="3"></asp:TextBox>
                     <br />
                 </td>
             </tr>
@@ -83,14 +84,25 @@
                         CssClass="CustomEditor" TabIndex="4" />
                 </td>
             </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <div style="font-size: 8pt; margin-top: -5px">
+                        <input type="text" readonly="readonly" id="totalPlain" value="" style="border: 0;
+                            font-size: 8pt; width: 24px; background-color: #F8F8F8; text-align: right" />
+                        / 1000
+                    </div>
+                    <div style="text-align: right; margin-top: -15px">
+                        <asp:Button ID="LimparTudoButton" runat="server" Text="Limpar Tudo" Width="110px"
+                            CssClass="button" CausesValidation="false" OnClick="LimparTudoButton_Click" TabIndex="5" />
+                        <asp:Button ID="EnviarButton" runat="server" Text="Enviar" CausesValidation="true"
+                            Width="110px" CssClass="button" Style="margin-left: 10px; margin-right: 11px"
+                            OnClick="EnviarButton_Click" TabIndex="6" />
+                    </div>
+                </td>
+            </tr>
         </table>
-        <div style="padding: 5px; text-align: right;">
-            <asp:Button ID="LimparTudoButton" runat="server" Text="Limpar Tudo" Width="110px"
-                CssClass="button" CausesValidation="false" OnClick="LimparTudoButton_Click" TabIndex="5" />
-            <asp:Button ID="EnviarButton" runat="server" Text="Enviar" CausesValidation="true"
-                Width="110px" CssClass="button" Style="margin-left: 10px; margin-right: 11px"
-                OnClick="EnviarButton_Click" TabIndex="6" />
-        </div>
         <asp:Panel ID="captchaPanel" runat="server" BackColor="White" Width="350px" Height="150px"
             BorderColor="Green" BorderWidth="1px">
             <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
@@ -125,4 +137,52 @@
             BackgroundCssClass="modalBackground">
         </cc3:ModalPopupExtender>
     </asp:Panel>
+    <script type="text/javascript">
+        // on Application load
+        debugger
+        Sys.Application.add_load(function () {
+            var editor = $find("<%= TextoTextBox.ClientID %>");
+            var editPanel = editor.get_editPanel();
+            var designPanel = editPanel.get_modePanels()[AjaxControlToolkit.HTMLEditor.ActiveModeType.Design];
+
+            editPanel._setActive_saved = editPanel._setActive;
+            editPanel._setActive = function () {
+                if (this.get_activeMode() == AjaxControlToolkit.HTMLEditor.ActiveModeType.Design) {
+                    var designPanel = this.get_activePanel();
+                    designPanel.onContentChanged();
+                }
+                this._setActive_saved();
+            };
+
+            designPanel.onContentChanged = function () {
+                if (parseInt((this._doc.body.innerText).length) > 1000) {
+                    var myString = this._doc.body.innerText;
+                    this._doc.body.innerText = myString.substring(0, myString.length - 1);
+
+                    alert("Limite atingido!");
+                    return false;
+                }
+                else {
+                    var innerText;
+
+                    if (AjaxControlToolkit.HTMLEditor.isIE) {
+                        innerText = this._doc.body.innerText;
+                    } else {
+                        var div1 = document.createElement("div");
+                        var html = new AjaxControlToolkit.HTMLEditor.jsDocument(true);
+                        AjaxControlToolkit.HTMLEditor.__MozillaGetInnerText(div1, html);
+                        innerText = html.toString();
+                        delete div1;
+                        delete html;
+                    }
+
+                    // Plain text length
+                    var plainTextLength = (this._doc.body.innerText).length;
+
+                    // Place here your code:
+                    document.getElementById("totalPlain").value = plainTextLength;
+                }
+            }
+        });
+    </script>
 </asp:Content>
