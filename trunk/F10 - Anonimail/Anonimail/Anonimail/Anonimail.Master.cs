@@ -11,7 +11,7 @@ namespace Anonimail
         protected void Page_Load(object sender, EventArgs e)
         {
             //TODO: fixar o logo do site que está flutuando errado
-            //TODO: colocar o recaptcha
+            //TODO: colocar o recaptcha (Ajustar a chamada e validações)
         }
 
         protected void BloquearEmailButton_Click(object sender, EventArgs e)
