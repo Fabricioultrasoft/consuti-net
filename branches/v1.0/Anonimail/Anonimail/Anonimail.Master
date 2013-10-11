@@ -43,7 +43,7 @@
             <h2>
                 envio e resposta de emails anônimos</h2>
         </div>
-        <div style="width: 850px; height: 500px;" class="centered">
+        <div style="width: 850px; " class="centered">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
             </asp:ContentPlaceHolder>
         </div>
