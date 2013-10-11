@@ -11,7 +11,6 @@ namespace Anonimail
         protected void Page_Load(object sender, EventArgs e)
         {
             //TODO: fixar o logo do site que está flutuando errado
-            //TODO: criar contador de texto para até 1000 caracteres
             //TODO: colocar o recaptcha
         }
 
