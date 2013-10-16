@@ -73,3 +73,9 @@
 .ajax__calendar_container
 {
     background-color: Transparent;
+}
+
+#referencias li
+{
+    padding-bottom: 10px;
+}
