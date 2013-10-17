@@ -100,8 +100,11 @@ pageTracker._trackPageview();
     <br />
     <div style="width:800px; margin-left:10%">
     <div id="Rodape">
-    <div style="float:left;"><br><b>Telefones para Contato:</b><br />
-        (31) 8841-8888 | (31) 3581-8906<br><b>
+    <div style="float:left;">
+        <br>
+        <b>CNPJ:</b> 08621621000102<br />
+            <b>Telefones para Contato:</b><br />
+            (31) 8841-8888 | (31) 3581-8906<br><b>
         <br />
         Email:</b>&nbsp; <a href="Contato.aspx">pousadazumbzeira@gmail.com </a>
         <br />
@@ -123,7 +126,7 @@ pageTracker._trackPageview();
                 ImageUrl="../Graficos/ConsuTI.png" onclick="ImageButton1_Click" />
 &nbsp;</div>
     
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 2010 - 2012&nbsp; Pousada Zumbzeira © - All Rights 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 2010 - 2013&nbsp; Pousada Zumbzeira © - All Rights 
         Reserved<br />
     
     </div>

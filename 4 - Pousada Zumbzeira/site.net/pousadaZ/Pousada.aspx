@@ -66,11 +66,6 @@
                         Possui três quedas d’água, sendo a última de aproximadamente 30 metros de altura.
                         O lugar possui uma beleza exuberante. Ate 70km Cidades Históricas de Minas, Sabará,
                         Congonhas Ouro Preto e o museu Natural de Inhotim </li>
-                        
-                        Nome do Fornecedor: Pousada Zumbzeira
-CNPJ/CPF: 08621621000102
-Betim e Contagem, até 70kmts Cida
-
                 </ul>
                 <br />
                 &nbsp;&nbsp;&nbsp;&nbsp; Venha para a Pousada Zumbzeira! Aqui você encontra paz
