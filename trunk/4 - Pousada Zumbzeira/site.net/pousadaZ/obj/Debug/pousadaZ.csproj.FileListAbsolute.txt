@@ -20,3 +20,9 @@ D:\ConsuTI\Repositorio\4 - Pousada Zumbzeira\site.net\pousadaZ\obj\Debug\pousada
 D:\ConsuTI\Repositorio\4 - Pousada Zumbzeira\site.net\pousadaZ\obj\Debug\pousadaZ.pdb
 D:\ConsuTI\Repositorio\4 - Pousada Zumbzeira\site.net\pousadaZ\bin\pousadaZ.dll
 D:\ConsuTI\Repositorio\4 - Pousada Zumbzeira\site.net\pousadaZ\bin\pousadaZ.pdb
+D:\ConsuTI\gcode\4 - Pousada Zumbzeira\site.net\pousadaZ\bin\pousadaZ.dll
+D:\ConsuTI\gcode\4 - Pousada Zumbzeira\site.net\pousadaZ\bin\pousadaZ.pdb
+D:\ConsuTI\gcode\4 - Pousada Zumbzeira\site.net\pousadaZ\bin\MySql.Data.dll
+D:\ConsuTI\gcode\4 - Pousada Zumbzeira\site.net\pousadaZ\obj\Debug\ResolveAssemblyReference.cache
+D:\ConsuTI\gcode\4 - Pousada Zumbzeira\site.net\pousadaZ\obj\Debug\pousadaZ.dll
+D:\ConsuTI\gcode\4 - Pousada Zumbzeira\site.net\pousadaZ\obj\Debug\pousadaZ.pdb

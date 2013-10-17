@@ -27,7 +27,7 @@
     </object>
     </div>
     <!-- fim flash -->
-    <div style="background-image: url('../Graficos/FundoPrinc.jpg'); height: 650px; width: 99%;
+    <div style="background-image: url('../Graficos/FundoPrinc.jpg'); height: 710px; width: 99%;
         text-align: center; margin-left">
         <p class="style1">
             A PAZ E TRANQUILIDADE PRÓXIMAS DE VOCÊ</p>
