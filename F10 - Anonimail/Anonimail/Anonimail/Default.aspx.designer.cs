@@ -40,6 +40,15 @@ namespace Anonimail {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator EmailDestinoTextBoxRequiredFieldValidator;
         
         /// <summary>
+        /// UpdatePanel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        
+        /// <summary>
         /// EmailDestinoTextBox control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,24 @@ namespace Anonimail {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox EmailDestinoTextBox;
+        
+        /// <summary>
+        /// EmailBloqueadoImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image EmailBloqueadoImage;
+        
+        /// <summary>
+        /// emailBloqueadoLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label emailBloqueadoLabel;
         
         /// <summary>
         /// EmailRespostaTextBoxRegularExpressionValidator control.
@@ -94,40 +121,22 @@ namespace Anonimail {
         protected global::Anonimail.Utilitarios.CustomEditor TextoTextBox;
         
         /// <summary>
-        /// LimparTudoButton control.
+        /// codVerificadorPanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LimparTudoButton;
+        protected global::System.Web.UI.WebControls.Panel codVerificadorPanel;
         
         /// <summary>
-        /// EnviarButton control.
+        /// CodInvalidoLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button EnviarButton;
-        
-        /// <summary>
-        /// captchaPanel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel captchaPanel;
-        
-        /// <summary>
-        /// UpdatePanel1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::System.Web.UI.WebControls.Label CodInvalidoLabel;
         
         /// <summary>
         /// Captcha1 control.
@@ -166,30 +175,21 @@ namespace Anonimail {
         protected global::System.Web.UI.WebControls.Label lblMessage;
         
         /// <summary>
-        /// btnVerify control.
+        /// LimparTudoButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnVerify;
+        protected global::System.Web.UI.WebControls.Button LimparTudoButton;
         
         /// <summary>
-        /// CancelarButton control.
+        /// EnviarButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CancelarButton;
-        
-        /// <summary>
-        /// captchaPanel_ModalPopupExtender control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.ModalPopupExtender captchaPanel_ModalPopupExtender;
+        protected global::System.Web.UI.WebControls.Button EnviarButton;
     }
 }

@@ -9,8 +9,7 @@ namespace Anonimail
     public partial class Anonimail : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-            //TODO: fixar o logo do site que está flutuando errado
+        {   
             //TODO: colocar o recaptcha (Ajustar a chamada e validações)
         }
 
