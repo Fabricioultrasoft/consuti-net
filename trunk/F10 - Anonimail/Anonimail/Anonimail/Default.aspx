@@ -45,8 +45,16 @@
                     E-mail Destino:
                 </td>
                 <td class="style2">
-                    <asp:TextBox ID="EmailDestinoTextBox" runat="server" Width="250px" MaxLength="100"
-                        TabIndex="1"></asp:TextBox>
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <ContentTemplate>
+                            <asp:TextBox ID="EmailDestinoTextBox" runat="server" Width="250px" MaxLength="100"
+                                TabIndex="1" AutoPostBack="True"></asp:TextBox>
+                            <asp:Image ID="EmailBloqueadoImage" runat="server" ImageAlign="Middle" />
+                            <span style="font-size: 8pt; color: Red">
+                                <asp:Label ID="emailBloqueadoLabel" runat="server" Text=""></asp:Label>
+                            </span>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
                 </td>
             </tr>
             <tr>
@@ -80,7 +88,7 @@
                     &nbsp;
                 </td>
                 <td class="style2" style="vertical-align: top; padding-top: 5px">
-                    <custom:CustomEditor ID="TextoTextBox" runat="server" Height="310px" Width="550px"
+                    <custom:CustomEditor ID="TextoTextBox" runat="server" Height="210px" Width="550px"
                         CssClass="CustomEditor" TabIndex="4" />
                 </td>
             </tr>
@@ -88,38 +96,45 @@
                 <td>
                 </td>
                 <td>
-                    <div style="font-size: 8pt; margin-top: -5px">
+                    <div style="font-size: 8pt; margin-top: -5px; text-align: center">
                         <input type="text" readonly="readonly" id="totalPlain" value="" style="border: 0;
                             font-size: 8pt; width: 24px; background-color: #F8F8F8; text-align: right" />
                         / 1000
                     </div>
-                    <div style="text-align: right; margin-top: -15px">
-                        <asp:Button ID="LimparTudoButton" runat="server" Text="Limpar Tudo" Width="110px"
-                            CssClass="button" CausesValidation="false" OnClick="LimparTudoButton_Click" TabIndex="5" />
-                        <asp:Button ID="EnviarButton" runat="server" Text="Enviar" CausesValidation="true"
-                            Width="110px" CssClass="button" Style="margin-left: 10px; margin-right: 11px"
-                            OnClick="EnviarButton_Click" TabIndex="6" />
-                    </div>
                 </td>
             </tr>
         </table>
-        <asp:Panel ID="captchaPanel" runat="server" BackColor="White" Width="350px" Height="150px"
+        <br />
+        <div style="text-align: center; background-color: White; border: 1px solid #87ae12;
+            width: 400px; margin-left: 200px">
+            <asp:Panel ID="codVerificadorPanel" runat="server" BackColor="#87ae12" ForeColor="White">
+                Código Verificador
+                <asp:Label ID="CodInvalidoLabel" runat="server" Text=""></asp:Label>
+            </asp:Panel>
+            <br />
+            <div style="width: 300px; margin: 0 auto">
+                <cc2:CaptchaControl ID="Captcha1" runat="server" CaptchaBackgroundNoise="Low" CaptchaLength="5"
+                    CaptchaHeight="60" CaptchaWidth="300" CaptchaLineNoise="None" CaptchaMinTimeout="5"
+                    CaptchaMaxTimeout="240" FontColor="#529E00" Width="300px" />
+            </div>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*"
+                ControlToValidate="txtCaptcha">
+            </asp:RequiredFieldValidator>
+            <asp:TextBox ID="txtCaptcha" runat="server" MaxLength="5" Text="" Width="100px"></asp:TextBox>
+            <span style="font-size: 8pt; color: Red">
+                <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label></span>
+            <div style="text-align: center; padding: 7px">
+                <asp:Button ID="LimparTudoButton" runat="server" Text="Limpar Tudo" Width="110px"
+                    CssClass="button" CausesValidation="false" OnClick="LimparTudoButton_Click" TabIndex="5" />
+                <asp:Button ID="EnviarButton" runat="server" Text="Enviar" CausesValidation="true"
+                    Width="110px" CssClass="button" Style="margin-left: 10px; margin-right: 11px"
+                    OnClick="EnviarButton_Click" TabIndex="6" />
+            </div>
+        </div>
+        <%--<asp:Panel ID="captchaPanel" runat="server" BackColor="White" Width="350px" Height="150px"
             BorderColor="Green" BorderWidth="1px">
             <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
                 <ContentTemplate>
-                    <div style="margin-bottom: 10px; padding-top: 10px">
-                        <cc2:CaptchaControl ID="Captcha1" runat="server" CaptchaBackgroundNoise="Low" CaptchaLength="5"
-                            CaptchaHeight="60" CaptchaWidth="200" CaptchaLineNoise="None" CaptchaMinTimeout="5"
-                            CaptchaMaxTimeout="240" FontColor="#529E00" />
-                    </div>
-                    <div style="text-align: left; margin-left: 10px; width: 330px">
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*"
-                            ControlToValidate="txtCaptcha">
-                        </asp:RequiredFieldValidator>Código Verificador:
-                        <asp:TextBox ID="txtCaptcha" runat="server" MaxLength="5" Text="" Width="100px"></asp:TextBox>
-                        <span style="font-size: 8pt; color: Red">
-                            <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label></span>
-                    </div>
                     <div style="text-align: right; margin-right: 10px; margin-top: 10px">
                         <asp:Button ID="btnVerify" runat="server" Text="Enviar" CssClass="button" Width="75px"
                             CausesValidation="true" OnClick="btnVerify_Click" />
@@ -135,7 +150,7 @@
         <cc3:ModalPopupExtender ID="captchaPanel_ModalPopupExtender" runat="server" DynamicServicePath=""
             Enabled="True" TargetControlID="EnviarButton" PopupControlID="captchaPanel" DropShadow="true"
             BackgroundCssClass="modalBackground">
-        </cc3:ModalPopupExtender>
+        </cc3:ModalPopupExtender>--%>
     </asp:Panel>
     <script type="text/javascript">
         // on Application load
