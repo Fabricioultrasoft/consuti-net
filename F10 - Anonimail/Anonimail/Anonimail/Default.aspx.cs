@@ -33,11 +33,6 @@ namespace Anonimail
             }
         }
 
-        private void textBox1_LostFocus(object sender, System.EventArgs e)
-        {
-            VerificaEmailBloqueado();
-        }
-
         protected void LimparTudoButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("Default.aspx");
@@ -50,7 +45,7 @@ namespace Anonimail
                 try
                 {
                     EnviaAnonimail();
-                    LimpaCampos();
+                    LimparCampos();
                     ExibeMensagemPopUp("AnôniMail enviado com sucesso!");
 
                 }
@@ -61,6 +56,9 @@ namespace Anonimail
             }
         }
 
+        /// <summary>
+        /// Verifica o email informado se está bloqueado ou se é válido
+        /// </summary>
         private void VerificaEmailBloqueado()
         {
             try
@@ -119,19 +117,24 @@ namespace Anonimail
 
         }
 
-        private void LimpaCampos()
+        /// <summary>
+        /// Limpa todos os campos da tela.
+        /// </summary>
+        private void LimparCampos()
         {
             TextoTextBox.Content =
                 TituloTextBox.Text =
                 EmailDestinoTextBox.Text =
-                EmailRespostaTextBox.Text = string.Empty;
+                EmailRespostaTextBox.Text = 
+                EmailBloqueadoImage.ToolTip = 
+                EmailBloqueadoImage.AlternateText = 
+            EmailBloqueadoImage.ImageUrl = string.Empty;
         }
 
-        protected void CancelarButton_Click(object sender, EventArgs e)
-        {
-            txtCaptcha.Text = string.Empty;
-        }
-
+        /// <summary>
+        /// Valida o captcha
+        /// </summary>
+        /// <returns>false se inválido; true se válido.</returns>
         private bool ValidaCaptcha()
         {
             Captcha1.ValidateCaptcha(txtCaptcha.Text.Trim());

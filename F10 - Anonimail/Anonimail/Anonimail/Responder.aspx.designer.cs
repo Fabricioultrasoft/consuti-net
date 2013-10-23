@@ -22,15 +22,6 @@ namespace Anonimail {
         protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
-        /// CodigoTextBoxRegularExpressionValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator CodigoTextBoxRegularExpressionValidator;
-        
-        /// <summary>
         /// CodigoTextBoxBoxRequiredFieldValidator control.
         /// </summary>
         /// <remarks>
@@ -40,6 +31,15 @@ namespace Anonimail {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator CodigoTextBoxBoxRequiredFieldValidator;
         
         /// <summary>
+        /// UpdatePanel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        
+        /// <summary>
         /// CodigoTextBox control.
         /// </summary>
         /// <remarks>
@@ -47,6 +47,15 @@ namespace Anonimail {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox CodigoTextBox;
+        
+        /// <summary>
+        /// CodigoInvalidoImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image CodigoInvalidoImage;
         
         /// <summary>
         /// TituloTextBoxRequiredFieldValidator control.
@@ -74,6 +83,51 @@ namespace Anonimail {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Anonimail.Utilitarios.CustomEditor TextoTextBox;
+        
+        /// <summary>
+        /// codVerificadorPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel codVerificadorPanel;
+        
+        /// <summary>
+        /// CodInvalidoLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label CodInvalidoLabel;
+        
+        /// <summary>
+        /// Captcha1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::MSCaptcha.CaptchaControl Captcha1;
+        
+        /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
+        /// txtCaptcha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCaptcha;
         
         /// <summary>
         /// LimparTudoButton control.

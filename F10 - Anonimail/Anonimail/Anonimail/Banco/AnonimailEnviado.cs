@@ -1,4 +1,5 @@
 ﻿using System;
+using MySql.Data.MySqlClient;
 
 namespace Anonimail.Banco
 {
@@ -46,16 +47,39 @@ namespace Anonimail.Banco
             string titulo,
             string codEnvio)
         {
-            comando.CommandText = @"INSERT INTO anonimail (EmailDestinatario, Texto, Titulo, CodEnvio, DataEnvio) 
-                                    VALUES (@emailDestinatario, @texto, @titulo, @codEnvio, @dataEnvio);";
+            comando.CommandText = @"INSERT INTO anonimail (EmailDestinatario, Texto, Titulo, CodEnvio, DataEnvio, EmailResposta) 
+                                    VALUES (@emailDestinatario, @texto, @titulo, @codEnvio, @dataEnvio, @EmailResposta);";
             comando.Parameters.AddWithValue("@emailDestinatario", "RESPOSTA");
             comando.Parameters.AddWithValue("@texto", texto);
             comando.Parameters.AddWithValue("@titulo", titulo);
             comando.Parameters.AddWithValue("@codEnvio", codEnvio);
             comando.Parameters.AddWithValue("@dataEnvio", dataEnvio);
+            comando.Parameters.AddWithValue("@emailResposta", "RESPOSTA");
 
             comando.CommandType = System.Data.CommandType.Text;
             comando.ExecuteNonQuery();
+        }
+
+        /// <summary>
+        /// Verifica um codigo de anonimail para resposta
+        /// </summary>
+        /// <param name="codAnonimail"></param>
+        /// <returns>Retorna True se o codigo de anonimail para resposta existir</returns>
+        public bool VerificaCodigoAnonimail(string codAnonimail)
+        {
+            comando.CommandText = @"SELECT CodEnvio 
+                                    FROM anonimail 
+                                    WHERE CodEnvio = @codAnonimail";
+            comando.Parameters.Add(new MySqlParameter("@codAnonimail", codAnonimail));
+
+            object resultadoBusca = comando.ExecuteScalar();
+            comando.Dispose();
+
+            if (resultadoBusca != null)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
