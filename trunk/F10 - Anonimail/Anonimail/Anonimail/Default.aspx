@@ -50,9 +50,6 @@
                             <asp:TextBox ID="EmailDestinoTextBox" runat="server" Width="250px" MaxLength="100"
                                 TabIndex="1" AutoPostBack="True"></asp:TextBox>
                             <asp:Image ID="EmailBloqueadoImage" runat="server" ImageAlign="Middle" />
-                            <span style="font-size: 8pt; color: Red">
-                                <asp:Label ID="emailBloqueadoLabel" runat="server" Text=""></asp:Label>
-                            </span>
                         </ContentTemplate>
                     </asp:UpdatePanel>
                 </td>
@@ -114,15 +111,13 @@
             <br />
             <div style="width: 300px; margin: 0 auto">
                 <cc2:CaptchaControl ID="Captcha1" runat="server" CaptchaBackgroundNoise="Low" CaptchaLength="5"
-                    CaptchaHeight="60" CaptchaWidth="300" CaptchaLineNoise="None" CaptchaMinTimeout="5"
-                    CaptchaMaxTimeout="240" FontColor="#529E00" Width="300px" />
+                    CaptchaHeight="60" CaptchaWidth="300" CaptchaLineNoise="None" CaptchaMinTimeout="3"
+                    CaptchaMaxTimeout="600" FontColor="#529E00" Width="300px" />
             </div>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*"
                 ControlToValidate="txtCaptcha">
             </asp:RequiredFieldValidator>
             <asp:TextBox ID="txtCaptcha" runat="server" MaxLength="5" Text="" Width="100px"></asp:TextBox>
-            <span style="font-size: 8pt; color: Red">
-                <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label></span>
             <div style="text-align: center; padding: 7px">
                 <asp:Button ID="LimparTudoButton" runat="server" Text="Limpar Tudo" Width="110px"
                     CssClass="button" CausesValidation="false" OnClick="LimparTudoButton_Click" TabIndex="5" />

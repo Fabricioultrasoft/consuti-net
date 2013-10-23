@@ -10,7 +10,7 @@ namespace Anonimail
     {
         protected void Page_Load(object sender, EventArgs e)
         {   
-            //TODO: colocar o recaptcha (Ajustar a chamada e validações)
+            //TODO: ajustar envio da resposta. Deve agrupar por ordem decrescente os emails enviados.
         }
 
         protected void BloquearEmailButton_Click(object sender, EventArgs e)
