@@ -71,11 +71,10 @@
                 <td class="style1">
                     <asp:RequiredFieldValidator ID="TituloTextBoxRequiredFieldValidator" runat="server"
                         ControlToValidate="TituloTextBox" Display="Dynamic" ErrorMessage="*" ToolTip="Campo Obrigatorio"></asp:RequiredFieldValidator>
-                    Titulo do E-mail:
+                    Assunto Anonimail:
                 </td>
                 <td class="style2">
-                    <asp:TextBox ID="TituloTextBox" runat="server" Width="550px" MaxLength="100" onkeyup="Contador(this)"
-                        TabIndex="3"></asp:TextBox>
+                    <asp:TextBox ID="TituloTextBox" runat="server" Width="550px" MaxLength="100" TabIndex="3"></asp:TextBox>
                     <br />
                 </td>
             </tr>
@@ -85,7 +84,7 @@
                     &nbsp;
                 </td>
                 <td class="style2" style="vertical-align: top; padding-top: 5px">
-                    <custom:CustomEditor ID="TextoTextBox" runat="server" Height="210px" Width="550px"
+                    <custom:CustomEditor ID="TextoTextBox" runat="server" Height="210px" Width="545px"
                         CssClass="CustomEditor" TabIndex="4" />
                 </td>
             </tr>
@@ -148,8 +147,6 @@
         </cc3:ModalPopupExtender>--%>
     </asp:Panel>
     <script type="text/javascript">
-        // on Application load
-        debugger
         Sys.Application.add_load(function () {
             var editor = $find("<%= TextoTextBox.ClientID %>");
             var editPanel = editor.get_editPanel();

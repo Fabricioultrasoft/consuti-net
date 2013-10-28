@@ -9,7 +9,11 @@ namespace Anonimail
     public partial class Anonimail : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
-        {   
+        {
+            if (!IsPostBack)
+            {
+                AnoLabel.Text = DateTime.Now.Year.ToString();
+            }
             //TODO: ajustar envio da resposta. Deve agrupar por ordem decrescente os emails enviados.
         }
 

@@ -2,7 +2,7 @@
     CodeBehind="Responder.aspx.cs" Inherits="Anonimail.WebForm2" %>
 
 <%@ Register Namespace="Anonimail.Utilitarios" TagPrefix="custom" %>
-<%@ Register Assembly="MSCaptcha" Namespace="MSCaptcha" TagPrefix="cc2" %>
+<%--<%@ Register Assembly="MSCaptcha" Namespace="MSCaptcha" TagPrefix="cc2" %>--%>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .style1
@@ -63,7 +63,7 @@
                     &nbsp;
                 </td>
                 <td class="style2" style="vertical-align: top; padding-top: 5px">
-                    <custom:CustomEditor ID="TextoTextBox" runat="server" Height="310px" Width="550px"
+                    <custom:CustomEditor ID="TextoTextBox" runat="server" Height="210px" Width="545px"
                         CssClass="CustomEditor" TabIndex="3" />
                 </td>
             </tr>
@@ -80,7 +80,14 @@
             </tr>
         </table>
         <br />
-        <div style="text-align: center; background-color: White; border: 1px solid #87ae12;
+        <div style="text-align: right; padding: 1px">
+            <asp:Button ID="LimparTudoButton" runat="server" Text="Limpar Tudo" Width="110px"
+                CssClass="button" CausesValidation="false" OnClick="LimparTudoButton_Click" />
+            <asp:Button ID="EnviarButton" runat="server" Text="Enviar" CausesValidation="true"
+                Width="110px" CssClass="button" Style="margin-left: 10px; margin-right: 21px"
+                OnClick="EnviarButton_Click" />
+        </div>
+        <%--<div style="text-align: center; background-color: White; border: 1px solid #87ae12;
             width: 400px; margin-left: 200px">
             <asp:Panel ID="codVerificadorPanel" runat="server" BackColor="#87ae12" ForeColor="White">
                 Código Verificador
@@ -103,11 +110,9 @@
                     Width="110px" CssClass="button" Style="margin-left: 10px; margin-right: 20px"
                     OnClick="EnviarButton_Click" />
             </div>
-        </div>
+        </div>--%>
     </asp:Panel>
     <script type="text/javascript">
-        // on Application load
-        debugger
         Sys.Application.add_load(function () {
             var editor = $find("<%= TextoTextBox.ClientID %>");
             var editPanel = editor.get_editPanel();

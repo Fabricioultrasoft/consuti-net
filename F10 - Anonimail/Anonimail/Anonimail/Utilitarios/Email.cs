@@ -1,10 +1,17 @@
 ﻿using System.Net.Mail;
 using System.Text.RegularExpressions;
+using System.Collections.Generic;
+using System.Configuration;
+using System.IO;
+using System.Linq;
+using System;
 
 namespace Anonimail.Utilitarios
 {
     public class Email
     {
+        private string CAMINHO_ARQUIVO_PALAVROES = System.AppDomain.CurrentDomain.BaseDirectory + "Utilitarios\\";
+
         public void EnviaEmail(string remetente, string destinatario, string titulo, string mensagemEmail)
         {
             SmtpClient clienteSmtp = new SmtpClient("localhost");
@@ -32,10 +39,10 @@ namespace Anonimail.Utilitarios
         /// <returns></returns>
         public string TratarConteudoEmail(string txtEmail, string codigoAnonimail, string emailResposta)
         {
-            //TODO: trata os palavroes e coloca o link no final do texto do email para resposta 
+            //TODO: colocar o link no final do texto do email para resposta 
             //além de colocar a assinatura do site. Se não possui email resposta não envia link e informa que o quem enviou não deseja receber replica
             //TODO: Criar um e-mail mais adequado para identificar o envio de anonimail 
-             string textoEmail = txtEmail + codigoAnonimail + emailResposta;
+            string textoEmail = txtEmail + codigoAnonimail + emailResposta;
 
             return textoEmail;
         }
@@ -52,6 +59,57 @@ namespace Anonimail.Utilitarios
             {
                 return false;
             }
+        }
+
+        /// <summary>
+        /// Busca palavrões no texto
+        /// </summary>
+        /// <param name="texto">Texto a ser filtrado.</param>
+        /// <returns>Lista com os palavrões encntrados.</returns>
+        public List<string> BuscaPalavroesTexto(string texto)
+        {
+            List<string> palavroesEncontrados = new List<string>();
+
+            var pls = (from s in CarregaListaPalavroes()
+                       orderby s descending
+                       select s).Distinct();
+
+            foreach (var palavrao in pls)
+            {
+                if (texto.Contains(palavrao))
+                    palavroesEncontrados.Add(palavrao);
+            }
+            return palavroesEncontrados;
+        }
+
+        /// <summary>
+        /// Obtem uma lista de palavras de um arquivo de texto salvo na pasta "Utilitários".
+        /// </summary>
+        /// <returns>Lista com as palavras listadas.</returns>
+        public List<string> CarregaListaPalavroes()
+        {
+            string palavrao;
+            List<string> listaPalavroes = new List<string>();
+            try
+            {
+                string caminho = CAMINHO_ARQUIVO_PALAVROES + ConfigurationManager.AppSettings["arquivoPalavroes"].ToString();
+                var file = new FileStream(caminho, FileMode.Open, FileAccess.Read);
+                using (StreamReader sr = new StreamReader(file))
+                {
+                    while ((palavrao = sr.ReadLine()) != null)
+                    {
+                        listaPalavroes.Add(palavrao.Replace(";", ""));
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                listaPalavroes = new List<string>();
+            }
+
+            return listaPalavroes;
+
         }
     }
 }
