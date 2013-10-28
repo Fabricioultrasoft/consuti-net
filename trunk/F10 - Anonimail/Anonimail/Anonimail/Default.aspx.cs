@@ -2,6 +2,7 @@
 using System.Configuration;
 using Anonimail.Banco;
 using Anonimail.Utilitarios;
+using System.Collections.Generic;
 
 namespace Anonimail
 {
@@ -99,22 +100,35 @@ namespace Anonimail
         /// </summary>
         private void EnviaAnonimail()
         {
-            string codigoAnonimail = Guid.NewGuid().ToString();//gera o guid que será utilizado como código no banco
+            List<string> listaPalavroes = new Email().BuscaPalavroesTexto(TextoTextBox.Content.ToString());
+            if (listaPalavroes.Count < 1)
+            {
+                string codigoAnonimail = Guid.NewGuid().ToString();//gera o guid que será utilizado como código no banco
 
-            new AnonimailEnviado().Incluir(
-                EmailDestinoTextBox.Text,
-                DateTime.Now,
-                TextoTextBox.Content.ToString(),
-                TituloTextBox.Text,
-                codigoAnonimail,
-                EmailRespostaTextBox.Text);
+                new AnonimailEnviado().Incluir(
+                    EmailDestinoTextBox.Text,
+                    DateTime.Now,
+                    TextoTextBox.Content.ToString(),
+                    TituloTextBox.Text,
+                    codigoAnonimail,
+                    EmailRespostaTextBox.Text);
 
-            new Email().EnviaEmail(
-                ConfigurationManager.AppSettings["emailRemetente"].ToString(),
-                EmailDestinoTextBox.Text,
-                TituloTextBox.Text,
-                new Email().TratarConteudoEmail(TextoTextBox.Content.ToString(), codigoAnonimail, EmailRespostaTextBox.Text));
-
+                new Email().EnviaEmail(
+                    ConfigurationManager.AppSettings["emailRemetente"].ToString(),
+                    EmailDestinoTextBox.Text,
+                    TituloTextBox.Text,
+                    new Email().TratarConteudoEmail(TextoTextBox.Content.ToString(), codigoAnonimail, EmailRespostaTextBox.Text));
+            }
+            else
+            {
+                string pls = string.Empty;
+                foreach (var palavra in listaPalavroes)
+                {
+                    pls += palavra + ";";
+                }
+                ExibeMensagemPopUp("Não foi possível enviar AnoniMail. Remova as seguintes palavras do seu texto: " +
+                    pls);
+            }
         }
 
         /// <summary>
@@ -125,9 +139,9 @@ namespace Anonimail
             TextoTextBox.Content =
                 TituloTextBox.Text =
                 EmailDestinoTextBox.Text =
-                EmailRespostaTextBox.Text = 
-                EmailBloqueadoImage.ToolTip = 
-                EmailBloqueadoImage.AlternateText = 
+                EmailRespostaTextBox.Text =
+                EmailBloqueadoImage.ToolTip =
+                EmailBloqueadoImage.AlternateText =
             EmailBloqueadoImage.ImageUrl = string.Empty;
         }
 

@@ -2,6 +2,7 @@
 using Anonimail.Banco;
 using Anonimail.Utilitarios;
 using System.Configuration;
+using System.Collections.Generic;
 
 namespace Anonimail
 {
@@ -40,37 +41,51 @@ namespace Anonimail
 
         protected void EnviarButton_Click(object sender, EventArgs e)
         {
-            if (ValidaCaptcha())
+            //if (ValidaCaptcha())
+            //{
+            try
             {
-                try
-                {
-                    EnviaAnonimailResposta();
-                    LimparCampos();
-                    ExibeMensagemPopUp("AnôniMail enviado com sucesso!");
+                EnviaAnonimailResposta();
+                LimparCampos();
+                ExibeMensagemPopUp("AnôniMail enviado com sucesso!");
 
-                }
-                catch (Exception ex)
-                {
-                    ExibeMensagemPopUp("Mensagem não enviada! Tente novamente mais tarde ou entre em Contato. \n\r Detalhes: " + ex.Message);
-                }
             }
+            catch (Exception ex)
+            {
+                ExibeMensagemPopUp("Mensagem não enviada! Tente novamente mais tarde ou entre em Contato. \n\r Detalhes: " + ex.Message);
+            }
+            //}
         }
         /// <summary>
         /// Salva o anonimailResposta no banco e envia para o destinatário
         /// </summary>
         private void EnviaAnonimailResposta()
         {
-            new AnonimailEnviado().Incluir(
-                DateTime.Now,
-                TextoTextBox.Content.ToString(),
-                TituloTextBox.Text,
-                CodigoTextBox.Text);
+            List<string> listaPalavroes = new Email().BuscaPalavroesTexto(TextoTextBox.Content.ToString());
+            if (listaPalavroes.Count < 1)
+            {
+                new AnonimailEnviado().Incluir(
+                    DateTime.Now,
+                    TextoTextBox.Content.ToString(),
+                    TituloTextBox.Text,
+                    CodigoTextBox.Text);
 
-            //new Email().EnviaEmail(
-            //    ConfigurationManager.AppSettings["emailRemetente"].ToString(),
-            //    EmailTextBox.Text,
-            //    TituloTextBox.Text,
-            //    new Email().TratarConteudoEmail(TextoTextBox.Content.ToString(), CodigoTextBox.Text));
+                //new Email().EnviaEmail(
+                //    ConfigurationManager.AppSettings["emailRemetente"].ToString(),
+                //    EmailTextBox.Text,
+                //    TituloTextBox.Text,
+                //    new Email().TratarConteudoEmail(TextoTextBox.Content.ToString(), CodigoTextBox.Text));
+            }
+            else
+            {
+                string pls = string.Empty;
+                foreach (var palavra in listaPalavroes)
+                {
+                    pls += palavra + ";";
+                }
+                ExibeMensagemPopUp("Não foi possível enviar AnoniMail. Remova as seguintes palavras do seu texto: " +
+                    pls);
+            }
         }
 
         private void LimparCampos()
@@ -79,7 +94,7 @@ namespace Anonimail
                 TituloTextBox.Text =
                 CodigoTextBox.Text =
                 CodigoInvalidoImage.ToolTip =
-                CodigoInvalidoImage.AlternateText = 
+                CodigoInvalidoImage.AlternateText =
             CodigoInvalidoImage.ImageUrl = string.Empty;
         }
 
@@ -112,27 +127,27 @@ namespace Anonimail
 
         }
 
-        /// <summary>
-        /// Valida o captcha
-        /// </summary>
-        /// <returns>false se inválido; true se válido.</returns>
-        private bool ValidaCaptcha()
-        {
-            Captcha1.ValidateCaptcha(txtCaptcha.Text.Trim());
-            if (Captcha1.UserValidated)
-            {
-                txtCaptcha.Text = string.Empty;
-                codVerificadorPanel.BackColor = System.Drawing.Color.FromName("#87ae12");
-                CodInvalidoLabel.Text = string.Empty;
-                return true;
-            }
-            else
-            {
-                txtCaptcha.Text = string.Empty;
-                codVerificadorPanel.BackColor = System.Drawing.Color.Red;
-                CodInvalidoLabel.Text = "- Inválido!";
-                return false;
-            }
-        }
+        ///// <summary>
+        ///// Valida o captcha
+        ///// </summary>
+        ///// <returns>false se inválido; true se válido.</returns>
+        //private bool ValidaCaptcha()
+        //{
+        //    Captcha1.ValidateCaptcha(txtCaptcha.Text.Trim());
+        //    if (Captcha1.UserValidated)
+        //    {
+        //        txtCaptcha.Text = string.Empty;
+        //        codVerificadorPanel.BackColor = System.Drawing.Color.FromName("#87ae12");
+        //        CodInvalidoLabel.Text = string.Empty;
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        txtCaptcha.Text = string.Empty;
+        //        codVerificadorPanel.BackColor = System.Drawing.Color.Red;
+        //        CodInvalidoLabel.Text = "- Inválido!";
+        //        return false;
+        //    }
+        //}
     }
 }
