@@ -1,0 +1,138 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="pousadaZ.Master" %>
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+    <META NAME="author" CONTENT="Cristian Gomes - Consuti.net" />
+    <meta name="description" content="Este é o espaço virtual da pousada zumbzeira, localizada em macacos - mg. tranquilidade e conforto em um só lugar, AQUI."/>
+    <META NAME="keywords" CONTENT="zumbzeira, pousada, macacos, pousadazumbzeira, zumbi, pousadas, são sebastião das águas claras, hospedagem" />
+    <meta name="URL" content="http://www.pousadazumbzeira.com.br" />
+    <meta name="language" content="portuguese" />
+    <meta name="robots" content="INDEX, FOLLOW" />
+    <meta name="reply-to" content="consuti@consuti.net"/>
+    <meta name="document-rating" content="General"/>
+    <meta name="document-state" content="Dynamic" />
+    <meta http-equiv="Content-Language" content="PT-BR" />
+    <meta name="Publisher-Email" content="cristian@consuti.net" />
+    <meta name="Contributors" content="Equipe Consuti"/>
+    <meta name="Page-Topic" content="pousadazumbzeira"/>
+        
+    
+        <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="Stylesheet" href="Estilos.css" media="screen" />
+    <style type="text/css">        
+    </style>
+</head>
+
+<!-- google analytics  -->
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-15514897-2");
+pageTracker._trackPageview();
+} catch (err) { }
+</script>
+<!-- google analytics  -->
+<body>
+    <form id="formMaster" runat="server">
+    <div id="Page">
+    <asp:Panel ID="PainelMaster" runat="server">
+    <div id="BannerPrincipal" style="width:800px; margin-left:10%">
+                <asp:Panel ID="PnlMasterBannerSuper" runat="server" BorderStyle="None" BorderColor="Transparent">
+                    <asp:ImageButton ID="ImgBtnMasterBannerSuper" runat="server"
+                     src="../Graficos/bannerSuperior.png" BorderStyle="None" 
+                        BorderColor="Transparent" CausesValidation="False" 
+                        onclick="ImgBtnMasterBannerSuper_Click" />
+                </asp:Panel>
+        </div>
+    <div id="conteudo">
+    <img src="../Graficos/bgTopPrincSite2.png" alt="" 
+            style="float:left; position: absolute; left: 14%;" />
+         <table style="width:100%;">
+             <tr>
+                 <td style="text-align:left; width: 126px; vertical-align:top " align="center">
+                     <br />
+                     <br />
+                 <object style="height: 275px;  width: 145px; margin-top: 0px;" id="menu" >
+                    <param name="ban2" value="../Graficos/menuPrincipal.swf" />
+                    <param name="quality" value="high" />
+                    <param name="wmode" />
+                    <embed src="../Graficos/menuPrincipal.swf" quality="high" height="275px"; width="145px;"/>
+                </object>
+                     <br />                     
+                     <br />
+                     <asp:ImageButton ID="MacacoNoelImageButton" runat="server" 
+                         ImageUrl="~/Graficos/MacacoNoel2.gif" style="margin-left: 34px" />
+                    <br />
+                    <div align="center">
+                     <span style="font-size:xx-small"><a style="text-align:center">Visitante Número:</a></span><br />
+                     </div>
+                     <div id="contador" align="center">
+                         <asp:Label ID="lblCont" runat="server" Text="500000"></asp:Label>&nbsp;&nbsp; <br />
+                                                  
+                     </div>
+                     <br />
+                     
+                     </td>
+                 <td>                                          
+                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                       
+        </asp:ContentPlaceHolder>
+        </td>                
+             </tr>
+            
+               
+            </table>
+            <asp:ScriptManager ID="ScriptManager1" runat="server">
+            </asp:ScriptManager>
+         <br />
+    </div>
+    <br />
+    <div style="width:800px; margin-left:10%">
+    <div id="Rodape">
+    <div style="float:left;">
+        <br>
+        <b>CNPJ:</b> 08621621000102<br />
+            <b>Telefones para Contato:</b><br />
+            (31) 8841-8888 | (31) 3581-8906<br><b>
+        <br />
+        Email:</b>&nbsp; <a href="Contato.aspx">pousadazumbzeira@gmail.com </a>
+        <br />
+        <br />
+        <img alt="Serviço de Internet Sem Fio Grátis" src="../Graficos/Ser6.png" />
+        <img alt="Aceitamos Master Card" src="../Graficos/master2.png" />
+        <img alt="Aceitamos Visa Card" src="../Graficos/visa2.png" />
+        <img alt="Aceitamos Rede Card" src="../Graficos/RedeCard.png" />        
+        <br />
+        <br />  
+        
+        
+        </div>
+        
+        <div style="float:right; text-align:center;"> 
+            <br />
+            Desenvolvido por:<br />
+            <asp:ImageButton ID="ImageButton1" runat="server" 
+                ImageUrl="../Graficos/ConsuTI.png" onclick="ImageButton1_Click" />
+&nbsp;</div>
+    
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 2010 - 2013&nbsp; Pousada Zumbzeira © - All Rights 
+        Reserved<br />
+    
+    </div>
+    </div>
+    </asp:Panel>
+    </div>
+    </form>
+</body>
+</html>

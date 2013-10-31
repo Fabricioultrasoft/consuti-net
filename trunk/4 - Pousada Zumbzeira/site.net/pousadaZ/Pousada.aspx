@@ -49,7 +49,7 @@
                 <br />
                 &nbsp;&nbsp;&nbsp;&nbsp; Esta beleza natural, associada a uma excelente estrutura
                 de hospedagem, proporciona a você, sua família e amigos a oportunidade de diversão
-                e relaxamente em um só lugar.
+                e relaxamento em um só lugar.
                 <br />
                 &nbsp;&nbsp;&nbsp;&nbsp; A região oferece uma grande variedade de atividades, como
                 por exemplo:
@@ -57,13 +57,13 @@
                     <li>Passeio ecológico pela Via Ecoturística de Resgate Histórico-cultural e Ambiental,
                         cujo trecho de 30 km se inicia no distrito de Mazagão, em Itabirito, passando pela
                         cidade de Rio Acima e terminando em Honório Bicalho, em Nova Lima. </li>
-                    <li>Região perfeita para ecoturismo, com belas trilhas para treking
+                    <li>Região perfeita para ecoturismo, com belas trilhas para trekking
                         e motocross. </li>
                     <li>Visita da igreja de São Sebastião, uma das primeiras construções de Minas Gerais.</li>
                     <li>Conheça o bairro Quintas dos Ingleses, com residências em estilo inglês delimitadas
                         por cercas vivas, parte delas do século XIX.</li>
                     <li>Passeio surpreendente na Cachoeira das Vinte e Sete Voltas localizada em uma mata homônima.
-                        Possui três quedas d’água, sendo a última de aproximadamente 30 metros de altura.
+                        Possui três quedas d&#39;água, sendo a última de aproximadamente 30 metros de altura.
                         O lugar possui uma beleza exuberante. Ate 70km Cidades Históricas de Minas, Sabará,
                         Congonhas Ouro Preto e o museu Natural de Inhotim </li>
                 </ul>

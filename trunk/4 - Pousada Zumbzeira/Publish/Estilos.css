@@ -1,0 +1,81 @@
+﻿body
+{
+    background-color: #D0DFEC;
+    font-family: Arial;
+    font-size: 12pts;
+}
+
+#BannerPrincipal
+{
+    text-align: center;
+}
+
+#Page
+{
+    width: 1030px;
+    margin: 0px auto;
+    height: 915px;
+    border-width: 0px;
+}
+
+#conteudo
+{
+    width: 800px;
+    text-align: center;
+    margin-left: 10%;
+    background-color: White;
+}
+
+#contGaleria
+{
+    text-align: center;
+}
+
+#titContato
+{
+    font-size: small;
+}
+
+#Rodape
+{
+    font-size: x-small;
+}
+
+.Marcadagua
+{
+    font-style: italic;
+    color: #CCCCCC;
+    background-color: #D0DFEC;
+}
+
+.TxtFundo
+{
+    background-color: #D0DFEC;
+}
+
+#contador
+{
+    font-family: Monotype Corsiva;
+    color: #3C65A5;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+/*Parâmentros para configuração da aparencia do Ajax Calendar Extender*/
+.ajax__calendar_container .ajax__calendar_header, .ajax__calendar_container .ajax__calendar_footer
+{
+    background-color: #D0DFEC;
+}
+.ajax__calendar_container .ajax__calendar_body
+{
+    background-color: White;
+}
+.ajax__calendar_container
+{
+    background-color: Transparent;
+}
+
+#referencias li
+{
+    padding-bottom: 10px;
+}
