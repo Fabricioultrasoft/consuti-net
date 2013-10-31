@@ -1,23 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
-  <publishTarget publishUrl="C:\Users\Cristian\Desktop\zumb\">
-    <file relUrl="Fideliza.aspx" publishTime="04/08/2010 01:35:12" />
-    <file relUrl="Principal.aspx" publishTime="04/10/2010 02:16:24" />
-    <file relUrl="LazerServicos.aspx" publishTime="02/28/2010 21:48:39" />
-    <file relUrl="Galeria.aspx" publishTime="04/05/2010 00:49:49" />
-    <file relUrl="Galeria2.aspx" publishTime="04/05/2010 00:50:21" />
-    <file relUrl="Web.config" publishTime="02/09/2010 22:03:48" />
-    <file relUrl="bin/pousadaZ.pdb" publishTime="04/10/2010 04:16:54" />
-    <file relUrl="Galeria3.aspx" publishTime="04/02/2010 01:38:00" />
-    <file relUrl="Precos.aspx" publishTime="04/10/2010 03:49:49" />
-    <file relUrl="Estilos.css" publishTime="04/10/2010 01:23:37" />
-    <file relUrl="bin/AjaxControlToolkit.dll" publishTime="02/09/2010 22:03:24" />
-    <file relUrl="Localizacao.aspx" publishTime="03/21/2010 18:45:35" />
-    <file relUrl="bin/pousadaZ.dll" publishTime="04/10/2010 04:16:54" />
-    <file relUrl="Pousada.aspx" publishTime="04/10/2010 03:02:41" />
-    <file relUrl="bin/AjaxControlToolkit.pdb" publishTime="02/09/2010 22:03:24" />
-    <file relUrl="Acomodacoes.aspx" publishTime="04/04/2010 23:35:27" />
-    <file relUrl="Default.aspx" publishTime="02/21/2010 17:07:32" />
-    <file relUrl="Master.Master" publishTime="04/10/2010 02:18:01" />
-    <file relUrl="Contato.aspx" publishTime="04/10/2010 04:10:43" />
-  </publishTarget>
+  <publishProfile publishUrl="D:\ConsuTI\gcode\4 - Pousada Zumbzeira\Publish" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True" />
 </publishData>

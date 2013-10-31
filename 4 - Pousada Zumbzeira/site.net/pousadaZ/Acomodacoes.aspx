@@ -62,8 +62,8 @@ function troca3(obj) {
                 <br />
                 <asp:Image ID="ImgGaleriaSlidShow" runat="server" />
                 <cc1:SlideShowExtender ID="ImgGaleriaSlidShow_SlideShowExtender" runat="server" 
-                    AutoPlay="True" Enabled="True" ImageTitleLabelID="LblgaleriaNomeImg" 
-                    Loop="True" NextButtonID="ImgBtnGaleriaAvancar" 
+                    AutoPlay="false" Enabled="True" ImageTitleLabelID="LblgaleriaNomeImg" 
+                    Loop="true" NextButtonID="ImgBtnGaleriaAvancar" 
                     PlayButtonID="ImgGaleriaPause" PlayInterval="3000" 
                     PreviousButtonID="ImgBtnGaleriaVoltar" SlideShowServiceMethod="GetSlidesVaranda" 
                     SlideShowServicePath="" TargetControlID="ImgGaleriaSlidShow" 
@@ -102,7 +102,7 @@ function troca3(obj) {
                 <br />
                 <asp:Image ID="ImgGaleriaSlidShow2" runat="server" />
                 <cc1:SlideShowExtender ID="ImgGaleriaSlidShow_SlideShowExtender2" runat="server" 
-                    AutoPlay="True" Enabled="True" ImageTitleLabelID="LblgaleriaNomeImg2" 
+                    AutoPlay="false" Enabled="True" ImageTitleLabelID="LblgaleriaNomeImg2" 
                     Loop="True" NextButtonID="ImgBtnGaleriaAvancar2" 
                     PlayButtonID="ImgGaleriaPause2" PlayInterval="3000" 
                     PreviousButtonID="ImgBtnGaleriaVoltar2" SlideShowServiceMethod="GetSlidesChale" 
@@ -141,7 +141,7 @@ function troca3(obj) {
                 <br />
                 <asp:Image ID="ImgGaleriaSlidShow3" runat="server" />
                 <cc1:SlideShowExtender ID="SlideShowExtender1" runat="server" 
-                    AutoPlay="True" Enabled="True" ImageTitleLabelID="LblgaleriaNomeImg3" 
+                    AutoPlay="false" Enabled="True" ImageTitleLabelID="LblgaleriaNomeImg3" 
                     Loop="True" NextButtonID="ImgBtnGaleriaAvancar3" 
                     PlayButtonID="ImgGaleriaPause3" PlayInterval="3000" 
                     PreviousButtonID="ImgBtnGaleriaVoltar3" SlideShowServiceMethod="GetSlidesKing" 

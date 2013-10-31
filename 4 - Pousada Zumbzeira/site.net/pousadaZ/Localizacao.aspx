@@ -18,6 +18,10 @@
             margin-left: 20px;
             text-align: justify;
         }
+        .style4
+        {
+            font-size: small;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -26,11 +30,27 @@
         LOCALIZAÇÃO</p>
 <div class="style3">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    A 
-    pousada está a 4.5 Km de distância da BR 040, na Estrada do Engenho - São 
-    Sebastião das Águas Claras - Macacos - MG. Apenas 14.5 Km de BH Shopping, 21 Km 
-    do centro de Belo Horizonte, 20 Km do Bairro Alphaville (Fundação Dom Cabral), 
-    80Km de Ouro Preto e 423 Km do Rio de Janeiro. </div>
+   <p class="style4">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alguns pontos de referência</p>
+                    <ul class="style2" id="referencias">
+                        <li><b>3,5km</b> do povoado de Macacos: ponto de encontro que é conhecido pelos bares e restaurantes.</li>
+                        <li><b>3,5km</b> da Igrejinha de Macacos que possui mais 280 anos de história.</li>
+                        <li><b>4km</b> da Mina Mar Azul, BR040 e do Posto Mutuca.</li>
+                        <li><b>7km</b> do bairro Jardim Canadá: que concentra as melhores casas de festas da região.</li>
+                        <li><b>14km</b> dos melhores shoppings: BH shopping e Leroy Merlin.</li>
+                        <li><b>15km</b> do Hospital Biocor e Clinica de Olhos: Dr. Ricardo Guimarães (referência
+                            cirúgia cardiáca e oftalmológica).</li>
+                        <li><b>20km</b> de Nova Lima.</li>
+                        <li><b>20km</b> de Contagem, polo industrial de Minas Geral.</li>
+                        <li><b>22km</b> da Fundação Dom Cabral na Lagoa dos Ingleses, Instituição Brasileira de Ensino Superior.</li>
+                        <li><b>23km</b> do Restaurante Topo do Mundo.</li>
+                        <li><b>25km</b> centro de BH: Mercado Central, Feira Hippie, Rua do Amendoim.</li>
+                        <li><b>30km</b> de Betim, polo industrial de Minas Geral.</li>
+                        <li><b>45km</b> de Sabará, cidade histórica.</li>
+                        <li><b>60km</b> de Congonhas, cidade histórica.</li>
+                        <li><b>67km</b> do Museu Inhotim, maior museu a céu aberto do mundo.</li>
+                        <li><b>70km</b> de Ouro Preto, uma das mais belas cidades históricas do mundo.</li>
+                        </ul> </div>
     <p>
         <img alt="" src="../Graficos/mapaDesenho.jpg" /></p>
     
