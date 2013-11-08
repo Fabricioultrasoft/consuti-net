@@ -39,11 +39,28 @@ namespace Anonimail.Utilitarios
         /// <returns></returns>
         public string TratarConteudoEmail(string txtEmail, string codigoAnonimail, string emailResposta)
         {
-            //TODO: colocar o link no final do texto do email para resposta 
-            //além de colocar a assinatura do site. Se não possui email resposta não envia link e informa que o quem enviou não deseja receber replica
-            //TODO: Criar um e-mail mais adequado para identificar o envio de anonimail 
-            string textoEmail = txtEmail + codigoAnonimail + emailResposta;
-
+            string resposta = "<P STYLE='margin-bottom: 0.14in'>A pessoa que lhe enviou não deseja receber uma resposta;</P>";
+            if (!emailResposta.Equals(string.Empty))
+            {
+                resposta = @"<P STYLE='margin-bottom: 0.14in'>Para responder clique 
+                <A HREF='http://www.anonimail.com.br/Responder.aspx?codAM= " + codigoAnonimail + @"'>aqui</A> ou acesse o site 
+                <A HREF='http://www.anonimail.com.br'>www.anonimail.com.br/Responder.aspx</A>e informe o código abaixo:</P>
+                <P ALIGN=CENTER STYLE='margin-bottom: 0.14in'><FONT SIZE=6 STYLE='font-size: 22pt'>
+                <B>" + codigoAnonimail.ToUpper() + @"</B></FONT></P>";
+            }
+             
+            string textoEmail =
+                @"<P STYLE='margin-left: 0.98in; text-indent: 0.49in; margin-bottom: 0.14in'>
+                Olá, Você recebeu um <B>AnôniMail</B>©!
+                <IMG SRC='http://www.anonimail.com.br/Imagens/LogoEmail.png' ALT='www.anonimail.com.br' NAME='Anonimail: Envio de emails anonimos' ALIGN=LEFT HSPACE=12 WIDTH=117 HEIGHT=117 BORDER=0></P>
+                <P STYLE='margin-left: 1.48in; margin-bottom: 0.14in'>
+                <I>" + txtEmail + @"</I></P>
+                <P STYLE='margin-bottom: 0.14in'><BR></P>" + resposta + @"
+                <P STYLE='margin-bottom: 0.14in'><FONT SIZE=2><B>AnôniMail</B></FONT>
+                <FONT SIZE=2>© é uma ferramenta desenvolvida por:</FONT></P>
+                <P STYLE='margin-bottom: 0.14in'>
+                <IMG SRC='http://www.anonimail.com.br/Imagens/consutiEmail.png' ALT='www.consuti.net' NAME='ConsuTI.NET' ALIGN=BOTTOM WIDTH=115 HEIGHT=60 BORDER=0></P>";
+                
             return textoEmail;
         }
 

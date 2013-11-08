@@ -103,20 +103,20 @@ namespace Anonimail
             List<string> listaPalavroes = new Email().BuscaPalavroesTexto(TextoTextBox.Content.ToString());
             if (listaPalavroes.Count < 1)
             {
-                string codigoAnonimail = Guid.NewGuid().ToString();//gera o guid que será utilizado como código no banco
+                string codigoAnonimail = Guid.NewGuid().ToString().ToUpper();//gera o guid que será utilizado como código no banco
 
                 new AnonimailEnviado().Incluir(
                     EmailDestinoTextBox.Text,
                     DateTime.Now,
                     TextoTextBox.Content.ToString(),
-                    TituloTextBox.Text,
+                    "[ANONIMAIL] " + TituloTextBox.Text,
                     codigoAnonimail,
                     EmailRespostaTextBox.Text);
 
                 new Email().EnviaEmail(
                     ConfigurationManager.AppSettings["emailRemetente"].ToString(),
                     EmailDestinoTextBox.Text,
-                    TituloTextBox.Text,
+                    "[ANONIMAIL] " + TituloTextBox.Text,
                     new Email().TratarConteudoEmail(TextoTextBox.Content.ToString(), codigoAnonimail, EmailRespostaTextBox.Text));
             }
             else
