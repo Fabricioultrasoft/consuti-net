@@ -57,6 +57,7 @@
   <ItemGroup>
     <Content Include="Estilos\Estilos.css" />
     <Content Include="Imagens\bg-gradient.gif" />
+    <Content Include="Imagens\consutiEmail.png" />
     <Content Include="Imagens\error.png" />
     <Content Include="Imagens\indicator.gif" />
     <Content Include="Imagens\logo16.ico" />
@@ -64,6 +65,7 @@
     <Content Include="Imagens\logo32.png" />
     <Content Include="Imagens\logo40.png" />
     <Content Include="Imagens\logo64.png" />
+    <Content Include="Imagens\LogoEmail.png" />
     <Content Include="Imagens\miniLogo.png" />
     <Content Include="Default.aspx" />
     <Content Include="DesbloquearEmail\Default.aspx" />
