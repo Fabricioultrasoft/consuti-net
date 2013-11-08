@@ -19,7 +19,7 @@ namespace Anonimail
 
         protected void BloquearEmailButton_Click(object sender, EventArgs e)
         {
-            string codDesbloqueio = Guid.NewGuid().ToString();
+            string codDesbloqueio = Guid.NewGuid().ToString().ToUpper();
             try
             {
                 new Banco.EmailBloqueado().BloquearEmail(BloquearEmailTextBox.Text, codDesbloqueio);

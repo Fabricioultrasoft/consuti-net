@@ -73,7 +73,7 @@ namespace Anonimail
                 //new Email().EnviaEmail(
                 //    ConfigurationManager.AppSettings["emailRemetente"].ToString(),
                 //    EmailTextBox.Text,
-                //    TituloTextBox.Text,
+                //    "[ANONIMAIL] " + TituloTextBox.Text,
                 //    new Email().TratarConteudoEmail(TextoTextBox.Content.ToString(), CodigoTextBox.Text));
             }
             else
