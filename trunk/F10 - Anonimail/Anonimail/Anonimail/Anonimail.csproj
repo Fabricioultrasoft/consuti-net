@@ -86,6 +86,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Banco\AnonimailDTO.cs" />
     <Compile Include="Banco\AnonimailEnviado.cs" />
     <Compile Include="Banco\BancoBase.cs" />
     <Compile Include="Banco\ContadorAcesso.cs" />

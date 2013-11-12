@@ -14,7 +14,7 @@ namespace Anonimail
             {
                 AnoLabel.Text = DateTime.Now.Year.ToString();
             }
-            //TODO: ajustar envio da resposta. Deve agrupar por ordem decrescente os emails enviados.
+            //todo: falta configurar o envio da resposta por email
         }
 
         protected void BloquearEmailButton_Click(object sender, EventArgs e)

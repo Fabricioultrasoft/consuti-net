@@ -1,5 +1,7 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
+using System.Data;
+using System.Collections.Generic;
 
 namespace Anonimail.Banco
 {
@@ -80,6 +82,39 @@ namespace Anonimail.Banco
                 return true;
             }
             return false;
+        }
+
+        public List<AnonimailDTO> ObterConversa(string CodEnvio)
+        {
+            List<AnonimailDTO> conversa = new List<AnonimailDTO>();
+            comando.CommandText = @"SELECT Texto, DataEnvio, Titulo 
+                                    FROM anonimail
+                                    WHERE codEnvio = @CodEnvio
+                                    ORDER BY DataEnvio desc";
+            comando.Parameters.Add(new MySqlParameter("@CodEnvio", CodEnvio));
+            comando.CommandType = CommandType.Text;
+
+            // Classe que auxilia no preenchimento de um dataset
+            MySqlDataAdapter adap = new MySqlDataAdapter(comando);
+
+            DataSet retorno = new DataSet();
+            adap.Fill(retorno);
+
+            for (int i = 0; i < retorno.Tables[0].Rows.Count; i++)
+            {
+                AnonimailDTO aux = new AnonimailDTO();
+                DataRow dr = retorno.Tables[0].Rows[i];
+
+                aux.Texto = dr["Texto"].ToString();
+                aux.dataEnvio = Convert.ToDateTime(dr["DataEnvio"].ToString());
+                aux.Titulo = dr["Titulo"].ToString();
+
+                conversa.Add(aux);
+            }
+
+            comando.Dispose();
+
+            return conversa;
         }
     }
 }
