@@ -23,6 +23,7 @@ namespace Anonimail
                     CodigoTextBox.Text = Request.QueryString["codAM"].ToString();
                     CodigoTextBox.ReadOnly = true;
                     CodigoTextBox.CssClass = "desativado";
+                    VerificaCodigoResposta();
                 }
             }
             else
