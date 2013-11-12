@@ -95,7 +95,8 @@ namespace Anonimail
                 CodigoTextBox.Text =
                 CodigoInvalidoImage.ToolTip =
                 CodigoInvalidoImage.AlternateText =
-            CodigoInvalidoImage.ImageUrl = string.Empty;
+            CodigoInvalidoImage.ImageUrl =
+            teste.Content = string.Empty;
         }
 
         /// <summary>
@@ -110,12 +111,14 @@ namespace Anonimail
                     CodigoInvalidoImage.ImageUrl = "~/Imagens/error.png";
                     CodigoInvalidoImage.AlternateText =
                         CodigoInvalidoImage.ToolTip = "O valor informado para código não é válido.";
+                    teste.Content = string.Empty;
                 }
                 else
                 {
                     CodigoInvalidoImage.ImageUrl = "~/Imagens/tick.png";
                     CodigoInvalidoImage.AlternateText =
                         CodigoInvalidoImage.ToolTip = "O código de resposta " + CodigoTextBox.Text + " está ok!";
+                    teste.Content = MontarResposta();
                 }
             }
             catch (Exception)
@@ -123,8 +126,24 @@ namespace Anonimail
                 CodigoInvalidoImage.ImageUrl = "~/Imagens/warning.png";
                 CodigoInvalidoImage.AlternateText =
                     CodigoInvalidoImage.ToolTip = "Não foi possível validar o código " + CodigoTextBox.Text;
+                teste.Content = string.Empty;
             }
 
+        }
+
+        private string MontarResposta()
+        {
+            List<AnonimailDTO> conversa = new AnonimailEnviado().ObterConversa(CodigoTextBox.Text);
+            string retorno = string.Empty;
+
+            foreach (var item in conversa)
+            {
+                retorno += "<span style='font-weight: bold; font-size: 12pt; color: Black;'>" + item.Titulo +
+                    "</span><br />\"" + item.Texto + "\"<br /><span style='font-weight: bold; font-size: 7pt; color: Gray;'>-- "
+                    + item.dataEnvio.ToString() + "</span><br /><br /><br />";
+            }
+
+            return retorno;
         }
 
         ///// <summary>

@@ -28,57 +28,68 @@
             <h3>
                 Quero <strong>RESPONDER...</strong></h3>
         </div>
-        <table style="padding: 5px; width: 100%;">
-            <tr>
-                <td class="style1">
-                    <asp:RequiredFieldValidator ID="CodigoTextBoxBoxRequiredFieldValidator" runat="server"
-                        ControlToValidate="CodigoTextBox" Display="Dynamic" ErrorMessage="*" ForeColor="Red"
-                        ToolTip="Campo Obrigatório"></asp:RequiredFieldValidator>
-                    Código AnôniMail:
-                </td>
-                <td class="style2">
-                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                        <ContentTemplate>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <table style="padding: 5px; width: 100%;">
+                    <tr>
+                        <td class="style1">
+                            <asp:RequiredFieldValidator ID="CodigoTextBoxBoxRequiredFieldValidator" runat="server"
+                                ControlToValidate="CodigoTextBox" Display="Dynamic" ErrorMessage="*" ForeColor="Red"
+                                ToolTip="Campo Obrigatório"></asp:RequiredFieldValidator>
+                            Código AnôniMail:
+                        </td>
+                        <td class="style2">
                             <asp:TextBox ID="CodigoTextBox" runat="server" Width="280px" MaxLength="100" TabIndex="1"
                                 AutoPostBack="True"></asp:TextBox>
                             <asp:Image ID="CodigoInvalidoImage" runat="server" ImageAlign="Middle" />
-                        </ContentTemplate>
-                    </asp:UpdatePanel>
-                </td>
-            </tr>
-            <tr>
-                <td class="style1">
-                    <asp:RequiredFieldValidator ID="TituloTextBoxRequiredFieldValidator" runat="server"
-                        ControlToValidate="TituloTextBox" Display="Dynamic" ErrorMessage="*" ToolTip="Campo Obrigatorio"></asp:RequiredFieldValidator>
-                    Titulo da Resposta:
-                </td>
-                <td class="style2">
-                    <asp:TextBox ID="TituloTextBox" runat="server" Width="550px" MaxLength="100" TabIndex="2"></asp:TextBox>
-                    <br />
-                </td>
-            </tr>
-            <tr>
-                <td class="style1" style="vertical-align: top; padding-top: 5px">
-                    Texto da Resposta:<br />
-                    &nbsp;
-                </td>
-                <td class="style2" style="vertical-align: top; padding-top: 5px">
-                    <custom:CustomEditor ID="TextoTextBox" runat="server" Height="210px" Width="545px"
-                        CssClass="CustomEditor" TabIndex="3" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                </td>
-                <td>
-                    <div style="font-size: 8pt; margin-top: -5px; text-align: center">
-                        <input type="text" readonly="readonly" id="totalPlain" value="" style="border: 0;
-                            font-size: 8pt; width: 24px; background-color: #F8F8F8; text-align: right" />
-                        / 1000
-                    </div>
-                </td>
-            </tr>
-        </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="style1">
+                            <asp:RequiredFieldValidator ID="TituloTextBoxRequiredFieldValidator" runat="server"
+                                ControlToValidate="TituloTextBox" Display="Dynamic" ErrorMessage="*" ToolTip="Campo Obrigatorio"></asp:RequiredFieldValidator>
+                            Titulo da Resposta:
+                        </td>
+                        <td class="style2">
+                            <asp:TextBox ID="TituloTextBox" runat="server" Width="550px" MaxLength="100" TabIndex="2"></asp:TextBox>
+                            <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="style1" style="vertical-align: top; padding-top: 5px">
+                            Texto da Resposta:<br />
+                            &nbsp;
+                        </td>
+                        <td class="style2" style="vertical-align: top; padding-top: 5px">
+                            <custom:CustomEditor ID="TextoTextBox" runat="server" Height="210px" Width="545px"
+                                CssClass="CustomEditor" TabIndex="3" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <div style="font-size: 8pt; margin-top: -5px; text-align: center">
+                                <input type="text" readonly="readonly" id="totalPlain" value="" style="border: 0;
+                                    font-size: 8pt; width: 24px; background-color: #F8F8F8; text-align: right" />
+                                / 1000
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="style1" style="vertical-align: top; padding-top: 5px">
+                            Histórico de Envio:<br />
+                            &nbsp;
+                        </td>
+                        <td class="style2" style="vertical-align: top; padding-top: 5px">
+                            <custom:CustomEditor ID="teste" runat="server" Height="420px" Width="545px" Enabled="false"
+                                ActiveMode="Preview" CssClass="CustomEditor" />
+                            <br />
+                        </td>
+                    </tr>
+                </table>
+            </ContentTemplate>
+        </asp:UpdatePanel>
         <br />
         <div style="text-align: right; padding: 1px">
             <asp:Button ID="LimparTudoButton" runat="server" Text="Limpar Tudo" Width="110px"

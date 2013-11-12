@@ -22,15 +22,6 @@ namespace Anonimail {
         protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
-        /// CodigoTextBoxBoxRequiredFieldValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator CodigoTextBoxBoxRequiredFieldValidator;
-        
-        /// <summary>
         /// UpdatePanel1 control.
         /// </summary>
         /// <remarks>
@@ -38,6 +29,15 @@ namespace Anonimail {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        
+        /// <summary>
+        /// CodigoTextBoxBoxRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator CodigoTextBoxBoxRequiredFieldValidator;
         
         /// <summary>
         /// CodigoTextBox control.
@@ -83,6 +83,15 @@ namespace Anonimail {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Anonimail.Utilitarios.CustomEditor TextoTextBox;
+        
+        /// <summary>
+        /// teste control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Anonimail.Utilitarios.CustomEditor teste;
         
         /// <summary>
         /// LimparTudoButton control.
