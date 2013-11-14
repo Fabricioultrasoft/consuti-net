@@ -50,10 +50,12 @@ namespace Anonimail
         /// </summary>
         private void EnviaContato()
         {
-            new Email().EnviaEmail(EmailContatoTextBox.Text,
+            new Email().EnviaEmail(ConfigurationManager.AppSettings["emailRemetente"].ToString(),
                 ConfigurationManager.AppSettings["emailContato"].ToString(),
                 AssuntoContatoTextBox.Text,
-                NomeContatoTextBox.Text + " - " + TextoTextBox.Content.ToString());
+                TextoTextBox.Content.ToString()  + Environment.NewLine +
+                "Nome: " + NomeContatoTextBox.Text + Environment.NewLine +
+                "Email" + EmailContatoTextBox.Text);
 
         }
 
