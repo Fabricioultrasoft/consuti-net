@@ -1,7 +1,7 @@
 ﻿using System;
-using MySql.Data.MySqlClient;
-using System.Data;
 using System.Collections.Generic;
+using System.Data;
+using MySql.Data.MySqlClient;
 
 namespace Anonimail.Banco
 {
@@ -87,7 +87,7 @@ namespace Anonimail.Banco
         public List<AnonimailDTO> ObterConversa(string CodEnvio)
         {
             List<AnonimailDTO> conversa = new List<AnonimailDTO>();
-            comando.CommandText = @"SELECT Texto, DataEnvio, Titulo 
+            comando.CommandText = @"SELECT Texto, DataEnvio, Titulo, EmailResposta, EmailDestinatario 
                                     FROM anonimail
                                     WHERE codEnvio = @CodEnvio
                                     ORDER BY DataEnvio desc";
@@ -108,6 +108,8 @@ namespace Anonimail.Banco
                 aux.Texto = dr["Texto"].ToString();
                 aux.dataEnvio = Convert.ToDateTime(dr["DataEnvio"].ToString());
                 aux.Titulo = dr["Titulo"].ToString();
+                aux.EmailResposta = dr["EmailResposta"].ToString();
+                aux.EmailDestinatario = dr["EmailDestinatario"].ToString();
 
                 conversa.Add(aux);
             }

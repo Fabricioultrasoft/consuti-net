@@ -14,7 +14,6 @@ namespace Anonimail
             {
                 AnoLabel.Text = DateTime.Now.Year.ToString();
             }
-            //todo: falta configurar o envio da resposta por email
         }
 
         protected void BloquearEmailButton_Click(object sender, EventArgs e)

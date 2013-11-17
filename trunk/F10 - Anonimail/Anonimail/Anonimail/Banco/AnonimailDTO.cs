@@ -12,5 +12,9 @@ namespace Anonimail.Banco
         public DateTime dataEnvio { get; set; }
 
         public string Titulo { get; set; }
+
+        public string EmailResposta { get; set; }
+
+        public string EmailDestinatario { get; set; }
     }
 }
