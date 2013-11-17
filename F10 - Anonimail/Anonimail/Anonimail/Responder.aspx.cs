@@ -1,13 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
 using Anonimail.Banco;
 using Anonimail.Utilitarios;
-using System.Configuration;
-using System.Collections.Generic;
 
 namespace Anonimail
 {
     public partial class WebForm2 : PageBase
     {
+        public string emailResposta = string.Empty;
+        public string emailDestinatario = string.Empty;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -42,8 +45,6 @@ namespace Anonimail
 
         protected void EnviarButton_Click(object sender, EventArgs e)
         {
-            //if (ValidaCaptcha())
-            //{
             try
             {
                 EnviaAnonimailResposta();
@@ -55,7 +56,6 @@ namespace Anonimail
             {
                 ExibeMensagemPopUp("Mensagem não enviada! Tente novamente mais tarde ou entre em Contato. \n\r Detalhes: " + ex.Message);
             }
-            //}
         }
         /// <summary>
         /// Salva o anonimailResposta no banco e envia para o destinatário
@@ -66,16 +66,17 @@ namespace Anonimail
             if (listaPalavroes.Count < 1)
             {
                 new AnonimailEnviado().Incluir(
+                    emailDestinatario,
                     DateTime.Now,
                     TextoTextBox.Content.ToString(),
                     TituloTextBox.Text,
-                    CodigoTextBox.Text);
+                    CodigoTextBox.Text, emailResposta);
 
-                //new Email().EnviaEmail(
-                //    ConfigurationManager.AppSettings["emailRemetente"].ToString(),
-                //    EmailTextBox.Text,
-                //    "[ANONIMAIL] " + TituloTextBox.Text,
-                //    new Email().TratarConteudoEmail(TextoTextBox.Content.ToString(), CodigoTextBox.Text));
+                new Email().EnviaEmail(
+                   ConfigurationManager.AppSettings["emailRemetente"].ToString(),
+                   emailDestinatario,
+                   "[ANONIMAIL] Resposta: " + TituloTextBox.Text,
+                   new Email().TratarConteudoEmail(TextoTextBox.Content.ToString(), CodigoTextBox.Text, string.Empty));
             }
             else
             {
@@ -136,6 +137,12 @@ namespace Anonimail
         {
             List<AnonimailDTO> conversa = new AnonimailEnviado().ObterConversa(CodigoTextBox.Text);
             string retorno = string.Empty;
+            emailDestinatario = conversa[0].EmailResposta;
+            emailResposta = conversa[0].EmailDestinatario;
+            if (TituloTextBox.Text.Equals(string.Empty))
+            {
+                TituloTextBox.Text = conversa[0].Titulo;
+            }
 
             foreach (var item in conversa)
             {
@@ -146,28 +153,5 @@ namespace Anonimail
 
             return retorno;
         }
-
-        ///// <summary>
-        ///// Valida o captcha
-        ///// </summary>
-        ///// <returns>false se inválido; true se válido.</returns>
-        //private bool ValidaCaptcha()
-        //{
-        //    Captcha1.ValidateCaptcha(txtCaptcha.Text.Trim());
-        //    if (Captcha1.UserValidated)
-        //    {
-        //        txtCaptcha.Text = string.Empty;
-        //        codVerificadorPanel.BackColor = System.Drawing.Color.FromName("#87ae12");
-        //        CodInvalidoLabel.Text = string.Empty;
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        txtCaptcha.Text = string.Empty;
-        //        codVerificadorPanel.BackColor = System.Drawing.Color.Red;
-        //        CodInvalidoLabel.Text = "- Inválido!";
-        //        return false;
-        //    }
-        //}
     }
 }
