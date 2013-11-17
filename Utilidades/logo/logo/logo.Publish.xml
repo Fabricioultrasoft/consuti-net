@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\ConsuTI\gcode\Utilidades\logo\publish" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/logo.dll" publishTime="11/17/2013 17:49:41" />
+    <file relUrl="logo.png" publishTime="01/23/2011 17:56:04" />
+    <file relUrl="Default.aspx" publishTime="11/17/2013 17:40:18" />
+    <file relUrl="bin/logo.pdb" publishTime="11/17/2013 17:49:41" />
+    <file relUrl="Web.config" publishTime="11/17/2013 17:49:49" />
+  </publishProfile>
+</publishData>
