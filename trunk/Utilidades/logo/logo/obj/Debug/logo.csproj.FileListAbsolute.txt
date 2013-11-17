@@ -1,0 +1,5 @@
+D:\ConsuTI\gcode\Utilidades\logo\logo\bin\logo.dll
+D:\ConsuTI\gcode\Utilidades\logo\logo\bin\logo.pdb
+D:\ConsuTI\gcode\Utilidades\logo\logo\obj\Debug\ResolveAssemblyReference.cache
+D:\ConsuTI\gcode\Utilidades\logo\logo\obj\Debug\logo.dll
+D:\ConsuTI\gcode\Utilidades\logo\logo\obj\Debug\logo.pdb
