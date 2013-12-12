@@ -1,0 +1,99 @@
+﻿/*
+Design by Felipe Dário (http://flipdarius.googlepages.com)
+Released under a Creative Commons Attribution 2.5 License.
+You're legally free to commercially use this, but I'd ask you to send me an email (orangax@gmail.com) if you do this.
+*/
+
+*{
+margin:0;
+padding:0;
+outline:none;}
+
+a{text-decoration:none;}
+
+body{
+color:#4c4c4c;
+background:#fff;
+font-family:"trebuchet ms", arial, helvetica,sans-serif;
+font-size:15px;}
+
+#header{
+background:#f5f5f5 url(images/header-bg.png) bottom repeat-x;
+border-bottom:1px solid #808080;
+padding:60px 0 30px 20px;}
+
+h1{
+font-variant:small-caps;
+font-size:2.4em;}
+
+h1 a{color:#fff;}
+
+h2{
+font-style:italic;
+font-size:1.4em;}
+
+h2 a{color:#666;}
+
+#content{
+line-height:1.6em;
+position:absolute;
+top:50px;
+right:25px;
+width:600px;
+background:#fff;
+border-top:1px solid #808080;
+padding:0 15px 15px 15px;}
+
+#content a:link{
+border-bottom:1px solid #ccc;
+color:#000;}
+
+#content a:link{
+color:#999;}
+
+#content a:hover, #content a:active{
+background:#f5f5f5;}
+
+#footer{
+padding:1em 0 1.5em 0;
+color:#999;}
+
+.post{
+border-bottom:1px solid #ccc;
+margin:1em 0;}
+
+.posttext p{
+margin:1em 0;}
+
+.posttitle{
+font-size:1.4em;
+font-variant:small-caps;}
+
+.posttitle a, .byline a{
+color:inherit !important;
+border:none !important;}
+
+.byline{
+font-style:italic;
+margin-bottom:25px;}
+
+.postfoot{
+margin:25px 10px 15px 0;}
+
+code{ 
+font-family: "lucida console", monospace;
+color:#000;}
+
+pre{ 
+font-family: "lucida console", monospace;
+background:#f5f5f5;
+color:#000;
+border: 1px  dashed #c0c0c0;
+padding: 10px;
+margin:.5em .1em;}
+
+blockquote{
+background: #f5f5f5;
+margin:.5em 0;
+padding: 0 .5em;
+border-left: 1px dashed #c0c0c0;}
