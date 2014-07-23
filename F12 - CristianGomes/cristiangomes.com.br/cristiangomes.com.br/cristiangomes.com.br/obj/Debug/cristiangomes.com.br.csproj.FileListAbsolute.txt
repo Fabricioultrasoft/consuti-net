@@ -1,0 +1,5 @@
+D:\ConsuTI\gcode\F12 - CristianGomes\cristiangomes.com.br\cristiangomes.com.br\cristiangomes.com.br\bin\cristiangomes.com.br.dll
+D:\ConsuTI\gcode\F12 - CristianGomes\cristiangomes.com.br\cristiangomes.com.br\cristiangomes.com.br\bin\cristiangomes.com.br.pdb
+D:\ConsuTI\gcode\F12 - CristianGomes\cristiangomes.com.br\cristiangomes.com.br\cristiangomes.com.br\obj\Debug\cristiangomes.com.br.dll
+D:\ConsuTI\gcode\F12 - CristianGomes\cristiangomes.com.br\cristiangomes.com.br\cristiangomes.com.br\obj\Debug\cristiangomes.com.br.pdb
+D:\ConsuTI\gcode\F12 - CristianGomes\cristiangomes.com.br\cristiangomes.com.br\cristiangomes.com.br\obj\Debug\cristiangomes.com.br.csprojResolveAssemblyReference.cache
