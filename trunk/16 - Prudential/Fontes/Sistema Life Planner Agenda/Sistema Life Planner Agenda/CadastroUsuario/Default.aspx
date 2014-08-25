@@ -54,7 +54,7 @@
                                 <span class="obrigatorio">*</span>Nome Completo:
                             </td>
                             <td>
-                                <asp:TextBox ID="nomeCompletoTextBox1" runat="server" Width="200px" TabIndex="5" MaxLength="100"></asp:TextBox>
+                                <asp:TextBox ID="nomeCompletoTextBox" runat="server" Width="200px" TabIndex="5" MaxLength="100"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -94,7 +94,8 @@
                 <div class="barraBotoes">
                     <asp:Button ID="cancelarButton" runat="server" Text="Cancelar" 
                         CssClass="botaoCancelar" TabIndex="9" onclick="cancelarButton_Click" />
-                    <asp:Button ID="okButton" runat="server" Text="OK" CssClass="botaoSalvar" TabIndex="10" />
+                    <asp:Button ID="okButton" runat="server" Text="OK" CssClass="botaoSalvar" 
+                        TabIndex="10" onclick="okButton_Click" />
                 </div>
             </asp:Panel>
             <br />

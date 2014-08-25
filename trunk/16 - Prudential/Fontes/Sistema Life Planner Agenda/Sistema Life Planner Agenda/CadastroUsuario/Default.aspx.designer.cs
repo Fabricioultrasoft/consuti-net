@@ -58,13 +58,13 @@ namespace Sistema_Life_Planner_Agenda.CadastroUsuario {
         protected global::System.Web.UI.WebControls.TextBox confirmaSenhaTextBox;
         
         /// <summary>
-        /// nomeCompletoTextBox1 control.
+        /// nomeCompletoTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nomeCompletoTextBox1;
+        protected global::System.Web.UI.WebControls.TextBox nomeCompletoTextBox;
         
         /// <summary>
         /// telefoneTextBox control.

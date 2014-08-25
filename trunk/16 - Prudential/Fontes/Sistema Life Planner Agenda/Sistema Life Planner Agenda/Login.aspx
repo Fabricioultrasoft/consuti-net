@@ -1,12 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Externa.Master" AutoEventWireup="true"
-    CodeBehind="Login.aspx.cs" Inherits="Sistema_Life_Planner_Agenda.WebForm1" %>
+﻿<%@ Page Title="Login Sistema Life Planner Agenda" Language="C#" MasterPageFile="~/Externa.Master"
+    AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Sistema_Life_Planner_Agenda.WebForm1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br />
-    <br />
-    <br />
     <div id="login">
         <div class="tituloTela">
             ACESSO AO SISTEMA LPA
@@ -30,8 +27,8 @@
                                 &nbsp;
                             </td>
                             <td class="alinhaDireita" style="padding-right: 35px">
-                                <asp:LinkButton ID="novoUsuarioLinkButton" runat="server" Font-Size="8pt" 
-                                    TabIndex="4" onclick="novoUsuarioLinkButton_Click">Novo Usuário</asp:LinkButton>
+                                <asp:LinkButton ID="novoUsuarioLinkButton" runat="server" Font-Size="8pt" TabIndex="4"
+                                    OnClick="novoUsuarioLinkButton_Click">Novo Usuário</asp:LinkButton>
                             </td>
                         </tr>
                         <tr>
@@ -47,7 +44,8 @@
                                 <span class="obrigatorio">*</span>Senha:
                             </td>
                             <td>
-                                <asp:TextBox ID="senhaTextBox" runat="server" Width="200px" TabIndex="2" MaxLength="50" TextMode="Password"></asp:TextBox>
+                                <asp:TextBox ID="senhaTextBox" runat="server" Width="200px" TabIndex="2" MaxLength="50"
+                                    TextMode="Password"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -55,14 +53,16 @@
                                 &nbsp;
                             </td>
                             <td class="alinhaDireita" style="padding-right: 35px">
-                                <asp:LinkButton ID="esqueciSenhaLinkButton" runat="server" Font-Size="8pt" TabIndex="5">Esquecia a Senha</asp:LinkButton>
+                                <asp:LinkButton ID="esqueciSenhaLinkButton" runat="server" Font-Size="8pt" TabIndex="5"
+                                    OnClick="esqueciSenhaLinkButton_Click">Esquecia a Senha</asp:LinkButton>
                             </td>
                         </tr>
                     </table>
                     <br />
                 </fieldset>
                 <div class="barraBotoes">
-                    <asp:Button ID="okButton" runat="server" Text="OK" CssClass="botaoSalvar" TabIndex="3" />
+                    <asp:Button ID="okButton" runat="server" Text="OK" CssClass="botaoSalvar" TabIndex="3"
+                        OnClick="okButton_Click" />
                 </div>
             </asp:Panel>
             <br />
