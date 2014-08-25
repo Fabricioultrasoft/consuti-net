@@ -1,0 +1,281 @@
+﻿html
+{
+    height: 100%;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font: normal .80em 'trebuchet ms' , arial, sans-serif;
+    background: #F0EFE2;
+    color: #777;
+}
+
+
+.center
+{
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+}
+
+blockquote
+{
+    margin: 20px 0;
+    padding: 10px 20px 0 20px;
+    border: 1px solid #E5E5DB;
+    background: #FFF;
+}
+
+ul
+{
+    margin: 2px 0 22px 17px;
+}
+
+ul li
+{
+    list-style-type: circle;
+    margin: 0 0 6px 0;
+    padding: 0 0 4px 5px;
+}
+
+ol
+{
+    margin: 8px 0 22px 20px;
+}
+
+ol li
+{
+    margin: 0 0 11px 0;
+}
+
+#main, #logo, #menubar, #site_content, #footer
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header
+{
+    background: #025587;
+    height: 105px;
+}
+
+#logo
+{
+    width: 825px;
+    position: relative;
+    height: 95px;
+    background: #025587 url(logo.png) no-repeat;
+}
+
+#logo #logo_text
+{
+    position: absolute;
+    top: 1px;
+    left: 0;
+    right: 691px;
+    height: 105px;
+}
+
+#logo h1, #logo h2
+{
+    font: normal 300% 'century gothic' , arial, sans-serif;
+    border-bottom: 0;
+    text-transform: none;
+    margin: 0;
+}
+
+#logo_text h1, #logo_text h1 a, #logo_text h1 a:hover
+{
+    padding: 22px 0 0 0;
+    color: #FFF;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+}
+
+#logo_text h1 a .logo_colour
+{
+    color: #80FFFF;
+}
+
+#logo_text h2
+{
+    font-size: 100%;
+    padding: 4px 0 0 0;
+    color: #DDD;
+}
+
+#site_content
+{
+    width: 837px;
+    overflow: hidden;
+    margin: 0 auto 0 auto;
+    padding: 20px 24px 20px 37px;
+    background: #FFF url(content.png) repeat-y;
+}
+
+
+#content
+{
+    text-align: left;
+    width: 595px;
+    padding: 0;
+}
+
+#content ul
+{
+    margin: 2px 0 22px 0px;
+}
+
+#content ul li
+{
+    list-style-type: none;
+    background: url(bullet.png) no-repeat;
+    margin: 0 0 6px 0;
+    padding: 0 0 4px 25px;
+    line-height: 1.5em;
+}
+
+#footer
+{
+    width: 878px;
+    font: normal 100% 'lucida sans unicode' , arial, sans-serif;
+    height: 33px;
+    padding: 24px 0 5px 0;
+    text-align: center;
+    background: #29425E url(footer.png) repeat-x;
+    color: #FFF;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+#footer a
+{
+    color: #FFF;
+    text-decoration: none;
+}
+
+#footer a:hover
+{
+    color: #FFF;
+    text-decoration: underline;
+}
+
+
+.form_settings textarea, .form_settings select
+{
+    font: 100% arial;
+    width: 299px;
+}
+
+.form_settings select
+{
+    width: 310px;
+}
+
+.form_settings .checkbox
+{
+    margin: 4px 0;
+    padding: 0;
+    width: 14px;
+    border: 0;
+    background: none;
+}
+
+#tituloTop
+{
+    width: 550px;
+    color: White;
+    font-size: 24pt;
+    margin: 0 auto;
+    font-family: Cooper Std Black;
+    padding-top: 30px;
+}
+
+#login
+{
+    width: 500px;
+    margin: 0 auto;
+    height: 300px;
+}
+
+.tituloTela
+{
+    background-color: #DEDEDE;
+    font-size: 12pt;
+    font-weight: bold;
+    height: 25px;
+    padding-left: 10px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#DEDEDE), to(#FFFFFF));
+    background: -moz-linear-gradient(top, #DEDEDE, #FFFFFF);
+    width: 100%;
+}
+
+.conteudoTela
+{
+    padding: 20px;
+}
+
+.alinhaDireita
+{
+    text-align: right;
+}
+
+fieldset
+{
+    border: 1px solid #DEDEDE;
+    padding: 10px;
+}
+
+legend
+{
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+input[type="submit"]
+{
+    width: 100px;
+    height: 25px;
+    background-color: #B4B4B4;
+    font-weight: bold;
+    color: White;
+    margin-left: 10px;
+}
+
+.botaoSalvar
+{
+    background-image: url('Imgs\check.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+.botaoCancelar
+{
+    background-image: url('Imgs\no.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+.barraBotoes
+{
+    text-align: right;
+    margin-top: 10px;
+}
+
+.obrigatorio
+{
+    color: Red;
+}
+
+.Formulario td
+{
+    padding: 5px;
+}

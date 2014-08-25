@@ -5,7 +5,7 @@
 <head runat="server">
     <meta name="description" content="Life Planner Agenda" />
     <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
-    <link rel="stylesheet" type="text/css" href="EstiloExterno.css" title="style" />
+    <link rel="stylesheet" type="text/css" href="~/Estilos/EstiloExterno.css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -14,12 +14,11 @@
         <div id="header">
             <div id="logo">
                 <div id="logo_text">
-                    <!-- class="logo_colour", allows you to change the colour of the text -->
-                    <h1>
-                        <a href="index.html">colour<span class="logo_colour">blue</span></a></h1>
-                    <h2>
-                        Sistema Life Planner Agenda</h2>
+                    <asp:Image ID="LogoTop" runat="server" ImageUrl="~/Estilos/Imgs/LogoSisLPA_100.png" />
                 </div>
+                <div id="tituloTop">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    Sistema Life Planner Agenda</div>
             </div>
         </div>
         <div id="site_content">

@@ -51,8 +51,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="EstiloExterno.css" />
+    <Content Include="CadastroUsuario\Default.aspx" />
+    <Content Include="Estilos\EstiloExterno.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Estilos\Imgs\check.png" />
+    <Content Include="Estilos\Imgs\LogoSisLPA_100.png" />
+    <Content Include="Estilos\Imgs\no.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -63,6 +67,13 @@
     <Content Include="Login.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastroUsuario\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastroUsuario\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Externa.Master.cs">
       <DependentUpon>Externa.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
