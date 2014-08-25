@@ -15,18 +15,23 @@ namespace Sistema_Life_Planner_Agenda
 
         }
 
-        protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
+        protected void novoUsuarioLinkButton_Click(object sender, EventArgs e)
         {
-            if ((Login1.UserName == "admin") && (Login1.Password == "123"))
-            {
-                e.Authenticated = true;
-                FormsAuthentication.RedirectFromLoginPage(Login1.UserName, false);
-            }
-            else
-            {
-                e.Authenticated = false;
-            }
-
+            Response.Redirect("CadastroUsuario\\Default.aspx");
         }
+
+        //protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
+        //{
+        //    if ((Login1.UserName == "admin") && (Login1.Password == "123"))
+        //    {
+        //        e.Authenticated = true;
+        //        FormsAuthentication.RedirectFromLoginPage(Login1.UserName, false);
+        //    }
+        //    else
+        //    {
+        //        e.Authenticated = false;
+        //    }
+
+        //}
     }
 }
