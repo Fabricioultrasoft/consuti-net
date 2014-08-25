@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
+using Sistema_Life_Planner_Agenda.Classes;
 using System.Web.UI.WebControls;
 using System.Web.Security;
 
 namespace Sistema_Life_Planner_Agenda
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class WebForm1 : PageBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,18 +17,39 @@ namespace Sistema_Life_Planner_Agenda
             Response.Redirect("CadastroUsuario\\Default.aspx");
         }
 
-        //protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
-        //{
-        //    if ((Login1.UserName == "admin") && (Login1.Password == "123"))
-        //    {
-        //        e.Authenticated = true;
-        //        FormsAuthentication.RedirectFromLoginPage(Login1.UserName, false);
-        //    }
-        //    else
-        //    {
-        //        e.Authenticated = false;
-        //    }
+        protected void okButton_Click(object sender, EventArgs e)
+        {
+            AuthenticateEventArgs a = new AuthenticateEventArgs();
+            string nomeUsuario = ValidarDadosAcesso(emailTextBox.Text, senhaTextBox.Text);
+            if (nomeUsuario.Equals(string.Empty))
+            {
+                a.Authenticated = false;
+                ExibeMensagemPopUp("Dados de acesso não conferem! Verifique e-mail e senha informados.");
+            }
+            else
+            {
+                a.Authenticated = true;
+                FormsAuthentication.RedirectFromLoginPage(nomeUsuario, false);
+            }
+        }
 
-        //}
+        protected void esqueciSenhaLinkButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("RecuperarSenha\\Default.aspx");
+        }
+
+        /// <summary>
+        /// Busca nome do usuário se dados de acesso forem válidos
+        /// </summary>
+        /// <param name="email">email para validação</param>
+        /// <param name="senha">senha para validação</param>
+        /// <returns>String com o nome do usuário autenticado</returns>
+        private string ValidarDadosAcesso(string email, string senha)
+        {
+            //TODO: validar login
+            string nomeUsuario = string.Empty;
+
+            return nomeUsuario;
+        }
     }
 }

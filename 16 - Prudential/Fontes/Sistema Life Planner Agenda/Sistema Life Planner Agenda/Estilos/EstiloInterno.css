@@ -16,7 +16,6 @@ body
     color: #777;
 }
 
-
 .center
 {
     display: block;
@@ -63,7 +62,7 @@ ol li
 #header
 {
     background: #025587;
-    height: 105px;
+    height: 167px;
 }
 
 #logo
@@ -120,6 +119,52 @@ ol li
     background: #FFF url(content.png) repeat-y;
 }
 
+#main, #logo, #menubar, #site_content, #footer
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#menubar
+{
+    width: 898px;
+    height: 72px;
+    padding: 0;
+    background: #29415D url(menu.png) repeat-x;
+}
+
+ul#menu, ul#menu li
+{
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+ul#menu li
+{
+    list-style: none;
+}
+
+ul#menu li a
+{
+    letter-spacing: 0.1em;
+    font: normal 100% 'lucida sans unicode' , arial, sans-serif;
+    display: block;
+    float: left;
+    height: 37px;
+    padding: 29px 26px 6px 26px;
+    text-align: center;
+    color: #FFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: transparent;
+}
+
+ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
+{
+    color: #FFF;
+    background: #1C2C3E url(menu_select.png) repeat-x;
+}
 
 #content
 {
@@ -285,4 +330,22 @@ input[type="submit"]
 .Formulario td
 {
     padding: 5px;
+}
+
+#controleTopo a, #controleTopo a:hover
+{
+    outline: none;
+    text-decoration: underline;
+    color: #FFFFFF;
+}
+
+#controleTopo a:hover
+{
+    text-decoration: none;
+}
+
+#controleTopo
+{
+    float: right;
+    margin: 5px;
 }
