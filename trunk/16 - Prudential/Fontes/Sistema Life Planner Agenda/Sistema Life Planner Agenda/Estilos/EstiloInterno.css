@@ -67,10 +67,10 @@ ol li
 
 #logo
 {
-    width: 825px;
+    width: 878px;
     position: relative;
     height: 95px;
-    background: #025587 url(logo.png) no-repeat;
+    background: #025587 url(Imgs/logo.png) no-repeat;
 }
 
 #logo #logo_text
@@ -116,7 +116,7 @@ ol li
     overflow: hidden;
     margin: 0 auto 0 auto;
     padding: 20px 24px 20px 37px;
-    background: #FFF url(content.png) repeat-y;
+    background: #FFF url(Imgs/content.png) repeat-y;
 }
 
 #main, #logo, #menubar, #site_content, #footer
@@ -127,10 +127,10 @@ ol li
 
 #menubar
 {
-    width: 898px;
+    width: 877px;
     height: 72px;
     padding: 0;
-    background: #29415D url(menu.png) repeat-x;
+    background: #29415D url(Imgs/menu.png) repeat-x;
 }
 
 ul#menu, ul#menu li
@@ -163,7 +163,7 @@ ul#menu li a
 ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
 {
     color: #FFF;
-    background: #1C2C3E url(menu_select.png) repeat-x;
+    background: #1C2C3E url(Imgs/menu_select.png) repeat-x;
 }
 
 #content
@@ -189,12 +189,12 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
 
 #footer
 {
-    width: 898px;
+    width: 878px;
     font: normal 100% 'lucida sans unicode' , arial, sans-serif;
     height: 33px;
     padding: 24px 0 5px 0;
     text-align: center;
-    background: #29425E url(footer.png) repeat-x;
+    background: #29425E url(Imgs/footer.png) repeat-x;
     color: #FFF;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -211,7 +211,6 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
     color: #FFF;
     text-decoration: underline;
 }
-
 
 .form_settings textarea, .form_settings select
 {
@@ -241,20 +240,6 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
     margin: 0 auto;
     font-family: Cooper Std Black;
     padding-top: 30px;
-}
-
-#login
-{
-    width: 500px;
-    margin: 0 auto;
-    height: 300px;
-}
-
-#recuperarSenha
-{
-    width: 500px;
-    margin: 0 auto;
-    height: 300px;
 }
 
 .tituloTela
@@ -304,16 +289,16 @@ input[type="submit"]
 
 .botaoSalvar
 {
-    background-image: url('Imgs\check.png');
+    background-image: url('Imgs/check.png');
     background-repeat: no-repeat;
     background-position: left bottom;
 }
 
 .botaoCancelar
 {
-    background-image: url('Imgs\no.png');
+    background-image: url('Imgs/no.png');
     background-repeat: no-repeat;
-    background-position: left bottom;
+    background-position: left center ;
 }
 
 .barraBotoes
@@ -349,3 +334,15 @@ input[type="submit"]
     float: right;
     margin: 5px;
 }
+
+
+/*--- Telas ---*/
+
+#home
+{
+    width: 500px;
+    margin: 0 auto;
+    height: 500px;
+}
+
+/*--- Icones http://findicons.com/pack/2443/bunch_of_cool_bluish_icons --*/

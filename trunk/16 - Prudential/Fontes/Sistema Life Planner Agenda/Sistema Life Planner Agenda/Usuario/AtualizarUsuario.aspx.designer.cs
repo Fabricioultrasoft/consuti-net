@@ -7,99 +7,108 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Sistema_Life_Planner_Agenda.Site {
+namespace Sistema_Life_Planner_Agenda.Usuario {
     
     
-    public partial class WebForm1 {
+    public partial class AtualizarUsuario {
         
         /// <summary>
-        /// Home control.
+        /// cadastroUsuarioPanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Home;
+        protected global::System.Web.UI.WebControls.Panel cadastroUsuarioPanel;
         
         /// <summary>
-        /// NovoContatoImageButton control.
+        /// emailTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton NovoContatoImageButton;
+        protected global::System.Web.UI.WebControls.TextBox emailTextBox;
         
         /// <summary>
-        /// NovoContatoLinkButton control.
+        /// confirmaEmailTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton NovoContatoLinkButton;
+        protected global::System.Web.UI.WebControls.TextBox confirmaEmailTextBox;
         
         /// <summary>
-        /// CadastrarAgendaImageButton control.
+        /// senhaTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton CadastrarAgendaImageButton;
+        protected global::System.Web.UI.WebControls.TextBox senhaTextBox;
         
         /// <summary>
-        /// CadastrarAgendaLinkButton control.
+        /// confirmaSenhaTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton CadastrarAgendaLinkButton;
+        protected global::System.Web.UI.WebControls.TextBox confirmaSenhaTextBox;
         
         /// <summary>
-        /// CadastrarContatoLoteImageButton control.
+        /// nomeCompletoTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton CadastrarContatoLoteImageButton;
+        protected global::System.Web.UI.WebControls.TextBox nomeCompletoTextBox;
         
         /// <summary>
-        /// CadastrarContatoLoteLinkButton control.
+        /// telefoneTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton CadastrarContatoLoteLinkButton;
+        protected global::System.Web.UI.WebControls.TextBox telefoneTextBox;
         
         /// <summary>
-        /// CadastrarSITPLANImageButton control.
+        /// emailGoogleTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton CadastrarSITPLANImageButton;
+        protected global::System.Web.UI.WebControls.TextBox emailGoogleTextBox;
         
         /// <summary>
-        /// CadastrarSITPLANLinkButton3 control.
+        /// SenhaEmailGoogleTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton CadastrarSITPLANLinkButton3;
+        protected global::System.Web.UI.WebControls.TextBox SenhaEmailGoogleTextBox;
         
         /// <summary>
-        /// GridView1 control.
+        /// cancelarButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Button cancelarButton;
+        
+        /// <summary>
+        /// okButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button okButton;
     }
 }

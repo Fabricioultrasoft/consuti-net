@@ -198,19 +198,7 @@ ol li
     padding-top: 30px;
 }
 
-#login
-{
-    width: 500px;
-    margin: 0 auto;
-    height: 300px;
-}
 
-#recuperarSenha
-{
-    width: 500px;
-    margin: 0 auto;
-    height: 300px;
-}
 
 .tituloTela
 {
@@ -285,4 +273,20 @@ input[type="submit"]
 .Formulario td
 {
     padding: 5px;
+}
+
+
+/*--- Telas ---*/
+#login
+{
+    width: 500px;
+    margin: 0 auto;
+    height: 300px;
+}
+
+#recuperarSenha
+{
+    width: 500px;
+    margin: 0 auto;
+    height: 300px;
 }

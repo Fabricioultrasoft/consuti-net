@@ -15,9 +15,8 @@ namespace Sistema_Life_Planner_Agenda.Site
         }
 
         protected void UsuarioLinkButton_Click(object sender, EventArgs e)
-        {
-            
-
+        {   
+            Response.Redirect("~\\Usuario\\AtualizarUsuario.aspx");
         }
 
         protected void SairLinkButton_Click(object sender, EventArgs e)
