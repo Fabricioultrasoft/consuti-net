@@ -13,5 +13,20 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
         {
 
         }
+
+        protected void pesquisarButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void limparButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void novoButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
