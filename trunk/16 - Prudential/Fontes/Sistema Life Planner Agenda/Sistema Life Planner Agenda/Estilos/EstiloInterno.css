@@ -112,10 +112,10 @@ ol li
 
 #site_content
 {
-    width: 837px;
+    width: 862px;
     overflow: hidden;
     margin: 0 auto 0 auto;
-    padding: 20px 24px 20px 37px;
+    padding: 10px 18px 20px 18px;
     background: #FFF url(Imgs/content.png) repeat-y;
 }
 
@@ -251,7 +251,7 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
     padding-left: 10px;
     background: -webkit-gradient(linear, left top, left bottom, from(#DEDEDE), to(#FFFFFF));
     background: -moz-linear-gradient(top, #DEDEDE, #FFFFFF);
-    width: 100%;
+    width: 99%;
 }
 
 .conteudoTela
@@ -287,6 +287,7 @@ input[type="submit"]
     margin-left: 10px;
 }
 
+/*--- Botões ---*/
 .botaoSalvar
 {
     background-image: url('Imgs/check.png');
@@ -298,7 +299,35 @@ input[type="submit"]
 {
     background-image: url('Imgs/no.png');
     background-repeat: no-repeat;
-    background-position: left center ;
+    background-position: left center;
+}
+
+.botaoPesquisar
+{
+    background-image: url('Imgs/search.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.botaoLimpar
+{
+    background-image: url('Imgs/clear.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.botaoNovo
+{
+    background-image: url('Imgs/add.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.botaoLote
+{
+    background-image: url('Imgs/lote.png');
+    background-repeat: no-repeat;
+    background-position: left center;
 }
 
 .barraBotoes

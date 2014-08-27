@@ -16,7 +16,6 @@ body
     color: #777;
 }
 
-
 .center
 {
     display: block;
@@ -71,7 +70,7 @@ ol li
     width: 825px;
     position: relative;
     height: 95px;
-    background: #025587 url(logo.png) no-repeat;
+    background: #025587 url(Imgs/logo.png) no-repeat;
 }
 
 #logo #logo_text
@@ -117,7 +116,7 @@ ol li
     overflow: hidden;
     margin: 0 auto 0 auto;
     padding: 20px 24px 20px 37px;
-    background: #FFF url(content.png) repeat-y;
+    background: #FFF url(Imgs/content.png) repeat-y;
 }
 
 
@@ -136,7 +135,7 @@ ol li
 #content ul li
 {
     list-style-type: none;
-    background: url(bullet.png) no-repeat;
+    background: url(Imgs/bullet.png) no-repeat;
     margin: 0 0 6px 0;
     padding: 0 0 4px 25px;
     line-height: 1.5em;
@@ -149,7 +148,7 @@ ol li
     height: 33px;
     padding: 24px 0 5px 0;
     text-align: center;
-    background: #29425E url(footer.png) repeat-x;
+    background: #29425E url(Imgs/footer.png) repeat-x;
     color: #FFF;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -247,14 +246,14 @@ input[type="submit"]
 
 .botaoSalvar
 {
-    background-image: url('Imgs\check.png');
+    background-image: url('Imgs/check.png');
     background-repeat: no-repeat;
     background-position: left bottom;
 }
 
 .botaoCancelar
 {
-    background-image: url('Imgs\no.png');
+    background-image: url('Imgs/no.png');
     background-repeat: no-repeat;
     background-position: left bottom;
 }
