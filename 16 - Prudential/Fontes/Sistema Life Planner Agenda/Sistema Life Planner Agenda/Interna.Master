@@ -13,12 +13,13 @@
     <form id="form1" runat="server">
     <div id="main">
         <div id="header">
+            
+            <div id="logo">
             <div id="controleTopo">
                 <asp:LinkButton ID="UsuarioLinkButton" runat="server" OnClick="UsuarioLinkButton_Click">Usuário</asp:LinkButton>
                 &nbsp;&nbsp;
                 <asp:LinkButton ID="SairLinkButton" runat="server" OnClick="SairLinkButton_Click">Sair</asp:LinkButton>
             </div>
-            <div id="logo">
                 <div id="logo_text">
                     <asp:Image ID="LogoTop" runat="server" ImageUrl="~/Estilos/Imgs/LogoSisLPA_100.png" />
                 </div>

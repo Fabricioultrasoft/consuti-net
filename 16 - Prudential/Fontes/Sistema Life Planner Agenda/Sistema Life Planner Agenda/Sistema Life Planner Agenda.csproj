@@ -51,14 +51,22 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Agenda\PesquisarAgenda.aspx" />
     <Content Include="CadastroUsuario\Default.aspx" />
+    <Content Include="Contato\PesquisarContato.aspx" />
     <Content Include="Estilos\EstiloInterno.css" />
     <Content Include="Estilos\EstiloExterno.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Estilos\Imgs\add_notes.png" />
+    <Content Include="Estilos\Imgs\add_user.png" />
+    <Content Include="Estilos\Imgs\call_group.png" />
     <Content Include="Estilos\Imgs\check.png" />
     <Content Include="Estilos\Imgs\LogoSisLPA_100.png" />
     <Content Include="Estilos\Imgs\no.png" />
+    <Content Include="Estilos\Imgs\todo.png" />
     <Content Include="RecuperarSenha\Default.aspx" />
+    <Content Include="SITPLAN\PesquisarSITPLAN.aspx" />
+    <Content Include="Usuario\AtualizarUsuario.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -69,6 +77,14 @@
     <Content Include="Login.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agenda\PesquisarAgenda.aspx.cs">
+      <DependentUpon>PesquisarAgenda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agenda\PesquisarAgenda.aspx.designer.cs">
+      <DependentUpon>PesquisarAgenda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BD\BancoBase.cs" />
     <Compile Include="BD\UsuarioBD.cs" />
     <Compile Include="CadastroUsuario\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -79,6 +95,13 @@
     </Compile>
     <Compile Include="Classes\PageBase.cs">
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contato\PesquisarContato.aspx.cs">
+      <DependentUpon>PesquisarContato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contato\PesquisarContato.aspx.designer.cs">
+      <DependentUpon>PesquisarContato.aspx</DependentUpon>
     </Compile>
     <Compile Include="Externa.Master.cs">
       <DependentUpon>Externa.Master</DependentUpon>
@@ -115,6 +138,20 @@
     </Compile>
     <Compile Include="RecuperarSenha\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SITPLAN\PesquisarSITPLAN.aspx.cs">
+      <DependentUpon>PesquisarSITPLAN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SITPLAN\PesquisarSITPLAN.aspx.designer.cs">
+      <DependentUpon>PesquisarSITPLAN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\AtualizarUsuario.aspx.cs">
+      <DependentUpon>AtualizarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuario\AtualizarUsuario.aspx.designer.cs">
+      <DependentUpon>AtualizarUsuario.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
