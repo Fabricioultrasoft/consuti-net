@@ -53,6 +53,7 @@
   <ItemGroup>
     <Content Include="Agenda\PesquisarAgenda.aspx" />
     <Content Include="CadastroUsuario\Default.aspx" />
+    <Content Include="Contato\CadastrarLote.aspx" />
     <Content Include="Contato\PesquisarContato.aspx" />
     <Content Include="Estilos\EstiloInterno.css" />
     <Content Include="Estilos\EstiloExterno.css" />
@@ -106,6 +107,13 @@
     </Compile>
     <Compile Include="Classes\PageBase.cs">
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contato\CadastrarLote.aspx.cs">
+      <DependentUpon>CadastrarLote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contato\CadastrarLote.aspx.designer.cs">
+      <DependentUpon>CadastrarLote.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contato\PesquisarContato.aspx.cs">
       <DependentUpon>PesquisarContato.aspx</DependentUpon>

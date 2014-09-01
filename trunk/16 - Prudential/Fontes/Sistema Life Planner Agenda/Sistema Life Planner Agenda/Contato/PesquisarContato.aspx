@@ -18,7 +18,7 @@
             <asp:Panel ID="PesquisaContatoPanel" runat="server">
                 <fieldset>
                     <legend>Filtro</legend>
-                    <table class="Formulario" style="width: 500px; margin: 0 auto;">
+                    <table class="Formulario">
                         <tr>
                             <td class="alinhaDireita">
                                 Nome:
@@ -41,7 +41,7 @@
                                 Telefone:
                             </td>
                             <td>
-                                <asp:TextBox ID="TelefoneTextBox" runat="server" Width="100px" TabIndex="3" MaxLength="50"
+                                <asp:TextBox ID="TelefoneTextBox" runat="server" Width="150px" TabIndex="3" MaxLength="50"
                                     TextMode="Password"></asp:TextBox>
                             </td>
                         </tr>

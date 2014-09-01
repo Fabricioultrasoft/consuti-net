@@ -18,19 +18,24 @@
             <asp:Panel ID="PesquisaSITPLANPanel" runat="server">
                 <fieldset>
                     <legend>Filtro</legend>
-                    <table class="Formulario" style="width: 500px; margin: 0 auto;">
+                    <table class="Formulario">
                         <tr>
-                            <td class="alinhaDireita">
+                            <td class="alinhaDireita" style="width: 90px">
                                 Período De:
                             </td>
-                            <td>
-                                <div style="width: 150px; float: left">
+                            <td style="width: 115px">
+                                <div style="width: 110px;">
                                     <asp:TextBox ID="PeriodoDeTextBox" runat="server" Width="70px" TabIndex="1" MaxLength="100"></asp:TextBox>
                                     <asp:ImageButton ID="deImageButton" runat="server" CausesValidation="False" ImageAlign="Middle"
                                         ImageUrl="~/Estilos/Imgs/Calendar.png" ToolTip="Selecione a data no calendário"
                                         TabIndex="5" />
                                 </div>
-                                <div style="width: 150px; float: left">
+                            </td>
+                            <td class="alinhaDireita" style="width:50px">
+                                Até:
+                            </td>
+                            <td>
+                                <div style="width: 110px;">
                                     <asp:TextBox ID="PeriodoAteTextBox" runat="server" Width="70px" TabIndex="1" MaxLength="100"></asp:TextBox>
                                     <asp:ImageButton ID="AteImageButton" runat="server" CausesValidation="False" ImageAlign="Middle"
                                         ImageUrl="~/Estilos/Imgs/Calendar.png" ToolTip="Selecione a data no calendário"

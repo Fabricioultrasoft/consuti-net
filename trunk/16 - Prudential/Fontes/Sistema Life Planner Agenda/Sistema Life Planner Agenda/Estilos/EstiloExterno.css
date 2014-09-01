@@ -166,6 +166,11 @@ ol li
     text-decoration: underline;
 }
 
+.Formulario
+{
+    margin: 5px 20px;
+    width: 90%;
+}
 
 .form_settings textarea, .form_settings select
 {
@@ -234,28 +239,53 @@ legend
     font-size: 12pt;
 }
 
+/*--- Botões ---*/
 input[type="submit"]
 {
     width: 100px;
-    height: 25px;
-    background-color: #B4B4B4;
+    height: 26px;
     font-weight: bold;
     color: White;
     margin-left: 10px;
+    border: 1px solid;
+    background-repeat: no-repeat;
+    background-color: #C0C0C0;
+    background-position: left center;
+}
+
+input[type="submit"]:hover
+{
+    background-color: #999999;
 }
 
 .botaoSalvar
 {
     background-image: url('Imgs/check.png');
-    background-repeat: no-repeat;
-    background-position: left bottom;
 }
 
 .botaoCancelar
 {
     background-image: url('Imgs/no.png');
-    background-repeat: no-repeat;
-    background-position: left bottom;
+}
+
+.botaoPesquisar
+{
+    background-image: url('Imgs/search.png');
+}
+
+.botaoLimpar
+{
+    background-image: url('Imgs/clear.png');
+}
+
+.botaoNovo
+{
+    background-image: url('Imgs/add.png');
+}
+
+.botaoLote
+{
+    background-image: url('Imgs/lote.png');
 }
 
 .barraBotoes
@@ -263,6 +293,7 @@ input[type="submit"]
     text-align: right;
     margin-top: 10px;
 }
+/*--- fim Botões ----*/
 
 .obrigatorio
 {
