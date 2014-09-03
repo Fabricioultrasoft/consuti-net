@@ -262,6 +262,7 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
 .alinhaDireita
 {
     text-align: right;
+    font-weight: bold;
 }
 
 fieldset
@@ -352,7 +353,6 @@ input[type="submit"]:hover
 .CadastroContatoLote
 {
     margin: 5px;
-    
 }
 
 .CadastroContatoLote td

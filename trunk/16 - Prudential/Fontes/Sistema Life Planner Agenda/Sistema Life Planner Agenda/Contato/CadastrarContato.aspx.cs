@@ -8,16 +8,16 @@ using Sistema_Life_Planner_Agenda.Classes;
 
 namespace Sistema_Life_Planner_Agenda.Contato
 {
-    public partial class CadastrarLote : PageBase
+    public partial class CadastrarContato : PageBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            DataCadastroLabel.Text = DateTime.Now.ToString();
+            //TODO: Verificar se existe histórico. se sim, ocultar o label
         }
 
-        protected void cancelarButton_Click(object sender, EventArgs e)
+        protected void incluirHistoricoContato_Click(object sender, EventArgs e)
         {
-            Response.Redirect("PesquisarContato.aspx");
 
         }
 
@@ -25,15 +25,19 @@ namespace Sistema_Life_Planner_Agenda.Contato
         {
             try
             {
-                //TODO: Salvar contatoslote
+                //TODO: Salvar contato
                 ExibeMensagemPopUp("Contatos Salvos com Sucesso!");
-                Response.Redirect("CadastrarLote.aspx");
+                Response.Redirect("CadastrarContato.aspx");
             }
             catch (Exception)
             {
                 throw;
             }
+        }
 
+        protected void cancelarButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("PesquisarContato.aspx");
         }
     }
 }

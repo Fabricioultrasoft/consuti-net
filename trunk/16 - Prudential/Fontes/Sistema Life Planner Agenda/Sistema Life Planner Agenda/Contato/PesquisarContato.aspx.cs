@@ -26,12 +26,12 @@ namespace Sistema_Life_Planner_Agenda.Contato
 
         protected void novoButton_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("CadastrarContato.aspx");
         }
 
         protected void loteButton_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("CadastrarLote.aspx");
         }
     }
 }
