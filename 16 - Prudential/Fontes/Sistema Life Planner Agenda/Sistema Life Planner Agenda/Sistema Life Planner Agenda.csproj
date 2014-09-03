@@ -53,6 +53,7 @@
   <ItemGroup>
     <Content Include="Agenda\PesquisarAgenda.aspx" />
     <Content Include="CadastroUsuario\Default.aspx" />
+    <Content Include="Contato\CadastrarContato.aspx" />
     <Content Include="Contato\CadastrarLote.aspx" />
     <Content Include="Contato\PesquisarContato.aspx" />
     <Content Include="Estilos\EstiloInterno.css" />
@@ -107,6 +108,13 @@
     </Compile>
     <Compile Include="Classes\PageBase.cs">
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contato\CadastrarContato.aspx.cs">
+      <DependentUpon>CadastrarContato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contato\CadastrarContato.aspx.designer.cs">
+      <DependentUpon>CadastrarContato.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contato\CadastrarLote.aspx.cs">
       <DependentUpon>CadastrarLote.aspx</DependentUpon>
@@ -188,7 +196,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>7106</DevelopmentServerPort>
+          <DevelopmentServerPort>36645</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
