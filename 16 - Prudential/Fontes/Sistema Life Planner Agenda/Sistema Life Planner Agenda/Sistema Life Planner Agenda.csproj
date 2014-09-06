@@ -51,6 +51,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Agenda\CadastrarAgenda.aspx" />
     <Content Include="Agenda\PesquisarAgenda.aspx" />
     <Content Include="CadastroUsuario\Default.aspx" />
     <Content Include="Contato\CadastrarContato.aspx" />
@@ -90,6 +91,13 @@
     <Content Include="Login.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agenda\CadastrarAgenda.aspx.cs">
+      <DependentUpon>CadastrarAgenda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agenda\CadastrarAgenda.aspx.designer.cs">
+      <DependentUpon>CadastrarAgenda.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Agenda\PesquisarAgenda.aspx.cs">
       <DependentUpon>PesquisarAgenda.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

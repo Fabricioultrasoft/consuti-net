@@ -20,17 +20,21 @@
                         <tr>
                             <td style="border-right-style: solid; border-right-width: 1px; border-right-color: #D6D6D6;
                                 border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #D6D6D6">
-                                <asp:ImageButton ID="NovoContatoImageButton" runat="server" ImageUrl="~/Estilos/Imgs/add_user.png" />
+                                <asp:ImageButton ID="NovoContatoImageButton" runat="server" 
+                                    ImageUrl="~/Estilos/Imgs/add_user.png" onclick="NovoContatoImageButton_Click" />
                                 <br />
-                                <asp:LinkButton ID="NovoContatoLinkButton" runat="server">Novo Contato</asp:LinkButton>
+                                <asp:LinkButton ID="NovoContatoLinkButton" runat="server" 
+                                    onclick="NovoContatoLinkButton_Click">Novo Contato</asp:LinkButton>
                                 <br />
                                 <br />
                             </td>
                             <td style="border-left-style: solid; border-left-width: 1px; border-left-color: #D6D6D6;
                                 border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #D6D6D6">
-                                <asp:ImageButton ID="CadastrarAgendaImageButton" runat="server" ImageUrl="~/Estilos/Imgs/todo.png" />
+                                <asp:ImageButton ID="CadastrarAgendaImageButton" runat="server" 
+                                    ImageUrl="~/Estilos/Imgs/todo.png" onclick="CadastrarAgendaImageButton_Click" />
                                 <br />
-                                <asp:LinkButton ID="CadastrarAgendaLinkButton" runat="server">Cadastrar na Agenda do LP</asp:LinkButton>
+                                <asp:LinkButton ID="CadastrarAgendaLinkButton" runat="server" 
+                                    onclick="CadastrarAgendaLinkButton_Click">Cadastrar na Agenda do LP</asp:LinkButton>
                                 <br />
                                 <br />
                             </td>
@@ -39,9 +43,12 @@
                             <td style="border-right-style: solid; border-right-width: 1px; border-right-color: #D6D6D6;
                                 border-top-style: solid; border-top-width: 1px; border-top-color: #D6D6D6">
                                 <br />
-                                <asp:ImageButton ID="CadastrarContatoLoteImageButton" runat="server" ImageUrl="~/Estilos/Imgs/add_notes.png" />
+                                <asp:ImageButton ID="CadastrarContatoLoteImageButton" runat="server" 
+                                    ImageUrl="~/Estilos/Imgs/add_notes.png" 
+                                    onclick="CadastrarContatoLoteImageButton_Click" />
                                 <br />
-                                <asp:LinkButton ID="CadastrarContatoLoteLinkButton" runat="server">Cadastrar Lote de Contatos</asp:LinkButton>
+                                <asp:LinkButton ID="CadastrarContatoLoteLinkButton" runat="server" 
+                                    onclick="CadastrarContatoLoteLinkButton_Click">Cadastrar Lote de Contatos</asp:LinkButton>
                                 <br />
                             </td>
                             <td style="border-left-style: solid; border-left-width: 1px; border-left-color: #D6D6D6;
