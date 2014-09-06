@@ -28,7 +28,7 @@
                                     <asp:TextBox ID="PeriodoDeTextBox" runat="server" Width="70px" TabIndex="1" MaxLength="10"></asp:TextBox>
                                     <asp:ImageButton ID="deImageButton" runat="server" CausesValidation="False" ImageAlign="Middle"
                                         ImageUrl="~/Estilos/Imgs/Calendar.png" ToolTip="Selecione a data no calendário"
-                                        TabIndex="5" />
+                                        TabIndex="2" />
                                 </div>
                             </td>
                             <td class="alinhaDireita" style="width:50px">
@@ -36,10 +36,10 @@
                             </td>
                             <td>
                                 <div style="width: 110px;">
-                                    <asp:TextBox ID="PeriodoAteTextBox" runat="server" Width="70px" TabIndex="1" MaxLength="10"></asp:TextBox>
+                                    <asp:TextBox ID="PeriodoAteTextBox" runat="server" Width="70px" TabIndex="3" MaxLength="10"></asp:TextBox>
                                     <asp:ImageButton ID="AteImageButton" runat="server" CausesValidation="False" ImageAlign="Middle"
                                         ImageUrl="~/Estilos/Imgs/Calendar.png" ToolTip="Selecione a data no calendário"
-                                        TabIndex="5" /></div>
+                                        TabIndex="4" /></div>
                             </td>
                         </tr>
                     </table>
@@ -49,17 +49,17 @@
                                 Situação:
                             </td>
                             <td style="float: left">
-                                <asp:DropDownList ID="RecomendanteDropDownList" runat="server" Width="300px" TabIndex="2">
+                                <asp:DropDownList ID="RecomendanteDropDownList" runat="server" Width="300px" TabIndex="5">
                                 </asp:DropDownList>
                             </td>
                         </tr>
                     </table>
                     <div class="barraBotoes">
                         <asp:Button ID="pesquisarButton" runat="server" Text="   Pesquisar" CssClass="botaoPesquisar"
-                            TabIndex="9" OnClick="pesquisarButton_Click" />
+                            TabIndex="6" OnClick="pesquisarButton_Click" />
                         <asp:Button ID="limparButton" runat="server" Text="Limpar" CssClass="botaoLimpar"
-                            TabIndex="10" OnClick="limparButton_Click" />
-                        <asp:Button ID="novoButton" runat="server" Text="Novo" CssClass="botaoNovo" TabIndex="11"
+                            TabIndex="7" OnClick="limparButton_Click" />
+                        <asp:Button ID="novoButton" runat="server" Text="Novo" CssClass="botaoNovo" TabIndex="8"
                             OnClick="novoButton_Click" />
                     </div>
                 </fieldset>
