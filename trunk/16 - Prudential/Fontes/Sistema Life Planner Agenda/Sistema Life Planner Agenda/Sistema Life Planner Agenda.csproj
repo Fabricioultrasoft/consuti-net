@@ -75,10 +75,15 @@
     <Content Include="Estilos\Imgs\menu.png" />
     <Content Include="Estilos\Imgs\menu_select.png" />
     <Content Include="Estilos\Imgs\no.png" />
+    <Content Include="Estilos\Imgs\play.png" />
+    <Content Include="Estilos\Imgs\printer.png" />
     <Content Include="Estilos\Imgs\search.png" />
     <Content Include="Estilos\Imgs\todo.png" />
     <Content Include="RecuperarSenha\Default.aspx" />
+    <Content Include="SITPLAN\CadastrarSITPLAN.aspx" />
+    <Content Include="SITPLAN\ExecutarSITPLAN.aspx" />
     <Content Include="SITPLAN\PesquisarSITPLAN.aspx" />
+    <Content Include="SITPLAN\RelatorioTAs.aspx" />
     <Content Include="_Check-list Interface.txt" />
     <Content Include="Usuario\AtualizarUsuario.aspx" />
     <Content Include="Web.config" />
@@ -174,12 +179,33 @@
     <Compile Include="RecuperarSenha\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SITPLAN\CadastrarSITPLAN.aspx.cs">
+      <DependentUpon>CadastrarSITPLAN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SITPLAN\CadastrarSITPLAN.aspx.designer.cs">
+      <DependentUpon>CadastrarSITPLAN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SITPLAN\ExecutarSITPLAN.aspx.cs">
+      <DependentUpon>ExecutarSITPLAN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SITPLAN\ExecutarSITPLAN.aspx.designer.cs">
+      <DependentUpon>ExecutarSITPLAN.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SITPLAN\PesquisarSITPLAN.aspx.cs">
       <DependentUpon>PesquisarSITPLAN.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SITPLAN\PesquisarSITPLAN.aspx.designer.cs">
       <DependentUpon>PesquisarSITPLAN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SITPLAN\RelatorioTAs.aspx.cs">
+      <DependentUpon>RelatorioTAs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SITPLAN\RelatorioTAs.aspx.designer.cs">
+      <DependentUpon>RelatorioTAs.aspx</DependentUpon>
     </Compile>
     <Compile Include="Usuario\AtualizarUsuario.aspx.cs">
       <DependentUpon>AtualizarUsuario.aspx</DependentUpon>

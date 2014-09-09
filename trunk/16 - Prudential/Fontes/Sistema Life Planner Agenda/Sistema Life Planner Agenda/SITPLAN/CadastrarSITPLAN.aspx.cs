@@ -4,10 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Sistema_Life_Planner_Agenda.Classes;
 
 namespace Sistema_Life_Planner_Agenda.SITPLAN
 {
-    public partial class PesquisarSITPLAN : System.Web.UI.Page
+    public partial class CadastrarSITPLAN : PageBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,12 +22,12 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
 
         protected void limparButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("PesquisarSITPLAN.aspx");
+            Response.Redirect("CadastrarSITPLAN.aspx");
         }
 
-        protected void novoButton_Click(object sender, EventArgs e)
+        protected void SalvarButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("CadastrarSITPLAN.aspx");
+            Response.Redirect("ExecutarSITPLAN.aspx");
         }
     }
 }

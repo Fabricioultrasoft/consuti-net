@@ -44,5 +44,15 @@ namespace Sistema_Life_Planner_Agenda.Site
         {
             Response.Redirect("Agenda/CadastrarAgenda.aspx");
         }
+
+        protected void CadastrarSITPLANImageButton_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("SITPLAN/CadastrarSITPLAN.aspx");
+        }
+
+        protected void CadastrarSITPLANLinkButton3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SITPLAN/CadastrarSITPLAN.aspx");
+        }
     }
 }

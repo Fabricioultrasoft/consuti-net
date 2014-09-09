@@ -327,10 +327,21 @@ input[type="submit"]:hover
     background-image: url('Imgs/lote.png');
 }
 
+.botaoImprimir
+{
+    background-image: url('Imgs/printer.png');
+}
+
 .barraBotoes
 {
     text-align: right;
     margin-top: 10px;
+}
+
+.botaoSalvarIniciar
+{
+    background-image: url('Imgs/play.png');
+    width: 135px !important;
 }
 /*--- fim Botões ----*/
 
