@@ -54,9 +54,12 @@
                             <td style="border-left-style: solid; border-left-width: 1px; border-left-color: #D6D6D6;
                                 border-top-style: solid; border-top-width: 1px; border-top-color: #D6D6D6">
                                 <br />
-                                <asp:ImageButton ID="CadastrarSITPLANImageButton" runat="server" ImageUrl="~/Estilos/Imgs/call_group.png" />
+                                <asp:ImageButton ID="CadastrarSITPLANImageButton" runat="server" 
+                                    ImageUrl="~/Estilos/Imgs/call_group.png" 
+                                    onclick="CadastrarSITPLANImageButton_Click" />
                                 <br />
-                                <asp:LinkButton ID="CadastrarSITPLANLinkButton3" runat="server">Cadastrar SIT PLAN</asp:LinkButton>
+                                <asp:LinkButton ID="CadastrarSITPLANLinkButton3" runat="server" 
+                                    onclick="CadastrarSITPLANLinkButton3_Click">Cadastrar SIT PLAN</asp:LinkButton>
                                 <br />
                             </td>
                         </tr>

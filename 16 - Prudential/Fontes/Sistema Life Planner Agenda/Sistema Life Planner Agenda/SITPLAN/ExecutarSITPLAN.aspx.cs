@@ -7,26 +7,21 @@ using System.Web.UI.WebControls;
 
 namespace Sistema_Life_Planner_Agenda.SITPLAN
 {
-    public partial class PesquisarSITPLAN : System.Web.UI.Page
+    public partial class ExecutarSITPLAN : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void pesquisarButton_Click(object sender, EventArgs e)
+        protected void salvarButton_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("RelatorioTAs.aspx");
         }
 
-        protected void limparButton_Click(object sender, EventArgs e)
+        protected void cancelarButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("PesquisarSITPLAN.aspx");
-        }
-
-        protected void novoButton_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("CadastrarSITPLAN.aspx");
         }
     }
 }
