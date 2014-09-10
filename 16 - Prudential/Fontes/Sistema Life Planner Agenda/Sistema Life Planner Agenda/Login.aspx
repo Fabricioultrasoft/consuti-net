@@ -19,7 +19,7 @@
                                 <span class="obrigatorio">*</span>E-mail:
                             </td>
                             <td>
-                                <asp:TextBox ID="emailTextBox" runat="server" Width="200px" TabIndex="1" MaxLength="100"></asp:TextBox>
+                                <asp:TextBox ID="emailLoginTextBox" runat="server" Width="200px" TabIndex="1" MaxLength="100" AutoCompleteType="Email" ></asp:TextBox>
                             </td>
                         </tr>
                         <tr>

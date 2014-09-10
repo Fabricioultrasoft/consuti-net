@@ -13,13 +13,103 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN {
     public partial class RelatorioTAs {
         
         /// <summary>
-        /// PesquisaContatoPanel control.
+        /// RelatorioTAsPanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PesquisaContatoPanel;
+        protected global::System.Web.UI.WebControls.Panel RelatorioTAsPanel;
+        
+        /// <summary>
+        /// NomeLPLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label NomeLPLabel;
+        
+        /// <summary>
+        /// DataHoraInicioLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label DataHoraInicioLabel;
+        
+        /// <summary>
+        /// DataHoraTerminoLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label DataHoraTerminoLabel;
+        
+        /// <summary>
+        /// LigacoesRealizadasLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LigacoesRealizadasLabel;
+        
+        /// <summary>
+        /// NaoAtendeuLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label NaoAtendeuLabel;
+        
+        /// <summary>
+        /// JaEhClienteLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label JaEhClienteLabel;
+        
+        /// <summary>
+        /// NaoQuerLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label NaoQuerLabel;
+        
+        /// <summary>
+        /// AgendouOiLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label AgendouOiLabel;
+        
+        /// <summary>
+        /// AgendouCLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label AgendouCLabel;
+        
+        /// <summary>
+        /// LigacaoFuturaLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LigacaoFuturaLabel;
         
         /// <summary>
         /// ImprimirButton control.

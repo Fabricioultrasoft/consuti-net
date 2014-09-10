@@ -42,7 +42,7 @@
                             </td>
                             <td>
                                 <asp:TextBox ID="TelefoneTextBox" runat="server" Width="150px" TabIndex="3" MaxLength="50"
-                                    TextMode="Password"></asp:TextBox>
+                                    TextMode="SingleLine"></asp:TextBox>
                             </td>
                         </tr>
                     </table>
@@ -68,10 +68,6 @@
                         <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
                         <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
                         <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                        <SortedAscendingCellStyle BackColor="#E9E7E2" />
-                        <SortedAscendingHeaderStyle BackColor="#506C8C" />
-                        <SortedDescendingCellStyle BackColor="#FFFDF8" />
-                        <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                     </asp:GridView>
                     <br />
                 </fieldset>

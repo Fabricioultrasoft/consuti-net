@@ -404,5 +404,43 @@ input[type="submit"]:hover
     color: Red;
 }
 
+#cabecalhoRelatorioTAs
+{
+    width: 90%;
+    background-color: #F0F0F0;
+    margin: 0 auto;
+}
+
+#resultadoRelatorioTAs
+{
+    width: 90%;
+    margin: 0 auto;
+}
+
+#logoRelatorio
+{
+    text-align: right;
+    display: none;
+}
+
+@media print
+{
+    #header, #footer, #barraBotoesRelatorioTas, #tituloTelaRelatorio
+    {
+        display: none;
+    }
+
+    #site_content
+    {
+        color: Black !important;
+    }
+    
+    #logoRelatorio
+    {
+        display: block;
+    }
+}
+
+
 
 /*--- Icones http://findicons.com/pack/2443/bunch_of_cool_bluish_icons --*/

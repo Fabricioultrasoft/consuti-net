@@ -4,13 +4,17 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Sistema_Life_Planner_Agenda.Classes;
 
-namespace Sistema_Life_Planner_Agenda.SITPLAN
+namespace Sistema_Life_Planner_Agenda.Usuario
 {
-    public partial class RelatorioTAs : PageBase
+    public partial class AutorizarUsuarios : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void IncluirButton_Click(object sender, EventArgs e)
         {
 
         }
