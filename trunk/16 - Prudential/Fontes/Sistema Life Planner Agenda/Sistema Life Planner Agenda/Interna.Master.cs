@@ -11,19 +11,24 @@ namespace Sistema_Life_Planner_Agenda.Site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //TODO: CONTROLAR A EXIBIÇÃO DO CONTROLE "ADMIN" APENAS PARA USUÁRIOS QUE PODEM MANTER A LISTA DE EMAILS DE ACESSO
         }
 
         protected void UsuarioLinkButton_Click(object sender, EventArgs e)
         {   
-            Response.Redirect("~\\Usuario\\AtualizarUsuario.aspx");
+            Response.Redirect("~/Usuario/AtualizarUsuario.aspx");
         }
 
         protected void SairLinkButton_Click(object sender, EventArgs e)
         {
             AuthenticateEventArgs a = new AuthenticateEventArgs();
             a.Authenticated = false;
-            Response.Redirect("Login.aspx");
+            Response.Redirect("~/Login.aspx");
+        }
+
+        protected void AdminLinkButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Usuario/AutorizarUsuarios.aspx");
         }
     }
 }

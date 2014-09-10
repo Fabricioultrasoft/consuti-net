@@ -20,7 +20,7 @@ namespace Sistema_Life_Planner_Agenda
         protected void okButton_Click(object sender, EventArgs e)
         {
             AuthenticateEventArgs a = new AuthenticateEventArgs();
-            string nomeUsuario = ValidarDadosAcesso(emailTextBox.Text, senhaTextBox.Text);
+            string nomeUsuario = ValidarDadosAcesso(emailLoginTextBox.Text, senhaTextBox.Text);
             if (nomeUsuario.Equals(string.Empty))
             {
                 a.Authenticated = false;

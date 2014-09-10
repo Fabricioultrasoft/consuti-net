@@ -7,63 +7,54 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Sistema_Life_Planner_Agenda {
+namespace Sistema_Life_Planner_Agenda.Usuario {
     
     
-    public partial class WebForm1 {
+    public partial class AutorizarUsuarios {
         
         /// <summary>
-        /// loginPanel control.
+        /// adminEmailsUsuarioPanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel loginPanel;
+        protected global::System.Web.UI.WebControls.Panel adminEmailsUsuarioPanel;
         
         /// <summary>
-        /// emailLoginTextBox control.
+        /// emailTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox emailLoginTextBox;
+        protected global::System.Web.UI.WebControls.TextBox emailTextBox;
         
         /// <summary>
-        /// novoUsuarioLinkButton control.
+        /// AdminCheckBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton novoUsuarioLinkButton;
+        protected global::System.Web.UI.WebControls.CheckBox AdminCheckBox;
         
         /// <summary>
-        /// senhaTextBox control.
+        /// IncluirButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox senhaTextBox;
+        protected global::System.Web.UI.WebControls.Button IncluirButton;
         
         /// <summary>
-        /// esqueciSenhaLinkButton control.
+        /// UsuariosAutorizadosGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton esqueciSenhaLinkButton;
-        
-        /// <summary>
-        /// okButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button okButton;
+        protected global::System.Web.UI.WebControls.GridView UsuariosAutorizadosGridView;
     }
 }
