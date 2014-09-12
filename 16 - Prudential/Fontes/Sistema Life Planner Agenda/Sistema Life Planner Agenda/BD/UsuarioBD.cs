@@ -8,9 +8,35 @@ namespace Sistema_Life_Planner_Agenda.BD
 {
     public class UsuarioBD : BancoBase
     {
-        public void Incluir()
+        /// <summary>
+        /// Cadastro de usuário SISLPA
+        /// </summary>
+        /// <param name="AgendaGoogleEmail"></param>
+        /// <param name="AgendaGoogleSenha"></param>
+        /// <param name="Email"></param>
+        /// <param name="Nome"></param>
+        /// <param name="Senha"></param>
+        /// <param name="Telefone"></param>
+        public void Incluir(
+            string AgendaGoogleEmail,
+            string AgendaGoogleSenha,
+            string Email, 
+            string Nome,
+            string Senha,
+            string Telefone)
         {
-            //TODO: Incluir Usuário
+            comando.CommandText = @"INSERT INTO usuario
+                                    (AgendaGoogleEmail, AgendaGoogleSenha, Email, Nome, Senha, Telefone) 
+                                    VALUES (@AgendaGoogleEmail, @AgendaGoogleSenha, @Email, @Nome, @Senha, @Telefone);";
+            comando.Parameters.AddWithValue("@AgendaGoogleEmail", AgendaGoogleEmail);
+            comando.Parameters.AddWithValue("@AgendaGoogleSenha", AgendaGoogleSenha);
+            comando.Parameters.AddWithValue("@Email", Email);
+            comando.Parameters.AddWithValue("@Nome", Nome);
+            comando.Parameters.AddWithValue("@Senha", Senha);
+            comando.Parameters.AddWithValue("@Telefone", Telefone);
+
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.ExecuteNonQuery();
         }
 
         public void Alterar()
@@ -59,10 +85,8 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// <returns>true se o usuário é admin, false otherwise</returns>
         public bool UsuarioAdmin(string email)
         {
-            //TODO: verifica se o usuário logado é o usuário administrador
-
-            comando.CommandText = @"SELECT Nome
-                                    FROM usuario
+            comando.CommandText = @"SELECT Email
+                                    FROM usuarios_autorizados
                                     WHERE email = @email AND Admin = 1";
             comando.Parameters.Add(new MySqlParameter("@email", email));
             object resultadoBusca = comando.ExecuteScalar();
@@ -72,6 +96,33 @@ namespace Sistema_Life_Planner_Agenda.BD
                 return true;
             }
             return false;
+        }
+
+        /// <summary>
+        /// Valida se o email está autorizado no sistema
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns>true se o email for autorizado, false otherwise</returns>
+        public bool EmailAutorizado(string email)
+        {
+            comando.CommandText = @"SELECT Email
+                                    FROM usuarios_autorizados
+                                    WHERE email = @email";
+            comando.Parameters.Add(new MySqlParameter("@email", email));
+
+            try
+            {
+                object resultadoBusca = comando.ExecuteScalar();
+                if (!resultadoBusca.ToString().Equals(string.Empty))
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }

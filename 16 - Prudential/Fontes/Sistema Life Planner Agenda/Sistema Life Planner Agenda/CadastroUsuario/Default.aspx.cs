@@ -1,6 +1,7 @@
 ﻿using System;
 using Sistema_Life_Planner_Agenda.Classes;
 using System.Configuration;
+using Sistema_Life_Planner_Agenda.BD;
 
 namespace Sistema_Life_Planner_Agenda.CadastroUsuario
 {
@@ -30,13 +31,19 @@ namespace Sistema_Life_Planner_Agenda.CadastroUsuario
                     SalvarUsuario(emailTextBox.Text,
                     senhaTextBox.Text,
                     nomeCompletoTextBox.Text,
-                    telefoneTextBox.Text,
+                    "(" + DDDTextBox.Text + ") " + telefoneTextBox.Text,
                     emailGoogleTextBox.Text,
                     SenhaEmailGoogleTextBox.Text);
                     ExibeMensagemPopUp("Salvo com sucesso!");
+
+                    LimparCampos();
                 }
                 catch (Exception ex)
                 {
+                    if (ex.Message.Contains("Duplicate"))
+                    {
+                        ExibeMensagemPopUp("ERRO! E-mail informado já está cadastrado no sistema.");
+                    }
                     ExibeMensagemPopUp("Erro interno no sistema. Não foi possível cadastrar. Detalhes do erro: " + ex.Message);
                 }
             }
@@ -60,7 +67,13 @@ namespace Sistema_Life_Planner_Agenda.CadastroUsuario
             string emailGoogle,
             string senhaEmailGoogle)
         {
-            //TODO: Salvar Usuário
+            new UsuarioBD().Incluir(
+                emailGoogle,
+                senhaEmailGoogle,
+                email,
+                nomeCompleto,
+                senha,
+                telefone);
         }
 
         /// <summary>
@@ -69,11 +82,26 @@ namespace Sistema_Life_Planner_Agenda.CadastroUsuario
         /// <param name="email">email a ser verificado</param>
         /// <returns>true se o email estiver autorizado; false se não autorizado</returns>
         private bool ValidarEmailAutorizado(string email)
-        {
-            //TODO: Valida se o email informado está autorizado na lista de emails autorizados
-            return false;
+        {   
+            return new UsuarioBD().EmailAutorizado(email);
         }
 
+        /// <summary>
+        /// Limpa os campos da tela
+        /// </summary>
+        private void LimparCampos()
+        {
+            emailTextBox.Text =
+                confirmaEmailTextBox.Text =
+                senhaTextBox.Text =
+                confirmaSenhaTextBox.Text =
+                nomeCompletoTextBox.Text =
+                telefoneTextBox.Text =
+                DDDTextBox.Text =
+                emailGoogleTextBox.Text =
+                SenhaEmailGoogleTextBox.Text =
+                string.Empty;
+        }
 
     }
 }
