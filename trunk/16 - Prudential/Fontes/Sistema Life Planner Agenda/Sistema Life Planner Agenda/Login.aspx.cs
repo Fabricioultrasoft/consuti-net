@@ -20,21 +20,28 @@ namespace Sistema_Life_Planner_Agenda
 
         protected void okButton_Click(object sender, EventArgs e)
         {
-            AuthenticateEventArgs a = new AuthenticateEventArgs();
-
-            /// Busca nome do usuário se dados de acesso forem válidos
-            string nomeUsuario = new UsuarioBD().Autenticar(emailLoginTextBox.Text, senhaTextBox.Text);
-            if (nomeUsuario.Equals(string.Empty))
+            if (emailLoginTextBox.Text.Equals(string.Empty) || senhaTextBox.Text.Equals(string.Empty))
             {
-                a.Authenticated = false;
-                ExibeMensagemPopUp("Dados de acesso não conferem! Verifique e-mail e senha informados.");
+                ExibeMensagemPopUp("Preencha todos os campos obrigatórios!");
             }
             else
             {
-                a.Authenticated = true;
-                Session["emailUsuarioLogado"] = emailLoginTextBox.Text;
-                Session["nomeUsuarioLogado"] = nomeUsuario;
-                FormsAuthentication.RedirectFromLoginPage(nomeUsuario, false);
+                AuthenticateEventArgs a = new AuthenticateEventArgs();
+
+                /// Busca nome do usuário se dados de acesso forem válidos
+                string nomeUsuario = new UsuarioBD().Autenticar(emailLoginTextBox.Text, senhaTextBox.Text);
+                if (nomeUsuario.Equals(string.Empty))
+                {
+                    a.Authenticated = false;
+                    ExibeMensagemPopUp("Dados de acesso não conferem! Verifique e-mail e senha informados.");
+                }
+                else
+                {
+                    a.Authenticated = true;
+                    Session["emailUsuarioLogado"] = emailLoginTextBox.Text;
+                    Session["nomeUsuarioLogado"] = nomeUsuario;
+                    FormsAuthentication.RedirectFromLoginPage(nomeUsuario, false);
+                }
             }
         }
 

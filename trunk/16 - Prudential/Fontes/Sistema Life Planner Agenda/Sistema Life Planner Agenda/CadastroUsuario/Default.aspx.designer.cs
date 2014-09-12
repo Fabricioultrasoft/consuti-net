@@ -31,6 +31,24 @@ namespace Sistema_Life_Planner_Agenda.CadastroUsuario {
         protected global::System.Web.UI.WebControls.TextBox emailTextBox;
         
         /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
+        /// EmailTextBoxRegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator EmailTextBoxRegularExpressionValidator;
+        
+        /// <summary>
         /// confirmaEmailTextBox control.
         /// </summary>
         /// <remarks>
@@ -38,6 +56,24 @@ namespace Sistema_Life_Planner_Agenda.CadastroUsuario {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox confirmaEmailTextBox;
+        
+        /// <summary>
+        /// CompareValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
+        
+        /// <summary>
+        /// RequiredFieldValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
         
         /// <summary>
         /// senhaTextBox control.
@@ -49,6 +85,15 @@ namespace Sistema_Life_Planner_Agenda.CadastroUsuario {
         protected global::System.Web.UI.WebControls.TextBox senhaTextBox;
         
         /// <summary>
+        /// RequiredFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        
+        /// <summary>
         /// confirmaSenhaTextBox control.
         /// </summary>
         /// <remarks>
@@ -56,6 +101,24 @@ namespace Sistema_Life_Planner_Agenda.CadastroUsuario {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox confirmaSenhaTextBox;
+        
+        /// <summary>
+        /// CompareValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator2;
+        
+        /// <summary>
+        /// RequiredFieldValidator4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
         
         /// <summary>
         /// nomeCompletoTextBox control.
@@ -67,6 +130,33 @@ namespace Sistema_Life_Planner_Agenda.CadastroUsuario {
         protected global::System.Web.UI.WebControls.TextBox nomeCompletoTextBox;
         
         /// <summary>
+        /// RequiredFieldValidator7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
+        
+        /// <summary>
+        /// DDDTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DDDTextBox;
+        
+        /// <summary>
+        /// DDDTextBox_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender DDDTextBox_FilteredTextBoxExtender;
+        
+        /// <summary>
         /// telefoneTextBox control.
         /// </summary>
         /// <remarks>
@@ -76,6 +166,51 @@ namespace Sistema_Life_Planner_Agenda.CadastroUsuario {
         protected global::System.Web.UI.WebControls.TextBox telefoneTextBox;
         
         /// <summary>
+        /// telefoneTextBox_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender telefoneTextBox_FilteredTextBoxExtender;
+        
+        /// <summary>
+        /// RequiredFieldValidator5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
+        
+        /// <summary>
+        /// RequiredFieldValidator6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
+        
+        /// <summary>
+        /// EmailTextBoxRegularExpressionValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator EmailTextBoxRegularExpressionValidator1;
+        
+        /// <summary>
+        /// EmailTextBoxRegularExpressionValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator EmailTextBoxRegularExpressionValidator2;
+        
+        /// <summary>
         /// emailGoogleTextBox control.
         /// </summary>
         /// <remarks>
@@ -83,6 +218,15 @@ namespace Sistema_Life_Planner_Agenda.CadastroUsuario {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox emailGoogleTextBox;
+        
+        /// <summary>
+        /// EmailTextBoxRegularExpressionValidator0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator EmailTextBoxRegularExpressionValidator0;
         
         /// <summary>
         /// SenhaEmailGoogleTextBox control.

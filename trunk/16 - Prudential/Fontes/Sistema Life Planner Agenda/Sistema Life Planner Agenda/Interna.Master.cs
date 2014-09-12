@@ -15,10 +15,11 @@ namespace Sistema_Life_Planner_Agenda.Site
         {
             if (!IsPostBack)
             {
-                UsuarioLinkButton.Text = Session["nomeUsuarioLogado"].ToString();
-                //CONTROLA A EXIBIÇÃO DO CONTROLE "ADMIN" APENAS PARA USUÁRIOS QUE PODEM MANTER A LISTA DE EMAILS DE ACESSO
                 try
                 {
+                    UsuarioLinkButton.Text = Session["nomeUsuarioLogado"].ToString();
+
+                    //CONTROLA A EXIBIÇÃO DO CONTROLE "ADMIN" APENAS PARA USUÁRIOS QUE PODEM MANTER A LISTA DE EMAILS DE ACESSO
                     AdiminLinkButton.Visible = new UsuarioBD().UsuarioAdmin(Session["emailUsuarioLogado"].ToString());
                 }
                 catch (Exception)

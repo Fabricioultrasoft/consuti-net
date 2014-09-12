@@ -93,5 +93,35 @@ namespace SislpaTests
             actual = target.UsuarioAdmin(email);
             Assert.AreEqual(expected, actual);
         }
+
+        /// <summary>
+        ///A test for Incluir
+        ///</summary>
+        [TestMethod()]
+        public void IncluirTest()
+        {
+            UsuarioBD target = new UsuarioBD();
+            string AgendaGoogleEmail = DateTime.Now.Millisecond.ToString() + "@testeunitario.com";
+            string AgendaGoogleSenha = "123456";
+            string Email = DateTime.Now.Millisecond.ToString() + "@testeunitario.com";
+            string Nome = "TesteUnitario";
+            string Senha = "123456";
+            string Telefone = "(31) 97653922";
+            target.Incluir(AgendaGoogleEmail, AgendaGoogleSenha, Email, Nome, Senha, Telefone);
+        }
+
+        /// <summary>
+        ///A test for EmailAutorizado
+        ///</summary>
+        [TestMethod()]
+        public void EmailAutorizadoTest()
+        {
+            UsuarioBD target = new UsuarioBD(); 
+            string email = "cristian.co.gomes@gmail.com"; 
+            bool expected = true;
+            bool actual;
+            actual = target.EmailAutorizado(email);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
