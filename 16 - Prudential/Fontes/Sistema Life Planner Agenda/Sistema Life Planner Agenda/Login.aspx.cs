@@ -2,6 +2,7 @@
 using Sistema_Life_Planner_Agenda.Classes;
 using System.Web.UI.WebControls;
 using System.Web.Security;
+using Sistema_Life_Planner_Agenda.BD;
 
 namespace Sistema_Life_Planner_Agenda
 {
@@ -20,7 +21,9 @@ namespace Sistema_Life_Planner_Agenda
         protected void okButton_Click(object sender, EventArgs e)
         {
             AuthenticateEventArgs a = new AuthenticateEventArgs();
-            string nomeUsuario = ValidarDadosAcesso(emailLoginTextBox.Text, senhaTextBox.Text);
+
+            /// Busca nome do usuário se dados de acesso forem válidos
+            string nomeUsuario = new UsuarioBD().Autenticar(emailLoginTextBox.Text, senhaTextBox.Text);
             if (nomeUsuario.Equals(string.Empty))
             {
                 a.Authenticated = false;
@@ -29,6 +32,8 @@ namespace Sistema_Life_Planner_Agenda
             else
             {
                 a.Authenticated = true;
+                Session["emailUsuarioLogado"] = emailLoginTextBox.Text;
+                Session["nomeUsuarioLogado"] = nomeUsuario;
                 FormsAuthentication.RedirectFromLoginPage(nomeUsuario, false);
             }
         }
@@ -36,20 +41,6 @@ namespace Sistema_Life_Planner_Agenda
         protected void esqueciSenhaLinkButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("RecuperarSenha\\Default.aspx");
-        }
-
-        /// <summary>
-        /// Busca nome do usuário se dados de acesso forem válidos
-        /// </summary>
-        /// <param name="email">email para validação</param>
-        /// <param name="senha">senha para validação</param>
-        /// <returns>String com o nome do usuário autenticado</returns>
-        private string ValidarDadosAcesso(string email, string senha)
-        {
-            //TODO: validar login
-            string nomeUsuario = string.Empty;
-
-            return nomeUsuario;
         }
     }
 }
