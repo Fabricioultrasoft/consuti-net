@@ -124,5 +124,29 @@ namespace Sistema_Life_Planner_Agenda.BD
                 return false;
             }
         }
+
+        /// <summary>
+        /// Recupera a senha de um usuário a partir do email
+        /// </summary>
+        /// <param name="email">Email utilizado de parâmetro para consulta</param>
+        /// <returns>Senha do usuário cadastrado</returns>
+        public string RecuperarSenha(string email)
+        {
+            comando.CommandText = @"SELECT Senha
+                                    FROM usuario
+                                    WHERE email = @email;";
+            comando.Parameters.Add(new MySqlParameter("@email", email));
+            object resultadoBusca = comando.ExecuteScalar();
+
+            try
+            {
+                return resultadoBusca.ToString();
+            }
+            catch (Exception)
+            {
+                return string.Empty;
+            }
+
+        }
     }
 }
