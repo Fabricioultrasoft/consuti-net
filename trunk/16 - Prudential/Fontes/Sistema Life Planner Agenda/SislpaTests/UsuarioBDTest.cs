@@ -123,5 +123,19 @@ namespace SislpaTests
             actual = target.EmailAutorizado(email);
             Assert.AreEqual(expected, actual);
         }
+
+        /// <summary>
+        /// Testar a recuperação de senha
+        /// </summary>
+        [TestMethod()]
+        public void RecuperarSenhaTest()
+        {
+            UsuarioBD target = new UsuarioBD(); 
+            string email = "cristian.co.gomes@gmail.com"; 
+            string expected = "123456"; 
+            string actual;
+            actual = target.RecuperarSenha(email);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
