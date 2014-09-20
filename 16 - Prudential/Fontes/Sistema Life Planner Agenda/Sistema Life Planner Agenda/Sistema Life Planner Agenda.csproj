@@ -69,6 +69,7 @@
     <Content Include="Estilos\Imgs\check.png" />
     <Content Include="Estilos\Imgs\clear.png" />
     <Content Include="Estilos\Imgs\content.png" />
+    <Content Include="Estilos\Imgs\edit.png" />
     <Content Include="Estilos\Imgs\footer.png" />
     <Content Include="Estilos\Imgs\logo.png" />
     <Content Include="Estilos\Imgs\LogoSisLPA_100.png" />
@@ -114,6 +115,7 @@
     </Compile>
     <Compile Include="BD\BancoBase.cs" />
     <Compile Include="BD\UsuarioBD.cs" />
+    <Compile Include="BD\UsuariosAutorizadosBD.cs" />
     <Compile Include="CadastroUsuario\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
