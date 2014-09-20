@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioBDTest.cs" />
+    <Compile Include="UsuariosAutorizadosBDTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sistema Life Planner Agenda\Sistema Life Planner Agenda.csproj">

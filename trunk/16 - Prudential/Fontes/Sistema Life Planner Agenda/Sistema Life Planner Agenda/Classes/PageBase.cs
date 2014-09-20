@@ -22,18 +22,16 @@ namespace Sistema_Life_Planner_Agenda.Classes
         }
 
         /// <summary>
-        /// Envia email 
+        /// Envia emails
         /// </summary>
         /// <param name="nomeRemetente"></param>
         /// <param name="emailRemetente"></param>
         /// <param name="emailDestinatario"></param>
-        /// <param name="emailComCopia"></param>
-        /// <param name="emailComCopiaOculta">Caso não tenha cópia oculta, informar string.empty</param>
+        /// <param name="emailComCopiaOculta"></param>
         /// <param name="assuntoMensagem"></param>
         /// <param name="conteudoMensagem"></param>
-        /// /// <param name="caminhoAnexo"></param>
-        /// <returns>false se não enviado, true se enviado</returns>
-        public bool EnviaEmail(
+        /// <param name="caminhoAnexo"></param>
+        public void EnviaEmail(
             string nomeRemetente,
             string emailRemetente,
             string emailDestinatario,
@@ -42,9 +40,6 @@ namespace Sistema_Life_Planner_Agenda.Classes
             string conteudoMensagem,
             string caminhoAnexo)
         {
-            bool Retorno = true;
-
-
             SmtpClient clienteSmtp = new SmtpClient("localhost");
             MailMessage email = new MailMessage(emailDestinatario, emailDestinatario);
 
@@ -62,18 +57,17 @@ namespace Sistema_Life_Planner_Agenda.Classes
                 email.ReplyTo = new System.Net.Mail.MailAddress(nomeRemetente + "<" + emailRemetente + ">");
                 email.Subject = assuntoMensagem;
                 email.Body = conteudoMensagem;
-                
+
                 clienteSmtp.Send(email);
             }
             catch (Exception)
             {
-                Retorno = false;
+                throw;
             }
             finally
-            {   
+            {
                 email.Dispose();
             }
-            return Retorno;
         }
     }
 }
