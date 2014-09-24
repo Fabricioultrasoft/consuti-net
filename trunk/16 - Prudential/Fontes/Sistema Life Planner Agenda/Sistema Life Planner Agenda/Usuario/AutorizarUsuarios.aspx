@@ -23,10 +23,16 @@
                     <div style="text-align: center;">
                         <span class="obrigatorio">*</span>E-mail:
                         <asp:TextBox ID="emailTextBox" runat="server" MaxLength="100" TabIndex="1" Width="300px"></asp:TextBox>
-                        &nbsp;<asp:CheckBox ID="AdminCheckBox" runat="server" Text="Admin?" TabIndex="2" />
+                        &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="emailTextBox"
+                            Display="Dynamic" ErrorMessage="*" ToolTip="Campo Obrigatório!"></asp:RequiredFieldValidator>
+                        &nbsp;<asp:RegularExpressionValidator ID="EmailTextBoxRegularExpressionValidator"
+                            runat="server" Display="Dynamic" ErrorMessage="*" ToolTip="Email Inválido" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
+                            ControlToValidate="emailTextBox"></asp:RegularExpressionValidator>
+                        &nbsp;
+                        <asp:CheckBox ID="AdminCheckBox" runat="server" Text="Admin?" TabIndex="2" />
                         &nbsp;
                         <asp:Button ID="IncluirButton" runat="server" Text="OK" CssClass="botaoNovo" TabIndex="3"
-                            OnClick="IncluirButton_Click" />
+                            CausesValidation="true" OnClick="IncluirButton_Click" />
                     </div>
                     <br />
                 </fieldset>
@@ -34,11 +40,23 @@
                     <legend>Lista de E-maisl Autorizados no Sistema</legend>
                     <asp:GridView ID="UsuariosAutorizadosGridView" runat="server" CellPadding="4" ForeColor="#333333"
                         GridLines="None" Width="100%" AutoGenerateColumns="False" EnableModelValidation="True"
-                        OnRowCommand="UsuariosAutorizadosGridView_Click" EmptyDataText="Não Existem usuários autorizados no momento.">
+                        OnRowCommand="UsuariosAutorizadosGridView_Click" EmptyDataText="Não Existem usuários autorizados no momento."
+                        AllowPaging="True" AllowSorting="True" PageSize="10" BorderColor="#003366" BorderStyle="Solid"
+                        BorderWidth="1px" CellSpacing="2" OnPageIndexChanging="UsuariosAutorizadosGridView_PageIndexChanging"
+                        OnSorting="UsuariosAutorizadosGridView_Sorting" >
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <Columns>
-                            <asp:BoundField DataField="Email" HeaderText="E-mail autorizado" />
-                            <asp:BoundField HeaderText="Administrador?" DataField="Administrador">
+                            <asp:TemplateField HeaderText="#" >
+                                <HeaderStyle HorizontalAlign="Center" Width="35px" />
+                                <ItemStyle HorizontalAlign="Center" Font-Bold="true" />
+                                <ItemTemplate>
+                                    <%# Container.DataItemIndex + 1 %>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:BoundField DataField="Email" HeaderText="E-mail autorizado" SortExpression="Email">
+                                <ItemStyle CssClass="espacoTabelas" />
+                            </asp:BoundField>
+                            <asp:BoundField HeaderText="Administrador?" DataField="Admin" SortExpression="Admin">
                                 <ItemStyle HorizontalAlign="Center" Width="120px" />
                             </asp:BoundField>
                             <asp:TemplateField HeaderText="Alterar">
@@ -61,12 +79,12 @@
                         </Columns>
                         <EditRowStyle BackColor="#999999" />
                         <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" Height="30px" />
                         <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
                         <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
                         <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                        <PagerSettings Position="Bottom" Mode="Numeric" />
                     </asp:GridView>
-                    <br />
                 </fieldset>
             </asp:Panel>
             <br />
