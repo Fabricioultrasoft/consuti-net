@@ -50,8 +50,9 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// <returns>lista de emails autorizados</returns>
         public DataSet Listar()
         {
-            comando.CommandText = @"SELECT Email, Admin as Administrador 
-                                    FROM usuarios_autorizados;";
+            comando.CommandText = @"SELECT Email, CASE WHEN Admin = 0 THEN 'Não' ELSE 'Sim' END AS Admin 
+                                    FROM usuarios_autorizados
+                                    ORDER BY Email;";
             comando.CommandType = CommandType.Text;
 
             // Classe que auxilia no preenchimento de um dataset
