@@ -134,7 +134,7 @@ namespace Sistema_Life_Planner_Agenda.Usuario
         private void CarregarGridView()
         {
             UsuariosAutorizadosBD usuarios = new UsuariosAutorizadosBD();
-            UsuariosAutorizadosGridView.DataSource = usuarios.Listar();
+            UsuariosAutorizadosGridView.DataSource = ViewState["UsuariosAutorizadosDataSet"] = usuarios.Listar();
             UsuariosAutorizadosGridView.DataBind();
             usuarios.Dispose();
         }
@@ -237,8 +237,7 @@ namespace Sistema_Life_Planner_Agenda.Usuario
             dataSet.Tables[0].DefaultView;
             UsuariosAutorizadosGridView.DataBind();
         }
-
-        //TODO: TRATAR BUG DE PERDER A PAGINAÇÃO APÓS ORDENAÇÃO
+        
         #endregion
     }
 }
