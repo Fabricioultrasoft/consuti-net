@@ -14,6 +14,41 @@ namespace Sistema_Life_Planner_Agenda.Usuario
 {
     public partial class AutorizarUsuarios : PageBase
     {
+        private SortDirection gridSortDirection
+        {
+            get
+            {
+                // Initial state is Ascending
+                if (ViewState["GridSortDirection"] == null)
+                {
+                    ViewState["GridSortDirection"] = SortDirection.Ascending;
+                }
+                // Return the state
+                return (SortDirection)ViewState["GridSortDirection"];
+            }
+            set
+            {
+                ViewState["GridSortDirection"] = value;
+            }
+        }
+        private string gridSortExpression
+        {
+            get
+            {
+                // Initial sort expression is DepartmentID
+                if (ViewState["GridSortExpression"] == null)
+                {
+                    ViewState["GridSortExpression"] = "Email";
+                }
+                // Return the sort expression
+                return (string)ViewState["GridSortExpression"];
+            }
+            set
+            {
+                ViewState["GridSortExpression"] = value;
+            }
+        }
+
         /// <summary>
         /// Carrega a página
         /// </summary>
@@ -93,11 +128,11 @@ namespace Sistema_Life_Planner_Agenda.Usuario
         /// <param name="e"></param>
         protected void UsuariosAutorizadosGridView_Click(object sender, GridViewCommandEventArgs e)
         {
-            UsuariosAutorizadosBD usuario = new UsuariosAutorizadosBD();
             try
             {
                 if (e.CommandName == "Excluir")
                 {
+                    UsuariosAutorizadosBD usuario = new UsuariosAutorizadosBD();
                     usuario.Excluir(Convert.ToString(e.CommandArgument));
                     ExibeMensagemPopUp("E-mail removido com sucesso!");
                     CarregarGridView();
@@ -124,6 +159,7 @@ namespace Sistema_Life_Planner_Agenda.Usuario
         protected void UsuariosAutorizadosGridView_PageIndexChanging(Object sender, GridViewPageEventArgs e)
         {
             UsuariosAutorizadosGridView.PageIndex = e.NewPageIndex;
+            UsuariosAutorizadosGridView.DataSource = (DataSet)ViewState["UsuariosAutorizadosDataSet"];
             UsuariosAutorizadosGridView.DataBind();
 
         }
@@ -138,7 +174,6 @@ namespace Sistema_Life_Planner_Agenda.Usuario
             UsuariosAutorizadosGridView.DataBind();
             usuarios.Dispose();
         }
-
 
         protected void UsuariosAutorizadosGridView_Sorting(object sender, GridViewSortEventArgs e)
         {
@@ -166,40 +201,7 @@ namespace Sistema_Life_Planner_Agenda.Usuario
             BindGrid();
         }
 
-        private SortDirection gridSortDirection
-        {
-            get
-            {
-                // Initial state is Ascending
-                if (ViewState["GridSortDirection"] == null)
-                {
-                    ViewState["GridSortDirection"] = SortDirection.Ascending;
-                }
-                // Return the state
-                return (SortDirection)ViewState["GridSortDirection"];
-            }
-            set
-            {
-                ViewState["GridSortDirection"] = value;
-            }
-        }
-        private string gridSortExpression
-        {
-            get
-            {
-                // Initial sort expression is DepartmentID
-                if (ViewState["GridSortExpression"] == null)
-                {
-                    ViewState["GridSortExpression"] = "Email";
-                }
-                // Return the sort expression
-                return (string)ViewState["GridSortExpression"];
-            }
-            set
-            {
-                ViewState["GridSortExpression"] = value;
-            }
-        }
+        
 
         /// <summary>
         /// Rebinda o grid ordenado.
@@ -208,7 +210,7 @@ namespace Sistema_Life_Planner_Agenda.Usuario
         {
             // Define data objects
             DataSet dataSet = new DataSet();
-            
+
             if (ViewState["UsuariosAutorizadosDataSet"] == null)
             {
                 dataSet = new UsuariosAutorizadosBD().Listar();
@@ -237,7 +239,7 @@ namespace Sistema_Life_Planner_Agenda.Usuario
             dataSet.Tables[0].DefaultView;
             UsuariosAutorizadosGridView.DataBind();
         }
-        
+
         #endregion
     }
 }
