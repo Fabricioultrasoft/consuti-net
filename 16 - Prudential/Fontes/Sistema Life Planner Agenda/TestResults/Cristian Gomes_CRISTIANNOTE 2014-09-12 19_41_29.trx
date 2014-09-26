@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="9ebd56d7-c022-481b-bab6-03e7f9917507" name="Cristian Gomes@CRISTIANNOTE 2014-09-12 19:41:29" runUser="CristianNote\Cristian Gomes" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="17f09b63-edf0-4d4e-84e1-147954c099a3">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Cristian Gomes_CRISTIANNOTE 2014-09-12 19_41_29">
+      <DeploymentItem filename="D:\ConsuTI\gcode\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\bin\Sistema Life Planner Agenda.dll" />
+      <DeploymentItem filename="D:\ConsuTI\gcode\16 - Prudential\Fontes\Sistema Life Planner Agenda\SislpaTests\bin\Debug\AjaxControlToolkit.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-09-12T19:41:29.1970744-03:00" queuing="2014-09-12T19:41:29.2490774-03:00" start="2014-09-12T19:41:29.2610781-03:00" finish="2014-09-12T19:41:30.2561350-03:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="4" executed="4" passed="4" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="AutenticarTest" storage="d:\consuti\gcode\16 - prudential\fontes\sistema life planner agenda\sislpatests\bin\debug\sislpatests.dll" id="141a4742-a385-caa0-fdee-730c1ca0ce71">
+      <Execution id="5a282442-3d9b-4c73-9861-f04696560bf1" />
+      <TestMethod codeBase="D:/ConsuTI/gcode/16 - Prudential/Fontes/Sistema Life Planner Agenda/SislpaTests/bin/Debug/SislpaTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SislpaTests.UsuarioBDTest, SislpaTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AutenticarTest" />
+    </UnitTest>
+    <UnitTest name="UsuarioAdminTest" storage="d:\consuti\gcode\16 - prudential\fontes\sistema life planner agenda\sislpatests\bin\debug\sislpatests.dll" id="864970ca-9104-ed6c-609f-c1f1761c9715">
+      <Execution id="4d6e6973-3461-46db-bbc9-b929cdd62563" />
+      <TestMethod codeBase="D:/ConsuTI/gcode/16 - Prudential/Fontes/Sistema Life Planner Agenda/SislpaTests/bin/Debug/SislpaTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SislpaTests.UsuarioBDTest, SislpaTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UsuarioAdminTest" />
+    </UnitTest>
+    <UnitTest name="EmailAutorizadoTest" storage="d:\consuti\gcode\16 - prudential\fontes\sistema life planner agenda\sislpatests\bin\debug\sislpatests.dll" id="fa760c41-7120-11a6-d154-1b3750843e7c">
+      <Execution id="48cc4a8a-839b-49f3-b3ff-0d5009e3513c" />
+      <TestMethod codeBase="D:/ConsuTI/gcode/16 - Prudential/Fontes/Sistema Life Planner Agenda/SislpaTests/bin/Debug/SislpaTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SislpaTests.UsuarioBDTest, SislpaTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="EmailAutorizadoTest" />
+    </UnitTest>
+    <UnitTest name="IncluirTest" storage="d:\consuti\gcode\16 - prudential\fontes\sistema life planner agenda\sislpatests\bin\debug\sislpatests.dll" id="f4cef54b-64ff-64c8-3e8e-e03b64d61f4e">
+      <Execution id="83fab531-a242-4e77-b623-55c2da07a6b0" />
+      <TestMethod codeBase="D:/ConsuTI/gcode/16 - Prudential/Fontes/Sistema Life Planner Agenda/SislpaTests/bin/Debug/SislpaTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SislpaTests.UsuarioBDTest, SislpaTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IncluirTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="141a4742-a385-caa0-fdee-730c1ca0ce71" executionId="5a282442-3d9b-4c73-9861-f04696560bf1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="864970ca-9104-ed6c-609f-c1f1761c9715" executionId="4d6e6973-3461-46db-bbc9-b929cdd62563" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f4cef54b-64ff-64c8-3e8e-e03b64d61f4e" executionId="83fab531-a242-4e77-b623-55c2da07a6b0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fa760c41-7120-11a6-d154-1b3750843e7c" executionId="48cc4a8a-839b-49f3-b3ff-0d5009e3513c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="5a282442-3d9b-4c73-9861-f04696560bf1" testId="141a4742-a385-caa0-fdee-730c1ca0ce71" testName="AutenticarTest" computerName="CRISTIANNOTE" duration="00:00:00.1162347" startTime="2014-09-12T19:41:29.2940800-03:00" endTime="2014-09-12T19:41:30.0341223-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5a282442-3d9b-4c73-9861-f04696560bf1">
+    </UnitTestResult>
+    <UnitTestResult executionId="4d6e6973-3461-46db-bbc9-b929cdd62563" testId="864970ca-9104-ed6c-609f-c1f1761c9715" testName="UsuarioAdminTest" computerName="CRISTIANNOTE" duration="00:00:00.0192849" startTime="2014-09-12T19:41:30.0411227-03:00" endTime="2014-09-12T19:41:30.0811250-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4d6e6973-3461-46db-bbc9-b929cdd62563">
+    </UnitTestResult>
+    <UnitTestResult executionId="83fab531-a242-4e77-b623-55c2da07a6b0" testId="f4cef54b-64ff-64c8-3e8e-e03b64d61f4e" testName="IncluirTest" computerName="CRISTIANNOTE" duration="00:00:00.0727654" startTime="2014-09-12T19:41:30.0871253-03:00" endTime="2014-09-12T19:41:30.1751303-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="83fab531-a242-4e77-b623-55c2da07a6b0">
+    </UnitTestResult>
+    <UnitTestResult executionId="48cc4a8a-839b-49f3-b3ff-0d5009e3513c" testId="fa760c41-7120-11a6-d154-1b3750843e7c" testName="EmailAutorizadoTest" computerName="CRISTIANNOTE" duration="00:00:00.0194135" startTime="2014-09-12T19:41:30.1781305-03:00" endTime="2014-09-12T19:41:30.2101323-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="48cc4a8a-839b-49f3-b3ff-0d5009e3513c">
+    </UnitTestResult>
+  </Results>
+</TestRun>
