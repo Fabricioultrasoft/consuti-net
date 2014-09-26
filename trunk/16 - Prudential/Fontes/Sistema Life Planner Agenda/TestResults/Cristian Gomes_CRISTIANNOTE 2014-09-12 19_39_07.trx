@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="60b214d4-8c7d-4cf4-986b-214ba0e994d6" name="Cristian Gomes@CRISTIANNOTE 2014-09-12 19:39:07" runUser="CristianNote\Cristian Gomes" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="17f09b63-edf0-4d4e-84e1-147954c099a3">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Cristian Gomes_CRISTIANNOTE 2014-09-12 19_39_07">
+      <DeploymentItem filename="D:\ConsuTI\gcode\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\bin\Sistema Life Planner Agenda.dll" />
+      <DeploymentItem filename="D:\ConsuTI\gcode\16 - Prudential\Fontes\Sistema Life Planner Agenda\SislpaTests\bin\Debug\AjaxControlToolkit.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-09-12T19:39:07.3179594-03:00" queuing="2014-09-12T19:39:07.3339603-03:00" start="2014-09-12T19:39:07.3469610-03:00" finish="2014-09-12T19:39:08.1410065-03:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="EmailAutorizadoTest" storage="d:\consuti\gcode\16 - prudential\fontes\sistema life planner agenda\sislpatests\bin\debug\sislpatests.dll" id="fa760c41-7120-11a6-d154-1b3750843e7c">
+      <Execution id="b4b35972-f8e4-4cbd-aca6-3e1f841f9db5" />
+      <TestMethod codeBase="D:/ConsuTI/gcode/16 - Prudential/Fontes/Sistema Life Planner Agenda/SislpaTests/bin/Debug/SislpaTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SislpaTests.UsuarioBDTest, SislpaTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="EmailAutorizadoTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="fa760c41-7120-11a6-d154-1b3750843e7c" executionId="b4b35972-f8e4-4cbd-aca6-3e1f841f9db5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="b4b35972-f8e4-4cbd-aca6-3e1f841f9db5" testId="fa760c41-7120-11a6-d154-1b3750843e7c" testName="EmailAutorizadoTest" computerName="CRISTIANNOTE" duration="00:00:00.1004105" startTime="2014-09-12T19:39:07.3849632-03:00" endTime="2014-09-12T19:39:08.0950038-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b4b35972-f8e4-4cbd-aca6-3e1f841f9db5">
+    </UnitTestResult>
+  </Results>
+</TestRun>

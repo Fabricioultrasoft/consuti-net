@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="b9f1c826-456f-43e6-b383-38f42b737b87" name="Cristian Gomes@CRISTIANNOTE 2014-09-23 20:40:17" runUser="CristianNote\Cristian Gomes" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="17f09b63-edf0-4d4e-84e1-147954c099a3">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Cristian Gomes_CRISTIANNOTE 2014-09-23 20_40_17">
+      <DeploymentItem filename="D:\ConsuTI\gcode\16 - Prudential\Fontes\Sistema Life Planner Agenda\SislpaTests\bin\Debug\AjaxControlToolkit.dll" />
+      <DeploymentItem filename="D:\ConsuTI\gcode\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\bin\Sistema Life Planner Agenda.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-09-23T20:40:17.7535574-03:00" queuing="2014-09-23T20:40:17.7975599-03:00" start="2014-09-23T20:40:17.8125608-03:00" finish="2014-09-23T20:40:18.8336192-03:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="IncluirTest" storage="d:\consuti\gcode\16 - prudential\fontes\sistema life planner agenda\sislpatests\bin\debug\sislpatests.dll" id="70283422-9434-2c89-5bad-8715528b71a8">
+      <Execution id="8c70b391-f459-4f26-b540-b5b4d8bbde34" />
+      <TestMethod codeBase="D:/ConsuTI/gcode/16 - Prudential/Fontes/Sistema Life Planner Agenda/SislpaTests/bin/Debug/SislpaTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SislpaTests.UsuariosAutorizadosBDTest, SislpaTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IncluirTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="70283422-9434-2c89-5bad-8715528b71a8" executionId="8c70b391-f459-4f26-b540-b5b4d8bbde34" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="8c70b391-f459-4f26-b540-b5b4d8bbde34" testId="70283422-9434-2c89-5bad-8715528b71a8" testName="IncluirTest" computerName="CRISTIANNOTE" duration="00:00:00.2192335" startTime="2014-09-23T20:40:17.8255615-03:00" endTime="2014-09-23T20:40:18.7366136-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8c70b391-f459-4f26-b540-b5b4d8bbde34">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SislpaTests.UsuariosAutorizadosBDTest.IncluirTest threw exception: 
+MySql.Data.MySqlClient.MySqlException: Duplicate entry 'testeUnitario@email.com' for key 'PRIMARY'</Message>
+          <StackTrace>    em MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   em MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64&amp; affectedRows, Int64&amp; lastInsertId)
+   em MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
+   em MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   em MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   em MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   em Sistema_Life_Planner_Agenda.BD.UsuariosAutorizadosBD.Incluir(Int32 Admin, String Email) na D:\ConsuTI\gcode\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\BD\UsuariosAutorizadosBD.cs:linha 28
+   em SislpaTests.UsuariosAutorizadosBDTest.IncluirTest() na D:\ConsuTI\gcode\16 - Prudential\Fontes\Sistema Life Planner Agenda\SislpaTests\UsuariosAutorizadosBDTest.cs:linha 78
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
