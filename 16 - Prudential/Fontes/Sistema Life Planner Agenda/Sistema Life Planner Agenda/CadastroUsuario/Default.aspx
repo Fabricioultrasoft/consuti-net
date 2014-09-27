@@ -135,7 +135,7 @@
                     <br />
                 </fieldset>
                 <div class="barraBotoes">
-                    <asp:Button ID="cancelarButton" runat="server" Text="Cancelar" CssClass="botaoCancelar"
+                    <asp:Button ID="cancelarButton" runat="server" Text="Voltar" CssClass="botaoVoltar"
                         TabIndex="9" OnClick="cancelarButton_Click" CausesValidation="False" />
                     <asp:Button ID="okButton" runat="server" Text="OK" CssClass="botaoSalvar" TabIndex="10"
                         OnClick="okButton_Click" />

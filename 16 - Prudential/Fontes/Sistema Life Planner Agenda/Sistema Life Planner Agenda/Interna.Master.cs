@@ -35,9 +35,8 @@ namespace Sistema_Life_Planner_Agenda.Site
         }
 
         protected void SairLinkButton_Click(object sender, EventArgs e)
-        {
-            AuthenticateEventArgs a = new AuthenticateEventArgs();
-            a.Authenticated = false;
+        {   
+            FormsAuthentication.SignOut();
             Response.Redirect("~/Login.aspx");
         }
 

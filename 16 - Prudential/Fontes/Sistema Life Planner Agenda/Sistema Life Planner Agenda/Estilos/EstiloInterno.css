@@ -291,7 +291,7 @@ input[type="submit"]
     font-weight: bold;
     color: White;
     margin-left: 10px;
-    border: 1px solid;
+    border: 1px solid #808080;
     background-repeat: no-repeat;
     background-color: #C0C0C0;
     background-position: left center;
@@ -300,6 +300,11 @@ input[type="submit"]
 input[type="submit"]:hover
 {
     background-color: #999999;
+}
+
+.botaoVoltar
+{
+    background-image: url('Imgs/left.png');
 }
 
 .botaoSalvar

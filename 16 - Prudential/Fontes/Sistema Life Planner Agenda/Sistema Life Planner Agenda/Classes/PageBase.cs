@@ -40,7 +40,7 @@ namespace Sistema_Life_Planner_Agenda.Classes
             string conteudoMensagem,
             string caminhoAnexo)
         {
-            SmtpClient clienteSmtp = new SmtpClient("localhost");
+            SmtpClient clienteSmtp = new SmtpClient("localhost", 25);
             MailMessage email = new MailMessage(emailDestinatario, emailDestinatario);
 
             try
