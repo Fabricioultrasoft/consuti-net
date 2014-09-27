@@ -15,11 +15,11 @@
         <div id="header">
             <div id="logo">
                 <div id="controleTopo">
-                    <asp:LinkButton ID="UsuarioLinkButton" runat="server" OnClick="UsuarioLinkButton_Click">Usuário</asp:LinkButton>
+                    <asp:LinkButton ID="UsuarioLinkButton" runat="server" CausesValidation="false" OnClick="UsuarioLinkButton_Click">Usuário</asp:LinkButton>
                     &nbsp;&nbsp;
-                    <asp:LinkButton ID="AdiminLinkButton" runat="server" OnClick="AdminLinkButton_Click">Admin</asp:LinkButton>
+                    <asp:LinkButton ID="AdiminLinkButton" runat="server" CausesValidation="false" OnClick="AdminLinkButton_Click">Admin</asp:LinkButton>
                     &nbsp;&nbsp;
-                    <asp:LinkButton ID="SairLinkButton" runat="server" OnClick="SairLinkButton_Click">Sair</asp:LinkButton>
+                    <asp:LinkButton ID="SairLinkButton" runat="server" CausesValidation="false" OnClick="SairLinkButton_Click">Sair</asp:LinkButton>
                 </div>
                 <div id="logo_text">
                     <asp:Image ID="LogoTop" runat="server" ImageUrl="~/Estilos/Imgs/LogoSisLPA_100.png" />

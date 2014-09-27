@@ -71,6 +71,7 @@
     <Content Include="Estilos\Imgs\content.png" />
     <Content Include="Estilos\Imgs\edit.png" />
     <Content Include="Estilos\Imgs\footer.png" />
+    <Content Include="Estilos\Imgs\left.png" />
     <Content Include="Estilos\Imgs\logo.png" />
     <Content Include="Estilos\Imgs\LogoSisLPA_100.png" />
     <Content Include="Estilos\Imgs\lote.png" />
