@@ -242,6 +242,11 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
     padding-top: 30px;
 }
 
+.espacoTabelas
+{   
+    padding-left: 5px;
+}
+
 .tituloTela
 {
     background-color: #DEDEDE;
@@ -286,7 +291,7 @@ input[type="submit"]
     font-weight: bold;
     color: White;
     margin-left: 10px;
-    border: 1px solid;
+    border: 1px solid #808080;
     background-repeat: no-repeat;
     background-color: #C0C0C0;
     background-position: left center;
@@ -434,7 +439,7 @@ input[type="submit"]:hover
     {
         color: Black !important;
     }
-    
+
     #logoRelatorio
     {
         display: block;
