@@ -69,5 +69,20 @@ namespace Sistema_Life_Planner_Agenda.Classes
                 email.Dispose();
             }
         }
+
+        /// <summary>
+        /// recebe o telefone completo e devolve tratado, com o ddd sendo o primeiro item da lista
+        /// </summary>
+        /// <param name="telParam"></param>
+        /// <returns></returns>
+        public List<string> TrtarTelefone(string telParam)
+        {
+            List<string> telefoneTratado = new List<string>();
+
+            telefoneTratado.Add(telParam.Substring(1, 2));
+            telefoneTratado.Add(telParam.Substring(4));
+
+            return telefoneTratado;
+        }
     }
 }

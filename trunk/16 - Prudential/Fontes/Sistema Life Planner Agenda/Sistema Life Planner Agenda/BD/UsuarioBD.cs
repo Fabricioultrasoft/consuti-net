@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace Sistema_Life_Planner_Agenda.BD
 {
@@ -39,9 +40,37 @@ namespace Sistema_Life_Planner_Agenda.BD
             comando.ExecuteNonQuery();
         }
 
-        public void Alterar()
+        /// <summary>
+        /// Atualiza os dados cadastrais de usuário.
+        /// </summary>
+        /// <param name="senha"></param>
+        /// <param name="nomeCompleto"></param>
+        /// <param name="telefone"></param>
+        /// <param name="emailGoogleAgenda"></param>
+        /// <param name="senhaGoogleAgenda"></param>
+        /// <param name="email"></param>
+        public void Alterar(
+            string senha,
+            string nomeCompleto,
+            string telefone,
+            string emailGoogleAgenda,
+            string senhaGoogleAgenda,
+            string email)
         {
-            //TODO: Alterar Usuário
+            // criar um comando para executar a alteração / executar comando
+            comando.CommandText = @"UPDATE bd_sislpa.usuario 
+                                    SET AgendaGoogleEmail = @AgendaGoogleEmail , AgendaGoogleSenha = @AgendaGoogleSenha, 
+                                        Nome = @Nome, Senha = @Senha, Telefone = @Telefone 
+                                    WHERE Email = @Email";
+            comando.Parameters.AddWithValue("@Senha", senha);
+            comando.Parameters.AddWithValue("@Nome", nomeCompleto);
+            comando.Parameters.AddWithValue("@Telefone", telefone);
+            comando.Parameters.AddWithValue("@AgendaGoogleEmail", emailGoogleAgenda);
+            comando.Parameters.AddWithValue("@AgendaGoogleSenha", senhaGoogleAgenda);
+            comando.Parameters.AddWithValue("@Email", email);
+
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.ExecuteNonQuery();
         }
 
         /// <summary>
@@ -73,9 +102,23 @@ namespace Sistema_Life_Planner_Agenda.BD
             
         }
 
-        public void Obter()
+        /// <summary>
+        /// Obtem um usuário a partir do email
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns>DataSet com os dados cadastrais do usuário</returns>
+        public DataSet Obter(string email)
         {
-            //TODO: Obter Usuário
+            comando.CommandText = @"SELECT AgendaGoogleEmail, AgendaGoogleSenha, Email, Nome, Senha, Telefone 
+                                    FROM usuario
+                                    WHERE email = @email;";
+            comando.Parameters.Add(new MySqlParameter("@email", email));
+            comando.CommandType = CommandType.Text;
+            // Classe que auxilia no preenchimento de um dataset
+            MySqlDataAdapter adap = new MySqlDataAdapter(comando);
+            DataSet retorno = new DataSet();
+            adap.Fill(retorno);
+            return retorno;
         }
 
         /// <summary>
