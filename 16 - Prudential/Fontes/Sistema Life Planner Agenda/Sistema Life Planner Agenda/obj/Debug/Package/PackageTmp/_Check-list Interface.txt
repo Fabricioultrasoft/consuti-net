@@ -1,4 +1,0 @@
-﻿Titulo da página;
-tab index dos campos;
-Espaço no final da tela;
-Atalhos no menu e na tela de home;

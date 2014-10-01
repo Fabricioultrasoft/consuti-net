@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://demonstracao.saotome.dcc.ufmg.br/" />
+<title>PesquisarPlanejamentoTest - Federal</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">PesquisarPlanejamentoTest - Federal</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/programasus/Home.app</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@id='registerForm:loginButton']/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=j_username</td>
+	<td>47234646740</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=j_password</td>
+	<td>47234646740</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>pageTitleSystemLayout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=registerForm:dataTable:0:selectImg</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='registerForm:arangi_menu_item_2_1']/span[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=registerForm:buttonSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=registerForm:selectedDataTable:0:nome</td>
+	<td>Plano Nacional de Saúde</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=registerForm:buttonSearchReset</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=img.image</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=registerForm:botaoMontarAjuda</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1 &gt; span</td>
+	<td>Ajuda da Página</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.wikiTopicTitle</td>
+	<td>Pesquisa de Plano Nacional de Saúde</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@title='Fechar']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=registerForm:buttonSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=registerForm:anoIniArg</td>
+	<td>0000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=registerForm:anoFimArg</td>
+	<td>0000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=registerForm:buttonSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=span.rf-msgs-sum</td>
+	<td>Nenhum registro encontrado para os parâmetros fornecidos.</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=registerForm:anoIniArg</td>
+	<td>2099</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=registerForm:anoFimArg</td>
+	<td>2000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=registerForm:buttonSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=span.rf-msgs-sum</td>
+	<td>Nenhum registro encontrado para os parâmetros fornecidos.</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=registerForm:anoFimArg</td>
+	<td>2100</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=registerForm:buttonSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=registerForm:anoIniArg</td>
+	<td>2000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=registerForm:anoFimArg</td>
+	<td>2020</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=registerForm:buttonSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//a[@id='registerForm:selectedDataTable:id_selectedDataTable_name']/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[@id='registerForm:logoutButton']/img</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

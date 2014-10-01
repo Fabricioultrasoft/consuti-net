@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://demonstracao.saotome.dcc.ufmg.br/" />
+<title>LoginTest - Federal</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">LoginTest - Federal</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/programasus/Home.app</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>id=registerForm:logoutButton</td>
+	<td>Sair</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@id='registerForm:loginButton']/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h2</td>
+	<td>Programação Geral das Ações e Serviços de Saúde - PGASS</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='other']/p[2]</td>
+	<td>Do ponto de vista metodológico, a PGASS foi subdivida em quatro etapas, possibilitando a melhor operacionalização da proposta de modo sistêmico. São elas:</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p</td>
+	<td>A PGASS é um instrumento de apoio à gestão no tocante ao processo de negociação e pactuação intergestores em que são definidos os quantitativos físicos e financeiros das ações e serviços de saúde a serem desenvolvidos, no âmbito da região de saúde.</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Ainda não possuo uma conta SCPA</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=exact:Esqueceu a senha?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=ul</td>
+	<td>Etapa I: Se traduz no registro informatizado das diretrizes, objetivos e metas dos planos de saúde, dos três entes federados, de modo a harmonizar as prioridades que culminam no Planejamento Regional Integrado. Etapa II: Corresponde à macro programação, a partir do processo de modelagem de redes/ações temáticas e estratégicas, tendo como produto final o Plano de Ação Regional e Mapa de Investimento e Custeio correspondente. Etapa III: Corresponde à meso programação das ações e serviços de saúde, tipo de pactuação, fluxos assistenciais e impacto financeiro. Etapa IV: Corresponde à micro programação, a partir da compatibilização entre dimensionamento das etapas anteriores com subsídios para a formalização de contratos, apoio aos complexos reguladores do acesso e apoio na elaboração da Ficha de Programação Orçamentária - FPO.</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Conheça mais sobre o SCPA</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=j_username</td>
+	<td>00000000000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=j_password</td>
+	<td>00000000000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h3</td>
+	<td>Falha na Autenticação: Usuário e/ou senha incorretos.</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=j_username</td>
+	<td>47234646740</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=j_password</td>
+	<td>47234646740</td>
+</tr>
+<tr>
+	<td>clickAtAndWait</td>
+	<td>id=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>pageTitleSystemLayout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=pageTitleSystemLayout</td>
+	<td>Selecione o Perfil que Deseja Trabalhar</td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//a[@id='registerForm:logoutButton']/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[@id='registerForm:logoutButton']/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=span.rf-msgs-sum</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=span.rf-msgs-sum</td>
+	<td>Sessão encerrada com sucesso!</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
