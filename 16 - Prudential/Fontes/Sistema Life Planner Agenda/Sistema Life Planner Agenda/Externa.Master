@@ -14,7 +14,7 @@
         <div id="header">
             <div id="logo">
                 <div id="logo_text">
-                    <asp:Image ID="LogoTop" runat="server" ImageUrl="~/Estilos/Imgs/LogoSisLPA_100.png" />
+                    <asp:Image ID="LogoTop" runat="server" ImageUrl="~/Estilos/Imgs/LogoSisLPA_100.png" AlternateText="Sistema Life Planner Agenda" />
                 </div>
                 <div id="tituloTop">
                     &nbsp;&nbsp;&nbsp;&nbsp; Sistema Life Planner Agenda</div>

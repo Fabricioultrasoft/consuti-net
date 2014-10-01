@@ -35,12 +35,16 @@ namespace Sistema_Life_Planner_Agenda
                     a.Authenticated = false;
                     ExibeMensagemPopUp("Dados de acesso não conferem! Verifique e-mail e senha informados.");
                 }
-                else
+                else if (new UsuarioBD().EmailAutorizado(emailLoginTextBox.Text))
                 {
                     a.Authenticated = true;
                     Session["emailUsuarioLogado"] = emailLoginTextBox.Text;
                     Session["nomeUsuarioLogado"] = nomeUsuario;
                     FormsAuthentication.RedirectFromLoginPage(nomeUsuario, false);
+                }
+                else
+                {
+                    ExibeMensagemPopUp("Usuário não possui mais acesso autorizado ao sistema. Procure o Administrador.");
                 }
             }
         }
