@@ -141,7 +141,7 @@
                 </fieldset>
                 <div class="barraBotoes">
                     <asp:Button ID="cancelarButton" runat="server" Text="Cancelar" CssClass="botaoCancelar"
-                        TabIndex="9" OnClick="cancelarButton_Click" />
+                        TabIndex="9" OnClick="cancelarButton_Click" CausesValidation="false" />
                     <asp:Button ID="okButton" runat="server" Text="OK" CssClass="botaoSalvar" TabIndex="10"
                         OnClick="okButton_Click" />
                 </div>

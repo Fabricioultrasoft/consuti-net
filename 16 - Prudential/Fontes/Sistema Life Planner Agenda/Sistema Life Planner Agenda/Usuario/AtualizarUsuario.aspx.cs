@@ -50,7 +50,7 @@ namespace Sistema_Life_Planner_Agenda.Usuario
 
         protected void cancelarButton_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("AtualizarUsuario.aspx");
         }
 
         private void CarregarDados()
