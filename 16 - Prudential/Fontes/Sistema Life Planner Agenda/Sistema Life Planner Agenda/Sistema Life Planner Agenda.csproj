@@ -70,6 +70,7 @@
     <Content Include="Estilos\Imgs\clear.png" />
     <Content Include="Estilos\Imgs\content.png" />
     <Content Include="Estilos\Imgs\edit.png" />
+    <Content Include="Estilos\Imgs\favicon.ico" />
     <Content Include="Estilos\Imgs\footer.png" />
     <Content Include="Estilos\Imgs\left.png" />
     <Content Include="Estilos\Imgs\logo.png" />
@@ -115,6 +116,9 @@
       <DependentUpon>PesquisarAgenda.aspx</DependentUpon>
     </Compile>
     <Compile Include="BD\BancoBase.cs" />
+    <Compile Include="BD\ContatoBD.cs" />
+    <Compile Include="BD\StatusContatoBD.cs" />
+    <Compile Include="BD\TipoContatoBD.cs" />
     <Compile Include="BD\UsuarioBD.cs" />
     <Compile Include="BD\UsuariosAutorizadosBD.cs" />
     <Compile Include="CadastroUsuario\Default.aspx.cs">
