@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using Sistema_Life_Planner_Agenda.Classes;
 using Sistema_Life_Planner_Agenda.BD;
 using System.Web.Security;
+using System.Data;
 
 namespace Sistema_Life_Planner_Agenda.Contato
 {
@@ -16,21 +17,28 @@ namespace Sistema_Life_Planner_Agenda.Contato
         {
             if (!this.IsPostBack)
             {
-                try
+                if (!string.IsNullOrEmpty(Request.QueryString["idContato"]))
                 {
-                    CarregarRecomendantes();
-                    CarregarStatus();
-                    CarregarTipos();
+                    CarregaDadosCadastrais(Convert.ToInt32(Request.QueryString["idContato"]));
+                }
+                else
+                {
+                    try
+                    {
+                        CarregarRecomendantes();
+                        CarregarStatus();
+                        CarregarTipos();
+                        //TODO: autocomplete de cidades
 
-                    DataCadastroLabel.Text = DateTime.Now.ToString();
-                    
+                        DataCadastroLabel.Text = DateTime.Now.ToString();
+
+                    }
+                    catch (Exception)
+                    {
+                        FormsAuthentication.SignOut();
+                        Response.Redirect("~/Login.aspx");
+                    }
                 }
-                catch (Exception)
-                {
-                    FormsAuthentication.SignOut();
-                    Response.Redirect("~/Login.aspx");
-                }
-               
             }
             //TODO: Verificar se existe histórico. se sim, ocultar o label
         }
@@ -44,7 +52,25 @@ namespace Sistema_Life_Planner_Agenda.Contato
         {
             try
             {
-                //TODO: Salvar contato
+                new ContatoBD().Incluir(
+                    Convert.ToInt32(RecomendanteDropDownList.SelectedItem.Value),
+                    Convert.ToInt32(StatusDropDownList.SelectedItem.Value),
+                    Convert.ToInt32(TipoDropDownList.SelectedItem.Value),
+                    cidadeTextBox.Text,
+                    emailTextBox.Text,
+                    EstadoCivilDropDownList.SelectedItem.Text,
+                    DateTime.Now,
+                    Convert.ToInt32(filhosTextBox.Text),
+                    Convert.ToInt32(idadeTextBox.Text),
+                    nomeCompletoTextBox.Text,
+                    outrasInformacoesTextBox.Text,
+                    profissaoTextBox.Text,
+                    Convert.ToChar(SexoRadioButtonList.SelectedItem.Value),
+                    "(" + DDDtelefoneAlternativo1TextBox.Text + ") " + telefoneAlternativo1TextBox.Text,
+                    "(" + DDDtelefoneAlternativo2TextBox.Text + ") " + telefoneAlternativo2TextBox.Text,
+                    "(" + DDDTelefoneTextBox.Text + ") " + TelefoneTextBox.Text,
+                    UFDropDownList.SelectedItem.Value);
+                
                 ExibeMensagemPopUp("Contatos Salvos com Sucesso!");
                 Response.Redirect("CadastrarContato.aspx");
             }
@@ -93,6 +119,28 @@ namespace Sistema_Life_Planner_Agenda.Contato
 
             ListItem selecione = new ListItem("<Selecione>", "");
             TipoDropDownList.Items.Insert(0, selecione);
+        }
+
+        private void CarregaDadosCadastrais(int idContato)
+        {
+            try
+            {
+                DataSet contatoCadastrado = new ContatoBD().Obter(idContato);
+
+                DataRow DrContato = contatoCadastrado.Tables[0].Rows[0];
+                DataCadastroLabel.Text = DrContato["Data_Cadastro"].ToString();
+                RecomendanteDropDownList.SelectedValue = DrContato["ID_Contato_Recomendante"].ToString();
+
+                //, ID_Status_Contato, ID_Tipo_Contato, 
+                //                            Cidade, Email, Estado_Civil, Data_Cadastro, Filhos, Idade, Nome, 
+                //                            Outras_Informacoes, Profissao, Sexo, Telefone_Alternativo_1, 
+                //                            Telefone_Alternativo_2, Telefone_Principal, UF
+            }
+            catch (Exception ex)
+            {
+                ExibeMensagemPopUp("Erro interno ao carregar os dados de contato. Detalhes: " + ex.Message);
+            }
+            
         }
     }
 }

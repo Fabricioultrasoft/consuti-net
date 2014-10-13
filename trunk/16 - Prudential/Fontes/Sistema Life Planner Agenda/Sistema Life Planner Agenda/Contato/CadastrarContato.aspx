@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Interna.Master" AutoEventWireup="true"
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Interna.Master" AutoEventWireup="true" ValidateRequest="false"
     CodeBehind="CadastrarContato.aspx.cs" Inherits="Sistema_Life_Planner_Agenda.Contato.CadastrarContato" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
@@ -95,8 +95,8 @@
                             <td>
                                 <asp:RadioButtonList ID="SexoRadioButtonList" runat="server" RepeatDirection="Horizontal"
                                     TabIndex="4">
-                                    <asp:ListItem>Masculino</asp:ListItem>
-                                    <asp:ListItem>Feminino</asp:ListItem>
+                                    <asp:ListItem Text="Masculino" Value="M"></asp:ListItem>
+                                    <asp:ListItem Text="Feminino" Value="F"></asp:ListItem>
                                 </asp:RadioButtonList>
                             </td>
                         </tr>
@@ -197,10 +197,10 @@
                                 Filhos:
                             </td>
                             <td>
-                                <asp:TextBox ID="filhosSenhaTextBox" runat="server" Width="30px" TabIndex="12" MaxLength="2"
+                                <asp:TextBox ID="filhosTextBox" runat="server" Width="20px" TabIndex="12" MaxLength="2"
                                     TextMode="SingleLine"></asp:TextBox>
                                 <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender1" runat="server" Enabled="True"
-                                    FilterType="Numbers" TargetControlID="filhosSenhaTextBox" ValidChars="0987654321">
+                                    FilterType="Numbers" TargetControlID="filhosTextBox" ValidChars="0987654321">
                                 </cc1:FilteredTextBoxExtender>
                             </td>
                         </tr>
@@ -299,14 +299,14 @@
                                 Telefone Alternativo 2:
                             </td>
                             <td>
-                                <asp:TextBox ID="DDDtelefoneAlternativo2TextBox" runat="server" MaxLength="2" TabIndex="17"
+                                <asp:TextBox ID="DDDtelefoneAlternativo2TextBox" runat="server" MaxLength="2" TabIndex="19"
                                     Width="20px"></asp:TextBox>
                                 <cc1:FilteredTextBoxExtender ID="DDDtelefoneAlternativo2TextBox_FilteredTextBoxExtender"
                                     runat="server" Enabled="True" TargetControlID="DDDtelefoneAlternativo2TextBox"
                                     ValidChars="1234567890">
                                 </cc1:FilteredTextBoxExtender>
                                 &nbsp;<asp:TextBox ID="telefoneAlternativo2TextBox" runat="server" MaxLength="9"
-                                    TabIndex="18" Width="70px"></asp:TextBox>
+                                    TabIndex="20" Width="70px"></asp:TextBox>
                                 <cc1:FilteredTextBoxExtender ID="telefoneAlternativo2TextBox_FilteredTextBoxExtender"
                                     runat="server" Enabled="True" TargetControlID="telefoneAlternativo2TextBox" ValidChars="1234567890">
                                 </cc1:FilteredTextBoxExtender>
@@ -323,9 +323,9 @@
                 </fieldset>
                 <div class="barraBotoes">
                     <asp:Button ID="cancelarButton" runat="server" Text="Cancelar" CssClass="botaoCancelar"
-                        TabIndex="19" OnClick="cancelarButton_Click" OnClientClick="return confirm('Confirma cancelamento? Os dados não salvos serão perdidos.');" />
+                        TabIndex="29" OnClick="cancelarButton_Click" OnClientClick="return confirm('Confirma cancelamento? Os dados não salvos serão perdidos.');" />
                     <asp:Button ID="salvarButton" runat="server" Text="Salvar" CssClass="botaoSalvar"
-                        TabIndex="20" OnClick="salvarButton_Click" />
+                        TabIndex="30" OnClick="salvarButton_Click" />
                 </div>
             </asp:Panel>
         </div>
