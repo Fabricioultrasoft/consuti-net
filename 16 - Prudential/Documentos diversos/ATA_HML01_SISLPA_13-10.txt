@@ -1,0 +1,5 @@
+o cruzamento de contatos e recomendantes deverá ser apenas na lista de contatos do próprio LP e não entre eles.
+
+A chave para cruzamento de recomendantes e contatos deve ser o telefone (qualquer um dos 3 telefones)
+
+Lincar a busca de recomendantes na tela de cadastro de contato para saber quais foram os contatos já indicados pelo recomendante do TA
