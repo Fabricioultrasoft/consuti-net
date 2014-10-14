@@ -50,6 +50,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Casado.htm" />
     <Content Include="experienciaProfissional.html" />
     <Content Include="contato.html" />
     <Content Include="Curriculo_Crstn.html" />
