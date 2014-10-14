@@ -1,0 +1,5 @@
+D:\ConsuTI\gcode\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\bin\Sistema Life Planner Agenda.dll
+D:\ConsuTI\gcode\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\bin\Sistema Life Planner Agenda.pdb
+D:\ConsuTI\gcode\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\obj\Debug\Sistema Life Planner Agenda.csprojResolveAssemblyReference.cache
+D:\ConsuTI\gcode\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\obj\Debug\Sistema Life Planner Agenda.dll
+D:\ConsuTI\gcode\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\obj\Debug\Sistema Life Planner Agenda.pdb
