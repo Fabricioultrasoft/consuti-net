@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data;
 using MySql.Data.MySqlClient;
+using MySql.Data.Types;
 
 namespace Sistema_Life_Planner_Agenda.BD
 {
@@ -77,7 +78,76 @@ namespace Sistema_Life_Planner_Agenda.BD
             comando.ExecuteNonQuery();
         }
 
+        /// <summary>
+        /// Atualiza um contato
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <param name="ID_Contato_Recomendante"></param>
+        /// <param name="ID_Status_Contato"></param>
+        /// <param name="ID_Tipo_Contato"></param>
+        /// <param name="Cidade"></param>
+        /// <param name="Email"></param>
+        /// <param name="Estado_Civil"></param>
+        /// <param name="Filhos"></param>
+        /// <param name="Idade"></param>
+        /// <param name="Nome"></param>
+        /// <param name="Outras_Informacoes"></param>
+        /// <param name="Profissao"></param>
+        /// <param name="Sexo"></param>
+        /// <param name="Telefone_Alternativo_1"></param>
+        /// <param name="Telefone_Alternativo_2"></param>
+        /// <param name="Telefone_Principal"></param>
+        /// <param name="UF"></param>
+        public void Atualizar(
+            int ID,
+            int ID_Contato_Recomendante,
+            int ID_Status_Contato,
+            int ID_Tipo_Contato,
+            string Cidade,
+            string Email,
+            string Estado_Civil,
+            int Filhos,
+            int Idade,
+            string Nome,
+            string Outras_Informacoes,
+            string Profissao,
+            char Sexo,
+            string Telefone_Alternativo_1,
+            string Telefone_Alternativo_2,
+            string Telefone_Principal,
+            string UF)
+        {
+            comando.CommandText = @"UPDATE contato 
+                                    SET ID_Contato_Recomendante = @ID_Contato_Recomendante, 
+                                        ID_Status_Contato = @ID_Status_Contato, ID_Tipo_Contato = @ID_Tipo_Contato, 
+                                        Cidade = @Cidade, Email = @Email, Estado_Civil = @Estado_Civil, 
+                                        Filhos = @Filhos, Idade = @Idade, Nome = @Nome, Outras_Informacoes = @Outras_Informacoes, 
+                                        Profissao = @Profissao, Sexo = @Sexo, Telefone_Alternativo_1 = @Telefone_Alternativo_1, 
+                                        Telefone_Alternativo_2 = @Telefone_Alternativo_2, Telefone_Principal = @Telefone_Principal,
+                                        UF = @UF 
+                                    WHERE ID = @id;";
 
+            comando.Parameters.AddWithValue("@ID_Contato_Recomendante", ID_Contato_Recomendante);
+            comando.Parameters.AddWithValue("@ID_Status_Contato", ID_Status_Contato);
+            comando.Parameters.AddWithValue("@ID_Tipo_Contato", ID_Tipo_Contato);
+            comando.Parameters.AddWithValue("@Cidade", Cidade);
+            comando.Parameters.AddWithValue("@Email", Email);
+            comando.Parameters.AddWithValue("@Estado_Civil", Estado_Civil);
+            comando.Parameters.AddWithValue("@Filhos", Filhos);
+            comando.Parameters.AddWithValue("@Idade", Idade);
+            comando.Parameters.AddWithValue("@Nome", Nome);
+            comando.Parameters.AddWithValue("@Outras_Informacoes", Outras_Informacoes);
+            comando.Parameters.AddWithValue("@Profissao", Profissao);
+            comando.Parameters.AddWithValue("@Sexo", Sexo);
+            comando.Parameters.AddWithValue("@Telefone_Alternativo_1", Telefone_Alternativo_1);
+            comando.Parameters.AddWithValue("@Telefone_Alternativo_2", Telefone_Alternativo_2);
+            comando.Parameters.AddWithValue("@Telefone_Principal", Telefone_Principal);
+            comando.Parameters.AddWithValue("@UF", UF);
+            comando.Parameters.AddWithValue("@id", ID);
+
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.ExecuteNonQuery();
+        }
 
         /// <summary>
         /// Lista os contatos cadastrados e seus ID's

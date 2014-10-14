@@ -120,6 +120,7 @@
     <Compile Include="BD\StatusContatoBD.cs" />
     <Compile Include="BD\TipoContatoBD.cs" />
     <Compile Include="BD\UsuarioBD.cs" />
+    <Compile Include="BD\UsuarioContatoBD.cs" />
     <Compile Include="BD\UsuariosAutorizadosBD.cs" />
     <Compile Include="CadastroUsuario\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

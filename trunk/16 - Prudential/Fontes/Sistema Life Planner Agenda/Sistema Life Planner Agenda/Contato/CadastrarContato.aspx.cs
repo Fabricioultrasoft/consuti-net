@@ -8,6 +8,7 @@ using Sistema_Life_Planner_Agenda.Classes;
 using Sistema_Life_Planner_Agenda.BD;
 using System.Web.Security;
 using System.Data;
+using MySql.Data.Types;
 
 namespace Sistema_Life_Planner_Agenda.Contato
 {
@@ -50,33 +51,65 @@ namespace Sistema_Life_Planner_Agenda.Contato
 
         protected void salvarButton_Click(object sender, EventArgs e)
         {
-            try
+            if (!string.IsNullOrEmpty(Request.QueryString["idContato"]))
             {
-                new ContatoBD().Incluir(
-                    Convert.ToInt32(RecomendanteDropDownList.SelectedItem.Value),
-                    Convert.ToInt32(StatusDropDownList.SelectedItem.Value),
-                    Convert.ToInt32(TipoDropDownList.SelectedItem.Value),
-                    cidadeTextBox.Text,
-                    emailTextBox.Text,
-                    EstadoCivilDropDownList.SelectedItem.Text,
-                    DateTime.Now,
-                    Convert.ToInt32(filhosTextBox.Text),
-                    Convert.ToInt32(idadeTextBox.Text),
-                    nomeCompletoTextBox.Text,
-                    outrasInformacoesTextBox.Text,
-                    profissaoTextBox.Text,
-                    Convert.ToChar(SexoRadioButtonList.SelectedItem.Value),
-                    "(" + DDDtelefoneAlternativo1TextBox.Text + ") " + telefoneAlternativo1TextBox.Text,
-                    "(" + DDDtelefoneAlternativo2TextBox.Text + ") " + telefoneAlternativo2TextBox.Text,
-                    "(" + DDDTelefoneTextBox.Text + ") " + TelefoneTextBox.Text,
-                    UFDropDownList.SelectedItem.Value);
-                
-                ExibeMensagemPopUp("Contatos Salvos com Sucesso!");
-                Response.Redirect("CadastrarContato.aspx");
+                try
+                {
+                    new ContatoBD().Atualizar(
+                        Convert.ToInt32(Request.QueryString["idContato"].ToString()),
+                        Convert.ToInt32(RecomendanteDropDownList.SelectedItem.Value),
+                        Convert.ToInt32(StatusDropDownList.SelectedItem.Value),
+                        Convert.ToInt32(TipoDropDownList.SelectedItem.Value),
+                        cidadeTextBox.Text,
+                        emailTextBox.Text,
+                        EstadoCivilDropDownList.SelectedItem.Text,
+                        Convert.ToInt32(filhosTextBox.Text),
+                        Convert.ToInt32(idadeTextBox.Text),
+                        nomeCompletoTextBox.Text,
+                        outrasInformacoesTextBox.Text,
+                        profissaoTextBox.Text,
+                        Convert.ToChar(SexoRadioButtonList.SelectedItem.Value),
+                        "(" + DDDtelefoneAlternativo1TextBox.Text + ") " + telefoneAlternativo1TextBox.Text,
+                        "(" + DDDtelefoneAlternativo2TextBox.Text + ") " + telefoneAlternativo2TextBox.Text,
+                        "(" + DDDTelefoneTextBox.Text + ") " + TelefoneTextBox.Text,
+                        UFDropDownList.SelectedItem.Value);
+
+                }
+                catch (Exception ex)
+                {
+                    ExibeMensagemPopUp("Falha ao tentar atualizar o contato. Tente novamente. Detalhes: " + ex.Message);
+                }
             }
-            catch (Exception)
+            else
             {
-                throw;
+                try
+                {
+                    new ContatoBD().Incluir(
+                        Convert.ToInt32(RecomendanteDropDownList.SelectedItem.Value),
+                        Convert.ToInt32(StatusDropDownList.SelectedItem.Value),
+                        Convert.ToInt32(TipoDropDownList.SelectedItem.Value),
+                        cidadeTextBox.Text,
+                        emailTextBox.Text,
+                        EstadoCivilDropDownList.SelectedItem.Text,
+                        DateTime.Now,
+                        Convert.ToInt32(filhosTextBox.Text),
+                        Convert.ToInt32(idadeTextBox.Text),
+                        nomeCompletoTextBox.Text,
+                        outrasInformacoesTextBox.Text,
+                        profissaoTextBox.Text,
+                        Convert.ToChar(SexoRadioButtonList.SelectedItem.Value),
+                        "(" + DDDtelefoneAlternativo1TextBox.Text + ") " + telefoneAlternativo1TextBox.Text,
+                        "(" + DDDtelefoneAlternativo2TextBox.Text + ") " + telefoneAlternativo2TextBox.Text,
+                        "(" + DDDTelefoneTextBox.Text + ") " + TelefoneTextBox.Text,
+                        UFDropDownList.SelectedItem.Value);
+
+                    ExibeMensagemPopUp("Contatos Salvos com Sucesso!");
+                    Response.Redirect("CadastrarContato.aspx");
+                }
+                catch (Exception ex)
+                {
+                    ExibeMensagemPopUp("Falha ao tentar salvar o contato. Tente novamente. Detalhes: " + ex.Message);
+                }
             }
         }
 
@@ -124,17 +157,37 @@ namespace Sistema_Life_Planner_Agenda.Contato
         private void CarregaDadosCadastrais(int idContato)
         {
             try
-            {
+            {                
+                //carrega os dados dos combos
+                CarregarRecomendantes();
+                CarregarStatus();
+                CarregarTipos();
+
+                //preenche os campos
                 DataSet contatoCadastrado = new ContatoBD().Obter(idContato);
 
                 DataRow DrContato = contatoCadastrado.Tables[0].Rows[0];
                 DataCadastroLabel.Text = DrContato["Data_Cadastro"].ToString();
                 RecomendanteDropDownList.SelectedValue = DrContato["ID_Contato_Recomendante"].ToString();
+                nomeCompletoTextBox.Text = DrContato["Nome"].ToString();
+                StatusDropDownList.SelectedValue = DrContato["ID_Status_Contato"].ToString();
+                DDDTelefoneTextBox.Text = DrContato["Telefone_Principal"].ToString().Substring(1, 2);
+                TelefoneTextBox.Text = DrContato["Telefone_Principal"].ToString().Substring(4);
+                SexoRadioButtonList.SelectedValue = DrContato["Sexo"].ToString();
+                outrasInformacoesTextBox.Text = DrContato["Outras_Informacoes"].ToString();
+                idadeTextBox.Text = DrContato["Idade"].ToString();
+                profissaoTextBox.Text = DrContato["Profissao"].ToString();
+                EstadoCivilDropDownList.SelectedValue = DrContato["Estado_Civil"].ToString();
+                filhosTextBox.Text = DrContato["Filhos"].ToString();
+                TipoDropDownList.SelectedValue = DrContato["ID_Tipo_Contato"].ToString();
+                UFDropDownList.SelectedValue = DrContato["UF"].ToString();
+                cidadeTextBox.Text = DrContato["Cidade"].ToString();
+                emailTextBox.Text = DrContato["Email"].ToString();
+                DDDtelefoneAlternativo1TextBox.Text = DrContato["Telefone_Alternativo_1"].ToString().Substring(1, 2);
+                telefoneAlternativo1TextBox.Text = DrContato["Telefone_Alternativo_1"].ToString().Substring(4);
+                DDDtelefoneAlternativo2TextBox.Text = DrContato["Telefone_Alternativo_2"].ToString().Substring(1, 2);
+                telefoneAlternativo2TextBox.Text = DrContato["Telefone_Alternativo_2"].ToString().Substring(4); 
 
-                //, ID_Status_Contato, ID_Tipo_Contato, 
-                //                            Cidade, Email, Estado_Civil, Data_Cadastro, Filhos, Idade, Nome, 
-                //                            Outras_Informacoes, Profissao, Sexo, Telefone_Alternativo_1, 
-                //                            Telefone_Alternativo_2, Telefone_Principal, UF
             }
             catch (Exception ex)
             {
