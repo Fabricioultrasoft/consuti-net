@@ -21,7 +21,7 @@ namespace Sistema_Life_Planner_Agenda.BD
         public void Incluir(
             string AgendaGoogleEmail,
             string AgendaGoogleSenha,
-            string Email, 
+            string Email,
             string Nome,
             string Senha,
             string Telefone)
@@ -99,8 +99,10 @@ namespace Sistema_Life_Planner_Agenda.BD
             {
                 return string.Empty;
             }
-            
+
         }
+
+
 
         /// <summary>
         /// Obtem um usuário a partir do email
@@ -119,6 +121,29 @@ namespace Sistema_Life_Planner_Agenda.BD
             DataSet retorno = new DataSet();
             adap.Fill(retorno);
             return retorno;
+        }
+
+        /// <summary>
+        /// Obtem e retorna o ID do usuário a partir do e-mail
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        public string ObterID(string email)
+        {
+            comando.CommandText = @"SELECT Id
+                                    FROM usuario
+                                    WHERE email = @email";
+            comando.Parameters.Add(new MySqlParameter("@email", email));
+            object resultadoBusca = comando.ExecuteScalar();
+
+            try
+            {
+                return resultadoBusca.ToString();
+            }
+            catch (Exception)
+            {
+                return string.Empty;
+            }
         }
 
         /// <summary>

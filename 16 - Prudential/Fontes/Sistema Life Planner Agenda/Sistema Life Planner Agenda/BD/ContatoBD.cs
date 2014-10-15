@@ -11,7 +11,7 @@ namespace Sistema_Life_Planner_Agenda.BD
     public class ContatoBD : BancoBase
     {
         /// <summary>
-        /// Cadastro de Contato
+        /// Inclui um contato e retorna o codigo do contato cadastrado
         /// </summary>
         /// <param name="ID_Contato_Recomendante"></param>
         /// <param name="ID_Status_Contato"></param>
@@ -30,21 +30,22 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// <param name="Telefone_Alternativo_2"></param>
         /// <param name="Telefone_Principal"></param>
         /// <param name="UF"></param>
-        public void Incluir(
+        /// <returns></returns>
+        public int Incluir(
             int ID_Contato_Recomendante,
-            int ID_Status_Contato, 
+            int ID_Status_Contato,
             int ID_Tipo_Contato,
-            string Cidade, 
-            string Email, 
-            string Estado_Civil, 
+            string Cidade,
+            string Email,
+            string Estado_Civil,
             DateTime Data_Cadastro,
-            int Filhos, 
-            int Idade, 
-            string Nome, 
-            string Outras_Informacoes, 
+            int Filhos,
+            int Idade,
+            string Nome,
+            string Outras_Informacoes,
             string Profissao,
-            char Sexo, 
-            string Telefone_Alternativo_1, 
+            char Sexo,
+            string Telefone_Alternativo_1,
             string Telefone_Alternativo_2,
             string Telefone_Principal,
             string UF)
@@ -76,6 +77,60 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             comando.CommandType = System.Data.CommandType.Text;
             comando.ExecuteNonQuery();
+
+            return new ContatoBD().ObterID(
+                ID_Contato_Recomendante,
+                Email,
+                Data_Cadastro,
+                Nome,
+                Sexo,
+                Telefone_Principal);
+        }
+
+        /// <summary>
+        /// Obtem o Id de um usuário cadastrado
+        /// </summary>
+        /// <param name="ID_Contato_Recomendante"></param>
+        /// <param name="Email"></param>
+        /// <param name="Data_Cadastro"></param>
+        /// <param name="Nome"></param>
+        /// <param name="Outras_Informacoes"></param>
+        /// <param name="Sexo"></param>
+        /// <param name="Telefone_Principal"></param>
+        /// <returns></returns>
+        public int ObterID(
+            int ID_Contato_Recomendante,
+            string  Email,
+            DateTime Data_Cadastro,
+            string Nome,
+            char Sexo,
+            string Telefone_Principal
+            )
+        {
+            comando.CommandText = @"SELECT Id
+                                    FROM contato
+                                    WHERE ID_Contato_Recomendante = @ID_Contato_Recomendante 
+                                    AND Email = @Email
+                                    AND Data_Cadastro = @Data_Cadastro
+                                    AND Nome = @Nome
+                                    AND Sexo = @Sexo
+                                    AND Telefone_Principal = @Telefone_Principal";
+            comando.Parameters.AddWithValue("@ID_Contato_Recomendante", ID_Contato_Recomendante);
+            comando.Parameters.AddWithValue("@Email", Email);
+            comando.Parameters.AddWithValue("@Data_Cadastro", Data_Cadastro);
+            comando.Parameters.AddWithValue("@Nome", Nome);
+            comando.Parameters.AddWithValue("@Sexo", Sexo);
+            comando.Parameters.AddWithValue("@Telefone_Principal", Telefone_Principal);
+            object resultadoBusca = comando.ExecuteScalar();
+
+            try
+            {
+                return Convert.ToInt32(resultadoBusca.ToString());
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
         }
 
         /// <summary>
@@ -154,7 +209,7 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// </summary>
         /// <returns></returns>
         public DataSet Listar()
-        {   
+        {
             comando.CommandText = @"SELECT ID, Nome
                                     FROM contato" +
                                   " ORDER BY Nome ASC";

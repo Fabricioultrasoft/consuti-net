@@ -146,6 +146,7 @@
     <Compile Include="Contato\CadastrarLote.aspx.designer.cs">
       <DependentUpon>CadastrarLote.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Contato\Contato.cs" />
     <Compile Include="Contato\PesquisarContato.aspx.cs">
       <DependentUpon>PesquisarContato.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
