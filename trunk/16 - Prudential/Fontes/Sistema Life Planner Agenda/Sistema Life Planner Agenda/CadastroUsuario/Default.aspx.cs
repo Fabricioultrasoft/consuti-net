@@ -36,6 +36,7 @@ namespace Sistema_Life_Planner_Agenda.CadastroUsuario
                     SenhaEmailGoogleTextBox.Text);
                     ExibeMensagemPopUp("Salvo com sucesso!");
 
+                    //DEPOIS QUE CADASTRAR O USUÁRIO, CADASTRAR O MESMO COMO CONTATO DO SISTEMA, PARA QUE SEJA POSSÍVEL SER O RECOMENDANTE
                     LimparCampos();
                 }
                 catch (Exception ex)

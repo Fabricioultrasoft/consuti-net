@@ -95,7 +95,7 @@
                             <td>
                                 <asp:RadioButtonList ID="SexoRadioButtonList" runat="server" RepeatDirection="Horizontal"
                                     TabIndex="4">
-                                    <asp:ListItem Text="Masculino" Value="M"></asp:ListItem>
+                                    <asp:ListItem Text="Masculino" Value="M" Selected="True"></asp:ListItem>
                                     <asp:ListItem Text="Feminino" Value="F"></asp:ListItem>
                                 </asp:RadioButtonList>
                             </td>
