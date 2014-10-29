@@ -15,9 +15,10 @@ namespace Sistema_Life_Planner_Agenda.Contato
     public partial class CadastrarContato : PageBase
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
+        {   
             if (!this.IsPostBack)
             {
+                ValidaUserLogado();
                 if (!string.IsNullOrEmpty(Request.QueryString["idContato"]))
                 {
                     CarregaDadosCadastrais(Convert.ToInt32(Request.QueryString["idContato"]));
@@ -126,7 +127,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
 
         private void CarregarRecomendantes()
         {
-            RecomendanteDropDownList.DataSource = new ContatoBD().Listar();
+            RecomendanteDropDownList.DataSource = new ContatoBD().Listar(Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())));
             RecomendanteDropDownList.DataTextField = "Nome";
             RecomendanteDropDownList.DataValueField = "Id";
             RecomendanteDropDownList.DataBind();
@@ -134,7 +135,8 @@ namespace Sistema_Life_Planner_Agenda.Contato
             ListItem selecione = new ListItem("<Selecione>", "");
             RecomendanteDropDownList.Items.Insert(0, selecione);
 
-            ListItem usuarioLogado = new ListItem(Session["nomeUsuarioLogado"].ToString().ToUpper(), "1");
+            //A CARGA INICIAL DO SISTEMA DEVE TER O CONTATO DE ID 1 QUE É UMA REFERENCIA AO PRÓPRIO USUÁRIO LOGADO
+            ListItem usuarioLogado = new ListItem(Session["nomeUsuarioLogado"].ToString() + " (EU)", "1");
             RecomendanteDropDownList.Items.Insert(1, usuarioLogado);
         }
 
@@ -291,3 +293,4 @@ namespace Sistema_Life_Planner_Agenda.Contato
         }
     }
 }
+//TODO: CRIAR SCRIPT DE CARGA ANTES DE IMPLANTAR
