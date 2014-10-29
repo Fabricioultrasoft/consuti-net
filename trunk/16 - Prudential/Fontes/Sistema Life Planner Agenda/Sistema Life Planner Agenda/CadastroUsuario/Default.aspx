@@ -10,7 +10,7 @@
             CADASTRO DE USUÁRIO
         </div>
         <div class="conteudoTela">
-            <asp:Panel ID="cadastroUsuarioPanel" runat="server">
+            <asp:Panel ID="cadastroUsuarioPanel" runat="server" DefaultButton="okButton">
                 <fieldset>
                     <legend>Dados de Acesso</legend>
                     <table class="Formulario">

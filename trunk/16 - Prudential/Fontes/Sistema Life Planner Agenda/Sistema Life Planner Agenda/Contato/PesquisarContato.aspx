@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="Pesquisar Contatos - SISLPA" Language="C#" MasterPageFile="~/Interna.Master"
     AutoEventWireup="true" CodeBehind="PesquisarContato.aspx.cs" Inherits="Sistema_Life_Planner_Agenda.Contato.PesquisarContato" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MenuContentPlaceHolder" runat="server">
@@ -24,7 +25,7 @@
                                 Nome:
                             </td>
                             <td>
-                                <asp:TextBox ID="emailTextBox" runat="server" Width="400px" TabIndex="1" MaxLength="100"></asp:TextBox>
+                                <asp:TextBox ID="nomeTextBox" runat="server" Width="400px" TabIndex="1" MaxLength="100"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -48,26 +49,72 @@
                     </table>
                     <div class="barraBotoes">
                         <asp:Button ID="pesquisarButton" runat="server" Text="   Pesquisar" CssClass="botaoPesquisar"
-                            TabIndex="9" onclick="pesquisarButton_Click" />
-                        <asp:Button ID="limparButton" runat="server" Text="Limpar" 
-                            CssClass="botaoLimpar" TabIndex="10" onclick="limparButton_Click" />
-                        <asp:Button ID="novoButton" runat="server" Text="Novo" CssClass="botaoNovo" 
-                            TabIndex="11" onclick="novoButton_Click" />
-                        <asp:Button ID="loteButton" runat="server" Text="Lote" CssClass="botaoLote" 
-                            TabIndex="12" onclick="loteButton_Click" />
+                            TabIndex="9" OnClick="pesquisarButton_Click" />
+                        <asp:Button ID="limparButton" runat="server" Text="Limpar" CssClass="botaoLimpar"
+                            TabIndex="10" OnClick="limparButton_Click" />
+                        <asp:Button ID="novoButton" runat="server" Text="Novo" CssClass="botaoNovo" TabIndex="11"
+                            OnClick="novoButton_Click" />
+                        <asp:Button ID="loteButton" runat="server" Text="Lote" CssClass="botaoLote" TabIndex="12"
+                            OnClick="loteButton_Click" />
                     </div>
                 </fieldset>
                 <fieldset>
                     <legend>Resultado</legend>
-                    <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None"
-                        Width="100%" EmptyDataText="Nenhum compromisso para os próximos 7 dias...">
+                    <asp:GridView ID="ContatosGridView" runat="server" CellPadding="4" ForeColor="#333333"
+                        GridLines="None" Width="100%" AutoGenerateColumns="False" EnableModelValidation="True"
+                        OnRowCommand="ContatosGridView_Click" EmptyDataText="Não existem contatos cadastrados por você no momento."
+                        AllowPaging="True" AllowSorting="True" PageSize="10" BorderColor="#003366" BorderStyle="Solid"
+                        BorderWidth="1px" CellSpacing="2" OnPageIndexChanging="ContatosGridView_PageIndexChanging"
+                        OnSorting="ContatosGridView_Sorting">
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                        <Columns>
+                            <asp:TemplateField HeaderText="#">
+                                <HeaderStyle HorizontalAlign="Center" Width="35px" />
+                                <ItemStyle HorizontalAlign="Center" Font-Bold="true" />
+                                <ItemTemplate>
+                                    <%# Container.DataItemIndex + 1 %>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome">
+                                <ItemStyle CssClass="espacoTabelas" />
+                            </asp:BoundField>
+                            <asp:BoundField HeaderText="Recomendante" DataField="Recomendante" SortExpression="Recomendante">
+                                <ItemStyle HorizontalAlign="Center" />
+                            </asp:BoundField>
+                            <asp:BoundField HeaderText="Status" DataField="Status" SortExpression="Status">
+                                <ItemStyle HorizontalAlign="Center" />
+                            </asp:BoundField>
+                            <asp:BoundField HeaderText="Telefone P." DataField="TelefonePrincipal">
+                                <ItemStyle HorizontalAlign="Center" />
+                            </asp:BoundField>
+                            <asp:BoundField HeaderText="Data do Cadastro" DataField="DataCadastro" SortExpression="DataCadastro">
+                                <ItemStyle HorizontalAlign="Center" />
+                            </asp:BoundField>
+                            <asp:TemplateField HeaderText="Alterar">
+                                <ItemTemplate>
+                                    <asp:ImageButton ID="imgBtnAlterar" runat="server" CausesValidation="False" CommandArgument='<%# Bind("Id") %>'
+                                        CommandName="Alterar" ImageUrl="~/Estilos/Imgs/edit.png"></asp:ImageButton>
+                                </ItemTemplate>
+                                <ItemStyle Width="50px" HorizontalAlign="Center" />
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Excluir">
+                                <ItemTemplate>
+                                    <asp:ImageButton ID="imgBtnExcluir" runat="server" CausesValidation="False" CommandArgument='<%# Bind("Id") %>'
+                                        CommandName="Excluir" ImageUrl="~/Estilos/Imgs/no.png"></asp:ImageButton>
+                                    <cc1:ConfirmButtonExtender ID="ConfirmButtonExtender" runat="server" TargetControlID="imgBtnExcluir"
+                                        ConfirmText="Confirma a exclusão do e-mail?">
+                                    </cc1:ConfirmButtonExtender>
+                                </ItemTemplate>
+                                <ItemStyle Width="50px" HorizontalAlign="Center" />
+                            </asp:TemplateField>
+                        </Columns>
                         <EditRowStyle BackColor="#999999" />
                         <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" Height="30px" />
                         <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
                         <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
                         <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                        <PagerSettings Position="Bottom" Mode="Numeric" />
                     </asp:GridView>
                     <br />
                 </fieldset>

@@ -143,11 +143,9 @@ namespace Sistema_Life_Planner_Agenda.Usuario
                     Response.Redirect("AutorizarUsuarios.aspx?email=" + Convert.ToString(e.CommandArgument), false);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                ExibeMensagemPopUp("Erro CODIGO 03!" +
-                              " Verifique se o Sistema não possui nenhuma Demanda cadastrada e" +
-                              " tente novamente mais tarde.");
+                ExibeMensagemPopUp("Erro interno. Tente novamente mais tarde. Detalhes: " + ex.Message);
             }
         }
 

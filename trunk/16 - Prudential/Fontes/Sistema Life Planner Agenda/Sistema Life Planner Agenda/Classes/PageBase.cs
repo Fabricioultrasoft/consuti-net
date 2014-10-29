@@ -75,7 +75,7 @@ namespace Sistema_Life_Planner_Agenda.Classes
         /// </summary>
         /// <param name="telParam"></param>
         /// <returns></returns>
-        public List<string> TrtarTelefone(string telParam)
+        public List<string> TratarTelefone(string telParam)
         {
             List<string> telefoneTratado = new List<string>();
 
@@ -83,6 +83,17 @@ namespace Sistema_Life_Planner_Agenda.Classes
             telefoneTratado.Add(telParam.Substring(4));
 
             return telefoneTratado;
+        }
+
+        /// <summary>
+        /// Se não houver email do usuário logado na sessão, redireciona para a tela de login
+        /// </summary>
+        public void ValidaUserLogado()
+        {
+            if (Session["emailUsuarioLogado"] == null)
+            {
+                Response.Redirect("~/Login.aspx");
+            }
         }
     }
 }

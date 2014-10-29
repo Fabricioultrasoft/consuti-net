@@ -208,14 +208,72 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// Lista os contatos cadastrados e seus ID's
         /// </summary>
         /// <returns></returns>
-        public DataSet Listar()
+        public DataSet Listar(int idUsuario)
         {
-            comando.CommandText = @"SELECT ID, Nome
-                                    FROM contato" +
-                                  " ORDER BY Nome ASC";
+            comando.CommandText = @"SELECT contato.ID as ID, contato.Nome as Nome
+                                    FROM contato
+                                    JOIN usuario_contato ON usuario_contato.ID_Contato = contato.ID
+                                    WHERE usuario_contato.ID_Usuario = @idUsuario
+                                    ORDER BY Nome ASC";
+            comando.Parameters.AddWithValue("@idUsuario", idUsuario);
             comando.CommandType = CommandType.Text;
 
             // Classe que auxilia no preenchimento de um dataset
+            MySqlDataAdapter adap = new MySqlDataAdapter(comando);
+
+            DataSet retorno = new DataSet();
+            adap.Fill(retorno);
+
+            return retorno;
+        }
+
+        /// <summary>
+        /// Lista os contatos de um usuário
+        /// </summary>
+        /// <param name="nome"></param>
+        /// <param name="idRecomendante"></param>
+        /// <param name="telefonePrincipal"></param>
+        /// <param name="idUsuario"></param>
+        /// <returns></returns>
+        public DataSet Listar(string nome,
+            string idRecomendante,
+            string telefonePrincipal,
+            int idUsuario)
+        {
+            #region Lógica de filtros
+            string filtrarRecomendante = string.Empty, filtrarNomeTelefone = string.Empty;
+            if (!string.IsNullOrEmpty(idRecomendante))
+            {
+                filtrarRecomendante = " AND c.ID_Contato_Recomendante = " + idRecomendante;
+            }
+            if (!string.IsNullOrEmpty(nome) && !string.IsNullOrEmpty(telefonePrincipal))
+            {
+                filtrarNomeTelefone = @" AND (c.Nome LIKE '%" + nome + "%' " + 
+                                        @"OR c.Telefone_Principal LIKE '%" + telefonePrincipal + "%') ";
+            }
+            else if (!string.IsNullOrEmpty(nome) && string.IsNullOrEmpty(telefonePrincipal))
+            {
+                filtrarNomeTelefone = @" AND c.Nome LIKE '%" + nome + "%' ";
+            }
+            else if (string.IsNullOrEmpty(nome) && !string.IsNullOrEmpty(telefonePrincipal))
+            {
+                filtrarNomeTelefone = @" AND c.Telefone_Principal LIKE '%" + telefonePrincipal + "%' ";
+            }
+
+            #endregion 
+
+            comando.CommandText = @"SELECT c.ID, c.nome, c.Telefone_Principal AS telefonePrincipal, c.Data_Cadastro AS DataCadastro,  
+                                           (SELECT status FROM status_contato WHERE status_contato.id = c.ID_Status_Contato) AS status,
+                                           (SELECT nome FROM contato WHERE contato.id = c.ID_Contato_Recomendante) AS recomendante
+                                    FROM contato c
+                                    JOIN usuario_contato uc ON uc.ID_Contato = c.ID                                    
+                                    WHERE uc.ID_Usuario = @idUsuario " +
+                                    filtrarRecomendante + 
+                                    filtrarNomeTelefone +
+                                    " ORDER BY c.Nome ASC";                                    
+            comando.Parameters.AddWithValue("@idUsuario", idUsuario);
+            comando.CommandType = CommandType.Text;
+
             MySqlDataAdapter adap = new MySqlDataAdapter(comando);
 
             DataSet retorno = new DataSet();
@@ -248,6 +306,20 @@ namespace Sistema_Life_Planner_Agenda.BD
             adap.Fill(retorno);
 
             return retorno;
+        }
+
+        /// <summary>
+        /// Exclui um contato
+        /// </summary>
+        /// <param name="id"></param>
+        public void Excluir(int id)
+        {
+            comando.CommandText = @"DELETE FROM contato 
+                                    WHERE ID = @Id;";
+            comando.Parameters.AddWithValue("@Id", id);
+
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.ExecuteNonQuery();
         }
     }
 }
