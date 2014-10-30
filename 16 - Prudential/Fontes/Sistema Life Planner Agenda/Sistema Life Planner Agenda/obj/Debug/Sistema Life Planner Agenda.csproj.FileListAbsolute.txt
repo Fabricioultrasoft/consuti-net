@@ -3,3 +3,15 @@ D:\ConsuTI\gcode\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life
 D:\ConsuTI\gcode\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\obj\Debug\Sistema Life Planner Agenda.csprojResolveAssemblyReference.cache
 D:\ConsuTI\gcode\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\obj\Debug\Sistema Life Planner Agenda.dll
 D:\ConsuTI\gcode\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\obj\Debug\Sistema Life Planner Agenda.pdb
+C:\Users\Cristian Gomes\Documents\ConsuTI\gcode\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\obj\Debug\Sistema Life Planner Agenda.csprojResolveAssemblyReference.cache
+C:\Users\Cristian Gomes\Documents\ConsuTI\gcode\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\obj\Debug\Sistema Life Planner Agenda.dll
+C:\Users\Cristian Gomes\Documents\ConsuTI\gcode\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\obj\Debug\Sistema Life Planner Agenda.pdb
+C:\Users\Cristian Gomes\Documents\ConsuTI\gcode\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\bin\Sistema Life Planner Agenda.dll
+C:\Users\Cristian Gomes\Documents\ConsuTI\gcode\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\bin\Sistema Life Planner Agenda.pdb
+C:\Users\Cristian Gomes\Documents\ConsuTI\gcode\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\bin\MySql.Data.dll
+C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\bin\Sistema Life Planner Agenda.dll
+C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\bin\Sistema Life Planner Agenda.pdb
+C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\bin\MySql.Data.dll
+C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\obj\Debug\Sistema Life Planner Agenda.csprojResolveAssemblyReference.cache
+C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\obj\Debug\Sistema Life Planner Agenda.dll
+C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\obj\Debug\Sistema Life Planner Agenda.pdb

@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Interna.Master" AutoEventWireup="true"
     CodeBehind="CadastrarLote.aspx.cs" Inherits="Sistema_Life_Planner_Agenda.Contato.CadastrarLote" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .style1
@@ -21,11 +22,22 @@
         <div class="tituloTela">
             CADASTRO DE CONTATO EM LOTE
         </div>
-        <div style="width: 90%; margin: 10px 0 10px 30px">
-            <span class="obrigatorio">*</span>Recomendante:
-            <asp:DropDownList ID="RecomendanteDropDownList" runat="server" Width="400px" TabIndex="0">
-            </asp:DropDownList>
-        </div>
+        <table class="Formulario">
+            <tr>
+                <td class="alinhaDireita" style="font-size: 13pt">
+                    <span class="obrigatorio">*</span>Recomendante:
+                </td>
+                <td>
+                    <asp:DropDownList ID="RecomendanteDropDownList" runat="server" Width="500px" TabIndex="1"
+                        Font-Size="13pt">
+                    </asp:DropDownList>
+                    <span class="obrigatorio">
+                        <asp:RequiredFieldValidator ID="RecomendanteDropDownListRequiredFieldValidator" runat="server"
+                            ControlToValidate="RecomendanteDropDownList" Display="Dynamic" ErrorMessage="*"
+                            CssClass="obrigatorio" ToolTip="Campo Obrigatório!"></asp:RequiredFieldValidator></span>
+                </td>
+            </tr>
+        </table>
         <div class="conteudoTela">
             <asp:Panel ID="cadastroContatoLotePanel" runat="server">
                 <fieldset>
@@ -36,12 +48,12 @@
                                 Nº
                             </td>
                             <td style="width: 300px">
-                                <span class="obrigatorio">*</span>Nome
+                                <span class="obrigatorio">*</span>Nome Completo
                             </td>
-                            <td style="width: 120px">
+                            <td style="width: 140px">
                                 Tefone
                             </td>
-                            <td style="width: 100px">
+                            <td style="width: 80px">
                                 Sexo
                             </td>
                             <td style="width: 220px">
@@ -56,39 +68,65 @@
                                 <asp:TextBox ID="NomeTextBox1" runat="server" Width="240px" MaxLength="100"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:TextBox ID="TelefoneTextBox1" runat="server" Width="100px" MaxLength="20"></asp:TextBox>
+                                <asp:TextBox ID="DDDTelefoneTextBox1" runat="server" MaxLength="2" TabIndex="3" Width="16px"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="DDDTelefoneTextBox1_FilteredTextBoxExtender" runat="server"
+                                    Enabled="True" TargetControlID="DDDTelefoneTextBox1" ValidChars="1234567890">
+                                </cc1:FilteredTextBoxExtender>
+                                <asp:TextBox ID="TelefoneTextBox1" runat="server" MaxLength="9" TabIndex="3" Width="65px"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="TelefoneTextBox1_FilteredTextBoxExtender" runat="server"
+                                    Enabled="True" TargetControlID="TelefoneTextBox1" ValidChars="1234567890">
+                                </cc1:FilteredTextBoxExtender>
+                                <asp:RegularExpressionValidator ID="DDDTelefoneTextBox1_RegularExpressionValidator"
+                                    runat="server" ControlToValidate="DDDTelefoneTextBox1" Display="Dynamic" ErrorMessage="*"
+                                    ToolTip="DDD Inválido" ValidationExpression="\d{2}"></asp:RegularExpressionValidator>
+                                <asp:RegularExpressionValidator ID="TelefoneTextBox1_RegularExpressionValidator"
+                                    runat="server" ControlToValidate="TelefoneTextBox1" Display="Dynamic" ErrorMessage="*"
+                                    ToolTip="Telefone Inválido" ValidationExpression="\d{8,9}"></asp:RegularExpressionValidator>
                             </td>
                             <td>
-                                <asp:RadioButtonList ID="SexoRadioButtonList1" runat="server" 
-                                    RepeatDirection="Horizontal" Width="80px">
-                                <asp:ListItem>M</asp:ListItem>
-                                <asp:ListItem>F</asp:ListItem>
+                                <asp:RadioButtonList ID="SexoRadioButtonList1" runat="server" RepeatDirection="Horizontal"
+                                    Width="70px">
+                                    <asp:ListItem>M</asp:ListItem>
+                                    <asp:ListItem>F</asp:ListItem>
                                 </asp:RadioButtonList>
                             </td>
                             <td style="width: 260px">
-                                <asp:TextBox ID="OutrasInfoTextBox1" runat="server" Width="240px" TextMode="MultiLine" 
+                                <asp:TextBox ID="OutrasInfoTextBox1" runat="server" Width="240px" TextMode="MultiLine"
                                     Rows="3"></asp:TextBox>
                             </td>
-                        </tr>                        
+                        </tr>
                         <tr style="background-color: #EBEBEB">
-                            <td class="style1" >
+                            <td class="style1">
                                 2
                             </td>
                             <td>
                                 <asp:TextBox ID="NomeTextBox2" runat="server" MaxLength="100" Width="240px"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:TextBox ID="TelefoneTextBox2" runat="server" MaxLength="20" Width="100px"></asp:TextBox>
+                                <asp:TextBox ID="DDDTelefoneTextBox2" runat="server" MaxLength="2" TabIndex="3" Width="16px"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="DDDTelefoneTextBox2_FilteredTextBoxExtender" runat="server"
+                                    Enabled="True" TargetControlID="DDDTelefoneTextBox2" ValidChars="1234567890">
+                                </cc1:FilteredTextBoxExtender>
+                                <asp:TextBox ID="TelefoneTextBox2" runat="server" MaxLength="9" TabIndex="3" Width="65px"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="TelefoneTextBox2_FilteredTextBoxExtender" runat="server"
+                                    Enabled="True" TargetControlID="TelefoneTextBox2" ValidChars="1234567890">
+                                </cc1:FilteredTextBoxExtender>
+                                <asp:RegularExpressionValidator ID="DDDTelefoneTextBox2_RegularExpressionValidator"
+                                    runat="server" ControlToValidate="DDDTelefoneTextBox2" Display="Dynamic" ErrorMessage="*"
+                                    ToolTip="DDD Inválido" ValidationExpression="\d{2}"></asp:RegularExpressionValidator>
+                                <asp:RegularExpressionValidator ID="TelefoneTextBox2_RegularExpressionValidator"
+                                    runat="server" ControlToValidate="TelefoneTextBox2" Display="Dynamic" ErrorMessage="*"
+                                    ToolTip="Telefone Inválido" ValidationExpression="\d{8,9}"></asp:RegularExpressionValidator>
                             </td>
                             <td>
-                                <asp:RadioButtonList ID="SexoRadioButtonList2" runat="server" 
-                                    RepeatDirection="Horizontal" Width="80px">
+                                <asp:RadioButtonList ID="SexoRadioButtonList2" runat="server" RepeatDirection="Horizontal"
+                                    Width="70px">
                                     <asp:ListItem>M</asp:ListItem>
                                     <asp:ListItem>F</asp:ListItem>
                                 </asp:RadioButtonList>
                             </td>
                             <td>
-                                <asp:TextBox ID="OutrasInfoTextBox2" runat="server" Rows="3" TextMode="MultiLine" 
+                                <asp:TextBox ID="OutrasInfoTextBox2" runat="server" Rows="3" TextMode="MultiLine"
                                     Width="240px"></asp:TextBox>
                             </td>
                         </tr>
@@ -100,42 +138,69 @@
                                 <asp:TextBox ID="NomeTextBox3" runat="server" Width="240px" MaxLength="100"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:TextBox ID="TelefoneTextBox3" runat="server" Width="100px" MaxLength="20"></asp:TextBox>
+                                <asp:TextBox ID="DDDTelefoneTextBox3" runat="server" MaxLength="2" TabIndex="3" Width="16px"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="DDDTelefoneTextBox3_FilteredTextBoxExtender" runat="server"
+                                    Enabled="True" TargetControlID="DDDTelefoneTextBox3" ValidChars="1234567890">
+                                </cc1:FilteredTextBoxExtender>
+                                <asp:TextBox ID="TelefoneTextBox3" runat="server" MaxLength="9" TabIndex="3" Width="65px"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="TelefoneTextBox3_FilteredTextBoxExtender" runat="server"
+                                    Enabled="True" TargetControlID="TelefoneTextBox3" ValidChars="1234567890">
+                                </cc1:FilteredTextBoxExtender>
+                                <asp:RegularExpressionValidator ID="DDDTelefoneTextBox3_RegularExpressionValidator"
+                                    runat="server" ControlToValidate="DDDTelefoneTextBox3" Display="Dynamic" ErrorMessage="*"
+                                    ToolTip="DDD Inválido" ValidationExpression="\d{2}"></asp:RegularExpressionValidator>
+                                <asp:RegularExpressionValidator ID="TelefoneTextBox3_RegularExpressionValidator"
+                                    runat="server" ControlToValidate="TelefoneTextBox3" Display="Dynamic" ErrorMessage="*"
+                                    ToolTip="Telefone Inválido" ValidationExpression="\d{8,9}"></asp:RegularExpressionValidator>
                             </td>
                             <td>
-                                <asp:RadioButtonList ID="SexoRadioButtonList3" runat="server" 
-                                    RepeatDirection="Horizontal" Width="80px">
-                                <asp:ListItem>M</asp:ListItem>
-                                <asp:ListItem>F</asp:ListItem>
+                                <asp:RadioButtonList ID="SexoRadioButtonList3" runat="server" RepeatDirection="Horizontal"
+                                    Width="70px">
+                                    <asp:ListItem>M</asp:ListItem>
+                                    <asp:ListItem>F</asp:ListItem>
                                 </asp:RadioButtonList>
                             </td>
                             <td style="width: 260px">
-                                <asp:TextBox ID="OutrasInfoTextBox3" runat="server" Width="240px" TextMode="MultiLine" 
+                                <asp:TextBox ID="OutrasInfoTextBox3" runat="server" Width="240px" TextMode="MultiLine"
                                     Rows="3"></asp:TextBox>
                             </td>
-                        </tr>                        
+                        </tr>
                         <tr style="background-color: #EBEBEB">
-                            <td class="style1" >
+                            <td class="style1">
                                 4
                             </td>
                             <td>
                                 <asp:TextBox ID="NomeTextBox4" runat="server" MaxLength="100" Width="240px"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:TextBox ID="TelefoneTextBox4" runat="server" MaxLength="20" Width="100px"></asp:TextBox>
+                                <asp:TextBox ID="DDDTelefoneTextBox4" runat="server" MaxLength="2" TabIndex="3" Width="16px"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="DDDTelefoneTextBox4_FilteredTextBoxExtender" runat="server"
+                                    Enabled="True" TargetControlID="DDDTelefoneTextBox4" ValidChars="1234567890">
+                                </cc1:FilteredTextBoxExtender>
+                                <asp:TextBox ID="TelefoneTextBox4" runat="server" MaxLength="9" TabIndex="3" Width="65px"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="TelefoneTextBox4_FilteredTextBoxExtender" runat="server"
+                                    Enabled="True" TargetControlID="TelefoneTextBox4" ValidChars="1234567890">
+                                </cc1:FilteredTextBoxExtender>
+                                <asp:RegularExpressionValidator ID="DDDTelefoneTextBox4_RegularExpressionValidator"
+                                    runat="server" ControlToValidate="DDDTelefoneTextBox4" Display="Dynamic" ErrorMessage="*"
+                                    ToolTip="DDD Inválido" ValidationExpression="\d{2}"></asp:RegularExpressionValidator>
+                                <asp:RegularExpressionValidator ID="TelefoneTextBox4_RegularExpressionValidator"
+                                    runat="server" ControlToValidate="TelefoneTextBox4" Display="Dynamic" ErrorMessage="*"
+                                    ToolTip="Telefone Inválido" ValidationExpression="\d{8,9}"></asp:RegularExpressionValidator>
                             </td>
                             <td>
-                                <asp:RadioButtonList ID="SexoRadioButtonList4" runat="server" 
-                                    RepeatDirection="Horizontal" Width="80px">
+                                <asp:RadioButtonList ID="SexoRadioButtonList4" runat="server" RepeatDirection="Horizontal"
+                                    Width="70px">
                                     <asp:ListItem>M</asp:ListItem>
                                     <asp:ListItem>F</asp:ListItem>
                                 </asp:RadioButtonList>
                             </td>
                             <td>
-                                <asp:TextBox ID="OutrasInfoTextBox4" runat="server" Rows="3" TextMode="MultiLine" 
+                                <asp:TextBox ID="OutrasInfoTextBox4" runat="server" Rows="3" TextMode="MultiLine"
                                     Width="240px"></asp:TextBox>
                             </td>
-                        </tr><tr>
+                        </tr>
+                        <tr>
                             <td class="style1">
                                 5
                             </td>
@@ -143,42 +208,69 @@
                                 <asp:TextBox ID="NomeTextBox5" runat="server" Width="240px" MaxLength="100"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:TextBox ID="TelefoneTextBox5" runat="server" Width="100px" MaxLength="20"></asp:TextBox>
+                                <asp:TextBox ID="DDDTelefoneTextBox5" runat="server" MaxLength="2" TabIndex="3" Width="16px"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="DDDTelefoneTextBox5_FilteredTextBoxExtender" runat="server"
+                                    Enabled="True" TargetControlID="DDDTelefoneTextBox5" ValidChars="1234567890">
+                                </cc1:FilteredTextBoxExtender>
+                                <asp:TextBox ID="TelefoneTextBox5" runat="server" MaxLength="9" TabIndex="3" Width="65px"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="TelefoneTextBox5_FilteredTextBoxExtender" runat="server"
+                                    Enabled="True" TargetControlID="TelefoneTextBox5" ValidChars="1234567890">
+                                </cc1:FilteredTextBoxExtender>
+                                <asp:RegularExpressionValidator ID="DDDTelefoneTextBox5_RegularExpressionValidator"
+                                    runat="server" ControlToValidate="DDDTelefoneTextBox5" Display="Dynamic" ErrorMessage="*"
+                                    ToolTip="DDD Inválido" ValidationExpression="\d{2}"></asp:RegularExpressionValidator>
+                                <asp:RegularExpressionValidator ID="TelefoneTextBox5_RegularExpressionValidator"
+                                    runat="server" ControlToValidate="TelefoneTextBox5" Display="Dynamic" ErrorMessage="*"
+                                    ToolTip="Telefone Inválido" ValidationExpression="\d{8,9}"></asp:RegularExpressionValidator>
                             </td>
                             <td>
-                                <asp:RadioButtonList ID="SexoRadioButtonList5" runat="server" 
-                                    RepeatDirection="Horizontal" Width="80px">
-                                <asp:ListItem>M</asp:ListItem>
-                                <asp:ListItem>F</asp:ListItem>
+                                <asp:RadioButtonList ID="SexoRadioButtonList5" runat="server" RepeatDirection="Horizontal"
+                                    Width="70px">
+                                    <asp:ListItem>M</asp:ListItem>
+                                    <asp:ListItem>F</asp:ListItem>
                                 </asp:RadioButtonList>
                             </td>
                             <td style="width: 260px">
-                                <asp:TextBox ID="OutrasInfoTextBox5" runat="server" Width="240px" TextMode="MultiLine" 
+                                <asp:TextBox ID="OutrasInfoTextBox5" runat="server" Width="240px" TextMode="MultiLine"
                                     Rows="3"></asp:TextBox>
                             </td>
-                        </tr>                        
+                        </tr>
                         <tr style="background-color: #EBEBEB">
-                            <td class="style1" >
+                            <td class="style1">
                                 6
                             </td>
                             <td>
                                 <asp:TextBox ID="NomeTextBox6" runat="server" MaxLength="100" Width="240px"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:TextBox ID="TelefoneTextBox6" runat="server" MaxLength="20" Width="100px"></asp:TextBox>
+                                <asp:TextBox ID="DDDTelefoneTextBox6" runat="server" MaxLength="2" TabIndex="3" Width="16px"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="DDDTelefoneTextBox6_FilteredTextBoxExtender" runat="server"
+                                    Enabled="True" TargetControlID="DDDTelefoneTextBox6" ValidChars="1234567890">
+                                </cc1:FilteredTextBoxExtender>
+                                <asp:TextBox ID="TelefoneTextBox6" runat="server" MaxLength="9" TabIndex="3" Width="65px"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="TelefoneTextBox6_FilteredTextBoxExtender" runat="server"
+                                    Enabled="True" TargetControlID="TelefoneTextBox6" ValidChars="1234567890">
+                                </cc1:FilteredTextBoxExtender>
+                                <asp:RegularExpressionValidator ID="DDDTelefoneTextBox6_RegularExpressionValidator"
+                                    runat="server" ControlToValidate="DDDTelefoneTextBox6" Display="Dynamic" ErrorMessage="*"
+                                    ToolTip="DDD Inválido" ValidationExpression="\d{2}"></asp:RegularExpressionValidator>
+                                <asp:RegularExpressionValidator ID="TelefoneTextBox6_RegularExpressionValidator"
+                                    runat="server" ControlToValidate="TelefoneTextBox6" Display="Dynamic" ErrorMessage="*"
+                                    ToolTip="Telefone Inválido" ValidationExpression="\d{8,9}"></asp:RegularExpressionValidator>
                             </td>
                             <td>
-                                <asp:RadioButtonList ID="SexoRadioButtonList6" runat="server" 
-                                    RepeatDirection="Horizontal" Width="80px">
+                                <asp:RadioButtonList ID="SexoRadioButtonList6" runat="server" RepeatDirection="Horizontal"
+                                    Width="70px">
                                     <asp:ListItem>M</asp:ListItem>
                                     <asp:ListItem>F</asp:ListItem>
                                 </asp:RadioButtonList>
                             </td>
                             <td>
-                                <asp:TextBox ID="OutrasInfoTextBox6" runat="server" Rows="3" TextMode="MultiLine" 
+                                <asp:TextBox ID="OutrasInfoTextBox6" runat="server" Rows="3" TextMode="MultiLine"
                                     Width="240px"></asp:TextBox>
                             </td>
-                        </tr><tr>
+                        </tr>
+                        <tr>
                             <td class="style1">
                                 7
                             </td>
@@ -186,42 +278,69 @@
                                 <asp:TextBox ID="NomeTextBox7" runat="server" Width="240px" MaxLength="100"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:TextBox ID="TelefoneTextBox7" runat="server" Width="100px" MaxLength="20"></asp:TextBox>
+                                <asp:TextBox ID="DDDTelefoneTextBox7" runat="server" MaxLength="2" TabIndex="3" Width="16px"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="DDDTelefoneTextBox7_FilteredTextBoxExtender" runat="server"
+                                    Enabled="True" TargetControlID="DDDTelefoneTextBox7" ValidChars="1234567890">
+                                </cc1:FilteredTextBoxExtender>
+                                <asp:TextBox ID="TelefoneTextBox7" runat="server" MaxLength="9" TabIndex="3" Width="65px"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="TelefoneTextBox7_FilteredTextBoxExtender" runat="server"
+                                    Enabled="True" TargetControlID="TelefoneTextBox7" ValidChars="1234567890">
+                                </cc1:FilteredTextBoxExtender>
+                                <asp:RegularExpressionValidator ID="DDDTelefoneTextBox7_RegularExpressionValidator"
+                                    runat="server" ControlToValidate="DDDTelefoneTextBox7" Display="Dynamic" ErrorMessage="*"
+                                    ToolTip="DDD Inválido" ValidationExpression="\d{2}"></asp:RegularExpressionValidator>
+                                <asp:RegularExpressionValidator ID="TelefoneTextBox7_RegularExpressionValidator"
+                                    runat="server" ControlToValidate="TelefoneTextBox7" Display="Dynamic" ErrorMessage="*"
+                                    ToolTip="Telefone Inválido" ValidationExpression="\d{8,9}"></asp:RegularExpressionValidator>
                             </td>
                             <td>
-                                <asp:RadioButtonList ID="SexoRadioButtonList7" runat="server" 
-                                    RepeatDirection="Horizontal" Width="80px">
-                                <asp:ListItem>M</asp:ListItem>
-                                <asp:ListItem>F</asp:ListItem>
+                                <asp:RadioButtonList ID="SexoRadioButtonList7" runat="server" RepeatDirection="Horizontal"
+                                    Width="70px">
+                                    <asp:ListItem>M</asp:ListItem>
+                                    <asp:ListItem>F</asp:ListItem>
                                 </asp:RadioButtonList>
                             </td>
                             <td style="width: 260px">
-                                <asp:TextBox ID="OutrasInfoTextBox7" runat="server" Width="240px" TextMode="MultiLine" 
+                                <asp:TextBox ID="OutrasInfoTextBox7" runat="server" Width="240px" TextMode="MultiLine"
                                     Rows="3"></asp:TextBox>
                             </td>
-                        </tr>                        
+                        </tr>
                         <tr style="background-color: #EBEBEB">
-                            <td class="style1" >
+                            <td class="style1">
                                 8
                             </td>
                             <td>
                                 <asp:TextBox ID="NomeTextBox8" runat="server" MaxLength="100" Width="240px"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:TextBox ID="TelefoneTextBox8" runat="server" MaxLength="20" Width="100px"></asp:TextBox>
+                                <asp:TextBox ID="DDDTelefoneTextBox8" runat="server" MaxLength="2" TabIndex="3" Width="16px"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="DDDTelefoneTextBox8_FilteredTextBoxExtender" runat="server"
+                                    Enabled="True" TargetControlID="DDDTelefoneTextBox8" ValidChars="1234567890">
+                                </cc1:FilteredTextBoxExtender>
+                                <asp:TextBox ID="TelefoneTextBox8" runat="server" MaxLength="9" TabIndex="3" Width="65px"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="TelefoneTextBox8_FilteredTextBoxExtender" runat="server"
+                                    Enabled="True" TargetControlID="TelefoneTextBox8" ValidChars="1234567890">
+                                </cc1:FilteredTextBoxExtender>
+                                <asp:RegularExpressionValidator ID="DDDTelefoneTextBox8_RegularExpressionValidator"
+                                    runat="server" ControlToValidate="DDDTelefoneTextBox8" Display="Dynamic" ErrorMessage="*"
+                                    ToolTip="DDD Inválido" ValidationExpression="\d{2}"></asp:RegularExpressionValidator>
+                                <asp:RegularExpressionValidator ID="TelefoneTextBox8_RegularExpressionValidator"
+                                    runat="server" ControlToValidate="TelefoneTextBox8" Display="Dynamic" ErrorMessage="*"
+                                    ToolTip="Telefone Inválido" ValidationExpression="\d{8,9}"></asp:RegularExpressionValidator>
                             </td>
                             <td>
-                                <asp:RadioButtonList ID="SexoRadioButtonList8" runat="server" 
-                                    RepeatDirection="Horizontal" Width="80px">
+                                <asp:RadioButtonList ID="SexoRadioButtonList8" runat="server" RepeatDirection="Horizontal"
+                                    Width="70px">
                                     <asp:ListItem>M</asp:ListItem>
                                     <asp:ListItem>F</asp:ListItem>
                                 </asp:RadioButtonList>
                             </td>
                             <td>
-                                <asp:TextBox ID="OutrasInfoTextBox8" runat="server" Rows="3" TextMode="MultiLine" 
+                                <asp:TextBox ID="OutrasInfoTextBox8" runat="server" Rows="3" TextMode="MultiLine"
                                     Width="240px"></asp:TextBox>
                             </td>
-                        </tr><tr>
+                        </tr>
+                        <tr>
                             <td class="style1">
                                 9
                             </td>
@@ -229,50 +348,77 @@
                                 <asp:TextBox ID="NomeTextBox9" runat="server" Width="240px" MaxLength="100"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:TextBox ID="TelefoneTextBox9" runat="server" Width="100px" MaxLength="20"></asp:TextBox>
+                                <asp:TextBox ID="DDDTelefoneTextBox9" runat="server" MaxLength="2" TabIndex="3" Width="16px"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="DDDTelefoneTextBox9_FilteredTextBoxExtender" runat="server"
+                                    Enabled="True" TargetControlID="DDDTelefoneTextBox9" ValidChars="1234567890">
+                                </cc1:FilteredTextBoxExtender>
+                                <asp:TextBox ID="TelefoneTextBox9" runat="server" MaxLength="9" TabIndex="3" Width="65px"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="TelefoneTextBox9_FilteredTextBoxExtender" runat="server"
+                                    Enabled="True" TargetControlID="TelefoneTextBox9" ValidChars="1234567890">
+                                </cc1:FilteredTextBoxExtender>
+                                <asp:RegularExpressionValidator ID="DDDTelefoneTextBox9_RegularExpressionValidator"
+                                    runat="server" ControlToValidate="DDDTelefoneTextBox9" Display="Dynamic" ErrorMessage="*"
+                                    ToolTip="DDD Inválido" ValidationExpression="\d{2}"></asp:RegularExpressionValidator>
+                                <asp:RegularExpressionValidator ID="TelefoneTextBox9_RegularExpressionValidator"
+                                    runat="server" ControlToValidate="TelefoneTextBox9" Display="Dynamic" ErrorMessage="*"
+                                    ToolTip="Telefone Inválido" ValidationExpression="\d{8,9}"></asp:RegularExpressionValidator>
                             </td>
                             <td>
-                                <asp:RadioButtonList ID="SexoRadioButtonList9" runat="server" 
-                                    RepeatDirection="Horizontal" Width="80px">
-                                <asp:ListItem>M</asp:ListItem>
-                                <asp:ListItem>F</asp:ListItem>
+                                <asp:RadioButtonList ID="SexoRadioButtonList9" runat="server" RepeatDirection="Horizontal"
+                                    Width="70px">
+                                    <asp:ListItem>M</asp:ListItem>
+                                    <asp:ListItem>F</asp:ListItem>
                                 </asp:RadioButtonList>
                             </td>
                             <td style="width: 260px">
-                                <asp:TextBox ID="OutrasInfoTextBox9" runat="server" Width="240px" TextMode="MultiLine" 
+                                <asp:TextBox ID="OutrasInfoTextBox9" runat="server" Width="240px" TextMode="MultiLine"
                                     Rows="3"></asp:TextBox>
                             </td>
-                        </tr>                        
+                        </tr>
                         <tr style="background-color: #EBEBEB">
-                            <td class="style1" >
+                            <td class="style1">
                                 10
                             </td>
                             <td>
                                 <asp:TextBox ID="NomeTextBox10" runat="server" MaxLength="100" Width="240px"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:TextBox ID="TelefoneTextBox10" runat="server" MaxLength="20" Width="100px"></asp:TextBox>
+                                <asp:TextBox ID="DDDTelefoneTextBox10" runat="server" MaxLength="2" TabIndex="3"
+                                    Width="16px"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="DDDTelefoneTextBox10_FilteredTextBoxExtender" runat="server"
+                                    Enabled="True" TargetControlID="DDDTelefoneTextBox10" ValidChars="1234567890">
+                                </cc1:FilteredTextBoxExtender>
+                                <asp:TextBox ID="TelefoneTextBox10" runat="server" MaxLength="9" TabIndex="3" Width="65px"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="TelefoneTextBox10_FilteredTextBoxExtender" runat="server"
+                                    Enabled="True" TargetControlID="TelefoneTextBox10" ValidChars="1234567890">
+                                </cc1:FilteredTextBoxExtender>
+                                <asp:RegularExpressionValidator ID="DDDTelefoneTextBox10_RegularExpressionValidator"
+                                    runat="server" ControlToValidate="DDDTelefoneTextBox10" Display="Dynamic" ErrorMessage="*"
+                                    ToolTip="DDD Inválido" ValidationExpression="\d{2}"></asp:RegularExpressionValidator>
+                                <asp:RegularExpressionValidator ID="TelefoneTextBox10_RegularExpressionValidator"
+                                    runat="server" ControlToValidate="TelefoneTextBox10" Display="Dynamic" ErrorMessage="*"
+                                    ToolTip="Telefone Inválido" ValidationExpression="\d{8,9}"></asp:RegularExpressionValidator>
                             </td>
                             <td>
-                                <asp:RadioButtonList ID="SexoRadioButtonList10" runat="server" 
-                                    RepeatDirection="Horizontal" Width="80px">
+                                <asp:RadioButtonList ID="SexoRadioButtonList10" runat="server" RepeatDirection="Horizontal"
+                                    Width="70px">
                                     <asp:ListItem>M</asp:ListItem>
                                     <asp:ListItem>F</asp:ListItem>
                                 </asp:RadioButtonList>
                             </td>
                             <td>
-                                <asp:TextBox ID="OutrasInfoTextBox10" runat="server" Rows="3" TextMode="MultiLine" 
+                                <asp:TextBox ID="OutrasInfoTextBox10" runat="server" Rows="3" TextMode="MultiLine"
                                     Width="240px"></asp:TextBox>
                             </td>
                         </tr>
                     </table>
-                </fieldset> 
+                </fieldset>
                 <div class="barraBotoes">
-                    <asp:Button ID="cancelarButton" runat="server" Text="Cancelar" 
-                        CssClass="botaoCancelar" TabIndex="39" onclick="cancelarButton_Click" OnClientClick="return confirm('Confirma cancelamento? Os dados não salvos serão perdidos.');" />
-                    <asp:Button ID="salvarButton" runat="server" Text="Salvar" CssClass="botaoSalvar" 
-                        TabIndex="40" onclick="salvarButton_Click" />
-                </div>               
+                    <asp:Button ID="cancelarButton" runat="server" Text="Cancelar" CssClass="botaoCancelar"
+                        TabIndex="39" OnClick="cancelarButton_Click" OnClientClick="return confirm('Confirma cancelamento? Os dados não salvos serão perdidos.');" />
+                    <asp:Button ID="salvarButton" runat="server" Text="Salvar" CssClass="botaoSalvar"
+                        TabIndex="40" OnClick="salvarButton_Click" />
+                </div>
             </asp:Panel>
             <br />
         </div>

@@ -62,8 +62,8 @@ namespace Sistema_Life_Planner_Agenda.Usuario
                 DataRow DrUser = dadosCadastrais.Tables[0].Rows[0];
                 emailTextBox.Text = DrUser["Email"].ToString();
                 nomeCompletoTextBox.Text = DrUser["Nome"].ToString();
-                DDDTextBox.Text = DrUser["Telefone"].ToString().Substring(1, 2);
-                telefoneTextBox.Text = DrUser["Telefone"].ToString().Substring(4);
+                DDDTextBox.Text = DrUser["Telefone"].ToString().Substring(0, 2);
+                telefoneTextBox.Text = DrUser["Telefone"].ToString().Substring(2);
                 emailGoogleTextBox.Text = DrUser["AgendaGoogleEmail"].ToString();
                 SenhaEmailGoogleTextBox.Text = DrUser["AgendaGoogleSenha"].ToString();
             }
