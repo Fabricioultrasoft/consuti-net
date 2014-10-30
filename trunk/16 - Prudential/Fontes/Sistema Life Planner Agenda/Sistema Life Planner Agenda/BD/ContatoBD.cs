@@ -100,7 +100,7 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// <returns></returns>
         public int ObterID(
             int ID_Contato_Recomendante,
-            string  Email,
+            string Email,
             DateTime Data_Cadastro,
             string Nome,
             char Sexo,
@@ -228,7 +228,8 @@ namespace Sistema_Life_Planner_Agenda.BD
         }
 
         /// <summary>
-        /// Lista os contatos de um usuário
+        /// Lista os contatos de um usuário, pesquisando por nome, recomendante ou telefone.
+        /// Na busca por telefone, ele irá considerar todos os telefones cadastrados para o usuário.
         /// </summary>
         /// <param name="nome"></param>
         /// <param name="idRecomendante"></param>
@@ -248,8 +249,10 @@ namespace Sistema_Life_Planner_Agenda.BD
             }
             if (!string.IsNullOrEmpty(nome) && !string.IsNullOrEmpty(telefonePrincipal))
             {
-                filtrarNomeTelefone = @" AND (c.Nome LIKE '%" + nome + "%' " + 
-                                        @"OR c.Telefone_Principal LIKE '%" + telefonePrincipal + "%') ";
+                filtrarNomeTelefone = @" AND (c.Nome LIKE '%" + nome + "%' " +
+                                        @" OR c.Telefone_Principal LIKE '%" + telefonePrincipal + "%' " +
+                                        @" OR c.Telefone_Alternativo_1 LIKE '%" + telefonePrincipal + "%' " +
+                                        @" OR c.Telefone_Alternativo_2 LIKE '%" + telefonePrincipal + "%') ";
             }
             else if (!string.IsNullOrEmpty(nome) && string.IsNullOrEmpty(telefonePrincipal))
             {
@@ -257,20 +260,24 @@ namespace Sistema_Life_Planner_Agenda.BD
             }
             else if (string.IsNullOrEmpty(nome) && !string.IsNullOrEmpty(telefonePrincipal))
             {
-                filtrarNomeTelefone = @" AND c.Telefone_Principal LIKE '%" + telefonePrincipal + "%' ";
+                filtrarNomeTelefone = @" AND c.Telefone_Principal LIKE '%" + telefonePrincipal + "%' " +
+                                        @" OR c.Telefone_Alternativo_1 LIKE '%" + telefonePrincipal + "%' " +
+                                        @" OR c.Telefone_Alternativo_2 LIKE '%" + telefonePrincipal + "%' ";
             }
 
-            #endregion 
+            #endregion
 
-            comando.CommandText = @"SELECT c.ID, c.nome, c.Telefone_Principal AS telefonePrincipal, c.Data_Cadastro AS DataCadastro,  
+            comando.CommandText = @"SELECT c.ID, c.nome,
+                                           CONCAT('(', SUBSTRING(Telefone_Principal, 1,2), ')',' ', SUBSTRING(Telefone_Principal, 3,4), '-',SUBSTRING(Telefone_Principal, 7,5) ) AS telefonePrincipal, 
+                                           c.Data_Cadastro AS DataCadastro,  
                                            (SELECT status FROM status_contato WHERE status_contato.id = c.ID_Status_Contato) AS status,
                                            (SELECT nome FROM contato WHERE contato.id = c.ID_Contato_Recomendante) AS recomendante
                                     FROM contato c
                                     JOIN usuario_contato uc ON uc.ID_Contato = c.ID                                    
                                     WHERE uc.ID_Usuario = @idUsuario " +
-                                    filtrarRecomendante + 
+                                    filtrarRecomendante +
                                     filtrarNomeTelefone +
-                                    " ORDER BY c.Nome ASC";                                    
+                                    " ORDER BY c.Nome ASC";
             comando.Parameters.AddWithValue("@idUsuario", idUsuario);
             comando.CommandType = CommandType.Text;
 

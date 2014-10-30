@@ -22,6 +22,15 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         protected global::System.Web.UI.WebControls.DropDownList RecomendanteDropDownList;
         
         /// <summary>
+        /// RecomendanteDropDownListRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RecomendanteDropDownListRequiredFieldValidator;
+        
+        /// <summary>
         /// cadastroContatoLotePanel control.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,24 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         protected global::System.Web.UI.WebControls.TextBox NomeTextBox1;
         
         /// <summary>
+        /// DDDTelefoneTextBox1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DDDTelefoneTextBox1;
+        
+        /// <summary>
+        /// DDDTelefoneTextBox1_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender DDDTelefoneTextBox1_FilteredTextBoxExtender;
+        
+        /// <summary>
         /// TelefoneTextBox1 control.
         /// </summary>
         /// <remarks>
@@ -47,6 +74,33 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TelefoneTextBox1;
+        
+        /// <summary>
+        /// TelefoneTextBox1_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender TelefoneTextBox1_FilteredTextBoxExtender;
+        
+        /// <summary>
+        /// DDDTelefoneTextBox1_RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator DDDTelefoneTextBox1_RegularExpressionValidator;
+        
+        /// <summary>
+        /// TelefoneTextBox1_RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator TelefoneTextBox1_RegularExpressionValidator;
         
         /// <summary>
         /// SexoRadioButtonList1 control.
@@ -76,6 +130,24 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         protected global::System.Web.UI.WebControls.TextBox NomeTextBox2;
         
         /// <summary>
+        /// DDDTelefoneTextBox2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DDDTelefoneTextBox2;
+        
+        /// <summary>
+        /// DDDTelefoneTextBox2_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender DDDTelefoneTextBox2_FilteredTextBoxExtender;
+        
+        /// <summary>
         /// TelefoneTextBox2 control.
         /// </summary>
         /// <remarks>
@@ -83,6 +155,33 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TelefoneTextBox2;
+        
+        /// <summary>
+        /// TelefoneTextBox2_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender TelefoneTextBox2_FilteredTextBoxExtender;
+        
+        /// <summary>
+        /// DDDTelefoneTextBox2_RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator DDDTelefoneTextBox2_RegularExpressionValidator;
+        
+        /// <summary>
+        /// TelefoneTextBox2_RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator TelefoneTextBox2_RegularExpressionValidator;
         
         /// <summary>
         /// SexoRadioButtonList2 control.
@@ -112,6 +211,24 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         protected global::System.Web.UI.WebControls.TextBox NomeTextBox3;
         
         /// <summary>
+        /// DDDTelefoneTextBox3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DDDTelefoneTextBox3;
+        
+        /// <summary>
+        /// DDDTelefoneTextBox3_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender DDDTelefoneTextBox3_FilteredTextBoxExtender;
+        
+        /// <summary>
         /// TelefoneTextBox3 control.
         /// </summary>
         /// <remarks>
@@ -119,6 +236,33 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TelefoneTextBox3;
+        
+        /// <summary>
+        /// TelefoneTextBox3_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender TelefoneTextBox3_FilteredTextBoxExtender;
+        
+        /// <summary>
+        /// DDDTelefoneTextBox3_RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator DDDTelefoneTextBox3_RegularExpressionValidator;
+        
+        /// <summary>
+        /// TelefoneTextBox3_RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator TelefoneTextBox3_RegularExpressionValidator;
         
         /// <summary>
         /// SexoRadioButtonList3 control.
@@ -148,6 +292,24 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         protected global::System.Web.UI.WebControls.TextBox NomeTextBox4;
         
         /// <summary>
+        /// DDDTelefoneTextBox4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DDDTelefoneTextBox4;
+        
+        /// <summary>
+        /// DDDTelefoneTextBox4_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender DDDTelefoneTextBox4_FilteredTextBoxExtender;
+        
+        /// <summary>
         /// TelefoneTextBox4 control.
         /// </summary>
         /// <remarks>
@@ -155,6 +317,33 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TelefoneTextBox4;
+        
+        /// <summary>
+        /// TelefoneTextBox4_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender TelefoneTextBox4_FilteredTextBoxExtender;
+        
+        /// <summary>
+        /// DDDTelefoneTextBox4_RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator DDDTelefoneTextBox4_RegularExpressionValidator;
+        
+        /// <summary>
+        /// TelefoneTextBox4_RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator TelefoneTextBox4_RegularExpressionValidator;
         
         /// <summary>
         /// SexoRadioButtonList4 control.
@@ -184,6 +373,24 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         protected global::System.Web.UI.WebControls.TextBox NomeTextBox5;
         
         /// <summary>
+        /// DDDTelefoneTextBox5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DDDTelefoneTextBox5;
+        
+        /// <summary>
+        /// DDDTelefoneTextBox5_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender DDDTelefoneTextBox5_FilteredTextBoxExtender;
+        
+        /// <summary>
         /// TelefoneTextBox5 control.
         /// </summary>
         /// <remarks>
@@ -191,6 +398,33 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TelefoneTextBox5;
+        
+        /// <summary>
+        /// TelefoneTextBox5_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender TelefoneTextBox5_FilteredTextBoxExtender;
+        
+        /// <summary>
+        /// DDDTelefoneTextBox5_RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator DDDTelefoneTextBox5_RegularExpressionValidator;
+        
+        /// <summary>
+        /// TelefoneTextBox5_RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator TelefoneTextBox5_RegularExpressionValidator;
         
         /// <summary>
         /// SexoRadioButtonList5 control.
@@ -220,6 +454,24 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         protected global::System.Web.UI.WebControls.TextBox NomeTextBox6;
         
         /// <summary>
+        /// DDDTelefoneTextBox6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DDDTelefoneTextBox6;
+        
+        /// <summary>
+        /// DDDTelefoneTextBox6_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender DDDTelefoneTextBox6_FilteredTextBoxExtender;
+        
+        /// <summary>
         /// TelefoneTextBox6 control.
         /// </summary>
         /// <remarks>
@@ -227,6 +479,33 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TelefoneTextBox6;
+        
+        /// <summary>
+        /// TelefoneTextBox6_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender TelefoneTextBox6_FilteredTextBoxExtender;
+        
+        /// <summary>
+        /// DDDTelefoneTextBox6_RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator DDDTelefoneTextBox6_RegularExpressionValidator;
+        
+        /// <summary>
+        /// TelefoneTextBox6_RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator TelefoneTextBox6_RegularExpressionValidator;
         
         /// <summary>
         /// SexoRadioButtonList6 control.
@@ -256,6 +535,24 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         protected global::System.Web.UI.WebControls.TextBox NomeTextBox7;
         
         /// <summary>
+        /// DDDTelefoneTextBox7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DDDTelefoneTextBox7;
+        
+        /// <summary>
+        /// DDDTelefoneTextBox7_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender DDDTelefoneTextBox7_FilteredTextBoxExtender;
+        
+        /// <summary>
         /// TelefoneTextBox7 control.
         /// </summary>
         /// <remarks>
@@ -263,6 +560,33 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TelefoneTextBox7;
+        
+        /// <summary>
+        /// TelefoneTextBox7_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender TelefoneTextBox7_FilteredTextBoxExtender;
+        
+        /// <summary>
+        /// DDDTelefoneTextBox7_RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator DDDTelefoneTextBox7_RegularExpressionValidator;
+        
+        /// <summary>
+        /// TelefoneTextBox7_RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator TelefoneTextBox7_RegularExpressionValidator;
         
         /// <summary>
         /// SexoRadioButtonList7 control.
@@ -292,6 +616,24 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         protected global::System.Web.UI.WebControls.TextBox NomeTextBox8;
         
         /// <summary>
+        /// DDDTelefoneTextBox8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DDDTelefoneTextBox8;
+        
+        /// <summary>
+        /// DDDTelefoneTextBox8_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender DDDTelefoneTextBox8_FilteredTextBoxExtender;
+        
+        /// <summary>
         /// TelefoneTextBox8 control.
         /// </summary>
         /// <remarks>
@@ -299,6 +641,33 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TelefoneTextBox8;
+        
+        /// <summary>
+        /// TelefoneTextBox8_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender TelefoneTextBox8_FilteredTextBoxExtender;
+        
+        /// <summary>
+        /// DDDTelefoneTextBox8_RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator DDDTelefoneTextBox8_RegularExpressionValidator;
+        
+        /// <summary>
+        /// TelefoneTextBox8_RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator TelefoneTextBox8_RegularExpressionValidator;
         
         /// <summary>
         /// SexoRadioButtonList8 control.
@@ -328,6 +697,24 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         protected global::System.Web.UI.WebControls.TextBox NomeTextBox9;
         
         /// <summary>
+        /// DDDTelefoneTextBox9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DDDTelefoneTextBox9;
+        
+        /// <summary>
+        /// DDDTelefoneTextBox9_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender DDDTelefoneTextBox9_FilteredTextBoxExtender;
+        
+        /// <summary>
         /// TelefoneTextBox9 control.
         /// </summary>
         /// <remarks>
@@ -335,6 +722,33 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TelefoneTextBox9;
+        
+        /// <summary>
+        /// TelefoneTextBox9_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender TelefoneTextBox9_FilteredTextBoxExtender;
+        
+        /// <summary>
+        /// DDDTelefoneTextBox9_RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator DDDTelefoneTextBox9_RegularExpressionValidator;
+        
+        /// <summary>
+        /// TelefoneTextBox9_RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator TelefoneTextBox9_RegularExpressionValidator;
         
         /// <summary>
         /// SexoRadioButtonList9 control.
@@ -364,6 +778,24 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         protected global::System.Web.UI.WebControls.TextBox NomeTextBox10;
         
         /// <summary>
+        /// DDDTelefoneTextBox10 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DDDTelefoneTextBox10;
+        
+        /// <summary>
+        /// DDDTelefoneTextBox10_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender DDDTelefoneTextBox10_FilteredTextBoxExtender;
+        
+        /// <summary>
         /// TelefoneTextBox10 control.
         /// </summary>
         /// <remarks>
@@ -371,6 +803,33 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TelefoneTextBox10;
+        
+        /// <summary>
+        /// TelefoneTextBox10_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender TelefoneTextBox10_FilteredTextBoxExtender;
+        
+        /// <summary>
+        /// DDDTelefoneTextBox10_RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator DDDTelefoneTextBox10_RegularExpressionValidator;
+        
+        /// <summary>
+        /// TelefoneTextBox10_RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator TelefoneTextBox10_RegularExpressionValidator;
         
         /// <summary>
         /// SexoRadioButtonList10 control.

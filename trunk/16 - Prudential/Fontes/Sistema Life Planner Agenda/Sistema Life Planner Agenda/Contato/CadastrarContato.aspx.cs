@@ -15,7 +15,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
     public partial class CadastrarContato : PageBase
     {
         protected void Page_Load(object sender, EventArgs e)
-        {   
+        {
             if (!this.IsPostBack)
             {
                 ValidaUserLogado();
@@ -77,6 +77,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
                         dadosContato.Telefone_Alternativo_2,
                         dadosContato.Telefone_Principal,
                         dadosContato.UF);
+                    ExibeMensagemPopUp("Contato salvo com sucesso!");
                 }
                 catch (Exception ex)
                 {
@@ -118,6 +119,8 @@ namespace Sistema_Life_Planner_Agenda.Contato
                     ExibeMensagemPopUp("Falha ao tentar salvar o contato. Tente novamente. Detalhes: " + ex.Message);
                 }
             }
+            pesquisarButton.Visible = true;
+            cancelarButton.Visible = false;
         }
 
         protected void cancelarButton_Click(object sender, EventArgs e)
@@ -179,8 +182,8 @@ namespace Sistema_Life_Planner_Agenda.Contato
                 RecomendanteDropDownList.SelectedValue = DrContato["ID_Contato_Recomendante"].ToString();
                 nomeCompletoTextBox.Text = DrContato["Nome"].ToString();
                 StatusDropDownList.SelectedValue = DrContato["ID_Status_Contato"].ToString();
-                DDDTelefoneTextBox.Text = DrContato["Telefone_Principal"].ToString().Substring(1, 2);
-                TelefoneTextBox.Text = DrContato["Telefone_Principal"].ToString().Substring(4);
+                DDDTelefoneTextBox.Text = DrContato["Telefone_Principal"].ToString().Substring(0, 2);
+                TelefoneTextBox.Text = DrContato["Telefone_Principal"].ToString().Substring(2);
                 SexoRadioButtonList.SelectedValue = DrContato["Sexo"].ToString();
                 outrasInformacoesTextBox.Text = DrContato["Outras_Informacoes"].ToString();
                 idadeTextBox.Text = DrContato["Idade"].ToString();
@@ -191,10 +194,10 @@ namespace Sistema_Life_Planner_Agenda.Contato
                 UFDropDownList.SelectedValue = DrContato["UF"].ToString();
                 cidadeTextBox.Text = DrContato["Cidade"].ToString();
                 emailTextBox.Text = DrContato["Email"].ToString();
-                DDDtelefoneAlternativo1TextBox.Text = DrContato["Telefone_Alternativo_1"].ToString().Substring(1, 2);
-                telefoneAlternativo1TextBox.Text = DrContato["Telefone_Alternativo_1"].ToString().Substring(4);
-                DDDtelefoneAlternativo2TextBox.Text = DrContato["Telefone_Alternativo_2"].ToString().Substring(1, 2);
-                telefoneAlternativo2TextBox.Text = DrContato["Telefone_Alternativo_2"].ToString().Substring(4);
+                DDDtelefoneAlternativo1TextBox.Text = DrContato["Telefone_Alternativo_1"].ToString().Substring(0, 2);
+                telefoneAlternativo1TextBox.Text = DrContato["Telefone_Alternativo_1"].ToString().Substring(2);
+                DDDtelefoneAlternativo2TextBox.Text = DrContato["Telefone_Alternativo_2"].ToString().Substring(0, 2);
+                telefoneAlternativo2TextBox.Text = DrContato["Telefone_Alternativo_2"].ToString().Substring(2);
 
             }
             catch (Exception ex)
@@ -218,19 +221,23 @@ namespace Sistema_Life_Planner_Agenda.Contato
 
             if (!string.IsNullOrEmpty(TipoDropDownList.SelectedItem.Value))
                 dados.ID_Tipo_Contato = Convert.ToInt32(TipoDropDownList.SelectedItem.Value);
-            dados.ID_Tipo_Contato = 1;
+            else
+                dados.ID_Tipo_Contato = 1;
 
             if (!string.IsNullOrEmpty(cidadeTextBox.Text))
                 dados.Cidade = cidadeTextBox.Text;
-            dados.Cidade = string.Empty;
+            else
+                dados.Cidade = string.Empty;
 
             if (!string.IsNullOrEmpty(emailTextBox.Text))
                 dados.Email = emailTextBox.Text;
-            dados.Email = string.Empty;
+            else
+                dados.Email = string.Empty;
 
-            if (!string.IsNullOrEmpty(EstadoCivilDropDownList.SelectedItem.Text))
+            if (!string.IsNullOrEmpty(EstadoCivilDropDownList.SelectedItem.Value))
                 dados.Estado_Civil = EstadoCivilDropDownList.SelectedItem.Text;
-            dados.Estado_Civil = string.Empty;
+            else
+                dados.Estado_Civil = string.Empty;
 
             if (!string.IsNullOrEmpty(filhosTextBox.Text))
                 dados.Filhos = Convert.ToInt32(filhosTextBox.Text);
@@ -240,27 +247,33 @@ namespace Sistema_Life_Planner_Agenda.Contato
 
             if (!string.IsNullOrEmpty(outrasInformacoesTextBox.Text))
                 dados.Outras_Informacoes = outrasInformacoesTextBox.Text;
-            dados.Outras_Informacoes = string.Empty;
+            else
+                dados.Outras_Informacoes = string.Empty;
 
             if (!string.IsNullOrEmpty(profissaoTextBox.Text))
                 dados.Profissao = profissaoTextBox.Text;
-            dados.Profissao = string.Empty;
+            else
+                dados.Profissao = string.Empty;
 
             if (!string.IsNullOrEmpty(DDDtelefoneAlternativo1TextBox.Text))
-                dados.Telefone_Alternativo_1 = "(" + DDDtelefoneAlternativo1TextBox.Text + ") " + telefoneAlternativo1TextBox.Text;
-            dados.Telefone_Alternativo_1 = string.Empty;
+                dados.Telefone_Alternativo_1 = DDDtelefoneAlternativo1TextBox.Text + telefoneAlternativo1TextBox.Text;
+            else
+                dados.Telefone_Alternativo_1 = string.Empty;
 
             if (!string.IsNullOrEmpty(DDDtelefoneAlternativo2TextBox.Text))
-                dados.Telefone_Alternativo_2 = "(" + DDDtelefoneAlternativo2TextBox.Text + ") " + telefoneAlternativo2TextBox.Text;
-            dados.Telefone_Alternativo_2 = string.Empty;
+                dados.Telefone_Alternativo_2 = DDDtelefoneAlternativo2TextBox.Text + telefoneAlternativo2TextBox.Text;
+            else
+                dados.Telefone_Alternativo_2 = string.Empty;
 
             if (!string.IsNullOrEmpty(DDDTelefoneTextBox.Text))
-                dados.Telefone_Principal = "(" + DDDTelefoneTextBox.Text + ") " + TelefoneTextBox.Text;
-            dados.Telefone_Principal = string.Empty;
+                dados.Telefone_Principal = DDDTelefoneTextBox.Text + TelefoneTextBox.Text;
+            else
+                dados.Telefone_Principal = string.Empty;
 
             if (!string.IsNullOrEmpty(UFDropDownList.SelectedItem.Value))
-                dados.UF = UFDropDownList.SelectedItem.Value;
-            dados.UF = string.Empty;
+                dados.UF = UFDropDownList.SelectedItem.Text;
+            else
+                dados.UF = string.Empty;
 
             return dados;
         }
@@ -290,6 +303,11 @@ namespace Sistema_Life_Planner_Agenda.Contato
                 TipoDropDownList.SelectedValue =
                 UFDropDownList.SelectedValue = string.Empty;
             SexoRadioButtonList.SelectedValue = "M";
+        }
+
+        protected void pesquisarButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("PesquisarContato.aspx");
         }
     }
 }

@@ -54,7 +54,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
 
         protected void pesquisarButton_Click(object sender, EventArgs e)
         {
-            PesquisarContatos();
+            CarregarGridView();
         }
 
         protected void limparButton_Click(object sender, EventArgs e)
@@ -72,7 +72,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
             Response.Redirect("CadastrarLote.aspx");
         }
 
-        private void PesquisarContatos()
+        private void CarregarGridView()
         {
             string idRecomendante = string.Empty;
 
@@ -81,10 +81,10 @@ namespace Sistema_Life_Planner_Agenda.Contato
                 idRecomendante = RecomendanteDropDownList.SelectedItem.Value.ToString();
             }
 
-            ContatosGridView.DataSource = new ContatoBD().Listar(
+            ContatosGridView.DataSource = ViewState["ContatosDataSet"] = new ContatoBD().Listar(
                 nomeTextBox.Text,
                 idRecomendante,
-                TelefoneTextBox.Text,
+                DDDTelefoneTextBox.Text + TelefoneTextBox.Text,
                 Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())));
             ContatosGridView.DataBind();
         }
@@ -98,7 +98,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
                 RecomendanteDropDownList.DataValueField = "Id";
                 RecomendanteDropDownList.DataBind();
 
-                ListItem selecione = new ListItem("<Selecione>", "");
+                ListItem selecione = new ListItem("< Todos >", "");
                 RecomendanteDropDownList.Items.Insert(0, selecione);
 
                 ListItem usuarioLogado = new ListItem(Session["nomeUsuarioLogado"].ToString() + " (EU)", "1");
@@ -132,7 +132,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
                 else if (e.CommandName == "Alterar")
                 {
                     // o ",false" é para suprimir a chamada interna para "Response.End"
-                    Response.Redirect("CadastrarContato.aspx?id=" + Convert.ToString(e.CommandArgument), false);
+                    Response.Redirect("CadastrarContato.aspx?idContato=" + Convert.ToString(e.CommandArgument), false);
                 }
             }
             catch (Exception ex)
@@ -154,16 +154,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
 
         }
 
-        /// <summary>
-        /// Carregar o grid com os contatos cadastrados
-        /// </summary>
-        private void CarregarGridView()
-        {
-            ContatoBD contatos = new ContatoBD();
-            ContatosGridView.DataSource = ViewState["ContatosDataSet"] = contatos.Listar(Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())));
-            ContatosGridView.DataBind();
-            contatos.Dispose();
-        }
+        
 
         protected void ContatosGridView_Sorting(object sender, GridViewSortEventArgs e)
         {

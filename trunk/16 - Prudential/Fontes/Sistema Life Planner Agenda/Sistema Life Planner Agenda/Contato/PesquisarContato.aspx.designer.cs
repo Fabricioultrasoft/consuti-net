@@ -40,6 +40,24 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         protected global::System.Web.UI.WebControls.DropDownList RecomendanteDropDownList;
         
         /// <summary>
+        /// DDDTelefoneTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DDDTelefoneTextBox;
+        
+        /// <summary>
+        /// DDDTelefoneTextBox_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender DDDTelefoneTextBox_FilteredTextBoxExtender;
+        
+        /// <summary>
         /// TelefoneTextBox control.
         /// </summary>
         /// <remarks>
@@ -47,6 +65,15 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TelefoneTextBox;
+        
+        /// <summary>
+        /// TelefoneTextBox_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender TelefoneTextBox_FilteredTextBoxExtender;
         
         /// <summary>
         /// pesquisarButton control.

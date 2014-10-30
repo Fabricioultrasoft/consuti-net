@@ -1,5 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Interna.Master" AutoEventWireup="true" ValidateRequest="false"
-    CodeBehind="CadastrarContato.aspx.cs" Inherits="Sistema_Life_Planner_Agenda.Contato.CadastrarContato" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Interna.Master" AutoEventWireup="true"
+    ValidateRequest="false" CodeBehind="CadastrarContato.aspx.cs" Inherits="Sistema_Life_Planner_Agenda.Contato.CadastrarContato" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -33,8 +33,8 @@
                                 </asp:DropDownList>
                                 <span class="obrigatorio">
                                     <asp:RequiredFieldValidator ID="RecomendanteDropDownListRequiredFieldValidator" runat="server"
-                                        ControlToValidate="RecomendanteDropDownList" Display="Dynamic" ErrorMessage="*" CssClass="obrigatorio" 
-                                        ToolTip="Campo Obrigatório!"></asp:RequiredFieldValidator></span>
+                                        ControlToValidate="RecomendanteDropDownList" Display="Dynamic" ErrorMessage="*"
+                                        CssClass="obrigatorio" ToolTip="Campo Obrigatório!"></asp:RequiredFieldValidator></span>
                             </td>
                         </tr>
                         <tr>
@@ -44,9 +44,9 @@
                             <td>
                                 <asp:TextBox ID="nomeCompletoTextBox" runat="server" MaxLength="100" TabIndex="1"
                                     TextMode="SingleLine" Width="500px" Font-Size="13pt"></asp:TextBox>
-                                    <span class="obrigatorio">
+                                <span class="obrigatorio">
                                     <asp:RequiredFieldValidator ID="nomeCompletoTextBoxRequiredFieldValidator" runat="server"
-                                        ControlToValidate="nomeCompletoTextBox" Display="Dynamic" ErrorMessage="*" CssClass="obrigatorio" 
+                                        ControlToValidate="nomeCompletoTextBox" Display="Dynamic" ErrorMessage="*" CssClass="obrigatorio"
                                         ToolTip="Campo Obrigatório!"></asp:RequiredFieldValidator></span>
                             </td>
                         </tr>
@@ -60,9 +60,8 @@
                                 </asp:DropDownList>
                                 <span class="obrigatorio">
                                     <asp:RequiredFieldValidator ID="StatusDropDownListRequiredFieldValidator" runat="server"
-                                        ControlToValidate="StatusDropDownList" Display="Dynamic" ErrorMessage="*" CssClass="obrigatorio" 
+                                        ControlToValidate="StatusDropDownList" Display="Dynamic" ErrorMessage="*" CssClass="obrigatorio"
                                         ToolTip="Campo Obrigatório!"></asp:RequiredFieldValidator></span>
-
                             </td>
                         </tr>
                         <tr>
@@ -255,8 +254,8 @@
                                 Cidade:
                             </td>
                             <td>
-                                <asp:TextBox ID="cidadeTextBox" runat="server" TextMode="SingleLine"
-                                    Width="300px" TabIndex="15" MaxLength="100"></asp:TextBox>
+                                <asp:TextBox ID="cidadeTextBox" runat="server" TextMode="SingleLine" Width="300px"
+                                    TabIndex="15" MaxLength="100"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -322,6 +321,8 @@
                     <br />
                 </fieldset>
                 <div class="barraBotoes">
+                    <asp:Button ID="pesquisarButton" runat="server" Text="   Pesquisar" CssClass="botaoPesquisar"
+                        TabIndex="28" OnClick="pesquisarButton_Click" Visible="false" CausesValidation="false" />
                     <asp:Button ID="cancelarButton" runat="server" Text="Cancelar" CssClass="botaoCancelar"
                         TabIndex="29" OnClick="cancelarButton_Click" OnClientClick="return confirm('Confirma cancelamento? Os dados não salvos serão perdidos.');" />
                     <asp:Button ID="salvarButton" runat="server" Text="Salvar" CssClass="botaoSalvar"

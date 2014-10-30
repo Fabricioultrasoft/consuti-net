@@ -42,8 +42,15 @@
                                 Telefone:
                             </td>
                             <td>
-                                <asp:TextBox ID="TelefoneTextBox" runat="server" Width="150px" TabIndex="3" MaxLength="50"
-                                    TextMode="SingleLine"></asp:TextBox>
+                                <asp:TextBox ID="DDDTelefoneTextBox" runat="server" MaxLength="2" TabIndex="3" Width="16px"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="DDDTelefoneTextBox_FilteredTextBoxExtender" runat="server"
+                                    Enabled="True" TargetControlID="DDDTelefoneTextBox" ValidChars="1234567890">
+                                </cc1:FilteredTextBoxExtender>
+                                &nbsp;<asp:TextBox ID="TelefoneTextBox" runat="server" MaxLength="9" TabIndex="3"
+                                    Width="65px"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="TelefoneTextBox_FilteredTextBoxExtender" runat="server"
+                                    Enabled="True" TargetControlID="TelefoneTextBox" ValidChars="1234567890">
+                                </cc1:FilteredTextBoxExtender>
                             </td>
                         </tr>
                     </table>
@@ -79,16 +86,16 @@
                                 <ItemStyle CssClass="espacoTabelas" />
                             </asp:BoundField>
                             <asp:BoundField HeaderText="Recomendante" DataField="Recomendante" SortExpression="Recomendante">
-                                <ItemStyle HorizontalAlign="Center" />
+                                <ItemStyle CssClass="espacoTabelas" />
                             </asp:BoundField>
                             <asp:BoundField HeaderText="Status" DataField="Status" SortExpression="Status">
-                                <ItemStyle HorizontalAlign="Center" />
+                                <ItemStyle CssClass="espacoTabelas" />
                             </asp:BoundField>
-                            <asp:BoundField HeaderText="Telefone P." DataField="TelefonePrincipal">
-                                <ItemStyle HorizontalAlign="Center" />
+                            <asp:BoundField HeaderText="Telefone Princ." DataField="TelefonePrincipal">
+                                <ItemStyle CssClass="espacoTabelas" />
                             </asp:BoundField>
                             <asp:BoundField HeaderText="Data do Cadastro" DataField="DataCadastro" SortExpression="DataCadastro">
-                                <ItemStyle HorizontalAlign="Center" />
+                                <ItemStyle CssClass="espacoTabelas" />
                             </asp:BoundField>
                             <asp:TemplateField HeaderText="Alterar">
                                 <ItemTemplate>
@@ -102,7 +109,7 @@
                                     <asp:ImageButton ID="imgBtnExcluir" runat="server" CausesValidation="False" CommandArgument='<%# Bind("Id") %>'
                                         CommandName="Excluir" ImageUrl="~/Estilos/Imgs/no.png"></asp:ImageButton>
                                     <cc1:ConfirmButtonExtender ID="ConfirmButtonExtender" runat="server" TargetControlID="imgBtnExcluir"
-                                        ConfirmText="Confirma a exclusão do e-mail?">
+                                        ConfirmText="Confirma a exclusão do contato?">
                                     </cc1:ConfirmButtonExtender>
                                 </ItemTemplate>
                                 <ItemStyle Width="50px" HorizontalAlign="Center" />
