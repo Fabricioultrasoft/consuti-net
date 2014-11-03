@@ -80,7 +80,6 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             return new ContatoBD().ObterID(
                 ID_Contato_Recomendante,
-                Email,
                 Data_Cadastro,
                 Nome,
                 Sexo,
@@ -99,8 +98,7 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// <param name="Telefone_Principal"></param>
         /// <returns></returns>
         public int ObterID(
-            int ID_Contato_Recomendante,
-            string Email,
+            int ID_Contato_Recomendante,            
             DateTime Data_Cadastro,
             string Nome,
             char Sexo,
@@ -109,14 +107,12 @@ namespace Sistema_Life_Planner_Agenda.BD
         {
             comando.CommandText = @"SELECT Id
                                     FROM contato
-                                    WHERE ID_Contato_Recomendante = @ID_Contato_Recomendante 
-                                    AND Email = @Email
+                                    WHERE ID_Contato_Recomendante = @ID_Contato_Recomendante                                     
                                     AND Data_Cadastro = @Data_Cadastro
                                     AND Nome = @Nome
                                     AND Sexo = @Sexo
                                     AND Telefone_Principal = @Telefone_Principal";
-            comando.Parameters.AddWithValue("@ID_Contato_Recomendante", ID_Contato_Recomendante);
-            comando.Parameters.AddWithValue("@Email", Email);
+            comando.Parameters.AddWithValue("@ID_Contato_Recomendante", ID_Contato_Recomendante);            
             comando.Parameters.AddWithValue("@Data_Cadastro", Data_Cadastro);
             comando.Parameters.AddWithValue("@Nome", Nome);
             comando.Parameters.AddWithValue("@Sexo", Sexo);
@@ -239,13 +235,19 @@ namespace Sistema_Life_Planner_Agenda.BD
         public DataSet Listar(string nome,
             string idRecomendante,
             string telefonePrincipal,
+            string idStatus,
             int idUsuario)
         {
             #region Lógica de filtros
-            string filtrarRecomendante = string.Empty, filtrarNomeTelefone = string.Empty;
+
+            string filtrarRecomendante = string.Empty, filtrarNomeTelefone = string.Empty, filtrarStatus = string.Empty;
             if (!string.IsNullOrEmpty(idRecomendante))
             {
                 filtrarRecomendante = " AND c.ID_Contato_Recomendante = " + idRecomendante;
+            }
+            if (!string.IsNullOrEmpty(idStatus))
+            {
+                filtrarStatus = " AND c.ID_Status_Contato = " + idStatus;
             }
             if (!string.IsNullOrEmpty(nome) && !string.IsNullOrEmpty(telefonePrincipal))
             {
@@ -276,6 +278,7 @@ namespace Sistema_Life_Planner_Agenda.BD
                                     JOIN usuario_contato uc ON uc.ID_Contato = c.ID                                    
                                     WHERE uc.ID_Usuario = @idUsuario " +
                                     filtrarRecomendante +
+                                    filtrarStatus +
                                     filtrarNomeTelefone +
                                     " ORDER BY c.Nome ASC";
             comando.Parameters.AddWithValue("@idUsuario", idUsuario);
@@ -328,5 +331,66 @@ namespace Sistema_Life_Planner_Agenda.BD
             comando.CommandType = System.Data.CommandType.Text;
             comando.ExecuteNonQuery();
         }
+
+        public int IncluirLote(
+            int ID_Contato_Recomendante,
+            DateTime Data_Cadastro,
+            string Nome,
+            string Outras_Informacoes,
+            char Sexo,
+            string Telefone_Principal)
+        {
+            comando.CommandText = @"INSERT INTO contato
+                                        (ID_Contato_Recomendante, ID_Status_Contato, ID_Tipo_Contato, 
+                                        Cidade, Email, Estado_Civil, Data_Cadastro, Filhos, Idade, Nome, Outras_Informacoes, 
+                                        Profissao, Sexo, Telefone_Alternativo_1, Telefone_Alternativo_2, Telefone_Principal, UF) 
+                                    VALUES (@ID_Contato_Recomendante, @ID_Status_Contato, @ID_Tipo_Contato, @Cidade,
+                                        @Email, @Estado_Civil, @Data_Cadastro, @Filhos, @Idade, @Nome, @Outras_Informacoes, @Profissao,
+                                        @Sexo, @Telefone_Alternativo_1, @Telefone_Alternativo_2, @Telefone_Principal, @UF);";
+            comando.Parameters.AddWithValue("@ID_Contato_Recomendante", ID_Contato_Recomendante);
+            comando.Parameters.AddWithValue("@ID_Status_Contato", 1);
+            comando.Parameters.AddWithValue("@ID_Tipo_Contato", 1);
+            comando.Parameters.AddWithValue("@Cidade", string.Empty);
+            comando.Parameters.AddWithValue("@Email", string.Empty);
+            comando.Parameters.AddWithValue("@Estado_Civil", string.Empty);
+            comando.Parameters.AddWithValue("@Data_Cadastro", Data_Cadastro);
+            comando.Parameters.AddWithValue("@Filhos", 0);
+            comando.Parameters.AddWithValue("@Idade", 0);
+            comando.Parameters.AddWithValue("@Nome", Nome);
+            comando.Parameters.AddWithValue("@Outras_Informacoes", Outras_Informacoes);
+            comando.Parameters.AddWithValue("@Profissao", string.Empty);
+            comando.Parameters.AddWithValue("@Sexo", Sexo);
+            comando.Parameters.AddWithValue("@Telefone_Alternativo_1", string.Empty);
+            comando.Parameters.AddWithValue("@Telefone_Alternativo_2", string.Empty);
+            comando.Parameters.AddWithValue("@Telefone_Principal", Telefone_Principal);
+            comando.Parameters.AddWithValue("@UF", string.Empty);
+
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.ExecuteNonQuery();
+
+            return new ContatoBD().ObterID(
+                ID_Contato_Recomendante,
+                Data_Cadastro,
+                Nome,
+                Sexo,
+                Telefone_Principal);
+        }
+
+//        public DataSet PesquisaRecomendanteComum(
+//            string idUsuario,
+//            string telefone)
+//        {
+//            comando.CommandText = @"SELECT *
+//                FROM contato c
+//                JOIN usuario_contato uc ON uc.ID_Contato = c.ID  
+//                WHERE uc.ID_Usuario = @idUsuario
+//                AND (Telefone_Principal LIKE '%@telefone%'
+//                OR Telefone_Alternativo_1 LIKE '%@telefone%'  //Logica do like para o telefone não está correta. ver acima....
+//                OR Telefone_Alternativo_2 LIKE '%@telefone%')
+//                ORDER BY c.Nome";
+
+//            comando.Parameters.AddWithValue("@idUsuario", idUsuario);
+//            comando.Parameters.AddWithValue("@telefone", telefone);
+//        }
     }
 }

@@ -39,6 +39,15 @@
                         </tr>
                         <tr>
                             <td class="alinhaDireita">
+                                Status:
+                            </td>
+                            <td>
+                                <asp:DropDownList ID="StatusDropDownList" runat="server" Width="200px" TabIndex="2">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="alinhaDireita">
                                 Telefone:
                             </td>
                             <td>
