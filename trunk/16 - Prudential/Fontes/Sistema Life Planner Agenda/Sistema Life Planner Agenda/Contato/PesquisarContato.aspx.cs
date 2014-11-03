@@ -49,6 +49,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
             {
                 ValidaUserLogado();
                 CarregarRecomendantes();
+                CarregarStatus();
             }
         }
 
@@ -72,23 +73,34 @@ namespace Sistema_Life_Planner_Agenda.Contato
             Response.Redirect("CadastrarLote.aspx");
         }
 
+        /// <summary>
+        /// Carrega o grid de pesquisa a partir dos filtros selecionados
+        /// </summary>
         private void CarregarGridView()
         {
-            string idRecomendante = string.Empty;
+            string idRecomendante = string.Empty, idStatus = string.Empty;
 
             if (!string.IsNullOrEmpty(RecomendanteDropDownList.SelectedItem.Value))
             {
                 idRecomendante = RecomendanteDropDownList.SelectedItem.Value.ToString();
             }
+            if (!string.IsNullOrEmpty(StatusDropDownList.SelectedItem.Value))
+            {
+                idStatus = StatusDropDownList.SelectedItem.Value.ToString();
+            }
 
             ContatosGridView.DataSource = ViewState["ContatosDataSet"] = new ContatoBD().Listar(
                 nomeTextBox.Text,
-                idRecomendante,
+                idRecomendante,                
                 DDDTelefoneTextBox.Text + TelefoneTextBox.Text,
+                idStatus,
                 Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())));
             ContatosGridView.DataBind();
         }
 
+        /// <summary>
+        /// Carrega a lista de recomendantes
+        /// </summary>
         private void CarregarRecomendantes()
         {
             try
@@ -110,6 +122,19 @@ namespace Sistema_Life_Planner_Agenda.Contato
             }
         }
 
+        /// <summary>
+        /// Carrega os status de contato
+        /// </summary>
+        private void CarregarStatus()
+        {
+            StatusDropDownList.DataSource = new StatusContatoBD().Listar();
+            StatusDropDownList.DataTextField = "Status";
+            StatusDropDownList.DataValueField = "Id";
+            StatusDropDownList.DataBind();
+
+            ListItem selecione = new ListItem("< Todos >", "");
+            StatusDropDownList.Items.Insert(0, selecione);
+        }
 
         #region Eventos do GridView
 
@@ -151,10 +176,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
             ContatosGridView.PageIndex = e.NewPageIndex;
             ContatosGridView.DataSource = (DataSet)ViewState["ContatosDataSet"];
             ContatosGridView.DataBind();
-
         }
-
-        
 
         protected void ContatosGridView_Sorting(object sender, GridViewSortEventArgs e)
         {
