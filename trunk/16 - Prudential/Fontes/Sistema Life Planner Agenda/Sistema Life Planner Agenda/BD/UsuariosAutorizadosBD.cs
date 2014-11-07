@@ -22,6 +22,8 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             comando.CommandType = System.Data.CommandType.Text;
             comando.ExecuteNonQuery();
+            
+            this.Dispose();
         }
 
         /// <summary>
@@ -41,6 +43,8 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             comando.CommandType = System.Data.CommandType.Text;
             comando.ExecuteNonQuery();
+
+            this.Dispose();
         }
 
         /// <summary>
@@ -57,6 +61,7 @@ namespace Sistema_Life_Planner_Agenda.BD
             comando.CommandType = System.Data.CommandType.Text;
             comando.ExecuteNonQuery();
 
+            this.Dispose();
         }
 
         /// <summary>
@@ -75,6 +80,8 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             DataSet retorno = new DataSet();
             adap.Fill(retorno);
+
+            this.Dispose();
 
             return retorno;
         }
@@ -97,6 +104,8 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             DataSet retorno = new DataSet();
             adap.Fill(retorno);
+
+            this.Dispose();
 
             // Cria uma instância da classe DataRow para receber uma linha do DataSet.
             return retorno.Tables[0].Rows[0];

@@ -78,6 +78,8 @@ namespace Sistema_Life_Planner_Agenda.BD
             comando.CommandType = System.Data.CommandType.Text;
             comando.ExecuteNonQuery();
 
+            this.Dispose();
+
             return new ContatoBD().ObterID(
                 ID_Contato_Recomendante,
                 Data_Cadastro,
@@ -119,6 +121,8 @@ namespace Sistema_Life_Planner_Agenda.BD
             comando.Parameters.AddWithValue("@Telefone_Principal", Telefone_Principal);
             object resultadoBusca = comando.ExecuteScalar();
 
+            this.Dispose();
+
             try
             {
                 return Convert.ToInt32(resultadoBusca.ToString());
@@ -127,6 +131,8 @@ namespace Sistema_Life_Planner_Agenda.BD
             {
                 return 0;
             }
+
+            
         }
 
         /// <summary>
@@ -198,6 +204,8 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             comando.CommandType = System.Data.CommandType.Text;
             comando.ExecuteNonQuery();
+
+            this.Dispose();
         }
 
         /// <summary>
@@ -219,6 +227,8 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             DataSet retorno = new DataSet();
             adap.Fill(retorno);
+
+            this.Dispose();
 
             return retorno;
         }
@@ -289,6 +299,8 @@ namespace Sistema_Life_Planner_Agenda.BD
             DataSet retorno = new DataSet();
             adap.Fill(retorno);
 
+            this.Dispose();
+
             return retorno;
         }
 
@@ -315,6 +327,8 @@ namespace Sistema_Life_Planner_Agenda.BD
             DataSet retorno = new DataSet();
             adap.Fill(retorno);
 
+            this.Dispose();
+
             return retorno;
         }
 
@@ -330,6 +344,9 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             comando.CommandType = System.Data.CommandType.Text;
             comando.ExecuteNonQuery();
+
+            this.Dispose();
+            //TODO: ao excluir, tem que setar o recomendante para "Usuário Excluído". Criar registro 2 de carga inicial.
         }
 
         public int IncluirLote(
@@ -348,8 +365,8 @@ namespace Sistema_Life_Planner_Agenda.BD
                                         @Email, @Estado_Civil, @Data_Cadastro, @Filhos, @Idade, @Nome, @Outras_Informacoes, @Profissao,
                                         @Sexo, @Telefone_Alternativo_1, @Telefone_Alternativo_2, @Telefone_Principal, @UF);";
             comando.Parameters.AddWithValue("@ID_Contato_Recomendante", ID_Contato_Recomendante);
-            comando.Parameters.AddWithValue("@ID_Status_Contato", 1);
-            comando.Parameters.AddWithValue("@ID_Tipo_Contato", 1);
+            comando.Parameters.AddWithValue("@ID_Status_Contato", 7); //7 - Nenhum
+            comando.Parameters.AddWithValue("@ID_Tipo_Contato", 4); // 4 - Nenhum
             comando.Parameters.AddWithValue("@Cidade", string.Empty);
             comando.Parameters.AddWithValue("@Email", string.Empty);
             comando.Parameters.AddWithValue("@Estado_Civil", string.Empty);
@@ -367,6 +384,8 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             comando.CommandType = System.Data.CommandType.Text;
             comando.ExecuteNonQuery();
+
+            this.Dispose();
 
             return new ContatoBD().ObterID(
                 ID_Contato_Recomendante,

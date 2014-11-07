@@ -150,7 +150,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
             StatusDropDownList.DataValueField = "Id";
             StatusDropDownList.DataBind();
 
-            ListItem selecione = new ListItem("<Selecione>", "");
+            ListItem selecione = new ListItem("< Selecione >", "");
             StatusDropDownList.Items.Insert(0, selecione);
         }
 
@@ -161,7 +161,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
             TipoDropDownList.DataValueField = "Id";
             TipoDropDownList.DataBind();
 
-            ListItem selecione = new ListItem("<Selecione>", "");
+            ListItem selecione = new ListItem("< Selecione >", "");
             TipoDropDownList.Items.Insert(0, selecione);
         }
 
@@ -222,7 +222,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
             if (!string.IsNullOrEmpty(TipoDropDownList.SelectedItem.Value))
                 dados.ID_Tipo_Contato = Convert.ToInt32(TipoDropDownList.SelectedItem.Value);
             else
-                dados.ID_Tipo_Contato = 1;
+                dados.ID_Tipo_Contato = 4; // 4 - Nenhum
 
             if (!string.IsNullOrEmpty(cidadeTextBox.Text))
                 dados.Cidade = cidadeTextBox.Text;

@@ -38,6 +38,8 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             comando.CommandType = System.Data.CommandType.Text;
             comando.ExecuteNonQuery();
+            
+            this.Dispose();
         }
 
         /// <summary>
@@ -71,6 +73,8 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             comando.CommandType = System.Data.CommandType.Text;
             comando.ExecuteNonQuery();
+
+            this.Dispose();
         }
 
         /// <summary>
@@ -90,6 +94,8 @@ namespace Sistema_Life_Planner_Agenda.BD
             comando.Parameters.Add(new MySqlParameter("@email", email));
             comando.Parameters.Add(new MySqlParameter("@senha", senha));
             object resultadoBusca = comando.ExecuteScalar();
+
+            this.Dispose();
 
             try
             {
@@ -120,6 +126,9 @@ namespace Sistema_Life_Planner_Agenda.BD
             MySqlDataAdapter adap = new MySqlDataAdapter(comando);
             DataSet retorno = new DataSet();
             adap.Fill(retorno);
+            
+            this.Dispose();
+
             return retorno;
         }
 
@@ -135,6 +144,8 @@ namespace Sistema_Life_Planner_Agenda.BD
                                     WHERE email = @email";
             comando.Parameters.Add(new MySqlParameter("@email", email));
             object resultadoBusca = comando.ExecuteScalar();
+
+            this.Dispose();
 
             try
             {
@@ -159,6 +170,8 @@ namespace Sistema_Life_Planner_Agenda.BD
             comando.Parameters.Add(new MySqlParameter("@email", email));
             object resultadoBusca = comando.ExecuteScalar();
 
+            this.Dispose();
+
             if (!resultadoBusca.ToString().Equals(string.Empty))
             {
                 return true;
@@ -177,6 +190,8 @@ namespace Sistema_Life_Planner_Agenda.BD
                                     FROM usuarios_autorizados
                                     WHERE email = @email";
             comando.Parameters.Add(new MySqlParameter("@email", email));
+
+            this.Dispose();
 
             try
             {
@@ -205,6 +220,8 @@ namespace Sistema_Life_Planner_Agenda.BD
                                     WHERE email = @email;";
             comando.Parameters.Add(new MySqlParameter("@email", email));
             object resultadoBusca = comando.ExecuteScalar();
+
+            this.Dispose();
 
             try
             {

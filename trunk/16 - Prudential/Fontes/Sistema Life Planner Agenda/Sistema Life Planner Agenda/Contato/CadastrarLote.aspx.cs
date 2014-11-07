@@ -46,6 +46,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
                         Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())),
                         DateTime.Now);
                 }
+                CarregarRecomendantes();
                 ExibeMensagemPopUp("Contatos Salvos com Sucesso!");
                 LimparCampos();
             }
