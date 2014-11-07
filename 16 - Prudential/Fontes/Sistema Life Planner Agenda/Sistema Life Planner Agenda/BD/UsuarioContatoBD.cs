@@ -21,6 +21,8 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             comando.CommandType = System.Data.CommandType.Text;
             comando.ExecuteNonQuery();
+
+            this.Dispose();
         }
     }
 }

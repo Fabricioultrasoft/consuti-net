@@ -17,7 +17,7 @@ namespace Sistema_Life_Planner_Agenda.BD
         {
             comando.CommandText = @"SELECT ID, Tipo
                                     FROM tipo_contato" +
-                                  " ORDER BY Tipo ASC";
+                                  " ORDER BY ID ASC";
             comando.CommandType = CommandType.Text;
 
             // Classe que auxilia no preenchimento de um dataset
@@ -25,6 +25,8 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             DataSet retorno = new DataSet();
             adap.Fill(retorno);
+
+            this.Dispose();
 
             return retorno;
         }

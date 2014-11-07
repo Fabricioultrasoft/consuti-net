@@ -65,7 +65,7 @@
                                 1
                             </td>
                             <td>
-                                <asp:TextBox ID="NomeTextBox1" runat="server" Width="240px" MaxLength="100"></asp:TextBox>
+                                <asp:TextBox ID="NomeTextBox1" runat="server" Width="240px" MaxLength="100" TabIndex="2"></asp:TextBox>
                             </td>
                             <td>
                                 <asp:TextBox ID="DDDTelefoneTextBox1" runat="server" MaxLength="2" TabIndex="3" Width="16px"></asp:TextBox>
@@ -85,14 +85,14 @@
                             </td>
                             <td>
                                 <asp:RadioButtonList ID="SexoRadioButtonList1" runat="server" RepeatDirection="Horizontal"
-                                    Width="70px">
-                                    <asp:ListItem>M</asp:ListItem>
+                                    Width="70px" TabIndex="4">
+                                    <asp:ListItem Selected="True">M</asp:ListItem>
                                     <asp:ListItem>F</asp:ListItem>
                                 </asp:RadioButtonList>
                             </td>
                             <td style="width: 260px">
                                 <asp:TextBox ID="OutrasInfoTextBox1" runat="server" Width="240px" TextMode="MultiLine"
-                                    Rows="3"></asp:TextBox>
+                                    Rows="3" TabIndex="5"></asp:TextBox>
                             </td>
                         </tr>
                         <tr style="background-color: #EBEBEB">
@@ -100,14 +100,14 @@
                                 2
                             </td>
                             <td>
-                                <asp:TextBox ID="NomeTextBox2" runat="server" MaxLength="100" Width="240px"></asp:TextBox>
+                                <asp:TextBox ID="NomeTextBox2" runat="server" MaxLength="100" Width="240px" TabIndex="6"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:TextBox ID="DDDTelefoneTextBox2" runat="server" MaxLength="2" TabIndex="3" Width="16px"></asp:TextBox>
+                                <asp:TextBox ID="DDDTelefoneTextBox2" runat="server" MaxLength="2" TabIndex="7" Width="16px"></asp:TextBox>
                                 <cc1:FilteredTextBoxExtender ID="DDDTelefoneTextBox2_FilteredTextBoxExtender" runat="server"
                                     Enabled="True" TargetControlID="DDDTelefoneTextBox2" ValidChars="1234567890">
                                 </cc1:FilteredTextBoxExtender>
-                                <asp:TextBox ID="TelefoneTextBox2" runat="server" MaxLength="9" TabIndex="3" Width="65px"></asp:TextBox>
+                                <asp:TextBox ID="TelefoneTextBox2" runat="server" MaxLength="9" TabIndex="8" Width="65px"></asp:TextBox>
                                 <cc1:FilteredTextBoxExtender ID="TelefoneTextBox2_FilteredTextBoxExtender" runat="server"
                                     Enabled="True" TargetControlID="TelefoneTextBox2" ValidChars="1234567890">
                                 </cc1:FilteredTextBoxExtender>
@@ -120,14 +120,14 @@
                             </td>
                             <td>
                                 <asp:RadioButtonList ID="SexoRadioButtonList2" runat="server" RepeatDirection="Horizontal"
-                                    Width="70px">
-                                    <asp:ListItem>M</asp:ListItem>
+                                    Width="70px" TabIndex="9">
+                                    <asp:ListItem Selected="True">M</asp:ListItem>
                                     <asp:ListItem>F</asp:ListItem>
                                 </asp:RadioButtonList>
                             </td>
                             <td>
                                 <asp:TextBox ID="OutrasInfoTextBox2" runat="server" Rows="3" TextMode="MultiLine"
-                                    Width="240px"></asp:TextBox>
+                                    Width="240px" TabIndex="10"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -135,14 +135,14 @@
                                 3
                             </td>
                             <td>
-                                <asp:TextBox ID="NomeTextBox3" runat="server" Width="240px" MaxLength="100"></asp:TextBox>
+                                <asp:TextBox ID="NomeTextBox3" runat="server" Width="240px" MaxLength="100" TabIndex="11"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:TextBox ID="DDDTelefoneTextBox3" runat="server" MaxLength="2" TabIndex="3" Width="16px"></asp:TextBox>
+                                <asp:TextBox ID="DDDTelefoneTextBox3" runat="server" MaxLength="2" TabIndex="12" Width="16px"></asp:TextBox>
                                 <cc1:FilteredTextBoxExtender ID="DDDTelefoneTextBox3_FilteredTextBoxExtender" runat="server"
                                     Enabled="True" TargetControlID="DDDTelefoneTextBox3" ValidChars="1234567890">
                                 </cc1:FilteredTextBoxExtender>
-                                <asp:TextBox ID="TelefoneTextBox3" runat="server" MaxLength="9" TabIndex="3" Width="65px"></asp:TextBox>
+                                <asp:TextBox ID="TelefoneTextBox3" runat="server" MaxLength="9" TabIndex="13" Width="65px"></asp:TextBox>
                                 <cc1:FilteredTextBoxExtender ID="TelefoneTextBox3_FilteredTextBoxExtender" runat="server"
                                     Enabled="True" TargetControlID="TelefoneTextBox3" ValidChars="1234567890">
                                 </cc1:FilteredTextBoxExtender>
@@ -155,14 +155,14 @@
                             </td>
                             <td>
                                 <asp:RadioButtonList ID="SexoRadioButtonList3" runat="server" RepeatDirection="Horizontal"
-                                    Width="70px">
-                                    <asp:ListItem>M</asp:ListItem>
+                                    Width="70px" TabIndex="14">
+                                    <asp:ListItem Selected="True">M</asp:ListItem>
                                     <asp:ListItem>F</asp:ListItem>
                                 </asp:RadioButtonList>
                             </td>
                             <td style="width: 260px">
                                 <asp:TextBox ID="OutrasInfoTextBox3" runat="server" Width="240px" TextMode="MultiLine"
-                                    Rows="3"></asp:TextBox>
+                                    Rows="3" TabIndex="15"></asp:TextBox>
                             </td>
                         </tr>
                         <tr style="background-color: #EBEBEB">
@@ -170,14 +170,14 @@
                                 4
                             </td>
                             <td>
-                                <asp:TextBox ID="NomeTextBox4" runat="server" MaxLength="100" Width="240px"></asp:TextBox>
+                                <asp:TextBox ID="NomeTextBox4" runat="server" MaxLength="100" Width="240px" TabIndex="16"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:TextBox ID="DDDTelefoneTextBox4" runat="server" MaxLength="2" TabIndex="3" Width="16px"></asp:TextBox>
+                                <asp:TextBox ID="DDDTelefoneTextBox4" runat="server" MaxLength="2" TabIndex="17" Width="16px"></asp:TextBox>
                                 <cc1:FilteredTextBoxExtender ID="DDDTelefoneTextBox4_FilteredTextBoxExtender" runat="server"
                                     Enabled="True" TargetControlID="DDDTelefoneTextBox4" ValidChars="1234567890">
                                 </cc1:FilteredTextBoxExtender>
-                                <asp:TextBox ID="TelefoneTextBox4" runat="server" MaxLength="9" TabIndex="3" Width="65px"></asp:TextBox>
+                                <asp:TextBox ID="TelefoneTextBox4" runat="server" MaxLength="9" TabIndex="18" Width="65px"></asp:TextBox>
                                 <cc1:FilteredTextBoxExtender ID="TelefoneTextBox4_FilteredTextBoxExtender" runat="server"
                                     Enabled="True" TargetControlID="TelefoneTextBox4" ValidChars="1234567890">
                                 </cc1:FilteredTextBoxExtender>
@@ -190,13 +190,13 @@
                             </td>
                             <td>
                                 <asp:RadioButtonList ID="SexoRadioButtonList4" runat="server" RepeatDirection="Horizontal"
-                                    Width="70px">
-                                    <asp:ListItem>M</asp:ListItem>
+                                    Width="70px" TabIndex="19">
+                                    <asp:ListItem Selected="True">M</asp:ListItem>
                                     <asp:ListItem>F</asp:ListItem>
                                 </asp:RadioButtonList>
                             </td>
                             <td>
-                                <asp:TextBox ID="OutrasInfoTextBox4" runat="server" Rows="3" TextMode="MultiLine"
+                                <asp:TextBox ID="OutrasInfoTextBox4" runat="server" Rows="3" TextMode="MultiLine" TabIndex="20"
                                     Width="240px"></asp:TextBox>
                             </td>
                         </tr>
@@ -205,14 +205,14 @@
                                 5
                             </td>
                             <td>
-                                <asp:TextBox ID="NomeTextBox5" runat="server" Width="240px" MaxLength="100"></asp:TextBox>
+                                <asp:TextBox ID="NomeTextBox5" runat="server" Width="240px" MaxLength="100" TabIndex="21"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:TextBox ID="DDDTelefoneTextBox5" runat="server" MaxLength="2" TabIndex="3" Width="16px"></asp:TextBox>
+                                <asp:TextBox ID="DDDTelefoneTextBox5" runat="server" MaxLength="2" TabIndex="22" Width="16px"></asp:TextBox>
                                 <cc1:FilteredTextBoxExtender ID="DDDTelefoneTextBox5_FilteredTextBoxExtender" runat="server"
                                     Enabled="True" TargetControlID="DDDTelefoneTextBox5" ValidChars="1234567890">
                                 </cc1:FilteredTextBoxExtender>
-                                <asp:TextBox ID="TelefoneTextBox5" runat="server" MaxLength="9" TabIndex="3" Width="65px"></asp:TextBox>
+                                <asp:TextBox ID="TelefoneTextBox5" runat="server" MaxLength="9" TabIndex="23" Width="65px"></asp:TextBox>
                                 <cc1:FilteredTextBoxExtender ID="TelefoneTextBox5_FilteredTextBoxExtender" runat="server"
                                     Enabled="True" TargetControlID="TelefoneTextBox5" ValidChars="1234567890">
                                 </cc1:FilteredTextBoxExtender>
@@ -225,14 +225,14 @@
                             </td>
                             <td>
                                 <asp:RadioButtonList ID="SexoRadioButtonList5" runat="server" RepeatDirection="Horizontal"
-                                    Width="70px">
-                                    <asp:ListItem>M</asp:ListItem>
+                                    Width="70px" TabIndex="24" >
+                                    <asp:ListItem Selected="True">M</asp:ListItem>
                                     <asp:ListItem>F</asp:ListItem>
                                 </asp:RadioButtonList>
                             </td>
                             <td style="width: 260px">
                                 <asp:TextBox ID="OutrasInfoTextBox5" runat="server" Width="240px" TextMode="MultiLine"
-                                    Rows="3"></asp:TextBox>
+                                    Rows="3" TabIndex="25"></asp:TextBox>
                             </td>
                         </tr>
                         <tr style="background-color: #EBEBEB">
@@ -240,14 +240,15 @@
                                 6
                             </td>
                             <td>
-                                <asp:TextBox ID="NomeTextBox6" runat="server" MaxLength="100" Width="240px"></asp:TextBox>
+                                <asp:TextBox ID="NomeTextBox6" runat="server" MaxLength="100" Width="240px" 
+                                    TabIndex="26"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:TextBox ID="DDDTelefoneTextBox6" runat="server" MaxLength="2" TabIndex="3" Width="16px"></asp:TextBox>
+                                <asp:TextBox ID="DDDTelefoneTextBox6" runat="server" MaxLength="2" TabIndex="27" Width="16px"></asp:TextBox>
                                 <cc1:FilteredTextBoxExtender ID="DDDTelefoneTextBox6_FilteredTextBoxExtender" runat="server"
                                     Enabled="True" TargetControlID="DDDTelefoneTextBox6" ValidChars="1234567890">
                                 </cc1:FilteredTextBoxExtender>
-                                <asp:TextBox ID="TelefoneTextBox6" runat="server" MaxLength="9" TabIndex="3" Width="65px"></asp:TextBox>
+                                <asp:TextBox ID="TelefoneTextBox6" runat="server" MaxLength="9" TabIndex="28" Width="65px"></asp:TextBox>
                                 <cc1:FilteredTextBoxExtender ID="TelefoneTextBox6_FilteredTextBoxExtender" runat="server"
                                     Enabled="True" TargetControlID="TelefoneTextBox6" ValidChars="1234567890">
                                 </cc1:FilteredTextBoxExtender>
@@ -260,14 +261,14 @@
                             </td>
                             <td>
                                 <asp:RadioButtonList ID="SexoRadioButtonList6" runat="server" RepeatDirection="Horizontal"
-                                    Width="70px">
-                                    <asp:ListItem>M</asp:ListItem>
+                                    Width="70px" TabIndex="29">
+                                    <asp:ListItem Selected="True">M</asp:ListItem>
                                     <asp:ListItem>F</asp:ListItem>
                                 </asp:RadioButtonList>
                             </td>
                             <td>
                                 <asp:TextBox ID="OutrasInfoTextBox6" runat="server" Rows="3" TextMode="MultiLine"
-                                    Width="240px"></asp:TextBox>
+                                    Width="240px" TabIndex="30"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -275,14 +276,15 @@
                                 7
                             </td>
                             <td>
-                                <asp:TextBox ID="NomeTextBox7" runat="server" Width="240px" MaxLength="100"></asp:TextBox>
+                                <asp:TextBox ID="NomeTextBox7" runat="server" Width="240px" MaxLength="100" 
+                                    TabIndex="31"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:TextBox ID="DDDTelefoneTextBox7" runat="server" MaxLength="2" TabIndex="3" Width="16px"></asp:TextBox>
+                                <asp:TextBox ID="DDDTelefoneTextBox7" runat="server" MaxLength="2" TabIndex="32" Width="16px"></asp:TextBox>
                                 <cc1:FilteredTextBoxExtender ID="DDDTelefoneTextBox7_FilteredTextBoxExtender" runat="server"
                                     Enabled="True" TargetControlID="DDDTelefoneTextBox7" ValidChars="1234567890">
                                 </cc1:FilteredTextBoxExtender>
-                                <asp:TextBox ID="TelefoneTextBox7" runat="server" MaxLength="9" TabIndex="3" Width="65px"></asp:TextBox>
+                                <asp:TextBox ID="TelefoneTextBox7" runat="server" MaxLength="9" TabIndex="33" Width="65px"></asp:TextBox>
                                 <cc1:FilteredTextBoxExtender ID="TelefoneTextBox7_FilteredTextBoxExtender" runat="server"
                                     Enabled="True" TargetControlID="TelefoneTextBox7" ValidChars="1234567890">
                                 </cc1:FilteredTextBoxExtender>
@@ -295,14 +297,14 @@
                             </td>
                             <td>
                                 <asp:RadioButtonList ID="SexoRadioButtonList7" runat="server" RepeatDirection="Horizontal"
-                                    Width="70px">
-                                    <asp:ListItem>M</asp:ListItem>
+                                    Width="70px" TabIndex="34">
+                                    <asp:ListItem Selected="True">M</asp:ListItem>
                                     <asp:ListItem>F</asp:ListItem>
                                 </asp:RadioButtonList>
                             </td>
                             <td style="width: 260px">
                                 <asp:TextBox ID="OutrasInfoTextBox7" runat="server" Width="240px" TextMode="MultiLine"
-                                    Rows="3"></asp:TextBox>
+                                    Rows="3" TabIndex="35"></asp:TextBox>
                             </td>
                         </tr>
                         <tr style="background-color: #EBEBEB">
@@ -310,14 +312,15 @@
                                 8
                             </td>
                             <td>
-                                <asp:TextBox ID="NomeTextBox8" runat="server" MaxLength="100" Width="240px"></asp:TextBox>
+                                <asp:TextBox ID="NomeTextBox8" runat="server" MaxLength="100" Width="240px" 
+                                    TabIndex="36"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:TextBox ID="DDDTelefoneTextBox8" runat="server" MaxLength="2" TabIndex="3" Width="16px"></asp:TextBox>
+                                <asp:TextBox ID="DDDTelefoneTextBox8" runat="server" MaxLength="2" TabIndex="37" Width="16px"></asp:TextBox>
                                 <cc1:FilteredTextBoxExtender ID="DDDTelefoneTextBox8_FilteredTextBoxExtender" runat="server"
                                     Enabled="True" TargetControlID="DDDTelefoneTextBox8" ValidChars="1234567890">
                                 </cc1:FilteredTextBoxExtender>
-                                <asp:TextBox ID="TelefoneTextBox8" runat="server" MaxLength="9" TabIndex="3" Width="65px"></asp:TextBox>
+                                <asp:TextBox ID="TelefoneTextBox8" runat="server" MaxLength="9" TabIndex="38" Width="65px"></asp:TextBox>
                                 <cc1:FilteredTextBoxExtender ID="TelefoneTextBox8_FilteredTextBoxExtender" runat="server"
                                     Enabled="True" TargetControlID="TelefoneTextBox8" ValidChars="1234567890">
                                 </cc1:FilteredTextBoxExtender>
@@ -330,14 +333,14 @@
                             </td>
                             <td>
                                 <asp:RadioButtonList ID="SexoRadioButtonList8" runat="server" RepeatDirection="Horizontal"
-                                    Width="70px">
-                                    <asp:ListItem>M</asp:ListItem>
+                                    Width="70px" TabIndex="39">
+                                    <asp:ListItem Selected="True">M</asp:ListItem>
                                     <asp:ListItem>F</asp:ListItem>
                                 </asp:RadioButtonList>
                             </td>
                             <td>
                                 <asp:TextBox ID="OutrasInfoTextBox8" runat="server" Rows="3" TextMode="MultiLine"
-                                    Width="240px"></asp:TextBox>
+                                    Width="240px" TabIndex="40"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -345,14 +348,15 @@
                                 9
                             </td>
                             <td>
-                                <asp:TextBox ID="NomeTextBox9" runat="server" Width="240px" MaxLength="100"></asp:TextBox>
+                                <asp:TextBox ID="NomeTextBox9" runat="server" Width="240px" MaxLength="100" 
+                                    TabIndex="41"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:TextBox ID="DDDTelefoneTextBox9" runat="server" MaxLength="2" TabIndex="3" Width="16px"></asp:TextBox>
+                                <asp:TextBox ID="DDDTelefoneTextBox9" runat="server" MaxLength="2" TabIndex="42" Width="16px"></asp:TextBox>
                                 <cc1:FilteredTextBoxExtender ID="DDDTelefoneTextBox9_FilteredTextBoxExtender" runat="server"
                                     Enabled="True" TargetControlID="DDDTelefoneTextBox9" ValidChars="1234567890">
                                 </cc1:FilteredTextBoxExtender>
-                                <asp:TextBox ID="TelefoneTextBox9" runat="server" MaxLength="9" TabIndex="3" Width="65px"></asp:TextBox>
+                                <asp:TextBox ID="TelefoneTextBox9" runat="server" MaxLength="9" TabIndex="43" Width="65px"></asp:TextBox>
                                 <cc1:FilteredTextBoxExtender ID="TelefoneTextBox9_FilteredTextBoxExtender" runat="server"
                                     Enabled="True" TargetControlID="TelefoneTextBox9" ValidChars="1234567890">
                                 </cc1:FilteredTextBoxExtender>
@@ -365,14 +369,14 @@
                             </td>
                             <td>
                                 <asp:RadioButtonList ID="SexoRadioButtonList9" runat="server" RepeatDirection="Horizontal"
-                                    Width="70px">
-                                    <asp:ListItem>M</asp:ListItem>
+                                    Width="70px" TabIndex="44">
+                                    <asp:ListItem Selected="True">M</asp:ListItem>
                                     <asp:ListItem>F</asp:ListItem>
                                 </asp:RadioButtonList>
                             </td>
                             <td style="width: 260px">
                                 <asp:TextBox ID="OutrasInfoTextBox9" runat="server" Width="240px" TextMode="MultiLine"
-                                    Rows="3"></asp:TextBox>
+                                    Rows="3" TabIndex="45"></asp:TextBox>
                             </td>
                         </tr>
                         <tr style="background-color: #EBEBEB">
@@ -380,15 +384,16 @@
                                 10
                             </td>
                             <td>
-                                <asp:TextBox ID="NomeTextBox10" runat="server" MaxLength="100" Width="240px"></asp:TextBox>
+                                <asp:TextBox ID="NomeTextBox10" runat="server" MaxLength="100" Width="240px" 
+                                    TabIndex="46"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:TextBox ID="DDDTelefoneTextBox10" runat="server" MaxLength="2" TabIndex="3"
+                                <asp:TextBox ID="DDDTelefoneTextBox10" runat="server" MaxLength="2" TabIndex="47"
                                     Width="16px"></asp:TextBox>
                                 <cc1:FilteredTextBoxExtender ID="DDDTelefoneTextBox10_FilteredTextBoxExtender" runat="server"
                                     Enabled="True" TargetControlID="DDDTelefoneTextBox10" ValidChars="1234567890">
                                 </cc1:FilteredTextBoxExtender>
-                                <asp:TextBox ID="TelefoneTextBox10" runat="server" MaxLength="9" TabIndex="3" Width="65px"></asp:TextBox>
+                                <asp:TextBox ID="TelefoneTextBox10" runat="server" MaxLength="9" TabIndex="48" Width="65px"></asp:TextBox>
                                 <cc1:FilteredTextBoxExtender ID="TelefoneTextBox10_FilteredTextBoxExtender" runat="server"
                                     Enabled="True" TargetControlID="TelefoneTextBox10" ValidChars="1234567890">
                                 </cc1:FilteredTextBoxExtender>
@@ -401,23 +406,23 @@
                             </td>
                             <td>
                                 <asp:RadioButtonList ID="SexoRadioButtonList10" runat="server" RepeatDirection="Horizontal"
-                                    Width="70px">
-                                    <asp:ListItem>M</asp:ListItem>
+                                    Width="70px" TabIndex="49">
+                                    <asp:ListItem Selected="True">M</asp:ListItem>
                                     <asp:ListItem>F</asp:ListItem>
                                 </asp:RadioButtonList>
                             </td>
                             <td>
                                 <asp:TextBox ID="OutrasInfoTextBox10" runat="server" Rows="3" TextMode="MultiLine"
-                                    Width="240px"></asp:TextBox>
+                                    Width="240px" TabIndex="50"></asp:TextBox>
                             </td>
                         </tr>
                     </table>
                 </fieldset>
                 <div class="barraBotoes">
                     <asp:Button ID="cancelarButton" runat="server" Text="Cancelar" CssClass="botaoCancelar"
-                        TabIndex="39" OnClick="cancelarButton_Click" OnClientClick="return confirm('Confirma cancelamento? Os dados não salvos serão perdidos.');" />
+                        TabIndex="139" OnClick="cancelarButton_Click" OnClientClick="return confirm('Confirma cancelamento? Os dados não salvos serão perdidos.');" />
                     <asp:Button ID="salvarButton" runat="server" Text="Salvar" CssClass="botaoSalvar"
-                        TabIndex="40" OnClick="salvarButton_Click" />
+                        TabIndex="140" OnClick="salvarButton_Click" />
                 </div>
             </asp:Panel>
             <br />
