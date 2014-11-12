@@ -52,21 +52,7 @@
                         </tr>
                         <tr>
                             <td class="alinhaDireita" style="font-size: 13pt">
-                                <span class="obrigatorio">*</span>Status:
-                            </td>
-                            <td>
-                                <asp:DropDownList ID="StatusDropDownList" runat="server" TabIndex="2" Width="300px"
-                                    Font-Size="13pt">
-                                </asp:DropDownList>
-                                <span class="obrigatorio">
-                                    <asp:RequiredFieldValidator ID="StatusDropDownListRequiredFieldValidator" runat="server"
-                                        ControlToValidate="StatusDropDownList" Display="Dynamic" ErrorMessage="*" CssClass="obrigatorio"
-                                        ToolTip="Campo Obrigatório!"></asp:RequiredFieldValidator></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="alinhaDireita" style="font-size: 13pt">
-                                Telefone Principal:
+                                <span class="obrigatorio">*</span>Telefone Principal:
                             </td>
                             <td>
                                 <asp:TextBox ID="DDDTelefoneTextBox" runat="server" MaxLength="2" TabIndex="3" Font-Size="13pt"
@@ -74,7 +60,7 @@
                                 <cc1:FilteredTextBoxExtender ID="DDDTelefoneTextBox_FilteredTextBoxExtender" runat="server"
                                     Enabled="True" TargetControlID="DDDTelefoneTextBox" ValidChars="1234567890">
                                 </cc1:FilteredTextBoxExtender>
-                                &nbsp;<asp:TextBox ID="TelefoneTextBox" runat="server" MaxLength="9" TabIndex="3"
+                                &nbsp;<asp:TextBox ID="TelefoneTextBox" runat="server" MaxLength="9" TabIndex="4"
                                     Font-Size="13pt" Width="90px"></asp:TextBox>
                                 <cc1:FilteredTextBoxExtender ID="TelefoneTextBox_FilteredTextBoxExtender" runat="server"
                                     Enabled="True" TargetControlID="TelefoneTextBox" ValidChars="1234567890">
@@ -85,6 +71,22 @@
                                 &nbsp;<asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server"
                                     ControlToValidate="TelefoneTextBox" Display="Dynamic" ErrorMessage="*" ToolTip="Telefone Inválido"
                                     ValidationExpression="\d{8,9}"></asp:RegularExpressionValidator>
+                                &nbsp;<asp:RequiredFieldValidator ID="DDDTelefoneTextBoxRequiredFieldValidator" runat="server"
+                                    ControlToValidate="DDDTelefoneTextBox" CssClass="obrigatorio" Display="Dynamic"
+                                    ErrorMessage="*" ToolTip="Campo Obrigatório!"> </asp:RequiredFieldValidator>
+                                &nbsp;<asp:RequiredFieldValidator ID="TelefoneTextBoxRequiredFieldValidator" runat="server"
+                                    ControlToValidate="TelefoneTextBox" CssClass="obrigatorio" Display="Dynamic"
+                                    ErrorMessage="*" ToolTip="Campo Obrigatório!"> </asp:RequiredFieldValidator>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="alinhaDireita" style="font-size: 13pt">
+                                Status:
+                            </td>
+                            <td>
+                                <asp:DropDownList ID="StatusDropDownList" runat="server" TabIndex="5" Width="200px"
+                                    Font-Size="13pt">
+                                </asp:DropDownList>
                             </td>
                         </tr>
                         <tr>
@@ -93,7 +95,7 @@
                             </td>
                             <td>
                                 <asp:RadioButtonList ID="SexoRadioButtonList" runat="server" RepeatDirection="Horizontal"
-                                    TabIndex="4">
+                                    TabIndex="6">
                                     <asp:ListItem Text="Masculino" Value="M" Selected="True"></asp:ListItem>
                                     <asp:ListItem Text="Feminino" Value="F"></asp:ListItem>
                                 </asp:RadioButtonList>
@@ -105,7 +107,7 @@
                             </td>
                             <td>
                                 <asp:TextBox ID="outrasInformacoesTextBox" runat="server" TabIndex="5" TextMode="MultiLine"
-                                    Width="500px" Rows="5"></asp:TextBox>
+                                    Width="500px" Rows="7"></asp:TextBox>
                             </td>
                         </tr>
                     </table>

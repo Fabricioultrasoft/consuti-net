@@ -35,7 +35,7 @@ namespace Sistema_Life_Planner_Agenda.BD
                     comando = conexao.CreateCommand();
                     conectado = true;
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
                     conectado = false;
                 }

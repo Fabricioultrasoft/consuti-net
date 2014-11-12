@@ -40,6 +40,25 @@ namespace Sistema_Life_Planner_Agenda.BD
             comando.ExecuteNonQuery();
             
             this.Dispose();
+
+            //Inclui o proprio usuário como contato
+            new ContatoBD().Incluir(1,
+                7,
+                4,
+                string.Empty,
+                Email,
+                string.Empty,
+                DateTime.Now,
+                0,
+                0,
+                Nome,
+                string.Empty,
+                string.Empty,
+                'S',
+                Telefone,
+                string.Empty,
+                string.Empty,
+                string.Empty);
         }
 
         /// <summary>
@@ -75,6 +94,8 @@ namespace Sistema_Life_Planner_Agenda.BD
             comando.ExecuteNonQuery();
 
             this.Dispose();
+
+            
         }
 
         /// <summary>
@@ -191,8 +212,6 @@ namespace Sistema_Life_Planner_Agenda.BD
                                     WHERE email = @email";
             comando.Parameters.Add(new MySqlParameter("@email", email));
 
-            this.Dispose();
-
             try
             {
                 object resultadoBusca = comando.ExecuteScalar();
@@ -205,6 +224,10 @@ namespace Sistema_Life_Planner_Agenda.BD
             catch (Exception)
             {
                 return false;
+            }
+            finally
+            {
+                this.Dispose();
             }
         }
 

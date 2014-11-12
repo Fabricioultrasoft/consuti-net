@@ -136,6 +136,41 @@ namespace Sistema_Life_Planner_Agenda.BD
         }
 
         /// <summary>
+        /// Obtém o ID do Contato a partir Nome e Email para listar o usuário logado
+        /// </summary>
+        /// <param name="ID_Contato_Recomendante"></param>
+        /// <param name="Nome"></param>
+        /// <param name="Email"></param>
+        /// <returns></returns>
+        public int ObterID(
+            int ID_Contato_Recomendante,
+            string Nome,
+            string Email)
+        {
+            comando.CommandText = @"SELECT Id
+                                    FROM contato
+                                    WHERE ID_Contato_Recomendante = @ID_Contato_Recomendante
+                                    AND Nome = @Nome
+                                    AND Email = @Email";
+            comando.Parameters.AddWithValue("@ID_Contato_Recomendante", ID_Contato_Recomendante);
+            comando.Parameters.AddWithValue("@Nome", Nome);
+            comando.Parameters.AddWithValue("@Email", Email);
+            object resultadoBusca = comando.ExecuteScalar();
+
+            this.Dispose();
+
+            try
+            {
+                return Convert.ToInt32(resultadoBusca.ToString());
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
+
+
+        /// <summary>
         /// Atualiza um contato
         /// </summary>
         /// <param name="ID"></param>
@@ -346,7 +381,10 @@ namespace Sistema_Life_Planner_Agenda.BD
             comando.ExecuteNonQuery();
 
             this.Dispose();
-            //TODO: ao excluir, tem que setar o recomendante para "Usuário Excluído". Criar registro 2 de carga inicial.
+
+            AtualizarRecomendante(
+                id, 2);
+            // ao excluir, tem que setar o recomendante para "NENHUM". Registro de carga inicial.
         }
 
         public int IncluirLote(
@@ -395,21 +433,61 @@ namespace Sistema_Life_Planner_Agenda.BD
                 Telefone_Principal);
         }
 
-//        public DataSet PesquisaRecomendanteComum(
-//            string idUsuario,
-//            string telefone)
-//        {
-//            comando.CommandText = @"SELECT *
-//                FROM contato c
-//                JOIN usuario_contato uc ON uc.ID_Contato = c.ID  
-//                WHERE uc.ID_Usuario = @idUsuario
-//                AND (Telefone_Principal LIKE '%@telefone%'
-//                OR Telefone_Alternativo_1 LIKE '%@telefone%'  //Logica do like para o telefone não está correta. ver acima....
-//                OR Telefone_Alternativo_2 LIKE '%@telefone%')
-//                ORDER BY c.Nome";
+        /// <summary>
+        /// Retorna a lista de usuários com o mesmo telefone
+        /// </summary>
+        /// <param name="idUsuario"></param>
+        /// <param name="telefone"></param>
+        /// <returns></returns>
+        public DataSet PesquisaContatoPeloTelefone(
+            string idUsuario,
+            string telefone)
+        {
+            comando.CommandText = @"SELECT *
+                FROM contato c
+                JOIN usuario_contato uc ON uc.ID_Contato = c.ID  
+                WHERE uc.ID_Usuario = @idUsuario
+                AND (Telefone_Principal LIKE '%" + telefone + "%' " +
+                "OR Telefone_Alternativo_1 LIKE '%" + telefone + "%' " +  
+                "OR Telefone_Alternativo_2 LIKE '%" + telefone + "%') " +
+                "ORDER BY c.Nome";
 
-//            comando.Parameters.AddWithValue("@idUsuario", idUsuario);
-//            comando.Parameters.AddWithValue("@telefone", telefone);
-//        }
+            comando.Parameters.AddWithValue("@idUsuario", idUsuario);
+
+            comando.CommandType = CommandType.Text;
+
+            // Classe que auxilia no preenchimento de um dataset
+            MySqlDataAdapter adap = new MySqlDataAdapter(comando);
+
+            DataSet retorno = new DataSet();
+            adap.Fill(retorno);
+
+            this.Dispose();
+
+            return retorno;       
+        
+        }
+
+        /// <summary>
+        /// Atualiza apenas o recomendante do contato
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <param name="IDContatoRecomendanteNovo"></param>
+        public void AtualizarRecomendante(
+            int ID,
+            int IDContatoRecomendanteNovo)
+        {
+            comando.CommandText = @"UPDATE contato 
+                                    SET IDContatoRecomendanteNovo = @IDContatoRecomendanteNovo
+                                    WHERE ID = @id;";
+
+            comando.Parameters.AddWithValue("@IDContatoRecomendanteNovo", IDContatoRecomendanteNovo);
+            comando.Parameters.AddWithValue("@id", ID);
+
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.ExecuteNonQuery();
+
+            this.Dispose();
+        }
     }
 }
