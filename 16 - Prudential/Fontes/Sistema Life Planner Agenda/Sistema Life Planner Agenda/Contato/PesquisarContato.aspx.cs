@@ -113,7 +113,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
                 ListItem selecione = new ListItem("< Todos >", "");
                 RecomendanteDropDownList.Items.Insert(0, selecione);
 
-                ListItem usuarioLogado = new ListItem(Session["nomeUsuarioLogado"].ToString() + " (EU)", "1");
+                ListItem usuarioLogado = new ListItem(Session["nomeUsuarioLogado"].ToString() + " (EU)", new ContatoBD().ObterID(1, Session["nomeUsuarioLogado"].ToString(), Session["emailUsuarioLogado"].ToString()).ToString());
                 RecomendanteDropDownList.Items.Insert(1, usuarioLogado);
             }
             catch (Exception)

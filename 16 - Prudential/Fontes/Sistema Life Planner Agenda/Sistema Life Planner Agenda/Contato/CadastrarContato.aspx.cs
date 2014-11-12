@@ -111,8 +111,10 @@ namespace Sistema_Life_Planner_Agenda.Contato
                         Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())),
                         DateTime.Now);
 
+
                     ExibeMensagemPopUp("Contato salvo com sucesso!");
                     LimparCampos();
+
                 }
                 catch (Exception ex)
                 {
@@ -130,17 +132,26 @@ namespace Sistema_Life_Planner_Agenda.Contato
 
         private void CarregarRecomendantes()
         {
-            RecomendanteDropDownList.DataSource = new ContatoBD().Listar(Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())));
-            RecomendanteDropDownList.DataTextField = "Nome";
-            RecomendanteDropDownList.DataValueField = "Id";
-            RecomendanteDropDownList.DataBind();
+            try
+            {
+                RecomendanteDropDownList.DataSource = new ContatoBD().Listar(Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())));
+                RecomendanteDropDownList.DataTextField = "Nome";
+                RecomendanteDropDownList.DataValueField = "Id";
+                RecomendanteDropDownList.DataBind();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                ListItem selecione = new ListItem("<Selecione>", "");
+                RecomendanteDropDownList.Items.Insert(0, selecione);
 
-            ListItem selecione = new ListItem("<Selecione>", "");
-            RecomendanteDropDownList.Items.Insert(0, selecione);
-
-            //A CARGA INICIAL DO SISTEMA DEVE TER O CONTATO DE ID 1 QUE É UMA REFERENCIA AO PRÓPRIO USUÁRIO LOGADO
-            ListItem usuarioLogado = new ListItem(Session["nomeUsuarioLogado"].ToString() + " (EU)", "1");
-            RecomendanteDropDownList.Items.Insert(1, usuarioLogado);
+                //A CARGA INICIAL DO SISTEMA DEVE TER O CONTATO DE ID 1 QUE É UMA REFERENCIA AO PRÓPRIO USUÁRIO LOGADO
+                ListItem usuarioLogado = new ListItem(Session["nomeUsuarioLogado"].ToString() + " (EU)", new ContatoBD().ObterID(1, Session["nomeUsuarioLogado"].ToString(), Session["emailUsuarioLogado"].ToString()).ToString());
+                RecomendanteDropDownList.Items.Insert(1, usuarioLogado);
+            }
         }
 
         private void CarregarStatus()
@@ -303,6 +314,8 @@ namespace Sistema_Life_Planner_Agenda.Contato
                 TipoDropDownList.SelectedValue =
                 UFDropDownList.SelectedValue = string.Empty;
             SexoRadioButtonList.SelectedValue = "M";
+
+            CarregarRecomendantes();
         }
 
         protected void pesquisarButton_Click(object sender, EventArgs e)

@@ -71,7 +71,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
             RecomendanteDropDownList.Items.Insert(0, selecione);
 
             //A CARGA INICIAL DO SISTEMA DEVE TER O CONTATO DE ID 1 QUE É UMA REFERENCIA AO PRÓPRIO USUÁRIO LOGADO
-            ListItem usuarioLogado = new ListItem(Session["nomeUsuarioLogado"].ToString() + " (EU)", "1");
+            ListItem usuarioLogado = new ListItem(Session["nomeUsuarioLogado"].ToString() + " (EU)", new ContatoBD().ObterID(1, Session["nomeUsuarioLogado"].ToString(), Session["emailUsuarioLogado"].ToString()).ToString());
             RecomendanteDropDownList.Items.Insert(1, usuarioLogado);
         }
 

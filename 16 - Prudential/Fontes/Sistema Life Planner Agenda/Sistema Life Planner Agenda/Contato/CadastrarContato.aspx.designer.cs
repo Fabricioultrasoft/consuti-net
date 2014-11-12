@@ -67,24 +67,6 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator nomeCompletoTextBoxRequiredFieldValidator;
         
         /// <summary>
-        /// StatusDropDownList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList StatusDropDownList;
-        
-        /// <summary>
-        /// StatusDropDownListRequiredFieldValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator StatusDropDownListRequiredFieldValidator;
-        
-        /// <summary>
         /// DDDTelefoneTextBox control.
         /// </summary>
         /// <remarks>
@@ -137,6 +119,33 @@ namespace Sistema_Life_Planner_Agenda.Contato {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator4;
+        
+        /// <summary>
+        /// DDDTelefoneTextBoxRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator DDDTelefoneTextBoxRequiredFieldValidator;
+        
+        /// <summary>
+        /// TelefoneTextBoxRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator TelefoneTextBoxRequiredFieldValidator;
+        
+        /// <summary>
+        /// StatusDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList StatusDropDownList;
         
         /// <summary>
         /// SexoRadioButtonList control.
