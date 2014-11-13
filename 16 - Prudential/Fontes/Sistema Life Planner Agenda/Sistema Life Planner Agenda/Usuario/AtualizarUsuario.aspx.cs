@@ -16,6 +16,7 @@ namespace Sistema_Life_Planner_Agenda.Usuario
         {
             if (!IsPostBack)
             {
+                ValidaUserLogado();
                 CarregarDados();
             }
         }
@@ -29,7 +30,7 @@ namespace Sistema_Life_Planner_Agenda.Usuario
                     new UsuarioBD().Alterar(
                         confirmaSenhaTextBox.Text,
                         nomeCompletoTextBox.Text,
-                        "(" + DDDTextBox.Text + ") " + telefoneTextBox.Text,
+                        DDDTextBox.Text + telefoneTextBox.Text,
                         emailGoogleTextBox.Text,
                         SenhaEmailGoogleTextBox.Text, Session["emailUsuarioLogado"].ToString()
                         );

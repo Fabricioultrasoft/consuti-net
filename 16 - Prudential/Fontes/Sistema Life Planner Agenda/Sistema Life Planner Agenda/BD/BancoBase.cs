@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using MySql.Data.MySqlClient;
 using System.Configuration;
+using MySql.Data.MySqlClient;
 
 namespace Sistema_Life_Planner_Agenda.BD
 {
@@ -17,29 +14,24 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// cria conexão com banco
         /// </summary>
         public BancoBase()
-        {
-            //tenta conectar por 5 vezes  
-            bool conectado = false;
+        {   
             int cont = 0;
 
-            while (conectado.Equals(false) &&
-                cont < 5)
+            try
             {
-                try
-                {
-                    cont++;
-                    conexao = new MySqlConnection(ConfigurationManager.AppSettings["constr"]);
-                    conexao.Open();
+                cont++;
+                conexao = new MySqlConnection(ConfigurationManager.AppSettings["constr"]);
+                conexao.Open();
 
-                    comando = new MySqlCommand();
-                    comando = conexao.CreateCommand();
-                    conectado = true;
-                }
-                catch (Exception ex)
-                {
-                    conectado = false;
-                }
+                comando = new MySqlCommand();
+                comando = conexao.CreateCommand();
+                
             }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
         }
 
         //liberar recursos
