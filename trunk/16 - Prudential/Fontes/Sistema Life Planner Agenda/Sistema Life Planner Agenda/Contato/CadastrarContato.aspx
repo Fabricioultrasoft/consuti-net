@@ -185,7 +185,7 @@
                             </td>
                             <td>
                                 <asp:DropDownList ID="EstadoCivilDropDownList" runat="server" Width="100px" TabIndex="11">
-                                    <asp:ListItem Text="<Selecione>" Value=""></asp:ListItem>
+                                    <asp:ListItem Text="< Selecione >" Value=""></asp:ListItem>
                                     <asp:ListItem Text="Solteiro(a)" Value="Solteiro(a)"></asp:ListItem>
                                     <asp:ListItem Text="Casado(a)" Value="Casado(a)"></asp:ListItem>
                                     <asp:ListItem Text="Divorciado(a)" Value="Divorciado(a)"></asp:ListItem>
@@ -220,7 +220,7 @@
                             </td>
                             <td>
                                 <asp:DropDownList ID="UFDropDownList" runat="server" Width="150px" TabIndex="14">
-                                    <asp:ListItem Text="<Selecione>" Value=""></asp:ListItem>
+                                    <asp:ListItem Text="< Selecione >" Value=""></asp:ListItem>
                                     <asp:ListItem Text="Acre" Value="AC"></asp:ListItem>
                                     <asp:ListItem Text="Alagoas" Value="AL"></asp:ListItem>
                                     <asp:ListItem Text="Amapá" Value="AP"></asp:ListItem>

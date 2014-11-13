@@ -31,7 +31,7 @@ namespace Sistema_Life_Planner_Agenda.CadastroUsuario
                     SalvarUsuario(emailTextBox.Text,
                     senhaTextBox.Text,
                     nomeCompletoTextBox.Text,
-                    "(" + DDDTextBox.Text + ") " + telefoneTextBox.Text,
+                    DDDTextBox.Text + telefoneTextBox.Text,
                     emailGoogleTextBox.Text,
                     SenhaEmailGoogleTextBox.Text);
                     ExibeMensagemPopUp("Salvo com sucesso!");

@@ -78,7 +78,7 @@
                     <legend>Resultado</legend>
                     <asp:GridView ID="ContatosGridView" runat="server" CellPadding="4" ForeColor="#333333"
                         GridLines="None" Width="100%" AutoGenerateColumns="False" EnableModelValidation="True"
-                        OnRowCommand="ContatosGridView_Click" EmptyDataText="Não existem contatos cadastrados por você no momento."
+                        OnRowCommand="ContatosGridView_Click" EmptyDataText="Nenhum resultado encontrado."
                         AllowPaging="True" AllowSorting="True" PageSize="10" BorderColor="#003366" BorderStyle="Solid"
                         BorderWidth="1px" CellSpacing="2" OnPageIndexChanging="ContatosGridView_PageIndexChanging"
                         OnSorting="ContatosGridView_Sorting">
@@ -100,7 +100,7 @@
                             <asp:BoundField HeaderText="Status" DataField="Status" SortExpression="Status">
                                 <ItemStyle CssClass="espacoTabelas" />
                             </asp:BoundField>
-                            <asp:BoundField HeaderText="Telefone Princ." DataField="TelefonePrincipal">
+                            <asp:BoundField HeaderText="Telefone Princ." DataField="TelefonePrincipal" SortExpression="TelefonePrincipal">
                                 <ItemStyle CssClass="espacoTabelas" />
                             </asp:BoundField>
                             <asp:BoundField HeaderText="Data do Cadastro" DataField="DataCadastro" SortExpression="DataCadastro">

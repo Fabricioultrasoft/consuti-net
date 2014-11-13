@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Net.Mail;
+using System.Web.Security;
 
 namespace Sistema_Life_Planner_Agenda.Classes
 {
@@ -92,6 +93,7 @@ namespace Sistema_Life_Planner_Agenda.Classes
         {
             if (Session["emailUsuarioLogado"] == null)
             {
+                FormsAuthentication.SignOut();
                 Response.Redirect("~/Login.aspx");
             }
         }

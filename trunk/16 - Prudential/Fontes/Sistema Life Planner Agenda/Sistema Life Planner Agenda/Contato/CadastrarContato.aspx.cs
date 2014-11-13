@@ -89,15 +89,12 @@ namespace Sistema_Life_Planner_Agenda.Contato
                 try
                 {
                     //cadastra um contato e associa o mesmo ao usuário logado
-                    new UsuarioContatoBD().Incluir(
-                        new ContatoBD().Incluir(
-                        dadosContato.ID_Contato_Recomendante,
+                    int novoContatoID = new ContatoBD().Incluir(
                         dadosContato.ID_Status_Contato,
                         dadosContato.ID_Tipo_Contato,
                         dadosContato.Cidade,
                         dadosContato.Email,
                         dadosContato.Estado_Civil,
-                        DateTime.Now,
                         dadosContato.Filhos,
                         dadosContato.Idade,
                         dadosContato.Nome,
@@ -107,10 +104,16 @@ namespace Sistema_Life_Planner_Agenda.Contato
                         dadosContato.Telefone_Alternativo_1,
                         dadosContato.Telefone_Alternativo_2,
                         dadosContato.Telefone_Principal,
-                        dadosContato.UF),
+                        dadosContato.UF);
+
+                    new ContatosUsuarioBD().Incluir(
+                        novoContatoID,
                         Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())),
                         DateTime.Now);
 
+                    new RecomendanteContatoBD().Incluir(
+                        novoContatoID,
+                        dadosContato.ID_Contato_Recomendante);
 
                     ExibeMensagemPopUp("Contato salvo com sucesso!");
                     LimparCampos();
@@ -141,15 +144,13 @@ namespace Sistema_Life_Planner_Agenda.Contato
             }
             catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
             finally
-            {
-                ListItem selecione = new ListItem("<Selecione>", "");
-                RecomendanteDropDownList.Items.Insert(0, selecione);
+            {   
+                RecomendanteDropDownList.Items.Insert(0, new ListItem("< Selecione >", ""));
 
-                //A CARGA INICIAL DO SISTEMA DEVE TER O CONTATO DE ID 1 QUE É UMA REFERENCIA AO PRÓPRIO USUÁRIO LOGADO
-                ListItem usuarioLogado = new ListItem(Session["nomeUsuarioLogado"].ToString() + " (EU)", new ContatoBD().ObterID(1, Session["nomeUsuarioLogado"].ToString(), Session["emailUsuarioLogado"].ToString()).ToString());
+                ListItem usuarioLogado = new ListItem(Session["nomeUsuarioLogado"].ToString() + " (EU)", new ContatoBD().ObterID(Session["nomeUsuarioLogado"].ToString(), Session["emailUsuarioLogado"].ToString()).ToString());
                 RecomendanteDropDownList.Items.Insert(1, usuarioLogado);
             }
         }
@@ -225,15 +226,21 @@ namespace Sistema_Life_Planner_Agenda.Contato
         {
             Contato dados = new Contato();
 
+            //Campos obrigatórios
             dados.ID_Contato_Recomendante = Convert.ToInt32(RecomendanteDropDownList.SelectedItem.Value);
-            dados.ID_Status_Contato = Convert.ToInt32(StatusDropDownList.SelectedItem.Value);
             dados.Nome = nomeCompletoTextBox.Text;
             dados.Sexo = Convert.ToChar(SexoRadioButtonList.SelectedItem.Value);
+            dados.Telefone_Principal = DDDTelefoneTextBox.Text + TelefoneTextBox.Text;
 
             if (!string.IsNullOrEmpty(TipoDropDownList.SelectedItem.Value))
                 dados.ID_Tipo_Contato = Convert.ToInt32(TipoDropDownList.SelectedItem.Value);
             else
                 dados.ID_Tipo_Contato = 4; // 4 - Nenhum
+
+            if (!string.IsNullOrEmpty(StatusDropDownList.SelectedItem.Value))
+                dados.ID_Status_Contato = Convert.ToInt32(StatusDropDownList.SelectedItem.Value);
+            else
+                dados.ID_Status_Contato = 7; // 7 - Nenhum
 
             if (!string.IsNullOrEmpty(cidadeTextBox.Text))
                 dados.Cidade = cidadeTextBox.Text;
@@ -276,13 +283,8 @@ namespace Sistema_Life_Planner_Agenda.Contato
             else
                 dados.Telefone_Alternativo_2 = string.Empty;
 
-            if (!string.IsNullOrEmpty(DDDTelefoneTextBox.Text))
-                dados.Telefone_Principal = DDDTelefoneTextBox.Text + TelefoneTextBox.Text;
-            else
-                dados.Telefone_Principal = string.Empty;
-
             if (!string.IsNullOrEmpty(UFDropDownList.SelectedItem.Value))
-                dados.UF = UFDropDownList.SelectedItem.Text;
+                dados.UF = UFDropDownList.SelectedItem.Value;
             else
                 dados.UF = string.Empty;
 
@@ -307,13 +309,15 @@ namespace Sistema_Life_Planner_Agenda.Contato
                 TelefoneTextBox.Text =
                 outrasInformacoesTextBox.Text =
                 idadeTextBox.Text =
-                profissaoTextBox.Text =
-                RecomendanteDropDownList.SelectedValue =
-                StatusDropDownList.SelectedValue =
-                EstadoCivilDropDownList.SelectedValue =
-                TipoDropDownList.SelectedValue =
-                UFDropDownList.SelectedValue = string.Empty;
+                profissaoTextBox.Text = string.Empty;
+            
             SexoRadioButtonList.SelectedValue = "M";
+
+            RecomendanteDropDownList.SelectedItem.Value = "";
+                StatusDropDownList.SelectedIndex =
+                EstadoCivilDropDownList.SelectedIndex =
+                TipoDropDownList.SelectedIndex =
+                UFDropDownList.SelectedIndex = 0;
 
             CarregarRecomendantes();
         }

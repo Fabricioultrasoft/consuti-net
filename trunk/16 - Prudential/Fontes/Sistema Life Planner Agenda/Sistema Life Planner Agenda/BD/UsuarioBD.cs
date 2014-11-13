@@ -42,13 +42,12 @@ namespace Sistema_Life_Planner_Agenda.BD
             this.Dispose();
 
             //Inclui o proprio usuário como contato
-            new ContatoBD().Incluir(1,
+            new ContatoBD().Incluir(
                 7,
                 4,
                 string.Empty,
                 Email,
                 string.Empty,
-                DateTime.Now,
                 0,
                 0,
                 Nome,
@@ -79,7 +78,7 @@ namespace Sistema_Life_Planner_Agenda.BD
             string email)
         {
             // criar um comando para executar a alteração / executar comando
-            comando.CommandText = @"UPDATE bd_sislpa.usuario 
+            comando.CommandText = @"UPDATE usuario 
                                     SET AgendaGoogleEmail = @AgendaGoogleEmail , AgendaGoogleSenha = @AgendaGoogleSenha, 
                                         Nome = @Nome, Senha = @Senha, Telefone = @Telefone 
                                     WHERE Email = @Email";
@@ -94,8 +93,6 @@ namespace Sistema_Life_Planner_Agenda.BD
             comando.ExecuteNonQuery();
 
             this.Dispose();
-
-            
         }
 
         /// <summary>
@@ -126,7 +123,6 @@ namespace Sistema_Life_Planner_Agenda.BD
             {
                 return string.Empty;
             }
-
         }
 
 
@@ -254,7 +250,6 @@ namespace Sistema_Life_Planner_Agenda.BD
             {
                 return string.Empty;
             }
-
         }
     }
 }

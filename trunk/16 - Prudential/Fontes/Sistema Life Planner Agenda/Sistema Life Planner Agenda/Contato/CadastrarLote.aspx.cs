@@ -30,23 +30,25 @@ namespace Sistema_Life_Planner_Agenda.Contato
         {
             try
             {
-                //TODO: Salvar contatoslote
-
                 foreach (var item in PreparaListaContatos())
                 {
-                    //cadastra um contato e associa o mesmo ao usuário logado
-                    new UsuarioContatoBD().Incluir(
-                    new ContatoBD().IncluirLote(
-                        item.ID_Contato_Recomendante,
+                     int novoContatoID = new ContatoBD().IncluirLote(
                         item.Data_Cadastro,
                         item.Nome,
                         item.Outras_Informacoes,
                         item.Sexo,
-                        item.Telefone_Principal),
+                        item.Telefone_Principal);
+
+                    new ContatosUsuarioBD().Incluir(
+                        novoContatoID,
                         Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())),
                         DateTime.Now);
+
+                    new RecomendanteContatoBD().Incluir(
+                        novoContatoID,
+                        item.ID_Contato_Recomendante);
                 }
-                CarregarRecomendantes();
+                
                 ExibeMensagemPopUp("Contatos Salvos com Sucesso!");
                 LimparCampos();
             }
@@ -67,11 +69,11 @@ namespace Sistema_Life_Planner_Agenda.Contato
             RecomendanteDropDownList.DataValueField = "Id";
             RecomendanteDropDownList.DataBind();
 
-            ListItem selecione = new ListItem("<Selecione>", "");
+            ListItem selecione = new ListItem("< Selecione >", "");
             RecomendanteDropDownList.Items.Insert(0, selecione);
 
             //A CARGA INICIAL DO SISTEMA DEVE TER O CONTATO DE ID 1 QUE É UMA REFERENCIA AO PRÓPRIO USUÁRIO LOGADO
-            ListItem usuarioLogado = new ListItem(Session["nomeUsuarioLogado"].ToString() + " (EU)", new ContatoBD().ObterID(1, Session["nomeUsuarioLogado"].ToString(), Session["emailUsuarioLogado"].ToString()).ToString());
+            ListItem usuarioLogado = new ListItem(Session["nomeUsuarioLogado"].ToString() + " (EU)", new ContatoBD().ObterID(Session["nomeUsuarioLogado"].ToString(), Session["emailUsuarioLogado"].ToString()).ToString());
             RecomendanteDropDownList.Items.Insert(1, usuarioLogado);
         }
 
@@ -110,7 +112,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
 
         private void LimparCampos()
         {
-            RecomendanteDropDownList.SelectedIndex = 0;
+            RecomendanteDropDownList.SelectedItem.Value = "";
             for (int i = 1; i < 11; i++)
             {
                 TextBox txt = (TextBox)FindControl("ctl00$ContentPlaceHolder1$NomeTextBox" + i);
@@ -123,6 +125,8 @@ namespace Sistema_Life_Planner_Agenda.Contato
                 rdlSexo.SelectedIndex = 0;
                 txtDDD.Text = txtTel.Text = string.Empty;
             }
+
+            CarregarRecomendantes();
         }
     }
 }

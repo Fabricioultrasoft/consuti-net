@@ -32,13 +32,11 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// <param name="UF"></param>
         /// <returns></returns>
         public int Incluir(
-            int ID_Contato_Recomendante,
             int ID_Status_Contato,
             int ID_Tipo_Contato,
             string Cidade,
             string Email,
             string Estado_Civil,
-            DateTime Data_Cadastro,
             int Filhos,
             int Idade,
             string Nome,
@@ -51,19 +49,17 @@ namespace Sistema_Life_Planner_Agenda.BD
             string UF)
         {
             comando.CommandText = @"INSERT INTO contato
-                                        (ID_Contato_Recomendante, ID_Status_Contato, ID_Tipo_Contato, 
-                                        Cidade, Email, Estado_Civil, Data_Cadastro, Filhos, Idade, Nome, Outras_Informacoes, 
+                                        (ID_Status_Contato, ID_Tipo_Contato, 
+                                        Cidade, Email, Estado_Civil, Filhos, Idade, Nome, Outras_Informacoes, 
                                         Profissao, Sexo, Telefone_Alternativo_1, Telefone_Alternativo_2, Telefone_Principal, UF) 
-                                    VALUES (@ID_Contato_Recomendante, @ID_Status_Contato, @ID_Tipo_Contato, @Cidade,
-                                        @Email, @Estado_Civil, @Data_Cadastro, @Filhos, @Idade, @Nome, @Outras_Informacoes, @Profissao,
+                                    VALUES (@ID_Status_Contato, @ID_Tipo_Contato, @Cidade,
+                                        @Email, @Estado_Civil, @Filhos, @Idade, @Nome, @Outras_Informacoes, @Profissao,
                                         @Sexo, @Telefone_Alternativo_1, @Telefone_Alternativo_2, @Telefone_Principal, @UF);";
-            comando.Parameters.AddWithValue("@ID_Contato_Recomendante", ID_Contato_Recomendante);
             comando.Parameters.AddWithValue("@ID_Status_Contato", ID_Status_Contato);
             comando.Parameters.AddWithValue("@ID_Tipo_Contato", ID_Tipo_Contato);
             comando.Parameters.AddWithValue("@Cidade", Cidade);
             comando.Parameters.AddWithValue("@Email", Email);
             comando.Parameters.AddWithValue("@Estado_Civil", Estado_Civil);
-            comando.Parameters.AddWithValue("@Data_Cadastro", Data_Cadastro);
             comando.Parameters.AddWithValue("@Filhos", Filhos);
             comando.Parameters.AddWithValue("@Idade", Idade);
             comando.Parameters.AddWithValue("@Nome", Nome);
@@ -80,11 +76,12 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             this.Dispose();
 
-            return new ContatoBD().ObterID(
-                ID_Contato_Recomendante,
-                Data_Cadastro,
+            return new ContatoBD().ObterID(                
+                ID_Status_Contato,
+                ID_Tipo_Contato,
+                Email, 
                 Nome,
-                Sexo,
+                Sexo, 
                 Telefone_Principal);
         }
 
@@ -100,25 +97,27 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// <param name="Telefone_Principal"></param>
         /// <returns></returns>
         public int ObterID(
-            int ID_Contato_Recomendante,            
-            DateTime Data_Cadastro,
+            int IDStatusContato,
+            int IDTipoContato,
+            string Email,
             string Nome,
             char Sexo,
-            string Telefone_Principal
-            )
+            string TelefonePrincipal)
         {
             comando.CommandText = @"SELECT Id
                                     FROM contato
-                                    WHERE ID_Contato_Recomendante = @ID_Contato_Recomendante                                     
-                                    AND Data_Cadastro = @Data_Cadastro
+                                    WHERE ID_Status_Contato = @IDStatusContato                                     
+                                    AND ID_Tipo_Contato = @ID_Tipo_Contato
                                     AND Nome = @Nome
                                     AND Sexo = @Sexo
+                                    AND Email = @Email
                                     AND Telefone_Principal = @Telefone_Principal";
-            comando.Parameters.AddWithValue("@ID_Contato_Recomendante", ID_Contato_Recomendante);            
-            comando.Parameters.AddWithValue("@Data_Cadastro", Data_Cadastro);
+            comando.Parameters.AddWithValue("@IDStatusContato", IDStatusContato);
+            comando.Parameters.AddWithValue("@ID_Tipo_Contato", IDTipoContato);
             comando.Parameters.AddWithValue("@Nome", Nome);
             comando.Parameters.AddWithValue("@Sexo", Sexo);
-            comando.Parameters.AddWithValue("@Telefone_Principal", Telefone_Principal);
+            comando.Parameters.AddWithValue("@Email", Email);
+            comando.Parameters.AddWithValue("@Telefone_Principal", TelefonePrincipal);
             object resultadoBusca = comando.ExecuteScalar();
 
             this.Dispose();
@@ -143,16 +142,13 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// <param name="Email"></param>
         /// <returns></returns>
         public int ObterID(
-            int ID_Contato_Recomendante,
             string Nome,
             string Email)
         {
             comando.CommandText = @"SELECT Id
                                     FROM contato
-                                    WHERE ID_Contato_Recomendante = @ID_Contato_Recomendante
-                                    AND Nome = @Nome
+                                    WHERE Nome = @Nome
                                     AND Email = @Email";
-            comando.Parameters.AddWithValue("@ID_Contato_Recomendante", ID_Contato_Recomendante);
             comando.Parameters.AddWithValue("@Nome", Nome);
             comando.Parameters.AddWithValue("@Email", Email);
             object resultadoBusca = comando.ExecuteScalar();
@@ -244,15 +240,15 @@ namespace Sistema_Life_Planner_Agenda.BD
         }
 
         /// <summary>
-        /// Lista os contatos cadastrados e seus ID's
+        /// Lista os contatos cadastrados e seus ID's para um determinado usuário
         /// </summary>
         /// <returns></returns>
         public DataSet Listar(int idUsuario)
         {
-            comando.CommandText = @"SELECT contato.ID as ID, contato.Nome as Nome
-                                    FROM contato
-                                    JOIN usuario_contato ON usuario_contato.ID_Contato = contato.ID
-                                    WHERE usuario_contato.ID_Usuario = @idUsuario
+            comando.CommandText = @"SELECT c.Nome, c.ID
+                                    FROM contato c
+                                    JOIN contatos_usuario u ON u.ID_Contato = c.ID
+                                    WHERE u.ID_Usuario = @idUsuario
                                     ORDER BY Nome ASC";
             comando.Parameters.AddWithValue("@idUsuario", idUsuario);
             comando.CommandType = CommandType.Text;
@@ -288,7 +284,7 @@ namespace Sistema_Life_Planner_Agenda.BD
             string filtrarRecomendante = string.Empty, filtrarNomeTelefone = string.Empty, filtrarStatus = string.Empty;
             if (!string.IsNullOrEmpty(idRecomendante))
             {
-                filtrarRecomendante = " AND c.ID_Contato_Recomendante = " + idRecomendante;
+                filtrarRecomendante = " AND r.ID_Recomendante = " + idRecomendante;
             }
             if (!string.IsNullOrEmpty(idStatus))
             {
@@ -315,12 +311,14 @@ namespace Sistema_Life_Planner_Agenda.BD
             #endregion
 
             comando.CommandText = @"SELECT c.ID, c.nome,
-                                           CONCAT('(', SUBSTRING(Telefone_Principal, 1,2), ')',' ', SUBSTRING(Telefone_Principal, 3,4), '-',SUBSTRING(Telefone_Principal, 7,5) ) AS telefonePrincipal, 
-                                           c.Data_Cadastro AS DataCadastro,  
-                                           (SELECT status FROM status_contato WHERE status_contato.id = c.ID_Status_Contato) AS status,
-                                           (SELECT nome FROM contato WHERE contato.id = c.ID_Contato_Recomendante) AS recomendante
+                                            CONCAT('(', SUBSTRING(Telefone_Principal, 1,2), ')',' ', SUBSTRING(Telefone_Principal, 3,4), '-',SUBSTRING(Telefone_Principal, 7,5) ) AS telefonePrincipal, 
+                                            uc.Data_Cadastro AS DataCadastro,  
+                                            (SELECT status FROM status_contato WHERE status_contato.id = c.ID_Status_Contato) AS status,
+                                            (SELECT nome FROM contato WHERE contato.id = r.ID_Recomendante) AS recomendante
                                     FROM contato c
-                                    JOIN usuario_contato uc ON uc.ID_Contato = c.ID                                    
+                                    JOIN contatos_usuario uc ON uc.ID_Contato = c.ID
+                                    JOIN recomendantes_contato r ON r.ID_Contato = c.ID 
+  
                                     WHERE uc.ID_Usuario = @idUsuario " +
                                     filtrarRecomendante +
                                     filtrarStatus +
@@ -388,7 +386,6 @@ namespace Sistema_Life_Planner_Agenda.BD
         }
 
         public int IncluirLote(
-            int ID_Contato_Recomendante,
             DateTime Data_Cadastro,
             string Nome,
             string Outras_Informacoes,
@@ -396,19 +393,17 @@ namespace Sistema_Life_Planner_Agenda.BD
             string Telefone_Principal)
         {
             comando.CommandText = @"INSERT INTO contato
-                                        (ID_Contato_Recomendante, ID_Status_Contato, ID_Tipo_Contato, 
-                                        Cidade, Email, Estado_Civil, Data_Cadastro, Filhos, Idade, Nome, Outras_Informacoes, 
+                                        (ID_Status_Contato, ID_Tipo_Contato, 
+                                        Cidade, Email, Estado_Civil, Filhos, Idade, Nome, Outras_Informacoes, 
                                         Profissao, Sexo, Telefone_Alternativo_1, Telefone_Alternativo_2, Telefone_Principal, UF) 
-                                    VALUES (@ID_Contato_Recomendante, @ID_Status_Contato, @ID_Tipo_Contato, @Cidade,
-                                        @Email, @Estado_Civil, @Data_Cadastro, @Filhos, @Idade, @Nome, @Outras_Informacoes, @Profissao,
-                                        @Sexo, @Telefone_Alternativo_1, @Telefone_Alternativo_2, @Telefone_Principal, @UF);";
-            comando.Parameters.AddWithValue("@ID_Contato_Recomendante", ID_Contato_Recomendante);
+                                    VALUES (@ID_Status_Contato, @ID_Tipo_Contato, @Cidade,
+                                        @Email, @Estado_Civil, @Filhos, @Idade, @Nome, @Outras_Informacoes, @Profissao,
+                                        @Sexo, @Telefone_Alternativo_1, @Telefone_Alternativo_2, @Telefone_Principal, @UF);";            
             comando.Parameters.AddWithValue("@ID_Status_Contato", 7); //7 - Nenhum
             comando.Parameters.AddWithValue("@ID_Tipo_Contato", 4); // 4 - Nenhum
             comando.Parameters.AddWithValue("@Cidade", string.Empty);
             comando.Parameters.AddWithValue("@Email", string.Empty);
             comando.Parameters.AddWithValue("@Estado_Civil", string.Empty);
-            comando.Parameters.AddWithValue("@Data_Cadastro", Data_Cadastro);
             comando.Parameters.AddWithValue("@Filhos", 0);
             comando.Parameters.AddWithValue("@Idade", 0);
             comando.Parameters.AddWithValue("@Nome", Nome);
@@ -426,10 +421,11 @@ namespace Sistema_Life_Planner_Agenda.BD
             this.Dispose();
 
             return new ContatoBD().ObterID(
-                ID_Contato_Recomendante,
-                Data_Cadastro,
+                7,
+                4,
+                string.Empty,
                 Nome,
-                Sexo,
+                Sexo, 
                 Telefone_Principal);
         }
 
@@ -445,7 +441,7 @@ namespace Sistema_Life_Planner_Agenda.BD
         {
             comando.CommandText = @"SELECT *
                 FROM contato c
-                JOIN usuario_contato uc ON uc.ID_Contato = c.ID  
+                JOIN contatos_usuario uc ON uc.ID_Contato = c.ID  
                 WHERE uc.ID_Usuario = @idUsuario
                 AND (Telefone_Principal LIKE '%" + telefone + "%' " +
                 "OR Telefone_Alternativo_1 LIKE '%" + telefone + "%' " +  
