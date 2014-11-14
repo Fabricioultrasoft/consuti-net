@@ -28,5 +28,30 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             this.Dispose();
         }
+
+        /// <summary>
+        /// Atualiza apenas o recomendante do contato
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <param name="IDContatoRecomendanteNovo"></param>
+        public void Atualizar(
+            int IDContatoRecomendanteAtual,
+            int IDContatoRecomendanteNovo,
+            int ID_Contato)
+        {
+            comando.CommandText = @"UPDATE recomendantes_contato 
+                                    SET ID_Recomendante = @IDContatoRecomendanteNovo
+                                    WHERE ID_Recomendante = @IDContatoRecomendanteAtual
+                                    AND ID_Contato = @ID_Contato;";
+
+            comando.Parameters.AddWithValue("@IDContatoRecomendanteAtual", IDContatoRecomendanteAtual);
+            comando.Parameters.AddWithValue("@IDContatoRecomendanteNovo", IDContatoRecomendanteNovo);
+            comando.Parameters.AddWithValue("@ID_Contato", ID_Contato);
+
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.ExecuteNonQuery();
+
+            this.Dispose();
+        }
     }
 }

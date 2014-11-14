@@ -188,7 +188,6 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// <param name="UF"></param>
         public void Atualizar(
             int ID,
-            int ID_Contato_Recomendante,
             int ID_Status_Contato,
             int ID_Tipo_Contato,
             string Cidade,
@@ -206,16 +205,13 @@ namespace Sistema_Life_Planner_Agenda.BD
             string UF)
         {
             comando.CommandText = @"UPDATE contato 
-                                    SET ID_Contato_Recomendante = @ID_Contato_Recomendante, 
-                                        ID_Status_Contato = @ID_Status_Contato, ID_Tipo_Contato = @ID_Tipo_Contato, 
+                                    SET ID_Status_Contato = @ID_Status_Contato, ID_Tipo_Contato = @ID_Tipo_Contato, 
                                         Cidade = @Cidade, Email = @Email, Estado_Civil = @Estado_Civil, 
                                         Filhos = @Filhos, Idade = @Idade, Nome = @Nome, Outras_Informacoes = @Outras_Informacoes, 
                                         Profissao = @Profissao, Sexo = @Sexo, Telefone_Alternativo_1 = @Telefone_Alternativo_1, 
                                         Telefone_Alternativo_2 = @Telefone_Alternativo_2, Telefone_Principal = @Telefone_Principal,
                                         UF = @UF 
                                     WHERE ID = @id;";
-
-            comando.Parameters.AddWithValue("@ID_Contato_Recomendante", ID_Contato_Recomendante);
             comando.Parameters.AddWithValue("@ID_Status_Contato", ID_Status_Contato);
             comando.Parameters.AddWithValue("@ID_Tipo_Contato", ID_Tipo_Contato);
             comando.Parameters.AddWithValue("@Cidade", Cidade);
@@ -342,15 +338,18 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public DataSet Obter(int id)
+        public DataSet Obter(int idContato, int idUsuario)
         {
-            comando.CommandText = @"SELECT ID_Contato_Recomendante, ID_Status_Contato, ID_Tipo_Contato, 
-                                        Cidade, Email, Estado_Civil, Data_Cadastro, Filhos, Idade, Nome, 
-                                        Outras_Informacoes, Profissao, Sexo, Telefone_Alternativo_1, 
-                                        Telefone_Alternativo_2, Telefone_Principal, UF 
-                                    FROM contato
-                                    WHERE ID = @id;";
-            comando.Parameters.AddWithValue("@id", id);
+            comando.CommandText = @"SELECT ID_Status_Contato, ID_Tipo_Contato, Cidade, Email, Estado_Civil, Filhos, Idade,
+                                           Nome, Outras_Informacoes, Profissao, Sexo, Telefone_Alternativo_1, Telefone_Alternativo_2, Telefone_Principal, UF, u.Data_Cadastro, 
+                                           (select ID from contato where contato.ID = r.ID_Recomendante) as ID_Contato_Recomendante
+                                      FROM contato 
+                                      JOIN recomendantes_contato r ON r.ID_Contato = contato.ID
+                                      JOIN contatos_usuario u ON u.ID_Contato = contato.ID 
+                                     WHERE contato.ID = @idContato
+                                     AND u.ID_Usuario = @idUsuario;";
+            comando.Parameters.AddWithValue("@idContato", idContato);
+            comando.Parameters.AddWithValue("@idUsuario", idUsuario);
 
             comando.CommandType = CommandType.Text;
 
@@ -458,28 +457,6 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             return retorno;       
         
-        }
-
-        /// <summary>
-        /// Atualiza apenas o recomendante do contato
-        /// </summary>
-        /// <param name="ID"></param>
-        /// <param name="IDContatoRecomendanteNovo"></param>
-        public void AtualizarRecomendante(
-            int ID,
-            int IDContatoRecomendanteNovo)
-        {
-            comando.CommandText = @"UPDATE contato 
-                                    SET IDContatoRecomendanteNovo = @IDContatoRecomendanteNovo
-                                    WHERE ID = @id;";
-
-            comando.Parameters.AddWithValue("@IDContatoRecomendanteNovo", IDContatoRecomendanteNovo);
-            comando.Parameters.AddWithValue("@id", ID);
-
-            comando.CommandType = System.Data.CommandType.Text;
-            comando.ExecuteNonQuery();
-
-            this.Dispose();
         }
     }
 }
