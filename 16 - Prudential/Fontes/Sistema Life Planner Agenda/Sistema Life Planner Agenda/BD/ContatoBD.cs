@@ -379,10 +379,6 @@ namespace Sistema_Life_Planner_Agenda.BD
             comando.ExecuteNonQuery();
 
             this.Dispose();
-
-            AtualizarRecomendante(
-                id, 2);
-            // ao excluir, tem que setar o recomendante para "NENHUM". Registro de carga inicial.
         }
 
         public int IncluirLote(

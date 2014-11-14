@@ -30,5 +30,23 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             this.Dispose();
         }
+
+        /// <summary>
+        /// Exclui um contato de um usuário
+        /// </summary>
+        /// <param name="id"></param>
+        public void Excluir(int idContato, int idUsuario)
+        {
+            comando.CommandText = @"DELETE FROM contatos_usuario 
+                                    WHERE ID_Contato = @ID_Contato 
+                                        AND ID_Usuario = @ID_Usuario;";
+            comando.Parameters.AddWithValue("@ID_Contato", idContato);
+            comando.Parameters.AddWithValue("@ID_Usuario", idUsuario);
+
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.ExecuteNonQuery();
+
+            this.Dispose();
+        }
     }
 }
