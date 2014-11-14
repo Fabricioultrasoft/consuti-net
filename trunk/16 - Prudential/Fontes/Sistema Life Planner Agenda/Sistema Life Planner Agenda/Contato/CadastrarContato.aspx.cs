@@ -57,31 +57,42 @@ namespace Sistema_Life_Planner_Agenda.Contato
 
             if (!string.IsNullOrEmpty(Request.QueryString["idContato"]))
             {
-                try
+                if (ValidarAtualizacaoRecomendanteContato(Request.QueryString["idContato"].ToString(), dadosContato.ID_Contato_Recomendante.ToString()))
                 {
-                    new ContatoBD().Atualizar(
-                        Convert.ToInt32(Request.QueryString["idContato"].ToString()),
-                        dadosContato.ID_Contato_Recomendante,
-                        dadosContato.ID_Status_Contato,
-                        dadosContato.ID_Tipo_Contato,
-                        dadosContato.Cidade,
-                        dadosContato.Email,
-                        dadosContato.Estado_Civil,
-                        dadosContato.Filhos,
-                        dadosContato.Idade,
-                        dadosContato.Nome,
-                        dadosContato.Outras_Informacoes,
-                        dadosContato.Profissao,
-                        dadosContato.Sexo,
-                        dadosContato.Telefone_Alternativo_1,
-                        dadosContato.Telefone_Alternativo_2,
-                        dadosContato.Telefone_Principal,
-                        dadosContato.UF);
-                    ExibeMensagemPopUp("Contato salvo com sucesso!");
+                    try
+                    {
+                        new ContatoBD().Atualizar(
+                            Convert.ToInt32(Request.QueryString["idContato"]),
+                            dadosContato.ID_Status_Contato,
+                            dadosContato.ID_Tipo_Contato,
+                            dadosContato.Cidade,
+                            dadosContato.Email,
+                            dadosContato.Estado_Civil,
+                            dadosContato.Filhos,
+                            dadosContato.Idade,
+                            dadosContato.Nome,
+                            dadosContato.Outras_Informacoes,
+                            dadosContato.Profissao,
+                            dadosContato.Sexo,
+                            dadosContato.Telefone_Alternativo_1,
+                            dadosContato.Telefone_Alternativo_2,
+                            dadosContato.Telefone_Principal,
+                            dadosContato.UF);
+
+                        new RecomendanteContatoBD().Atualizar(Convert.ToInt32(Session["ID_Contato_RecomendanteAtual"].ToString()),
+                            dadosContato.ID_Contato_Recomendante,
+                            Convert.ToInt32(Request.QueryString["idContato"]));
+
+                        ExibeMensagemPopUp("Contato salvo com sucesso!");
+                    }
+                    catch (Exception ex)
+                    {
+                        ExibeMensagemPopUp("Falha ao tentar atualizar o contato. Tente novamente. Detalhes: " + ex.Message);
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    ExibeMensagemPopUp("Falha ao tentar atualizar o contato. Tente novamente. Detalhes: " + ex.Message);
+                    ExibeMensagemPopUp("Não é possível alterar o recomendante para o próprio contato. Selecione outro recomendante e tente novamente.");
                 }
             }
             else
@@ -147,7 +158,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
                 throw ex;
             }
             finally
-            {   
+            {
                 RecomendanteDropDownList.Items.Insert(0, new ListItem("< Selecione >", ""));
 
                 ListItem usuarioLogado = new ListItem(Session["nomeUsuarioLogado"].ToString() + " (EU)", new ContatoBD().ObterID(Session["nomeUsuarioLogado"].ToString(), Session["emailUsuarioLogado"].ToString()).ToString());
@@ -187,7 +198,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
                 CarregarTipos();
 
                 //preenche os campos
-                DataSet contatoCadastrado = new ContatoBD().Obter(idContato);
+                DataSet contatoCadastrado = new ContatoBD().Obter(idContato, Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())));
 
                 DataRow DrContato = contatoCadastrado.Tables[0].Rows[0];
                 DataCadastroLabel.Text = DrContato["Data_Cadastro"].ToString();
@@ -206,10 +217,18 @@ namespace Sistema_Life_Planner_Agenda.Contato
                 UFDropDownList.SelectedValue = DrContato["UF"].ToString();
                 cidadeTextBox.Text = DrContato["Cidade"].ToString();
                 emailTextBox.Text = DrContato["Email"].ToString();
-                DDDtelefoneAlternativo1TextBox.Text = DrContato["Telefone_Alternativo_1"].ToString().Substring(0, 2);
-                telefoneAlternativo1TextBox.Text = DrContato["Telefone_Alternativo_1"].ToString().Substring(2);
-                DDDtelefoneAlternativo2TextBox.Text = DrContato["Telefone_Alternativo_2"].ToString().Substring(0, 2);
-                telefoneAlternativo2TextBox.Text = DrContato["Telefone_Alternativo_2"].ToString().Substring(2);
+                if (!string.IsNullOrEmpty(DrContato["Telefone_Alternativo_1"].ToString()))
+                {
+                    DDDtelefoneAlternativo1TextBox.Text = DrContato["Telefone_Alternativo_1"].ToString().Substring(0, 2);
+                    telefoneAlternativo1TextBox.Text = DrContato["Telefone_Alternativo_1"].ToString().Substring(2);
+                }
+                if (!string.IsNullOrEmpty(DrContato["Telefone_Alternativo_2"].ToString()))
+                {
+                    DDDtelefoneAlternativo2TextBox.Text = DrContato["Telefone_Alternativo_2"].ToString().Substring(0, 2);
+                    telefoneAlternativo2TextBox.Text = DrContato["Telefone_Alternativo_2"].ToString().Substring(2);
+                }
+
+                Session["ID_Contato_RecomendanteAtual"] = DrContato["ID_Contato_Recomendante"].ToString();
 
             }
             catch (Exception ex)
@@ -310,14 +329,14 @@ namespace Sistema_Life_Planner_Agenda.Contato
                 outrasInformacoesTextBox.Text =
                 idadeTextBox.Text =
                 profissaoTextBox.Text = string.Empty;
-            
+
             SexoRadioButtonList.SelectedValue = "M";
 
             RecomendanteDropDownList.SelectedItem.Value = "";
-                StatusDropDownList.SelectedIndex =
-                EstadoCivilDropDownList.SelectedIndex =
-                TipoDropDownList.SelectedIndex =
-                UFDropDownList.SelectedIndex = 0;
+            StatusDropDownList.SelectedIndex =
+            EstadoCivilDropDownList.SelectedIndex =
+            TipoDropDownList.SelectedIndex =
+            UFDropDownList.SelectedIndex = 0;
 
             CarregarRecomendantes();
         }
@@ -325,6 +344,13 @@ namespace Sistema_Life_Planner_Agenda.Contato
         protected void pesquisarButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("PesquisarContato.aspx");
+        }
+
+        private bool ValidarAtualizacaoRecomendanteContato(string idContato, string idNovoRecomendante)
+        {
+            if (idContato.Equals(idNovoRecomendante))
+                return false;
+            return true;
         }
     }
 }
