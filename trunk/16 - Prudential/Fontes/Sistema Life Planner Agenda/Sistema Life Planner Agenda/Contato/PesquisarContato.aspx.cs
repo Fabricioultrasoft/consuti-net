@@ -149,8 +149,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
             {
                 if (e.CommandName == "Excluir")
                 {
-                    ContatoBD contato = new ContatoBD();
-                    contato.Excluir(Convert.ToInt32(e.CommandArgument));
+                    new ContatosUsuarioBD().Excluir(Convert.ToInt32(e.CommandArgument), Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())));
                     ExibeMensagemPopUp("Contato removido com sucesso!");
                     CarregarGridView();
                 }
