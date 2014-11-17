@@ -76,12 +76,12 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             this.Dispose();
 
-            return new ContatoBD().ObterID(                
+            return new ContatoBD().ObterID(
                 ID_Status_Contato,
                 ID_Tipo_Contato,
-                Email, 
+                Email,
                 Nome,
-                Sexo, 
+                Sexo,
                 Telefone_Principal);
         }
 
@@ -130,8 +130,6 @@ namespace Sistema_Life_Planner_Agenda.BD
             {
                 return 0;
             }
-
-            
         }
 
         /// <summary>
@@ -269,7 +267,8 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// <param name="telefonePrincipal"></param>
         /// <param name="idUsuario"></param>
         /// <returns></returns>
-        public DataSet Listar(string nome,
+        public DataSet Listar(
+            string nome,
             string idRecomendante,
             string telefonePrincipal,
             string idStatus,
@@ -334,6 +333,73 @@ namespace Sistema_Life_Planner_Agenda.BD
         }
 
         /// <summary>
+        /// Listagem de contatos para SITPLAN
+        /// </summary>
+        /// <param name="idRecomendante"></param>
+        /// <param name="idStatus"></param>
+        /// <param name="dataCadastroDe"></param>
+        /// <param name="dataCadastroAte"></param>
+        /// <param name="sexo"></param>
+        /// <param name="idUsuario"></param>
+        /// <returns></returns>
+        public DataSet Listar(
+            string idRecomendante,
+            string idStatus,
+            DateTime dataCadastroDe,
+            DateTime dataCadastroAte,
+            string sexo,
+            int idUsuario)
+        {
+            #region Lógica de filtros
+
+            string filtrarRecomendante = string.Empty, filtrarStatus = string.Empty, filtrarSexo = string.Empty;
+            if (!string.IsNullOrEmpty(idRecomendante))
+            {
+                filtrarRecomendante = " AND r.ID_Recomendante = " + idRecomendante;
+            }
+            if (!string.IsNullOrEmpty(idStatus))
+            {
+                filtrarStatus = " AND c.ID_Status_Contato = " + idStatus;
+            }
+            if (!string.IsNullOrEmpty(sexo))
+            {
+                filtrarSexo = " AND c.Sexo = '" + sexo + "'";
+            }
+
+            #endregion
+
+            comando.CommandText = @"SELECT c.ID, c.nome, s.Status, c.Sexo,
+                                            CONCAT('(', SUBSTRING(Telefone_Principal, 1,2), ')',' ', SUBSTRING(Telefone_Principal, 3,4), '-',SUBSTRING(Telefone_Principal, 7,5) ) AS telefonePrincipal, 
+                                            uc.Data_Cadastro AS DataCadastro,  
+                                            (SELECT status FROM status_contato WHERE status_contato.id = c.ID_Status_Contato) AS status,
+                                            (SELECT nome FROM contato WHERE contato.id = r.ID_Recomendante) AS recomendante
+                                    FROM contato c
+                                    JOIN contatos_usuario uc ON uc.ID_Contato = c.ID
+                                    JOIN recomendantes_contato r ON r.ID_Contato = c.ID 
+                                    JOIN status_contato s ON c.ID_Status_Contato = s.ID
+                                    WHERE uc.ID_Usuario = @idUsuario
+                                    AND uc.Data_Cadastro >= @dataCadastroDe
+                                    AND uc.Data_Cadastro <= @dataCadastroAte " +
+                                    filtrarRecomendante +
+                                    filtrarStatus +
+                                    filtrarSexo +
+                                    " ORDER BY c.Nome ASC";
+            comando.Parameters.AddWithValue("@idUsuario", idUsuario);
+            comando.Parameters.AddWithValue("@dataCadastroDe", dataCadastroDe);
+            comando.Parameters.AddWithValue("@dataCadastroAte", dataCadastroAte.AddHours(23).AddMinutes(59).AddSeconds(59));
+            comando.CommandType = CommandType.Text;
+
+            MySqlDataAdapter adap = new MySqlDataAdapter(comando);
+
+            DataSet retorno = new DataSet();
+            adap.Fill(retorno);
+
+            this.Dispose();
+
+            return retorno;
+        }
+
+        /// <summary>
         /// Obtem os dados cadastrais de um usuário a apartir do ID
         /// </summary>
         /// <param name="id"></param>
@@ -380,8 +446,15 @@ namespace Sistema_Life_Planner_Agenda.BD
             this.Dispose();
         }
 
+        /// <summary>
+        /// Salva lote de contatos
+        /// </summary>
+        /// <param name="Nome"></param>
+        /// <param name="Outras_Informacoes"></param>
+        /// <param name="Sexo"></param>
+        /// <param name="Telefone_Principal"></param>
+        /// <returns></returns>
         public int IncluirLote(
-            DateTime Data_Cadastro,
             string Nome,
             string Outras_Informacoes,
             char Sexo,
@@ -393,7 +466,7 @@ namespace Sistema_Life_Planner_Agenda.BD
                                         Profissao, Sexo, Telefone_Alternativo_1, Telefone_Alternativo_2, Telefone_Principal, UF) 
                                     VALUES (@ID_Status_Contato, @ID_Tipo_Contato, @Cidade,
                                         @Email, @Estado_Civil, @Filhos, @Idade, @Nome, @Outras_Informacoes, @Profissao,
-                                        @Sexo, @Telefone_Alternativo_1, @Telefone_Alternativo_2, @Telefone_Principal, @UF);";            
+                                        @Sexo, @Telefone_Alternativo_1, @Telefone_Alternativo_2, @Telefone_Principal, @UF);";
             comando.Parameters.AddWithValue("@ID_Status_Contato", 7); //7 - Nenhum
             comando.Parameters.AddWithValue("@ID_Tipo_Contato", 4); // 4 - Nenhum
             comando.Parameters.AddWithValue("@Cidade", string.Empty);
@@ -420,7 +493,7 @@ namespace Sistema_Life_Planner_Agenda.BD
                 4,
                 string.Empty,
                 Nome,
-                Sexo, 
+                Sexo,
                 Telefone_Principal);
         }
 
@@ -439,7 +512,7 @@ namespace Sistema_Life_Planner_Agenda.BD
                 JOIN contatos_usuario uc ON uc.ID_Contato = c.ID  
                 WHERE uc.ID_Usuario = @idUsuario
                 AND (Telefone_Principal LIKE '%" + telefone + "%' " +
-                "OR Telefone_Alternativo_1 LIKE '%" + telefone + "%' " +  
+                "OR Telefone_Alternativo_1 LIKE '%" + telefone + "%' " +
                 "OR Telefone_Alternativo_2 LIKE '%" + telefone + "%') " +
                 "ORDER BY c.Nome";
 
@@ -455,8 +528,34 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             this.Dispose();
 
-            return retorno;       
-        
+            return retorno;
+
+        }
+
+        /// <summary>
+        /// Obtem e retorna o ID do status atual do contato
+        /// </summary>
+        /// <param name="idContato"></param>
+        /// <returns></returns>
+        public int ObtemIDStatus(int idContato)
+        {
+            comando.CommandText = @"SELECT ID_Status_Contato
+                                    FROM contato
+                                    WHERE ID = @idContato;";
+            comando.Parameters.AddWithValue("@idContato", idContato);
+            
+            object resultadoBusca = comando.ExecuteScalar();
+
+            this.Dispose();
+
+            try
+            {
+                return Convert.ToInt32(resultadoBusca.ToString());
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
         }
     }
 }

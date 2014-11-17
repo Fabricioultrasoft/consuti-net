@@ -33,7 +33,6 @@ namespace Sistema_Life_Planner_Agenda.Contato
                 foreach (var item in PreparaListaContatos())
                 {
                      int novoContatoID = new ContatoBD().IncluirLote(
-                        item.Data_Cadastro,
                         item.Nome,
                         item.Outras_Informacoes,
                         item.Sexo,

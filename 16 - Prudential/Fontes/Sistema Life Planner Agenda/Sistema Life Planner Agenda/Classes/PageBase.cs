@@ -97,5 +97,20 @@ namespace Sistema_Life_Planner_Agenda.Classes
                 Response.Redirect("~/Login.aspx");
             }
         }
+
+        /// <summary>
+        /// Valida se a data inicial é maior que a data final
+        /// </summary>
+        /// <returns>true se as datas foram válidas</returns>
+        public bool ValidarIntervaloDatas(string PeriodoDe, string PeriodoAte)
+        {
+            if (!string.IsNullOrEmpty(PeriodoDe) &&
+               !string.IsNullOrEmpty(PeriodoAte) &&
+                Convert.ToDateTime(PeriodoAte) < Convert.ToDateTime(PeriodoDe))
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

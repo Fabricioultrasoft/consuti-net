@@ -121,7 +121,9 @@
     </Compile>
     <Compile Include="BD\BancoBase.cs" />
     <Compile Include="BD\ContatoBD.cs" />
+    <Compile Include="BD\ContatosSitPlanBD.cs" />
     <Compile Include="BD\RecomendanteContatoBD.cs" />
+    <Compile Include="BD\SitPlanBD.cs" />
     <Compile Include="BD\StatusContatoBD.cs" />
     <Compile Include="BD\TipoContatoBD.cs" />
     <Compile Include="BD\UsuarioBD.cs" />

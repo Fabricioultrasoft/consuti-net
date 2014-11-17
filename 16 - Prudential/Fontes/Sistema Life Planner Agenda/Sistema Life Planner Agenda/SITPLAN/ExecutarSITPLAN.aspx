@@ -12,12 +12,12 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
         <div class="tituloTela">
-            CADASTRO DE CONTATO EM LOTE
+            EXECUTAR SIT PLAN
         </div>
         <div class="conteudoTela">
             <asp:Panel ID="cadastroContatoLotePanel" runat="server">
                 <fieldset>
-                    <legend>Lista de TA's do SITPLAN</legend>
+                    <legend>Lista de TA's do SIT PLAN</legend>
                     <table id="ExecutarTasTable" class="CadastroContatoLote" style="text-align: center;">
                         <tr style="font-weight: bold; background-color: #CCCCCC;">
                             <td style="width: 30px">
