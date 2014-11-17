@@ -31,31 +31,13 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN {
         protected global::System.Web.UI.WebControls.DropDownList RecomendanteDropDownList;
         
         /// <summary>
-        /// TipoContatoDropDownList control.
+        /// StatusDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TipoContatoDropDownList;
-        
-        /// <summary>
-        /// DropDownList3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
-        
-        /// <summary>
-        /// DropDownList4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList4;
+        protected global::System.Web.UI.WebControls.DropDownList StatusDropDownList;
         
         /// <summary>
         /// PeriodoDeTextBox control.
@@ -65,6 +47,15 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox PeriodoDeTextBox;
+        
+        /// <summary>
+        /// PeriodoDeTextBox_CalendarExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CalendarExtender PeriodoDeTextBox_CalendarExtender;
         
         /// <summary>
         /// deImageButton control.
@@ -85,6 +76,15 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN {
         protected global::System.Web.UI.WebControls.TextBox PeriodoAteTextBox;
         
         /// <summary>
+        /// PeriodoAteTextBox_CalendarExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CalendarExtender PeriodoAteTextBox_CalendarExtender;
+        
+        /// <summary>
         /// AteImageButton control.
         /// </summary>
         /// <remarks>
@@ -94,13 +94,13 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN {
         protected global::System.Web.UI.WebControls.ImageButton AteImageButton;
         
         /// <summary>
-        /// SexoRadioButtonList control.
+        /// SexoDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList SexoRadioButtonList;
+        protected global::System.Web.UI.WebControls.DropDownList SexoDropDownList;
         
         /// <summary>
         /// pesquisarButton control.
@@ -121,13 +121,13 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN {
         protected global::System.Web.UI.WebControls.Button limparButton;
         
         /// <summary>
-        /// GridView1 control.
+        /// ContatosGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView ContatosGridView;
         
         /// <summary>
         /// SalvarButton control.
