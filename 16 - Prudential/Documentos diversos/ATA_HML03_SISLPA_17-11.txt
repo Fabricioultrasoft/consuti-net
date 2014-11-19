@@ -1,0 +1,6 @@
+Ajustes:
+nome do SITPLAN - Não obrigatório
+aumentar altura das linhas das listas de resultados
+
+Para a proxima Release: 
+Execução do TA

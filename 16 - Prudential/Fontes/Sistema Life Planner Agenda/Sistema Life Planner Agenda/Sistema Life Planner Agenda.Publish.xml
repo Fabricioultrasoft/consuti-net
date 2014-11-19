@@ -1,50 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
-  <publishProfile publishUrl="D:\ConsuTI\gcode\16 - Prudential\Fontes\publish" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
-    <file relUrl="CadastroUsuario/Default.aspx" publishTime="09/26/2014 20:58:26" />
-    <file relUrl="bin/Sistema Life Planner Agenda.dll" publishTime="09/30/2014 22:37:52" />
-    <file relUrl="Estilos/Imgs/no.png" publishTime="08/24/2014 03:46:53" />
-    <file relUrl="Estilos/Imgs/edit.png" publishTime="09/19/2014 20:59:57" />
-    <file relUrl="Estilos/Imgs/add_user.png" publishTime="08/26/2014 19:57:46" />
+  <publishProfile publishUrl="ftp://ftp.consuti.net/Web/SISLPA/" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FTP" replaceMatchingFiles="True" userName="consuti" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGyKc3G7erEesM933Hc9zAQAAAAACAAAAAAAQZgAAAAEAACAAAAC4y2qou5EBqnmwbnsZjNp8onDzt6DhOSdND/juDm+MkQAAAAAOgAAAAAIAACAAAAAReBhH/LiqvhQ4plpY0gv3NEvkB2Eo/gceNrSerk6VuSAAAADQHXtej3jU+WxYK8fgC5a+pexICDssaHbcyceZ4m2TF0AAAAA1XzyjpqEJqGpXS7lNpw1NM0+M2oMkxaFKnihGu8+7MFy1BpDVM503aZiw68r0k/AObBwnDLDxMN1sQ7ToQYdg" SelectedForPublish="True">
+    <file relUrl="CadastroUsuario/Default.aspx" publishTime="10/26/2014 16:14:13" />
+    <file relUrl="bin/Sistema Life Planner Agenda.dll" publishTime="11/17/2014 10:52:49" />
+    <file relUrl="Estilos/Imgs/no.png" publishTime="10/07/2014 23:17:50" />
+    <file relUrl="bin/MySql.Data.dll" publishTime="10/26/2014 23:28:14" />
+    <file relUrl="Estilos/Imgs/add_user.png" publishTime="10/07/2014 23:17:50" />
     <file relUrl="Agenda/CadastrarAgenda.aspx" publishTime="09/06/2014 01:51:44" />
-    <file relUrl="Estilos/Imgs/Calendar.png" publishTime="08/27/2014 18:11:58" />
-    <file relUrl="Interna.Master" publishTime="09/30/2014 22:40:19" />
-    <file relUrl="Estilos/Imgs/lote.png" publishTime="08/27/2014 17:37:23" />
-    <file relUrl="Estilos/Imgs/logo.png" publishTime="01/07/2011 13:44:24" />
-    <file relUrl="Estilos/Imgs/left.png" publishTime="09/26/2014 20:57:01" />
-    <file relUrl="Estilos/Imgs/search.png" publishTime="08/27/2014 17:35:26" />
-    <file relUrl="SITPLAN/PesquisarSITPLAN.aspx" publishTime="09/10/2014 16:11:56" />
-    <file relUrl="Estilos/Imgs/printer.png" publishTime="09/09/2014 20:33:04" />
-    <file relUrl="Contato/CadastrarContato.aspx" publishTime="09/03/2014 20:11:03" />
-    <file relUrl="Estilos/Imgs/LogoSisLPA_100.png" publishTime="08/21/2014 18:17:43" />
-    <file relUrl="Estilos/Imgs/todo.png" publishTime="08/26/2014 19:57:37" />
+    <file relUrl="Interna.Master" publishTime="10/07/2014 22:51:05" />
+    <file relUrl="Estilos/Imgs/lote.png" publishTime="10/07/2014 23:17:50" />
+    <file relUrl="Estilos/Imgs/logo.png" publishTime="10/07/2014 23:17:50" />
+    <file relUrl="Estilos/EstiloExterno.css" publishTime="09/26/2014 20:58:07" />
+    <file relUrl="Estilos/Imgs/search.png" publishTime="10/07/2014 23:17:50" />
+    <file relUrl="SITPLAN/PesquisarSITPLAN.aspx" publishTime="11/16/2014 23:00:11" />
+    <file relUrl="Estilos/Imgs/printer.png" publishTime="10/07/2014 23:17:50" />
+    <file relUrl="Contato/CadastrarContato.aspx" publishTime="11/13/2014 19:25:06" />
+    <file relUrl="Estilos/Imgs/LogoSisLPA_100.png" publishTime="10/07/2014 23:17:50" />
+    <file relUrl="Estilos/Imgs/todo.png" publishTime="10/07/2014 23:17:50" />
     <file relUrl="Usuario/AtualizarUsuario.aspx" publishTime="09/30/2014 22:38:32" />
-    <file relUrl="Estilos/Imgs/add_notes.png" publishTime="08/26/2014 19:56:40" />
+    <file relUrl="Estilos/Imgs/add_notes.png" publishTime="10/07/2014 23:17:50" />
     <file relUrl="SITPLAN/RelatorioTAs.aspx" publishTime="09/10/2014 19:19:10" />
     <file relUrl="_Check-list Interface.txt" publishTime="08/27/2014 18:17:46" />
-    <file relUrl="Contato/CadastrarLote.aspx" publishTime="09/03/2014 19:33:57" />
-    <file relUrl="Estilos/Imgs/call_group.png" publishTime="08/26/2014 19:57:06" />
-    <file relUrl="Estilos/Imgs/footer.png" publishTime="12/16/2010 02:30:24" />
+    <file relUrl="Contato/CadastrarLote.aspx" publishTime="11/06/2014 20:50:33" />
+    <file relUrl="Estilos/Imgs/call_group.png" publishTime="10/07/2014 23:17:50" />
+    <file relUrl="Estilos/Imgs/footer.png" publishTime="10/07/2014 23:17:50" />
     <file relUrl="Default.aspx" publishTime="09/10/2014 16:09:58" />
-    <file relUrl="Estilos/EstiloInterno.css" publishTime="09/26/2014 20:57:48" />
-    <file relUrl="Estilos/Imgs/add.png" publishTime="08/27/2014 17:36:55" />
-    <file relUrl="Externa.Master" publishTime="09/30/2014 22:40:19" />
+    <file relUrl="Estilos/EstiloInterno.css" publishTime="11/03/2014 00:10:49" />
+    <file relUrl="Estilos/Imgs/left.png" publishTime="10/14/2014 18:18:29" />
+    <file relUrl="Externa.Master" publishTime="10/07/2014 22:51:01" />
     <file relUrl="RecuperarSenha/Default.aspx" publishTime="09/26/2014 20:58:53" />
-    <file relUrl="Estilos/Imgs/content.png" publishTime="07/16/2010 10:51:38" />
-    <file relUrl="Contato/PesquisarContato.aspx" publishTime="09/10/2014 16:41:45" />
+    <file relUrl="Estilos/Imgs/content.png" publishTime="10/07/2014 23:17:50" />
+    <file relUrl="Contato/PesquisarContato.aspx" publishTime="11/13/2014 20:00:45" />
     <file relUrl="Usuario/AutorizarUsuarios.aspx" publishTime="09/24/2014 19:42:49" />
-    <file relUrl="bin/Sistema Life Planner Agenda.pdb" publishTime="09/30/2014 22:37:52" />
-    <file relUrl="SITPLAN/CadastrarSITPLAN.aspx" publishTime="09/10/2014 16:11:56" />
-    <file relUrl="Estilos/Imgs/play.png" publishTime="09/09/2014 19:32:23" />
-    <file relUrl="Estilos/Imgs/menu.png" publishTime="12/16/2010 02:30:26" />
-    <file relUrl="Estilos/Imgs/menu_select.png" publishTime="09/02/2009 10:32:48" />
+    <file relUrl="bin/Sistema Life Planner Agenda.pdb" publishTime="11/17/2014 10:52:49" />
+    <file relUrl="Estilos/Imgs/edit.png" publishTime="10/07/2014 23:17:50" />
+    <file relUrl="Estilos/Imgs/play.png" publishTime="10/07/2014 23:17:50" />
+    <file relUrl="Estilos/Imgs/menu.png" publishTime="10/07/2014 23:17:50" />
+    <file relUrl="Estilos/Imgs/menu_select.png" publishTime="10/07/2014 23:17:50" />
     <file relUrl="Login.aspx" publishTime="09/10/2014 16:54:15" />
-    <file relUrl="Web.config" publishTime="09/26/2014 20:45:23" />
-    <file relUrl="Estilos/Imgs/clear.png" publishTime="08/27/2014 17:36:38" />
+    <file relUrl="Web.config" publishTime="11/17/2014 10:54:26" />
+    <file relUrl="SITPLAN/CadastrarSITPLAN.aspx" publishTime="11/16/2014 02:38:42" />
+    <file relUrl="Estilos/Imgs/clear.png" publishTime="10/07/2014 23:17:50" />
+    <file relUrl="Estilos/Imgs/add.png" publishTime="10/07/2014 23:17:50" />
     <file relUrl="Agenda/PesquisarAgenda.aspx" publishTime="09/10/2014 16:11:31" />
-    <file relUrl="Estilos/EstiloExterno.css" publishTime="09/26/2014 20:58:07" />
-    <file relUrl="Estilos/Imgs/check.png" publishTime="08/24/2014 02:46:46" />
+    <file relUrl="Estilos/Imgs/Calendar.png" publishTime="10/07/2014 23:17:50" />
+    <file relUrl="Estilos/Imgs/check.png" publishTime="10/07/2014 23:17:50" />
     <file relUrl="bin/AjaxControlToolkit.dll" publishTime="10/06/2013 20:27:00" />
-    <file relUrl="SITPLAN/ExecutarSITPLAN.aspx" publishTime="09/09/2014 20:13:20" />
+    <file relUrl="SITPLAN/ExecutarSITPLAN.aspx" publishTime="11/16/2014 02:31:56" />
+    <file relUrl="Estilos/Imgs/favicon.ico" publishTime="10/07/2014 23:27:23" />
   </publishProfile>
 </publishData>
