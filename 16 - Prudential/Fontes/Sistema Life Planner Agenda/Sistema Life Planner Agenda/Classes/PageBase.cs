@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Net.Mail;
 using System.Web.Security;
+using System.Data;
+using Sistema_Life_Planner_Agenda.BD;
 
 namespace Sistema_Life_Planner_Agenda.Classes
 {
@@ -111,6 +113,11 @@ namespace Sistema_Life_Planner_Agenda.Classes
                 return false;
             }
             return true;
+        }
+
+        public DataSet Municipios(string UF)
+        {
+            return new CidadesBD().Listar(UF);
         }
     }
 }

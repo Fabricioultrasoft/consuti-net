@@ -30,7 +30,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
                         CarregarRecomendantes();
                         CarregarStatus();
                         CarregarTipos();
-                        //TODO: autocomplete de cidades
+                        CarregarMunicipios();
 
                         DataCadastroLabel.Text = DateTime.Now.ToString();
 
@@ -41,7 +41,9 @@ namespace Sistema_Life_Planner_Agenda.Contato
                         Response.Redirect("~/Login.aspx");
                     }
                 }
+
             }
+
             //TODO: Verificar se existe histórico. se sim, ocultar o label
         }
 
@@ -177,6 +179,26 @@ namespace Sistema_Life_Planner_Agenda.Contato
             StatusDropDownList.Items.Insert(0, selecione);
         }
 
+        private void CarregarMunicipios()
+        {
+            if (string.IsNullOrEmpty(UFDropDownList.SelectedItem.Value))
+            {
+                ListItem selecione = new ListItem("< Selecione >", "");
+                CidadesDropDownList.Items.Insert(0, selecione);
+            }
+            else
+            {
+
+                CidadesDropDownList.DataSource = new CidadesBD().Listar(UFDropDownList.SelectedItem.Value);
+                CidadesDropDownList.DataTextField = "Nome";
+                CidadesDropDownList.DataValueField = "id_cidade";
+                CidadesDropDownList.DataBind();
+
+                ListItem selecione = new ListItem("< Selecione >", "");
+                CidadesDropDownList.Items.Insert(0, selecione);
+            }
+        }
+
         private void CarregarTipos()
         {
             TipoDropDownList.DataSource = new TipoContatoBD().Listar();
@@ -215,7 +237,8 @@ namespace Sistema_Life_Planner_Agenda.Contato
                 filhosTextBox.Text = DrContato["Filhos"].ToString();
                 TipoDropDownList.SelectedValue = DrContato["ID_Tipo_Contato"].ToString();
                 UFDropDownList.SelectedValue = DrContato["UF"].ToString();
-                cidadeTextBox.Text = DrContato["Cidade"].ToString();
+                CarregarMunicipios();
+                CidadesDropDownList.SelectedItem.Text = DrContato["Cidade"].ToString();
                 emailTextBox.Text = DrContato["Email"].ToString();
                 if (!string.IsNullOrEmpty(DrContato["Telefone_Alternativo_1"].ToString()))
                 {
@@ -261,8 +284,8 @@ namespace Sistema_Life_Planner_Agenda.Contato
             else
                 dados.ID_Status_Contato = 7; // 7 - Nenhum
 
-            if (!string.IsNullOrEmpty(cidadeTextBox.Text))
-                dados.Cidade = cidadeTextBox.Text;
+            if (!string.IsNullOrEmpty(CidadesDropDownList.SelectedItem.Text))
+                dados.Cidade = CidadesDropDownList.SelectedItem.Text;
             else
                 dados.Cidade = string.Empty;
 
@@ -317,7 +340,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
         {
             DataCadastroLabel.Text =
                 nomeCompletoTextBox.Text =
-                cidadeTextBox.Text =
+
                 emailTextBox.Text =
                 DDDtelefoneAlternativo1TextBox.Text =
                 telefoneAlternativo1TextBox.Text =
@@ -336,7 +359,8 @@ namespace Sistema_Life_Planner_Agenda.Contato
             StatusDropDownList.SelectedIndex =
             EstadoCivilDropDownList.SelectedIndex =
             TipoDropDownList.SelectedIndex =
-            UFDropDownList.SelectedIndex = 0;
+            UFDropDownList.SelectedIndex =
+            CidadesDropDownList.SelectedIndex = 0;
 
             CarregarRecomendantes();
         }
@@ -351,6 +375,11 @@ namespace Sistema_Life_Planner_Agenda.Contato
             if (idContato.Equals(idNovoRecomendante))
                 return false;
             return true;
+        }
+
+        protected void UFDropDownList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregarMunicipios();
         }
     }
 }

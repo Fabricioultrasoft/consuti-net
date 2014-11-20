@@ -120,6 +120,7 @@
       <DependentUpon>PesquisarAgenda.aspx</DependentUpon>
     </Compile>
     <Compile Include="BD\BancoBase.cs" />
+    <Compile Include="BD\CidadesBD.cs" />
     <Compile Include="BD\ContatoBD.cs" />
     <Compile Include="BD\ContatosSitPlanBD.cs" />
     <Compile Include="BD\RecomendanteContatoBD.cs" />
