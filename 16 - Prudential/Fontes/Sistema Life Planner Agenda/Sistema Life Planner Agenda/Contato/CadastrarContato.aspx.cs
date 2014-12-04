@@ -19,10 +19,18 @@ namespace Sistema_Life_Planner_Agenda.Contato
             if (!this.IsPostBack)
             {
                 ValidaUserLogado();
-                if (!string.IsNullOrEmpty(Request.QueryString["idContato"]))
+                if (!string.IsNullOrEmpty(Request.QueryString["idContato"]) &&
+                    string.IsNullOrEmpty(Request.QueryString["Mode"]))
                 {
                     CarregaDadosCadastrais(Convert.ToInt32(Request.QueryString["idContato"]));
                 }
+                else if (!string.IsNullOrEmpty(Request.QueryString["idContato"]) &&
+                    !string.IsNullOrEmpty(Request.QueryString["Mode"]))
+                {
+                    CarregaDadosCadastrais(Convert.ToInt32(Request.QueryString["idContato"]));
+                    BloqueiaCampos();
+                }
+
                 else
                 {
                     try
@@ -380,6 +388,43 @@ namespace Sistema_Life_Planner_Agenda.Contato
         protected void UFDropDownList_SelectedIndexChanged(object sender, EventArgs e)
         {
             CarregarMunicipios();
+        }
+
+        private void BloqueiaCampos()
+        {
+            DataContatoTextBox.Enabled =
+                DDDtelefoneAlternativo1TextBox.Enabled =
+                DDDtelefoneAlternativo2TextBox.Enabled =
+                DDDTelefoneTextBox.Enabled =
+                emailTextBox.Enabled =
+                filhosTextBox.Enabled =
+                HoraContatoTextBox.Enabled =
+                idadeTextBox.Enabled =
+                nomeCompletoTextBox.Enabled =
+                ObservacaoTextBox.Enabled =
+                outrasInformacoesTextBox.Enabled =
+                profissaoTextBox.Enabled =
+                telefoneAlternativo1TextBox.Enabled =
+                telefoneAlternativo2TextBox.Enabled =
+                TelefoneTextBox.Enabled =
+                CidadesDropDownList.Enabled =
+                EstadoCivilDropDownList.Enabled =
+                RecomendanteDropDownList.Enabled =
+                StatusDropDownList.Enabled =
+                TipoDropDownList.Enabled =
+                UFDropDownList.Enabled =
+                SexoRadioButtonList.Enabled =
+                incluirContatoButton.Visible =
+                salvarButton.Visible =
+                cancelarButton.Visible =
+                pesquisarButton.Visible = false;
+
+            VoltarButton.Visible = true;
+        }
+
+        protected void VoltarButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/SITPLAN/ExecutarSITPLAN.aspx?idSitPlan=" + Request.QueryString["idSitPlan"]);
         }
     }
 }

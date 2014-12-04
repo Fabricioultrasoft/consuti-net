@@ -334,6 +334,9 @@
                         TabIndex="29" OnClick="cancelarButton_Click" OnClientClick="return confirm('Confirma cancelamento? Os dados não salvos serão perdidos.');" />
                     <asp:Button ID="salvarButton" runat="server" Text="Salvar" CssClass="botaoSalvar"
                         TabIndex="30" OnClick="salvarButton_Click" />
+                        <asp:Button ID="VoltarButton" runat="server" Text="Voltar" CssClass="botaoVoltar"
+                        TabIndex="39" CausesValidation="False" Visible="false" 
+                        onclick="VoltarButton_Click" />
                 </div>
             </asp:Panel>
         </div>

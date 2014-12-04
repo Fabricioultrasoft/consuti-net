@@ -234,6 +234,27 @@ namespace Sistema_Life_Planner_Agenda.BD
         }
 
         /// <summary>
+        /// Atualiza o Status do Contato
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <param name="ID_Status_Contato"></param>
+        public void Atualizar(
+            int ID,
+            int ID_Status_Contato)
+        {
+            comando.CommandText = @"UPDATE contato 
+                                    SET ID_Status_Contato = @ID_Status_Contato
+                                    WHERE ID = @id;";
+            comando.Parameters.AddWithValue("@ID_Status_Contato", ID_Status_Contato);
+            comando.Parameters.AddWithValue("@id", ID);
+
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.ExecuteNonQuery();
+
+            this.Dispose();
+        }
+
+        /// <summary>
         /// Lista os contatos cadastrados e seus ID's para um determinado usuário
         /// </summary>
         /// <returns></returns>
@@ -543,7 +564,7 @@ namespace Sistema_Life_Planner_Agenda.BD
                                     FROM contato
                                     WHERE ID = @idContato;";
             comando.Parameters.AddWithValue("@idContato", idContato);
-            
+
             object resultadoBusca = comando.ExecuteScalar();
 
             this.Dispose();
