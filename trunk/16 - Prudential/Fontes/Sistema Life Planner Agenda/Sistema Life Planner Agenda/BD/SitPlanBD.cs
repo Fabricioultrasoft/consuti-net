@@ -132,5 +132,33 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             this.Dispose();
         }
+
+        /// <summary>
+        /// Obtem os contatos do SITPLAN
+        /// </summary>
+        /// <param name="idSitPlan"></param>
+        /// <returns></returns>
+        public DataSet ContatosSITPLAN(int idSitPlan)
+        {
+            comando.CommandText = @"select c.Nome, c.ID, SUBSTRING(Telefone_Principal, 1,2) as DDD_TELEFONE_CONTATO, 
+                                    SUBSTRING(Telefone_Principal, 3,10) as TELEFONE_CONTATO, sc.status as STATUS_PRE_TA
+                                    from contato c
+                                    join contatos_sit_plan cs on cs.ID_Contato = c.ID 
+                                    join sit_plan sp ON cs.ID_SIT_PLAN = sp.ID
+                                    join status_contato sc ON cs.ID_Status_Pre_TA = sc.ID  
+                                    where sp.ID = @idSitPlan
+                                    order by c.Nome;";
+            comando.Parameters.AddWithValue("@idSitPlan", idSitPlan);
+            comando.CommandType = CommandType.Text;
+
+            MySqlDataAdapter adap = new MySqlDataAdapter(comando);
+
+            DataSet retorno = new DataSet();
+            adap.Fill(retorno);
+
+            this.Dispose();
+
+            return retorno;
+        }
     }
 }

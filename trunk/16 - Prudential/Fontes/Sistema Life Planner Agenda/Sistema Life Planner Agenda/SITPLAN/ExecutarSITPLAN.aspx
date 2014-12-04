@@ -21,48 +21,55 @@
                     <table id="ExecutarTasTable" class="CadastroContatoLote" style="text-align: center;">
                         <tr style="font-weight: bold; background-color: #CCCCCC;">
                             <td style="width: 30px">
-                                TA
+                                ID
                             </td>
                             <td style="width: 300px">
                                 Contato
                             </td>
-                            <td style="width: 120px">
+                            <td style="width: 130px">
                                 Tefone Principal
                             </td>
-                            <td style="width: 100px">
+                            <td style="width: 120px">
                                 Status Atual
                             </td>
-                            <td style="width: 120px">
+                            <td style="width: 140px">
                                 Novo Status
                             </td>
-                            <td style="width: 100px">
-                                Agendamento
+                            <td style="width: 60px">
+                                Agenda
                             </td>
                         </tr>
                     </table>
-                    <asp:Repeater ID="listaTasRepeater" runat="server">
+                    <asp:Repeater ID="listaTasRepeater" runat="server" OnItemCommand="listaTasRepeater_ItemCommand">
                         <ItemTemplate>
                             <table id="CamposTasTable" class="CadastroContatoLote" style="text-align: center;">
                                 <tr>
                                     <td style="width: 30px">
-                                        <asp:Label ID="ContadorTasLabel" runat="server" Text="1"></asp:Label>
+                                        <asp:Label ID="ContadorTasLabel" runat="server" Text='<%# Eval("ID") %>'></asp:Label>
                                     </td>
                                     <td style="width: 300px">
-                                        <asp:TextBox ID="NomeContatoTextBox" runat="server" Enabled="false" Width="250px"></asp:TextBox>&nbsp<asp:ImageButton
-                                            ID="PesquisarContatoImageButton" runat="server" ImageUrl="~/Estilos/Imgs/search.png" ImageAlign="Top" />
+                                        <asp:TextBox ID="NomeContatoTextBox" runat="server" Enabled="false" Width="250px"
+                                            Text='<%# Eval("NOME") %>'></asp:TextBox>
+                                        &nbsp<asp:ImageButton ID="PesquisarContatoImageButton" runat="server" ImageUrl="~/Estilos/Imgs/search.png"
+                                            ImageAlign="Top" CommandArgument='<%# Bind("ID") %>' CommandName="DetalhesContato" />
                                     </td>
                                     <td style="width: 120px">
-                                        <asp:TextBox ID="TelefoneTextBox" runat="server" Width="110px"></asp:TextBox>
+                                        <asp:TextBox ID="DDDTelefoneTextBox" runat="server" Width="20px" Enabled="false"
+                                            Text='<%# Eval("DDD_TELEFONE_CONTATO") %>'></asp:TextBox>
+                                        <asp:TextBox ID="TelefoneTextBox" runat="server" Width="70px" Enabled="false" Text='<%# Eval("TELEFONE_CONTATO") %>'></asp:TextBox>
                                     </td>
-                                    <td style="width: 100px">
-                                        <asp:TextBox ID="StatusAtualTextBox" runat="server" Width="90px"></asp:TextBox>
+                                    <td style="width: 130px">
+                                        <asp:TextBox ID="StatusAtualTextBox" runat="server" Width="100px" Enabled="false"
+                                            Text='<%# Eval("STATUS_PRE_TA") %>'></asp:TextBox>
                                     </td>
-                                    <td style="width: 120px">
-                                        <asp:DropDownList ID="StatusDropDownList" runat="server" Width="110px" >
-                                </asp:DropDownList>
+                                    <td style="width: 140px">
+                                        <asp:DropDownList ID="StatusDropDownList" runat="server" Width="120px" OnSelectedIndexChanged="StatusDropDownList_SelectedIndexChanged"
+                                            AutoPostBack="true"  >
+                                        </asp:DropDownList>
                                     </td>
-                                    <td style="width: 100px">
-                                        <asp:ImageButton ID="AgendamentoImageButton" runat="server" ImageUrl="~/Estilos/Imgs/Calendar.png"/>
+                                    <td style="width: 60px">
+                                        <asp:ImageButton ID="AgendamentoImageButton" runat="server" ImageUrl="~/Estilos/Imgs/Calendar.png"
+                                            CommandArgument='<%# Bind("ID")%>' CommandName="AgendamentoContato" />
                                     </td>
                                 </tr>
                             </table>
