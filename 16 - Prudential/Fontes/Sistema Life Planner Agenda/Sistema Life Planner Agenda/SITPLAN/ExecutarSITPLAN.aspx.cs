@@ -17,7 +17,10 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
             if (!IsPostBack)
             {
                 ValidaUserLogado();
-                CarregarContatos(Convert.ToInt32(Request.QueryString["idSitPlan"]));
+                if (!string.IsNullOrEmpty(Request.QueryString["idSitPlan"]))
+                {
+                    CarregarContatos(Convert.ToInt32(Request.QueryString["idSitPlan"]));
+                }
             }
         }
 
