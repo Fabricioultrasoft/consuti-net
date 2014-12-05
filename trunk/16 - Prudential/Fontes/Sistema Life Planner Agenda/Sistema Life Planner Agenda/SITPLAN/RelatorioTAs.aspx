@@ -112,6 +112,14 @@
                             <td>
                                 <asp:Label ID="LigacaoFuturaLabel" runat="server" Text=""></asp:Label>
                             </td>
+                            </tr>
+                            <tr>
+                                <td class="alinhaDireita">
+                                    Nenhum Status:
+                                </td>
+                                <td>
+                                    <asp:Label ID="NenhumLabel" runat="server" Text=""></asp:Label>
+                                </td>
                         </tr>
                     </table>
                 </div>

@@ -160,5 +160,73 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             return retorno;
         }
+
+        /// <summary>
+        /// Obtem e retorna os dados para o relatório de resultado do SITPLAN
+        /// </summary>
+        /// <param name="idSitPlan">id do sitplan a ser consultado</param>
+        /// <returns></returns>
+        public DataSet RelatorioTA(int idSitPlan)
+        {
+            comando.CommandText = @"select sp.Inicio, 
+                                    (select count(*)
+                                      from contatos_sit_plan
+                                      where contatos_sit_plan.ID_SIT_PLAN = sp.ID) as total_ligacoes, 
+                                    (select count(sc.Status)
+                                      from contatos_sit_plan cs
+                                      join contato c ON cs.ID_Contato = c.ID
+                                      join status_contato sc ON c.ID_Status_Contato = sc.ID
+                                      where cs.ID_SIT_PLAN = sp.ID
+                                      and sc.Status = 'Não Atendeu') as total_nao_atendeu, 
+                                    (select count(sc.Status)
+                                      from contatos_sit_plan cs
+                                      join contato c ON cs.ID_Contato = c.ID
+                                      join status_contato sc ON c.ID_Status_Contato = sc.ID
+                                      where cs.ID_SIT_PLAN = sp.ID
+                                      and sc.Status = 'Já é Cliente') as total_ja_e_cliente, 
+                                    (select count(sc.Status)
+                                      from contatos_sit_plan cs
+                                      join contato c ON cs.ID_Contato = c.ID
+                                      join status_contato sc ON c.ID_Status_Contato = sc.ID
+                                      where cs.ID_SIT_PLAN = sp.ID
+                                      and sc.Status = 'Não Quer') as total_nao_quer, 
+                                    (select count(sc.Status)
+                                      from contatos_sit_plan cs
+                                      join contato c ON cs.ID_Contato = c.ID
+                                      join status_contato sc ON c.ID_Status_Contato = sc.ID
+                                      where cs.ID_SIT_PLAN = sp.ID
+                                      and sc.Status = 'Agendou OI') as total_agendou_oi, 
+                                    (select count(sc.Status)
+                                      from contatos_sit_plan cs
+                                      join contato c ON cs.ID_Contato = c.ID
+                                      join status_contato sc ON c.ID_Status_Contato = sc.ID
+                                      where cs.ID_SIT_PLAN = sp.ID
+                                      and sc.Status = 'Agendou C') as total_agendou_c, 
+                                    (select count(sc.Status)
+                                      from contatos_sit_plan cs
+                                      join contato c ON cs.ID_Contato = c.ID
+                                      join status_contato sc ON c.ID_Status_Contato = sc.ID
+                                      where cs.ID_SIT_PLAN = sp.ID
+                                      and sc.Status = 'Ligação Futura') as total_ligacao_futura, 
+                                    (select count(sc.Status)
+                                      from contatos_sit_plan cs
+                                      join contato c ON cs.ID_Contato = c.ID
+                                      join status_contato sc ON c.ID_Status_Contato = sc.ID
+                                      where cs.ID_SIT_PLAN = sp.ID
+                                      and sc.Status = 'Nenhum') as total_nenhum
+                                    from sit_plan sp
+                                    where sp.ID = @idSitPlan;";
+            comando.Parameters.AddWithValue("@idSitPlan", idSitPlan);
+            comando.CommandType = CommandType.Text;
+
+            MySqlDataAdapter adap = new MySqlDataAdapter(comando);
+
+            DataSet retorno = new DataSet();
+            adap.Fill(retorno);
+
+            this.Dispose();
+
+            return retorno;
+        }
     }
 }
