@@ -108,7 +108,7 @@
                         OnRowCommand="ContatosGridView_Click" EmptyDataText="Nenhum resultado encontrado."
                         AllowPaging="True" AllowSorting="True" PageSize="100" BorderColor="#003366" BorderStyle="Solid"
                         BorderWidth="1px" CellSpacing="2" OnPageIndexChanging="ContatosGridView_PageIndexChanging"
-                        OnSorting="ContatosGridView_Sorting">
+                        OnSorting="ContatosGridView_Sorting" RowStyle-Height="40px">
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <Columns>
                         

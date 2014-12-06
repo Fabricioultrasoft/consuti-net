@@ -99,7 +99,7 @@
                         </tr>
                         <tr>
                             <td class="alinhaDireita">
-                                Agendou C:
+                                Agendou P/C:
                             </td>
                             <td>
                                 <asp:Label ID="AgendouCLabel" runat="server" Text=""></asp:Label>
@@ -119,6 +119,14 @@
                                 </td>
                                 <td>
                                     <asp:Label ID="NenhumLabel" runat="server" Text=""></asp:Label>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td class="alinhaDireita">
+                                    Meu Cliente:
+                                </td>
+                                <td>
+                                    <asp:Label ID="MeuClienteLabel" runat="server" Text=""></asp:Label>
                                 </td>
                         </tr>
                     </table>

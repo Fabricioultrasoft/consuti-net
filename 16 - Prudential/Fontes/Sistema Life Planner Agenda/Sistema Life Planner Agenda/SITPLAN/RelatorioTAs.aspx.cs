@@ -52,6 +52,7 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
             AgendouCLabel.Text = dados["total_agendou_c"].ToString();
             LigacaoFuturaLabel.Text = dados["total_ligacao_futura"].ToString();
             NenhumLabel.Text = dados["total_nenhum"].ToString();
+            MeuClienteLabel.Text = dados["meu_cliente"].ToString();
         }
     }
 }

@@ -43,7 +43,7 @@
                         OnRowCommand="UsuariosAutorizadosGridView_Click" EmptyDataText="Não Existem usuários autorizados no momento."
                         AllowPaging="True" AllowSorting="True" PageSize="10" BorderColor="#003366" BorderStyle="Solid"
                         BorderWidth="1px" CellSpacing="2" OnPageIndexChanging="UsuariosAutorizadosGridView_PageIndexChanging"
-                        OnSorting="UsuariosAutorizadosGridView_Sorting" >
+                        OnSorting="UsuariosAutorizadosGridView_Sorting" RowStyle-Height="40px">
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <Columns>
                             <asp:TemplateField HeaderText="#" >
