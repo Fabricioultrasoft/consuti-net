@@ -201,7 +201,7 @@ namespace Sistema_Life_Planner_Agenda.BD
                                       join contato c ON cs.ID_Contato = c.ID
                                       join status_contato sc ON c.ID_Status_Contato = sc.ID
                                       where cs.ID_SIT_PLAN = sp.ID
-                                      and sc.Status = 'Agendou C') as total_agendou_c, 
+                                      and sc.Status = 'Agendou P/C') as total_agendou_c, 
                                     (select count(sc.Status)
                                       from contatos_sit_plan cs
                                       join contato c ON cs.ID_Contato = c.ID
@@ -213,7 +213,13 @@ namespace Sistema_Life_Planner_Agenda.BD
                                       join contato c ON cs.ID_Contato = c.ID
                                       join status_contato sc ON c.ID_Status_Contato = sc.ID
                                       where cs.ID_SIT_PLAN = sp.ID
-                                      and sc.Status = 'Nenhum') as total_nenhum
+                                      and sc.Status = 'Nenhum') as total_nenhum, 
+                                    (select count(sc.Status)
+                                      from contatos_sit_plan cs
+                                      join contato c ON cs.ID_Contato = c.ID
+                                      join status_contato sc ON c.ID_Status_Contato = sc.ID
+                                      where cs.ID_SIT_PLAN = sp.ID
+                                      and sc.Status = 'Meu Cliente') as meu_cliente
                                     from sit_plan sp
                                     where sp.ID = @idSitPlan;";
             comando.Parameters.AddWithValue("@idSitPlan", idSitPlan);

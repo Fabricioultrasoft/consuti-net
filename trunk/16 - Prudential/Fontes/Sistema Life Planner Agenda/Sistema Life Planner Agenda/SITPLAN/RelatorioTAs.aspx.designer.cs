@@ -121,6 +121,15 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN {
         protected global::System.Web.UI.WebControls.Label NenhumLabel;
         
         /// <summary>
+        /// MeuClienteLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MeuClienteLabel;
+        
+        /// <summary>
         /// ImprimirButton control.
         /// </summary>
         /// <remarks>

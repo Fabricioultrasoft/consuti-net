@@ -66,7 +66,7 @@
                 <fieldset>
                     <legend>Resultado</legend>
                     <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None"
-                        Width="100%" EmptyDataText="Nenhum compromisso para os próximos 7 dias...">
+                        Width="100%" EmptyDataText="Nenhum compromisso para os próximos 7 dias..." RowStyle-Height="40px">
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <EditRowStyle BackColor="#999999" />
                         <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

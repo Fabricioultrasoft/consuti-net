@@ -69,7 +69,7 @@
                         OnRowCommand="SITPLANGridView_Click" EmptyDataText="Nenhum resultado encontrado."
                         AllowPaging="True" AllowSorting="True" PageSize="10" BorderColor="#003366" BorderStyle="Solid"
                         BorderWidth="1px" CellSpacing="2" OnPageIndexChanging="SITPLANGridView_PageIndexChanging"
-                        OnSorting="SITPLANGridView_Sorting">
+                        OnSorting="SITPLANGridView_Sorting" RowStyle-Height="40px">
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <Columns>
                             <asp:TemplateField HeaderText="#">
