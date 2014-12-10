@@ -19,9 +19,16 @@ namespace Sistema_Life_Planner_Agenda.BD
         public DataSet Listar(
            DateTime dataInicioDe,
            DateTime dataInicioAte,
-           int idUsuario)
+           int idUsuario,
+            string Nome)
         {
-            comando.CommandText = @"SELECT s.ID, s.ID_Usuario, s.Inicio, s.Status, 
+            string filtrarNome = string.Empty; ;
+            if (!string.IsNullOrEmpty(Nome))
+            {
+                filtrarNome = "AND s.Nome LIKE '%" + Nome + "%' ";
+            }
+            
+            comando.CommandText = @"SELECT s.ID, s.ID_Usuario, s.Inicio, s.Status, s.Nome, 
                                         (SELECT COUNT(ID) 
                                             FROM contatos_sit_plan
                                             WHERE contatos_sit_plan.ID_SIT_PLAN = s.ID) as TotalContatos 
@@ -29,8 +36,9 @@ namespace Sistema_Life_Planner_Agenda.BD
                                     JOIN contatos_sit_plan c ON c.ID_SIT_PLAN = s.ID
                                     WHERE s.ID_Usuario = @idUsuario
                                     AND s.Inicio >= @dataCadastroDe
-                                    AND s.Inicio <= @dataCadastroAte 
-                                    GROUP BY c.ID_SIT_PLAN
+                                    AND s.Inicio <= @dataCadastroAte " +
+                                    filtrarNome +
+                                    @"GROUP BY c.ID_SIT_PLAN
                                     ORDER BY s.Inicio DESC";
             comando.Parameters.AddWithValue("@idUsuario", idUsuario);
             comando.Parameters.AddWithValue("@dataCadastroDe", dataInicioDe);
@@ -57,15 +65,17 @@ namespace Sistema_Life_Planner_Agenda.BD
             string ID_Usuario,
             DateTime Inicio,
             string Status, 
-            string Chave)
+            string Chave,
+            string Nome)
         {
             comando.CommandText = @"INSERT INTO sit_plan
-                                    (ID_Usuario, Inicio, Status, Chave) 
-                                    VALUES (@ID_Usuario, @Inicio, @Status, @Chave);";
+                                    (ID_Usuario, Inicio, Status, Chave, Nome) 
+                                    VALUES (@ID_Usuario, @Inicio, @Status, @Chave, @Nome);";
             comando.Parameters.AddWithValue("@ID_Usuario", ID_Usuario);
             comando.Parameters.AddWithValue("@Inicio", Inicio);
             comando.Parameters.AddWithValue("@Status", Status);
             comando.Parameters.AddWithValue("@Chave", Chave);
+            comando.Parameters.AddWithValue("@Nome", Nome);
 
             comando.CommandType = System.Data.CommandType.Text;
             comando.ExecuteNonQuery();
@@ -140,7 +150,7 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// <returns></returns>
         public DataSet ContatosSITPLAN(int idSitPlan)
         {
-            comando.CommandText = @"select c.Nome, c.ID, SUBSTRING(Telefone_Principal, 1,2) as DDD_TELEFONE_CONTATO, 
+            comando.CommandText = @"select c.Nome, c.ID, SUBSTRING(Telefone_Principal, 1,2) as DDD_TELEFONE_CONTATO, sp.Nome as NomeSITPLAN, 
                                     SUBSTRING(Telefone_Principal, 3,10) as TELEFONE_CONTATO, sc.status as STATUS_PRE_TA
                                     from contato c
                                     join contatos_sit_plan cs on cs.ID_Contato = c.ID 
@@ -168,7 +178,7 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// <returns></returns>
         public DataSet RelatorioTA(int idSitPlan)
         {
-            comando.CommandText = @"select sp.Inicio, 
+            comando.CommandText = @"select sp.Inicio, sp.Nome as NomeSITPLAN, 
                                     (select count(*)
                                       from contatos_sit_plan
                                       where contatos_sit_plan.ID_SIT_PLAN = sp.ID) as total_ligacoes, 

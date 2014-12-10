@@ -16,6 +16,11 @@
         </div>
         <div class="conteudoTela">
             <asp:Panel ID="cadastroContatoLotePanel" runat="server">
+                <div class="TituloSITPLAN">
+                    <asp:Label ID="NomeSITPLANLabel" runat="server" Text=""></asp:Label>
+                    <br />
+                    <br />
+                </div>
                 <fieldset>
                     <legend>Lista de TA's do SIT PLAN</legend>
                     <table id="ExecutarTasTable" class="CadastroContatoLote" style="text-align: center;">
@@ -64,7 +69,7 @@
                                     </td>
                                     <td style="width: 140px">
                                         <asp:DropDownList ID="StatusDropDownList" runat="server" Width="120px" OnSelectedIndexChanged="StatusDropDownList_SelectedIndexChanged"
-                                            AutoPostBack="true"  >
+                                            AutoPostBack="true">
                                         </asp:DropDownList>
                                     </td>
                                     <td style="width: 60px">

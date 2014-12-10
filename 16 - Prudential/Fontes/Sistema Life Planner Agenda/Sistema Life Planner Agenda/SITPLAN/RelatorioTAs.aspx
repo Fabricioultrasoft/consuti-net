@@ -56,6 +56,11 @@
                 <hr />
                 <br />
                 <div id="resultadoRelatorioTAs">
+                <div class="TituloSITPLAN">
+                    <asp:Label ID="NomeSITPLANLabel" runat="server" Text=""></asp:Label>
+                    <br />
+                    <br />
+                </div>
                     <table class="Formulario">
                         <tr style="font-size: 15pt; text-decoration: underline">
                             <td class="alinhaDireita" style="width: 200px">
@@ -65,7 +70,7 @@
                                 <asp:Label ID="LigacoesRealizadasLabel" runat="server" Text=""></asp:Label>
                             </td>
                         </tr>
-                        <tr style="font-size: 15pt; text-decoration: underline">
+                        <tr style="font-size: 15pt;">
                             <td class="alinhaDireita" style="width: 300px">
                                 Contatos Atualizados:
                             </td>

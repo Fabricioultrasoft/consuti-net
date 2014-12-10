@@ -284,7 +284,8 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
                 new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString()),
                 dataInicio,
                 "Iniciado", 
-                chave.ToString());
+                chave.ToString(), 
+                NomeSitPlanTextBox.Text);
 
             int idSITPLAN = new SitPlanBD().ObterID(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString()),
                 "Iniciado", 
