@@ -1,8 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Interna.Master" AutoEventWireup="true"
     CodeBehind="CadastrarSITPLAN.aspx.cs" Inherits="Sistema_Life_Planner_Agenda.SITPLAN.CadastrarSITPLAN" %>
 
-<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
-
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .style1
@@ -32,8 +31,7 @@
                                 Recomendante:
                             </td>
                             <td>
-                                <asp:DropDownList ID="RecomendanteDropDownList" runat="server" Width="400px" 
-                                    TabIndex="1">
+                                <asp:DropDownList ID="RecomendanteDropDownList" runat="server" Width="400px" TabIndex="1">
                                 </asp:DropDownList>
                             </td>
                         </tr>
@@ -42,14 +40,12 @@
                                 Status:
                             </td>
                             <td>
-                                <asp:DropDownList ID="StatusDropDownList" runat="server" TabIndex="2" 
-                                    Width="200px" >
+                                <asp:DropDownList ID="StatusDropDownList" runat="server" TabIndex="2" Width="200px">
                                 </asp:DropDownList>
                             </td>
                         </tr>
                     </table>
                     <table class="Formulario">
-                        
                         <tr>
                             <td class="alinhaDireita" style="width: 140px">
                                 Data Cadastro De:
@@ -57,9 +53,9 @@
                             <td class="style1">
                                 <div style="width: 110px;">
                                     <asp:TextBox ID="PeriodoDeTextBox" runat="server" Width="70px" TabIndex="3" MaxLength="10"></asp:TextBox>
-                                    <cc1:CalendarExtender ID="PeriodoDeTextBox_CalendarExtender" runat="server" 
-                                        Enabled="True" TargetControlID="PeriodoDeTextBox" PopupButtonID="deImageButton"
-                                        TodaysDateFormat=" d MMMM yyyy" Format="dd/MM/yyyy">
+                                    <cc1:CalendarExtender ID="PeriodoDeTextBox_CalendarExtender" runat="server" Enabled="True"
+                                        TargetControlID="PeriodoDeTextBox" PopupButtonID="deImageButton" TodaysDateFormat=" d MMMM yyyy"
+                                        Format="dd/MM/yyyy">
                                     </cc1:CalendarExtender>
                                     <asp:ImageButton ID="deImageButton" runat="server" CausesValidation="False" ImageAlign="Middle"
                                         ImageUrl="~/Estilos/Imgs/Calendar.png" ToolTip="Selecione a data no calendário"
@@ -72,9 +68,9 @@
                             <td>
                                 <div style="width: 110px;">
                                     <asp:TextBox ID="PeriodoAteTextBox" runat="server" Width="70px" TabIndex="4" MaxLength="10"></asp:TextBox>
-                                    <cc1:CalendarExtender ID="PeriodoAteTextBox_CalendarExtender" runat="server" 
-                                       Enabled="True" TargetControlID="PeriodoAteTextBox" PopupButtonID="AteImageButton"
-                                        TodaysDateFormat=" d MMMM yyyy" Format="dd/MM/yyyy">
+                                    <cc1:CalendarExtender ID="PeriodoAteTextBox_CalendarExtender" runat="server" Enabled="True"
+                                        TargetControlID="PeriodoAteTextBox" PopupButtonID="AteImageButton" TodaysDateFormat=" d MMMM yyyy"
+                                        Format="dd/MM/yyyy">
                                     </cc1:CalendarExtender>
                                     <asp:ImageButton ID="AteImageButton" runat="server" CausesValidation="False" ImageAlign="Middle"
                                         ImageUrl="~/Estilos/Imgs/Calendar.png" ToolTip="Selecione a data no calendário"
@@ -87,9 +83,9 @@
                             </td>
                             <td class="style1">
                                 <asp:DropDownList ID="SexoDropDownList" runat="server">
-                                <asp:ListItem Text="< Todos >" Value=""></asp:ListItem>
-                                <asp:ListItem Text="Masculino" Value="M"></asp:ListItem>
-                                <asp:ListItem Text="Feminino" Value="F"></asp:ListItem>
+                                    <asp:ListItem Text="< Todos >" Value=""></asp:ListItem>
+                                    <asp:ListItem Text="Masculino" Value="M"></asp:ListItem>
+                                    <asp:ListItem Text="Feminino" Value="F"></asp:ListItem>
                                 </asp:DropDownList>
                             </td>
                         </tr>
@@ -111,9 +107,8 @@
                         OnSorting="ContatosGridView_Sorting" RowStyle-Height="40px">
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <Columns>
-                        
                             <asp:TemplateField HeaderText="#">
-                                <HeaderStyle HorizontalAlign="Center" Width="35px" />
+                                <HeaderStyle HorizontalAlign="Center" />
                                 <ItemStyle HorizontalAlign="Center" Font-Bold="true" />
                                 <ItemTemplate>
                                     <%# Container.DataItemIndex + 1 %>
@@ -126,16 +121,16 @@
                                 <ItemStyle CssClass="espacoTabelas" />
                             </asp:BoundField>
                             <asp:BoundField HeaderText="Status" DataField="Status" SortExpression="Status">
-                                <ItemStyle CssClass="espacoTabelas" />
+                                <ItemStyle CssClass="espacoTabelas" Width="95px" />
                             </asp:BoundField>
                             <asp:BoundField HeaderText="Telefone Princ." DataField="TelefonePrincipal" SortExpression="TelefonePrincipal">
-                                <ItemStyle CssClass="espacoTabelas" />
+                                <ItemStyle CssClass="espacoTabelas" Width="110px" />
                             </asp:BoundField>
                             <asp:BoundField HeaderText="Data do Cadastro" DataField="DataCadastro" SortExpression="DataCadastro">
-                                <ItemStyle CssClass="espacoTabelas" />
+                                <ItemStyle CssClass="espacoTabelas" Width="80px" />
                             </asp:BoundField>
                             <asp:BoundField HeaderText="Sexo" DataField="Sexo" SortExpression="Sexo">
-                                <ItemStyle CssClass="espacoTabelas" HorizontalAlign="Center" />
+                                <ItemStyle CssClass="espacoTabelas" HorizontalAlign="Center" Width="50px" />
                             </asp:BoundField>
                             <asp:TemplateField HeaderText="Detalhe">
                                 <ItemTemplate>
@@ -143,13 +138,13 @@
                                         CommandName="Visualizar" ImageUrl="~/Estilos/Imgs/search.png"></asp:ImageButton>
                                 </ItemTemplate>
                                 <ItemStyle Width="60px" HorizontalAlign="Center" />
-                            </asp:TemplateField> 
-                            <asp:TemplateField HeaderText="" >
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="">
                                 <ItemTemplate>
                                     <asp:CheckBox ID="IncluirContatoCheckBox" runat="server" />
-                                </ItemTemplate> 
-                                <ItemStyle Width="30px" HorizontalAlign="Center" />                               
-                            </asp:TemplateField>                           
+                                </ItemTemplate>
+                                <ItemStyle Width="30px" HorizontalAlign="Center" />
+                            </asp:TemplateField>
                         </Columns>
                         <EditRowStyle BackColor="#999999" />
                         <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

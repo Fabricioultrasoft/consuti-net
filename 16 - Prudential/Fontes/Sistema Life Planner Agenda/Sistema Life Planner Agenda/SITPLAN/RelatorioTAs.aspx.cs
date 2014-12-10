@@ -45,6 +45,7 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
             DataHoraInicioLabel.Text = dados["Inicio"].ToString();
             DataHoraTerminoLabel.Text = DateTime.Now.ToString();
             LigacoesRealizadasLabel.Text = dados["total_ligacoes"].ToString();
+            ContatosAtualizadosLabel.Text = dados["total_atualizado"].ToString();
             NaoAtendeuLabel.Text = dados["total_nao_atendeu"].ToString();
             JaEhClienteLabel.Text = dados["total_ja_e_cliente"].ToString();
             NaoQuerLabel.Text = dados["total_nao_quer"].ToString();

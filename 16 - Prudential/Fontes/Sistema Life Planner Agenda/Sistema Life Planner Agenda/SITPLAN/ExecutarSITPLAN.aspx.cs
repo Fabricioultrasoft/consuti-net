@@ -101,7 +101,7 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
             new ContatoBD().Atualizar(IdDoContato, novoStatus);
 
             //Atualiza o pré-status
-            new ContatosSitPlanBD().Atualizar(IdDoContato, novoStatus, Convert.ToInt32(Request.QueryString["idSitPlan"]));
+            //new ContatosSitPlanBD().Atualizar(IdDoContato, novoStatus, Convert.ToInt32(Request.QueryString["idSitPlan"]));
 
             CarregarContatos(Convert.ToInt32(Request.QueryString["idSitPlan"]));
         }
