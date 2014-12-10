@@ -85,7 +85,7 @@
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <Columns>
                             <asp:TemplateField HeaderText="#">
-                                <HeaderStyle HorizontalAlign="Center" />
+                                <HeaderStyle HorizontalAlign="Center" Width="35px" />
                                 <ItemStyle HorizontalAlign="Center" Font-Bold="true" />
                                 <ItemTemplate>
                                     <%# Container.DataItemIndex + 1 %>
