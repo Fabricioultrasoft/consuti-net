@@ -57,6 +57,8 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
             listaTasRepeater.DataSource = dsContatos;
             listaTasRepeater.DataBind();
 
+            NomeSITPLANLabel.Text = dsContatos.Tables[0].Rows[0]["NomeSITPLAN"].ToString();
+
             List<string> listaIds = new List<string>();
             foreach (DataRow item in dsContatos.Tables[0].Rows)
             {

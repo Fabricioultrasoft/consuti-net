@@ -101,7 +101,8 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
             DataSet ds = new SitPlanBD().Listar(
                 Convert.ToDateTime(dataDe),
                 Convert.ToDateTime(dataAte),
-                Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())));
+                Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())),
+                NomeSitPlanTextBox.Text);
 
             if (ds.Tables[0].Rows.Count > 0)
             {

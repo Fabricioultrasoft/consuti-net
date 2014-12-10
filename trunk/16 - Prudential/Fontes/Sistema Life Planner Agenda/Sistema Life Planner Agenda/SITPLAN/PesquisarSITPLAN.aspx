@@ -1,8 +1,7 @@
 ﻿<%@ Page Title="Pesquisar SIT PLAN - SISLPA" Language="C#" MasterPageFile="~/Interna.Master"
     AutoEventWireup="true" CodeBehind="PesquisarSITPLAN.aspx.cs" Inherits="Sistema_Life_Planner_Agenda.SITPLAN.PesquisarSITPLAN" %>
 
-<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
-
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MenuContentPlaceHolder" runat="server">
@@ -12,7 +11,7 @@
     <li class="selected"><a href="PesquisarSITPLAN.aspx">SIT PLAN</a></li>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<div>
+    <div>
         <div class="tituloTela">
             PESQUISAR SIT PLAN
         </div>
@@ -23,29 +22,39 @@
                     <table class="Formulario">
                         <tr>
                             <td class="alinhaDireita" style="width: 90px">
+                                Nome:
+                            </td>
+                            <td>
+                                <asp:TextBox ID="NomeSitPlanTextBox" runat="server" MaxLength="100" Width="500px"></asp:TextBox>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="Formulario">
+                        <tr>
+                            <td class="alinhaDireita" style="width: 90px">
                                 Período De:
                             </td>
                             <td style="width: 115px">
                                 <div style="width: 110px;">
                                     <asp:TextBox ID="PeriodoDeTextBox" runat="server" Width="70px" TabIndex="1" MaxLength="100"></asp:TextBox>
-                                    <cc1:CalendarExtender ID="PeriodoDeTextBox_CalendarExtender" runat="server" 
-                                        Enabled="True" TargetControlID="PeriodoDeTextBox" PopupButtonID="deImageButton"
-                                        TodaysDateFormat=" d MMMM yyyy" Format="dd/MM/yyyy">
+                                    <cc1:CalendarExtender ID="PeriodoDeTextBox_CalendarExtender" runat="server" Enabled="True"
+                                        TargetControlID="PeriodoDeTextBox" PopupButtonID="deImageButton" TodaysDateFormat=" d MMMM yyyy"
+                                        Format="dd/MM/yyyy">
                                     </cc1:CalendarExtender>
                                     <asp:ImageButton ID="deImageButton" runat="server" CausesValidation="False" ImageAlign="Middle"
                                         ImageUrl="~/Estilos/Imgs/Calendar.png" ToolTip="Selecione a data no calendário"
                                         TabIndex="5" />
                                 </div>
                             </td>
-                            <td class="alinhaDireita" style="width:50px">
+                            <td class="alinhaDireita" style="width: 50px">
                                 Até:
                             </td>
                             <td>
                                 <div style="width: 110px;">
                                     <asp:TextBox ID="PeriodoAteTextBox" runat="server" Width="70px" TabIndex="1" MaxLength="100"></asp:TextBox>
-                                    <cc1:CalendarExtender ID="PeriodoAteTextBox_CalendarExtender" runat="server" 
-                                        Enabled="True" TargetControlID="PeriodoAteTextBox" PopupButtonID="AteImageButton"
-                                        TodaysDateFormat=" d MMMM yyyy" Format="dd/MM/yyyy">
+                                    <cc1:CalendarExtender ID="PeriodoAteTextBox_CalendarExtender" runat="server" Enabled="True"
+                                        TargetControlID="PeriodoAteTextBox" PopupButtonID="AteImageButton" TodaysDateFormat=" d MMMM yyyy"
+                                        Format="dd/MM/yyyy">
                                     </cc1:CalendarExtender>
                                     <asp:ImageButton ID="AteImageButton" runat="server" CausesValidation="False" ImageAlign="Middle"
                                         ImageUrl="~/Estilos/Imgs/Calendar.png" ToolTip="Selecione a data no calendário"
@@ -79,6 +88,9 @@
                                     <%# Container.DataItemIndex + 1 %>
                                 </ItemTemplate>
                             </asp:TemplateField>
+                            <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome">
+                                <ItemStyle CssClass="espacoTabelas" />
+                            </asp:BoundField>
                             <asp:BoundField DataField="Inicio" HeaderText="Iniciado em" SortExpression="Inicio">
                                 <ItemStyle CssClass="espacoTabelas" />
                             </asp:BoundField>
@@ -87,7 +99,6 @@
                             </asp:BoundField>
                             <asp:BoundField HeaderText="Total Contatos" DataField="TotalContatos" SortExpression="TotalContatos">
                                 <ItemStyle CssClass="espacoTabelas" HorizontalAlign="Center" />
-                                
                             </asp:BoundField>
                             <asp:TemplateField HeaderText="Reiniciar">
                                 <ItemTemplate>

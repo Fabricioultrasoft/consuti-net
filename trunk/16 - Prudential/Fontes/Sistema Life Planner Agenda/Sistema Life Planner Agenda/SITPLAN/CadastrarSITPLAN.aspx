@@ -22,6 +22,22 @@
             CADASTRAR SITPLAN
         </div>
         <div class="conteudoTela">
+            <asp:Panel ID="CadastroSitPlanPanel" runat="server">
+                <fieldset>
+                    <legend>Cadastro do SITPLAN</legend>
+                    <table class="Formulario">
+                        <tr>
+                            <td class="alinhaDireita">
+                                Nome do SITPLAN:
+                            </td>
+                            <td>
+                                <asp:TextBox ID="NomeSitPlanTextBox" runat="server" MaxLength="100" Width="500px"></asp:TextBox>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </asp:Panel>
+            <br />
             <asp:Panel ID="PesquisaContatoPanel" runat="server">
                 <fieldset>
                     <legend>Filtro para Seleção de Contatos</legend>

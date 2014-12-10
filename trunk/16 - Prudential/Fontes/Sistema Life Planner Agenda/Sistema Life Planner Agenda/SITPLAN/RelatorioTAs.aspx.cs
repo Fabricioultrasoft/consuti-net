@@ -41,6 +41,7 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
 
         private void PreencheCampos(DataRow dados)
         {
+            NomeSITPLANLabel.Text = dados["NomeSITPLAN"].ToString();
             NomeLPLabel.Text = Session["nomeUsuarioLogado"].ToString();
             DataHoraInicioLabel.Text = dados["Inicio"].ToString();
             DataHoraTerminoLabel.Text = DateTime.Now.ToString();
