@@ -145,7 +145,7 @@ namespace Sistema_Life_Planner_Agenda.BD
                                     from contato c
                                     join contatos_sit_plan cs on cs.ID_Contato = c.ID 
                                     join sit_plan sp ON cs.ID_SIT_PLAN = sp.ID
-                                    join status_contato sc ON cs.ID_Status_Pre_TA = sc.ID  
+                                    join status_contato sc ON c.ID_Status_Contato = sc.ID  
                                     where sp.ID = @idSitPlan
                                     order by c.Nome;";
             comando.Parameters.AddWithValue("@idSitPlan", idSitPlan);
@@ -172,6 +172,11 @@ namespace Sistema_Life_Planner_Agenda.BD
                                     (select count(*)
                                       from contatos_sit_plan
                                       where contatos_sit_plan.ID_SIT_PLAN = sp.ID) as total_ligacoes, 
+                                    (select count(*)
+                                      from contatos_sit_plan
+                                      join contato ON contatos_sit_plan.ID_Contato = contato.ID
+                                      where contatos_sit_plan.ID_SIT_PLAN = sp.ID
+                                      and contato.ID_Status_Contato <> contatos_sit_plan.ID_Status_Pre_TA) as total_atualizado, 
                                     (select count(sc.Status)
                                       from contatos_sit_plan cs
                                       join contato c ON cs.ID_Contato = c.ID

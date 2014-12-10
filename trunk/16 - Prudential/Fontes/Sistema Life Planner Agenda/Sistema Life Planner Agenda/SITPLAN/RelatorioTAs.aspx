@@ -59,10 +59,18 @@
                     <table class="Formulario">
                         <tr style="font-size: 15pt; text-decoration: underline">
                             <td class="alinhaDireita" style="width: 200px">
-                                Ligações Realizadas:
+                                Ligações Planejadas:
                             </td>
                             <td>
                                 <asp:Label ID="LigacoesRealizadasLabel" runat="server" Text=""></asp:Label>
+                            </td>
+                        </tr>
+                        <tr style="font-size: 15pt; text-decoration: underline">
+                            <td class="alinhaDireita" style="width: 300px">
+                                Contatos Atualizados:
+                            </td>
+                            <td>
+                                <asp:Label ID="ContatosAtualizadosLabel" runat="server" Text=""></asp:Label>
                             </td>
                         </tr>
                         <tr>

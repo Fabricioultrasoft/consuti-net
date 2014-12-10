@@ -85,7 +85,7 @@
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <Columns>
                             <asp:TemplateField HeaderText="#">
-                                <HeaderStyle HorizontalAlign="Center" Width="35px" />
+                                <HeaderStyle HorizontalAlign="Center" />
                                 <ItemStyle HorizontalAlign="Center" Font-Bold="true" />
                                 <ItemTemplate>
                                     <%# Container.DataItemIndex + 1 %>
@@ -98,13 +98,13 @@
                                 <ItemStyle CssClass="espacoTabelas" />
                             </asp:BoundField>
                             <asp:BoundField HeaderText="Status" DataField="Status" SortExpression="Status">
-                                <ItemStyle CssClass="espacoTabelas" />
+                                <ItemStyle CssClass="espacoTabelas"  Width="95px" />
                             </asp:BoundField>
                             <asp:BoundField HeaderText="Telefone Princ." DataField="TelefonePrincipal" SortExpression="TelefonePrincipal">
-                                <ItemStyle CssClass="espacoTabelas" />
+                                <ItemStyle CssClass="espacoTabelas"  Width="110px"/>
                             </asp:BoundField>
                             <asp:BoundField HeaderText="Data do Cadastro" DataField="DataCadastro" SortExpression="DataCadastro">
-                                <ItemStyle CssClass="espacoTabelas" />
+                                <ItemStyle CssClass="espacoTabelas" Width="80px" />
                             </asp:BoundField>
                             <asp:TemplateField HeaderText="Alterar">
                                 <ItemTemplate>
