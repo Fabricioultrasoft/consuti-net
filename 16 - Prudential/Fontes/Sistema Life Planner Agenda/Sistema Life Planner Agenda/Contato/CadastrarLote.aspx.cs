@@ -27,28 +27,39 @@ namespace Sistema_Life_Planner_Agenda.Contato
         }
 
         protected void salvarButton_Click(object sender, EventArgs e)
-        {
+        {   
+            List<string> contatosDuplicados = new List<string>();
             try
             {
                 foreach (var item in PreparaListaContatos())
                 {
-                     int novoContatoID = new ContatoBD().IncluirLote(
-                        item.Nome,
-                        item.Outras_Informacoes,
-                        item.Sexo,
-                        item.Telefone_Principal);
+                    string idUsuario = new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString());
+                    string NomeContatoExistente = new ContatoBD().PesquisaContatoPeloTelefone(idUsuario, item.Telefone_Principal).Tables[0].Rows[0]["Nome"].ToString();
 
-                    new ContatosUsuarioBD().Incluir(
-                        novoContatoID,
-                        Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())),
-                        DateTime.Now);
+                    if (!string.IsNullOrEmpty(NomeContatoExistente))
+                    {
+                        contatosDuplicados.Add("Novo Contato: " + item.Nome + " - Contato Existente: " + NomeContatoExistente);
+                    }
+                    
+                        int novoContatoID = new ContatoBD().IncluirLote(
+                           item.Nome,
+                           item.Outras_Informacoes,
+                           item.Sexo,
+                           item.Telefone_Principal);
 
-                    new RecomendanteContatoBD().Incluir(
-                        novoContatoID,
-                        item.ID_Contato_Recomendante);
+                        new ContatosUsuarioBD().Incluir(
+                            novoContatoID,
+                            Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())),
+                            DateTime.Now);
+
+                        new RecomendanteContatoBD().Incluir(
+                            novoContatoID,
+                            item.ID_Contato_Recomendante);
                 }
                 
-                ExibeMensagemPopUp("Contatos Salvos com Sucesso!");
+                ExibeMensagemPopUp("Contatos Salvos com Sucesso! " +
+                    "\\nAtenção! O(s) contato(s) a seguir foi(ram) salvo(s) com o(s) telefone(s) duplicado(s) por algum(ns) de seus contatos já cadastrados: \\n " +
+                    ListaNomesString(contatosDuplicados));
                 LimparCampos();
             }
             catch (Exception ex)
@@ -56,6 +67,21 @@ namespace Sistema_Life_Planner_Agenda.Contato
                 ExibeMensagemPopUp("Erro interno ao tentar cadastrar o lote de contatos. Verifique os dados e tente novamente mais tarde. Detalhes: " + ex.Message);
             }
 
+        }
+
+        /// <summary>
+        /// transforma uma lista de nomes em string separados por ponto e vírgula
+        /// </summary>
+        /// <param name="nomes"></param>
+        /// <returns></returns>
+        private string ListaNomesString(List<string> nomes)
+        {
+            string nomesRetorno = string.Empty;
+            foreach (var nome in nomes)
+            {
+                nomesRetorno += nome.ToUpper() + "; \\n ";
+            }
+            return nomesRetorno;
         }
 
         /// <summary>
@@ -97,7 +123,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
                     Contato cnt = new Contato();
                     cnt.Data_Cadastro = DateTime.Now;
                     cnt.Nome = txt.Text;
-                    cnt.ID_Contato_Recomendante = Convert.ToInt32(RecomendanteDropDownList.SelectedItem.Value);                    
+                    cnt.ID_Contato_Recomendante = Convert.ToInt32(RecomendanteDropDownList.SelectedItem.Value);
                     cnt.Outras_Informacoes = txtOutInfo.Text;
                     cnt.Sexo = Convert.ToChar(rdlSexo.SelectedItem.Value);
                     cnt.Telefone_Principal = txtDDD.Text + txtTel.Text;
