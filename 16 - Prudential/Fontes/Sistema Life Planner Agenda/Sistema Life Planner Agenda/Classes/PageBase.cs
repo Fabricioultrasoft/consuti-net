@@ -6,6 +6,8 @@ using System.Net.Mail;
 using System.Web.Security;
 using System.Data;
 using Sistema_Life_Planner_Agenda.BD;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Sistema_Life_Planner_Agenda.Classes
 {
@@ -25,51 +27,65 @@ namespace Sistema_Life_Planner_Agenda.Classes
         }
 
         /// <summary>
-        /// Envia emails
+        /// Envio email
         /// </summary>
         /// <param name="nomeRemetente"></param>
         /// <param name="emailRemetente"></param>
         /// <param name="emailDestinatario"></param>
-        /// <param name="emailComCopiaOculta"></param>
         /// <param name="assuntoMensagem"></param>
         /// <param name="conteudoMensagem"></param>
-        /// <param name="caminhoAnexo"></param>
         public void EnviaEmail(
             string nomeRemetente,
             string emailRemetente,
             string emailDestinatario,
-            string emailComCopiaOculta,
             string assuntoMensagem,
-            string conteudoMensagem,
-            string caminhoAnexo)
+            string conteudoMensagem)
         {
-            SmtpClient clienteSmtp = new SmtpClient("localhost", 25);
-            MailMessage email = new MailMessage(emailDestinatario, emailDestinatario);
+            //Cria objeto com dados do e-mail.
+            MailMessage objEmail = new MailMessage();
 
+            //Define o Campo From e ReplyTo do e-mail.
+            objEmail.From = new System.Net.Mail.MailAddress(nomeRemetente + "<" + emailRemetente + ">");
+
+            //Define os destinatários do e-mail.
+            objEmail.To.Add(emailDestinatario);
+
+            //Define a prioridade do e-mail.
+            objEmail.Priority = System.Net.Mail.MailPriority.Normal;
+
+            //Define o formato do e-mail HTML (caso não queira HTML alocar valor false)
+            objEmail.IsBodyHtml = true;
+
+            //Define título do e-mail.
+            objEmail.Subject = assuntoMensagem;
+
+            //Define o corpo do e-mail.
+            objEmail.Body = conteudoMensagem;
+
+            //Para evitar problemas de caracteres "estranhos", configuramos o charset para "ISO-8859-1"
+            objEmail.SubjectEncoding = System.Text.Encoding.GetEncoding("ISO-8859-1");
+            objEmail.BodyEncoding = System.Text.Encoding.GetEncoding("ISO-8859-1");
+
+            //Cria objeto com os dados do SMTP
+            System.Net.Mail.SmtpClient objSmtp = new System.Net.Mail.SmtpClient();
+
+            //Alocamos o endereço do host para enviar os e-mails, localhost(recomendado) ou smtp2.locaweb.com.br
+            objSmtp.Host = "localhost";
+            objSmtp.Port = 25;
+
+            //Enviamos o e-mail através do método .send()
             try
             {
-                if (!string.IsNullOrEmpty(emailComCopiaOculta))
-                {
-                    email.Bcc.Add(emailComCopiaOculta);
-                }
-                if (!string.IsNullOrEmpty(caminhoAnexo))
-                {
-                    email.Attachments.Add(new Attachment(caminhoAnexo));
-                }
-                email.IsBodyHtml = true;
-                email.ReplyTo = new System.Net.Mail.MailAddress(nomeRemetente + "<" + emailRemetente + ">");
-                email.Subject = assuntoMensagem;
-                email.Body = conteudoMensagem;
-
-                clienteSmtp.Send(email);
+                objSmtp.Send(objEmail);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
             finally
             {
-                email.Dispose();
+                //excluímos o objeto de e-mail da memória
+                objEmail.Dispose();
             }
         }
 
@@ -118,6 +134,80 @@ namespace Sistema_Life_Planner_Agenda.Classes
         public DataSet Municipios(string UF)
         {
             return new CidadesBD().Listar(UF);
+        }
+
+        /// <summary>
+        /// Criptografa uma string
+        /// </summary>
+        /// <param name="entrada"></param>
+        /// <returns></returns>
+        public static string Criptografar(string entrada)
+        {
+            TripleDESCryptoServiceProvider tripledescryptoserviceprovider = new TripleDESCryptoServiceProvider();
+            MD5CryptoServiceProvider md5cryptoserviceprovider = new MD5CryptoServiceProvider();
+
+            try
+            {
+                if (entrada.Trim() != "")
+                {
+                    string myKey = "SISLPA";  //Aqui vc inclui uma chave qualquer para servir de base para cifrar, que deve ser a mesma no método Decodificar
+                    tripledescryptoserviceprovider.Key = md5cryptoserviceprovider.ComputeHash(ASCIIEncoding.ASCII.GetBytes(myKey));
+                    tripledescryptoserviceprovider.Mode = CipherMode.ECB;
+                    ICryptoTransform desdencrypt = tripledescryptoserviceprovider.CreateEncryptor();
+                    ASCIIEncoding MyASCIIEncoding = new ASCIIEncoding();
+                    byte[] buff = Encoding.ASCII.GetBytes(entrada);
+
+                    return Convert.ToBase64String(desdencrypt.TransformFinalBlock(buff, 0, buff.Length));
+
+                }
+                else
+                {
+                    return "";
+                }
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+            finally
+            {
+                tripledescryptoserviceprovider = null;
+                md5cryptoserviceprovider = null;
+            }
+        }
+
+        public static string Decriptografar(string entrada)
+        {
+            TripleDESCryptoServiceProvider tripledescryptoserviceprovider = new TripleDESCryptoServiceProvider();
+            MD5CryptoServiceProvider md5cryptoserviceprovider = new MD5CryptoServiceProvider();
+
+            try
+            {
+                if (entrada.Trim() != "")
+                {
+                    string myKey = "SISLPA";  //Aqui vc inclui uma chave qualquer para servir de base para cifrar, que deve ser a mesma no método Codificar
+                    tripledescryptoserviceprovider.Key = md5cryptoserviceprovider.ComputeHash(ASCIIEncoding.ASCII.GetBytes(myKey));
+                    tripledescryptoserviceprovider.Mode = CipherMode.ECB;
+                    ICryptoTransform desdencrypt = tripledescryptoserviceprovider.CreateDecryptor();
+                    byte[] buff = Convert.FromBase64String(entrada);
+
+                    return ASCIIEncoding.ASCII.GetString(desdencrypt.TransformFinalBlock(buff, 0, buff.Length));
+                }
+                else
+                {
+                    return "";
+                }
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+            finally
+            {
+                tripledescryptoserviceprovider = null;
+                md5cryptoserviceprovider = null;
+            }
+
         }
     }
 }

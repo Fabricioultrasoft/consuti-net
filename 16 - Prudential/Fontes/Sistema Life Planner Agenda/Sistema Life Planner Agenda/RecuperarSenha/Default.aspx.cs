@@ -30,16 +30,14 @@ namespace Sistema_Life_Planner_Agenda.RecuperarSenha
                 else
                 {
                     EnviaEmail(
-                    "SisLPA",
+                    "SISLPA",
                     ConfigurationManager.AppSettings["emailDestinatarioRecuperarSenha"].ToString(),
                     emailTextBox.Text,
-                    string.Empty,
+                    "Recuperação de acesso ao SISLPA",
                     "<html><head></head><body>" +
-                    "Recuperação de acesso ao SisLPA",
-                    "Olá! <br /> Foi solicitado em " + DateTime.Now + " a recuperação da senha de acesso ao sistema SisLPA.<br /><br />" +
-                    "Senha: " + senhaRecuperada + "<br /><br />Favor não responder este e-mail." +
-                    "<br /> <br /><br /><br />Sistema Life Planner Agenda </body></html>",
-                    string.Empty);
+                    "Olá! <br /><br /> Foi solicitado em " + DateTime.Now + " a recuperação da senha de acesso ao sistema SISLPA.<br /><br />" +
+                    "Senha: " + Decriptografar(senhaRecuperada) + "<br /><br />Favor não responder este e-mail." +
+                    "<br /> <br /><br /><br />Sistema Life Planner Agenda - SISLPA </body></html>");
 
                     ExibeMensagemPopUp("E-mail de recuperação de acesso enviado para " + emailTextBox.Text + ".");
                 }

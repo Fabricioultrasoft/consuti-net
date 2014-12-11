@@ -29,7 +29,7 @@ namespace Sistema_Life_Planner_Agenda.CadastroUsuario
                 try
                 {
                     SalvarUsuario(emailTextBox.Text,
-                    senhaTextBox.Text,
+                    Criptografar(senhaTextBox.Text),
                     nomeCompletoTextBox.Text,
                     DDDTextBox.Text + telefoneTextBox.Text,
                     emailGoogleTextBox.Text,
