@@ -109,35 +109,53 @@ namespace Sistema_Life_Planner_Agenda.Contato
             {
                 try
                 {
-                    //cadastra um contato e associa o mesmo ao usuário logado
-                    int novoContatoID = new ContatoBD().Incluir(
-                        dadosContato.ID_Status_Contato,
-                        dadosContato.ID_Tipo_Contato,
-                        dadosContato.Cidade,
-                        dadosContato.Email,
-                        dadosContato.Estado_Civil,
-                        dadosContato.Filhos,
-                        dadosContato.Idade,
-                        dadosContato.Nome,
-                        dadosContato.Outras_Informacoes,
-                        dadosContato.Profissao,
-                        dadosContato.Sexo,
-                        dadosContato.Telefone_Alternativo_1,
-                        dadosContato.Telefone_Alternativo_2,
-                        dadosContato.Telefone_Principal,
-                        dadosContato.UF);
+                    string IdUsuario = new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString());
+                    List<string> nomesContatos = PesquisaTelefones(IdUsuario, MontaListaTelefones(dadosContato));
 
-                    new ContatosUsuarioBD().Incluir(
-                        novoContatoID,
-                        Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())),
-                        DateTime.Now);
+                    if (nomesContatos.Count > 0) //valida a existencia de telefones repetidos para o mesmo usuário
+                    {
+                        string nomes = string.Empty;
+                        for (int i = 0; i < nomesContatos.Count; i++)
+                        {
+                            nomes += nomesContatos[i].ToString().ToUpper() + "; \\n ";
+                        }
 
-                    new RecomendanteContatoBD().Incluir(
-                        novoContatoID,
-                        dadosContato.ID_Contato_Recomendante);
+                        ExibeMensagemPopUp("Não foi possível cadastrar o contato " + dadosContato.Nome.ToUpper() +
+                            ".\\nO(s) telefone(s) informado(s) já está(ão) associado(s) para o(s) seu(s) seguinte(s) contato(s): \\n " + nomes);
+                    }
+                    else
+                    {
 
-                    ExibeMensagemPopUp("Contato salvo com sucesso!");
-                    LimparCampos();
+                        //cadastra um contato e associa o mesmo ao usuário logado
+                        int novoContatoID = new ContatoBD().Incluir(
+                            dadosContato.ID_Status_Contato,
+                            dadosContato.ID_Tipo_Contato,
+                            dadosContato.Cidade,
+                            dadosContato.Email,
+                            dadosContato.Estado_Civil,
+                            dadosContato.Filhos,
+                            dadosContato.Idade,
+                            dadosContato.Nome,
+                            dadosContato.Outras_Informacoes,
+                            dadosContato.Profissao,
+                            dadosContato.Sexo,
+                            dadosContato.Telefone_Alternativo_1,
+                            dadosContato.Telefone_Alternativo_2,
+                            dadosContato.Telefone_Principal,
+                            dadosContato.UF);
+
+                        new ContatosUsuarioBD().Incluir(
+                            novoContatoID,
+                            Convert.ToInt32(IdUsuario),
+                            Convert.ToDateTime(DataCadastroLabel.Text));
+
+                        new RecomendanteContatoBD().Incluir(
+                            novoContatoID,
+                            dadosContato.ID_Contato_Recomendante);
+
+                        ExibeMensagemPopUp("Contato salvo com sucesso!");
+                        LimparCampos();
+                    }
 
                 }
                 catch (Exception ex)
@@ -147,6 +165,52 @@ namespace Sistema_Life_Planner_Agenda.Contato
             }
             pesquisarButton.Visible = true;
             cancelarButton.Visible = false;
+        }
+
+        private List<string> MontaListaTelefones(Contato dadosContato)
+        {
+            List<string> retorno = new List<string>();
+            if (!string.IsNullOrEmpty(dadosContato.Telefone_Alternativo_1))
+            {
+                retorno.Add(dadosContato.Telefone_Alternativo_1);
+            }
+            if (!string.IsNullOrEmpty(dadosContato.Telefone_Alternativo_2))
+            {
+                retorno.Add(dadosContato.Telefone_Alternativo_2);
+            }
+             if (!string.IsNullOrEmpty(dadosContato.Telefone_Principal))
+            {
+                retorno.Add(dadosContato.Telefone_Principal);
+            }
+
+            return retorno;
+        }
+
+        /// <summary>
+        /// Obtem e retorna a lista de contatos com o mesmo telefone
+        /// </summary>
+        /// <param name="IdUsuario"></param>
+        /// <param name="telefones"></param>
+        /// <returns></returns>
+        private List<string> PesquisaTelefones(string IdUsuario, List<string> telefones)
+        {
+            List<string> nomesContatos = new List<string>();
+            foreach (string telefone in telefones)
+            {
+                DataTable dt = new ContatoBD().PesquisaContatoPeloTelefone(IdUsuario, telefone).Tables[0];
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow item in dt.Rows)
+                    {
+                        if (!nomesContatos.Contains(item["Nome"].ToString()))//para não inserir item repetido
+                        {
+                            nomesContatos.Add(item["Nome"].ToString());
+                        }
+                    }
+
+                }
+            }
+            return nomesContatos;
         }
 
         protected void cancelarButton_Click(object sender, EventArgs e)
@@ -426,6 +490,8 @@ namespace Sistema_Life_Planner_Agenda.Contato
         {
             Response.Redirect("~/SITPLAN/ExecutarSITPLAN.aspx?idSitPlan=" + Request.QueryString["idSitPlan"]);
         }
+
+
+
     }
 }
-//TODO: CRIAR SCRIPT DE CARGA ANTES DE IMPLANTAR
