@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Sistema_Life_Planner_Agenda.Classes;
 using Sistema_Life_Planner_Agenda.BD;
+using System.Data;
 
 namespace Sistema_Life_Planner_Agenda.Contato
 {
@@ -34,11 +35,11 @@ namespace Sistema_Life_Planner_Agenda.Contato
                 foreach (var item in PreparaListaContatos())
                 {
                     string idUsuario = new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString());
-                    string NomeContatoExistente = new ContatoBD().PesquisaContatoPeloTelefone(idUsuario, item.Telefone_Principal).Tables[0].Rows[0]["Nome"].ToString();
+                    DataSet NomeContatoExistente = new ContatoBD().PesquisaContatoPeloTelefone(idUsuario, item.Telefone_Principal);
 
-                    if (!string.IsNullOrEmpty(NomeContatoExistente))
+                    if (NomeContatoExistente.Tables[0].Rows.Count > 0)
                     {
-                        contatosDuplicados.Add("Novo Contato: " + item.Nome + " - Contato Existente: " + NomeContatoExistente);
+                        contatosDuplicados.Add("Novo Contato: " + item.Nome.ToUpper() + " - Contato Existente: " + NomeContatoExistente.Tables[0].Rows[0]["Nome"].ToString().ToUpper());
                     }
                     
                         int novoContatoID = new ContatoBD().IncluirLote(
@@ -79,7 +80,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
             string nomesRetorno = string.Empty;
             foreach (var nome in nomes)
             {
-                nomesRetorno += nome.ToUpper() + "; \\n ";
+                nomesRetorno += nome + "; \\n ";
             }
             return nomesRetorno;
         }
