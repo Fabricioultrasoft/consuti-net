@@ -29,7 +29,7 @@ namespace Sistema_Life_Planner_Agenda
                 AuthenticateEventArgs a = new AuthenticateEventArgs();
 
                 /// Busca nome do usuário se dados de acesso forem válidos
-                string nomeUsuario = new UsuarioBD().Autenticar(emailLoginTextBox.Text, senhaTextBox.Text);
+                string nomeUsuario = new UsuarioBD().Autenticar(emailLoginTextBox.Text, Criptografar(senhaTextBox.Text));
                 if (nomeUsuario.Equals(string.Empty))
                 {
                     a.Authenticated = false;

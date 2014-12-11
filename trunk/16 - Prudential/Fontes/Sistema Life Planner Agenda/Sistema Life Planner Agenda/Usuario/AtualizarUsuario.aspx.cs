@@ -28,7 +28,7 @@ namespace Sistema_Life_Planner_Agenda.Usuario
                 try
                 {
                     new UsuarioBD().Alterar(
-                        confirmaSenhaTextBox.Text,
+                        Criptografar(confirmaSenhaTextBox.Text),
                         nomeCompletoTextBox.Text,
                         DDDTextBox.Text + telefoneTextBox.Text,
                         emailGoogleTextBox.Text,
