@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Interna.Master"
+﻿<%@ Page Title="SISLPA" Language="C#" MasterPageFile="~/Interna.Master"
     CodeBehind="AutorizarUsuarios.aspx.cs" Inherits="Sistema_Life_Planner_Agenda.Usuario.AutorizarUsuarios" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>

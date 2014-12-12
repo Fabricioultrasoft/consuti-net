@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Externa.Master" AutoEventWireup="true"
+﻿<%@ Page Title="SISLPA" Language="C#" MasterPageFile="~/Externa.Master" AutoEventWireup="true"
     CodeBehind="Default.aspx.cs" Inherits="Sistema_Life_Planner_Agenda.CadastroUsuario.Default" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>

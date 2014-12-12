@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Interna.Master" AutoEventWireup="true"
+﻿<%@ Page Title="SISLPA" Language="C#" MasterPageFile="~/Interna.Master" AutoEventWireup="true"
     CodeBehind="ExecutarSITPLAN.aspx.cs" Inherits="Sistema_Life_Planner_Agenda.SITPLAN.ExecutarSITPLAN" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">

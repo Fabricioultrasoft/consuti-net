@@ -68,7 +68,7 @@ namespace SislpaTests
         [TestMethod()]
         public void CodificarTest()
         {
-            string entrada = "alb123"; 
+            string entrada = "marc123"; 
             string actual;
             actual = PageBase.Criptografar(entrada);
             
