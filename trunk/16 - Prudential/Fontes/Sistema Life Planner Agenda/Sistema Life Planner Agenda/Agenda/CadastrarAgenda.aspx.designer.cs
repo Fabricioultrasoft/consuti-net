@@ -85,6 +85,15 @@ namespace Sistema_Life_Planner_Agenda.Agenda {
         protected global::System.Web.UI.WebControls.TextBox TelefonePrincipalTextBox;
         
         /// <summary>
+        /// DDDTelefonePrincipalTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DDDTelefonePrincipalTextBox;
+        
+        /// <summary>
         /// TelefonePrincipalCheckBox control.
         /// </summary>
         /// <remarks>
@@ -94,13 +103,22 @@ namespace Sistema_Life_Planner_Agenda.Agenda {
         protected global::System.Web.UI.WebControls.CheckBox TelefonePrincipalCheckBox;
         
         /// <summary>
-        /// TelefoneAlternativo1TextBox control.
+        /// DDDtelefoneAlternativo1TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TelefoneAlternativo1TextBox;
+        protected global::System.Web.UI.WebControls.TextBox DDDtelefoneAlternativo1TextBox;
+        
+        /// <summary>
+        /// telefoneAlternativo1TextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox telefoneAlternativo1TextBox;
         
         /// <summary>
         /// TelefoneAlternativo1CheckBox control.
@@ -112,13 +130,22 @@ namespace Sistema_Life_Planner_Agenda.Agenda {
         protected global::System.Web.UI.WebControls.CheckBox TelefoneAlternativo1CheckBox;
         
         /// <summary>
-        /// TelefoneAlternativo2TextBox control.
+        /// DDDtelefoneAlternativo2TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TelefoneAlternativo2TextBox;
+        protected global::System.Web.UI.WebControls.TextBox DDDtelefoneAlternativo2TextBox;
+        
+        /// <summary>
+        /// telefoneAlternativo2TextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox telefoneAlternativo2TextBox;
         
         /// <summary>
         /// TelefoneAlternativo2CheckBox control.
