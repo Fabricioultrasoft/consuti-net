@@ -429,7 +429,8 @@ namespace Sistema_Life_Planner_Agenda.BD
         {
             comando.CommandText = @"SELECT ID_Status_Contato, ID_Tipo_Contato, Cidade, Email, Estado_Civil, Filhos, Idade,
                                            Nome, Outras_Informacoes, Profissao, Sexo, Telefone_Alternativo_1, Telefone_Alternativo_2, Telefone_Principal, UF, u.Data_Cadastro, 
-                                           (select ID from contato where contato.ID = r.ID_Recomendante) as ID_Contato_Recomendante
+                                           (select ID from contato where contato.ID = r.ID_Recomendante) as ID_Contato_Recomendante,
+                                           (select Nome from contato where contato.ID = r.ID_Recomendante) as Nome_Recomendante
                                       FROM contato 
                                       JOIN recomendantes_contato r ON r.ID_Contato = contato.ID
                                       JOIN contatos_usuario u ON u.ID_Contato = contato.ID 

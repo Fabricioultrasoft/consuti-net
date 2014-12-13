@@ -46,7 +46,7 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
             }
             if (e.CommandName.Equals("AgendamentoContato"))
             {
-                Response.Redirect("~/Agenda/CadastrarAgenda.aspx?idContato=" + Convert.ToString(e.CommandArgument));
+                Response.Redirect("~/Agenda/CadastrarAgenda.aspx?idContato=" + Convert.ToString(e.CommandArgument) + "&ReturnSitPlanId=" + Request.QueryString["idSitPlan"].ToString());
             }
         }
 

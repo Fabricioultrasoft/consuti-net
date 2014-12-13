@@ -79,7 +79,7 @@
                             </table>
                             <fieldset>
                                 <legend>Dados para Contato</legend>
-                                <table class="Formulario">
+                                <table class="Formulario" style="margin-top: -10px">
                                     <tr>
                                         <td class="alinhaDireita">
                                         </td>
@@ -94,7 +94,10 @@
                                             Telefone Principal:
                                         </td>
                                         <td>
-                                            <asp:TextBox ID="TelefonePrincipalTextBox" runat="server" Enabled="false" TabIndex="7"></asp:TextBox>
+                                            <asp:TextBox ID="TelefonePrincipalTextBox" runat="server" MaxLength="2" TabIndex="7"
+                                            Width="20px" Enabled="false"></asp:TextBox>
+                                        &nbsp;<asp:TextBox ID="DDDTelefonePrincipalTextBox" runat="server" MaxLength="9"
+                                            TabIndex="7" Width="70px" Enabled="false"></asp:TextBox>
                                         </td>
                                         <td class="style1">
                                             <asp:CheckBox ID="TelefonePrincipalCheckBox" runat="server" Text=" " TabIndex="8" />
@@ -105,7 +108,10 @@
                                             Telefone Alternativo 1:
                                         </td>
                                         <td>
-                                            <asp:TextBox ID="TelefoneAlternativo1TextBox" runat="server" Enabled="false" TabIndex="9"></asp:TextBox>
+                                            <asp:TextBox ID="DDDtelefoneAlternativo1TextBox" runat="server" MaxLength="2" TabIndex="9"
+                                            Width="20px" Enabled="false"></asp:TextBox>                                        
+                                        &nbsp;<asp:TextBox ID="telefoneAlternativo1TextBox" runat="server" MaxLength="9"
+                                            TabIndex="9" Width="70px" Enabled="false"></asp:TextBox>
                                         </td>
                                         <td class="style1">
                                             <asp:CheckBox ID="TelefoneAlternativo1CheckBox" runat="server" Text=" " TabIndex="10" />
@@ -116,7 +122,10 @@
                                             Telefone Alternativo 2:
                                         </td>
                                         <td>
-                                            <asp:TextBox ID="TelefoneAlternativo2TextBox" runat="server" Enabled="false" TabIndex="11"></asp:TextBox>
+                                            <asp:TextBox ID="DDDtelefoneAlternativo2TextBox" runat="server" MaxLength="2" TabIndex="10"
+                                            Width="20px" Enabled="false"></asp:TextBox>
+                                        &nbsp;<asp:TextBox ID="telefoneAlternativo2TextBox" runat="server" MaxLength="9"
+                                            TabIndex="10" Width="70px" Enabled="false"></asp:TextBox>
                                         </td>
                                         <td class="style1">
                                             <asp:CheckBox ID="TelefoneAlternativo2CheckBox" runat="server" Text=" " TabIndex="12" />
@@ -127,7 +136,7 @@
                                             E-mail:
                                         </td>
                                         <td>
-                                            <asp:TextBox ID="emailTextBox" runat="server" Enabled="false" TabIndex="13"></asp:TextBox>
+                                            <asp:TextBox ID="emailTextBox" runat="server" Enabled="false" TabIndex="13" Width="220px"></asp:TextBox>
                                         </td>
                                         <td class="style1">
                                             <asp:CheckBox ID="emailCheckBox" runat="server" Text=" " TabIndex="14" />
