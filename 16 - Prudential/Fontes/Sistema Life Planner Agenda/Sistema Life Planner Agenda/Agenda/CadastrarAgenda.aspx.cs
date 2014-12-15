@@ -24,7 +24,11 @@ namespace Sistema_Life_Planner_Agenda.Agenda
                 }
                 if (!string.IsNullOrEmpty(Request.QueryString["idContato"]))
                 {
-                    CarregaCampos(Convert.ToInt32(Request.QueryString["idContato"].ToString()), false);
+                    CarregaCamposContato(Convert.ToInt32(Request.QueryString["idContato"].ToString()), false);
+                }
+                if (!string.IsNullOrEmpty(Request.QueryString["idAgenda"]))
+                {
+                    CarregaCamposEdicao(Request.QueryString["idAgenda"].ToString());
                 }
                 else
                 {
@@ -33,11 +37,56 @@ namespace Sistema_Life_Planner_Agenda.Agenda
             }
         }
 
+        private void PreencheContatoPreferencial(string preferencias)
+        {
+            if (preferencias.Contains("TP"))
+            {
+                TelefonePrincipalCheckBox.Checked = true;
+            } if (preferencias.Contains("TA1"))
+            {
+                TelefoneAlternativo1CheckBox.Checked = true;
+            } if (preferencias.Contains("TA2"))
+            {
+                TelefoneAlternativo2CheckBox.Checked = true;
+            } if (preferencias.Contains("EM"))
+            {
+                emailCheckBox.Checked = true;
+            }
+        }
+
+        private void CarregaCamposEdicao(string idAgenda)
+        {
+            try
+            {
+                DataRow dr = new AgendaBD().Obter(idAgenda, new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())).Tables[0].Rows[0];
+
+                DiaCompromissoCalendar.SelectedDate = Convert.ToDateTime(dr["Data"].ToString());
+                HoraTextBox.Text = dr["Hora"].ToString();
+                MinutosTextBox.Text = dr["Minutos"].ToString();
+                MaisInformaciesTextBox.Text = dr["Mais_Informacoes"].ToString();
+                CriarAgendaGoogleCheckBox.Checked = Convert.ToBoolean(dr["Criar_Google_Agenda"].ToString());
+
+                CarregarContatos();
+                CarregaCamposContato(Convert.ToInt32(dr["ID_Contato"].ToString()), true);
+
+                if (!string.IsNullOrEmpty(dr["Periodo"].ToString()))
+                {
+                    PeriodoRadioButtonList.Items.FindByText(dr["Periodo"].ToString()).Selected = true;
+                }
+
+                PreencheContatoPreferencial(dr["Preferencia_Contato"].ToString());
+            }
+            catch (Exception ex)
+            {
+                ExibeMensagemPopUp("Não foi possível carregar os dados. Parâmetros inválidos para o seu perfil. Detalhes: " + ex.Message);
+            }
+        }
+
         protected void CarregaContato_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(ContatoDropDownList.SelectedItem.Value))
             {
-                CarregaCampos(Convert.ToInt32(ContatoDropDownList.SelectedItem.Value), true);
+                CarregaCamposContato(Convert.ToInt32(ContatoDropDownList.SelectedItem.Value), true);
             }
             else
             {
@@ -140,12 +189,12 @@ namespace Sistema_Life_Planner_Agenda.Agenda
             return pref;
         }
 
-        private void CarregaCampos(int idContato, bool carregaContatos)
+        private void CarregaCamposContato(int idContato, bool carregaContatos)
         {
             DataRow contato = new ContatoBD().Obter(idContato, Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString()))).Tables[0].Rows[0];
             if (carregaContatos)
             {
-                ContatoDropDownList.SelectedItem.Value = idContato.ToString();
+                ContatoDropDownList.SelectedValue = idContato.ToString();
             }
             else
             {
@@ -212,7 +261,7 @@ namespace Sistema_Life_Planner_Agenda.Agenda
                 TelefonePrincipalTextBox.Text =
                 emailTextBox.Text =
                 MinutosTextBox.Text =
-                MaisInformaciesTextBox.Text = 
+                MaisInformaciesTextBox.Text =
                 HoraTextBox.Text = string.Empty;
 
             TelefonePrincipalCheckBox.Checked =
@@ -222,7 +271,7 @@ namespace Sistema_Life_Planner_Agenda.Agenda
             CriarAgendaGoogleCheckBox.Checked = true;
 
             PeriodoRadioButtonList.SelectedIndex = 0;
-            
+
         }
 
         /// <summary>
@@ -230,13 +279,13 @@ namespace Sistema_Life_Planner_Agenda.Agenda
         /// </summary>
         private void SelecaoVazia()
         {
-            RecomendanteTextBox.Text = 
-                DDDtelefoneAlternativo1TextBox.Text = 
-                DDDtelefoneAlternativo2TextBox.Text = 
-                DDDTelefonePrincipalTextBox.Text = 
-                telefoneAlternativo1TextBox.Text = 
-                telefoneAlternativo2TextBox.Text = 
-                TelefonePrincipalTextBox.Text = 
+            RecomendanteTextBox.Text =
+                DDDtelefoneAlternativo1TextBox.Text =
+                DDDtelefoneAlternativo2TextBox.Text =
+                DDDTelefonePrincipalTextBox.Text =
+                telefoneAlternativo1TextBox.Text =
+                telefoneAlternativo2TextBox.Text =
+                TelefonePrincipalTextBox.Text =
                 emailTextBox.Text = string.Empty;
 
             TelefonePrincipalCheckBox.Checked =
