@@ -29,7 +29,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
         {
             get
             {
-                // Initial sort expression is DepartmentID
+                //Ordenação padrão inicial
                 if (ViewState["GridSortExpression"] == null)
                 {
                     ViewState["GridSortExpression"] = "Nome";
@@ -213,7 +213,23 @@ namespace Sistema_Life_Planner_Agenda.Contato
 
             if (ViewState["ContatosDataSet"] == null)
             {
-                dataSet = new ContatoBD().Listar(Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())));
+                string idRecomendante = string.Empty, idStatus = string.Empty;
+
+                if (!string.IsNullOrEmpty(RecomendanteDropDownList.SelectedItem.Value))
+                {
+                    idRecomendante = RecomendanteDropDownList.SelectedItem.Value.ToString();
+                }
+                if (!string.IsNullOrEmpty(StatusDropDownList.SelectedItem.Value))
+                {
+                    idStatus = StatusDropDownList.SelectedItem.Value.ToString();
+                }
+
+                dataSet = new ContatoBD().Listar(
+                nomeTextBox.Text,
+                idRecomendante,
+                DDDTelefoneTextBox.Text + TelefoneTextBox.Text,
+                idStatus,
+                Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())));
                 // Store the DataSet in view state
                 ViewState["ContatosDataSet"] = dataSet;
             }

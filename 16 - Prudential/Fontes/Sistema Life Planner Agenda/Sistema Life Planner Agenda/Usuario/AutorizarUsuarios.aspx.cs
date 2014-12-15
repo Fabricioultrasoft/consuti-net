@@ -35,7 +35,7 @@ namespace Sistema_Life_Planner_Agenda.Usuario
         {
             get
             {
-                // Initial sort expression is DepartmentID
+                //Ordenação padrão inicial
                 if (ViewState["GridSortExpression"] == null)
                 {
                     ViewState["GridSortExpression"] = "Email";

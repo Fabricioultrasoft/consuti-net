@@ -33,7 +33,7 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
         {
             get
             {
-                // Initial sort expression is DepartmentID
+                //Ordenação padrão inicial
                 if (ViewState["GridSortExpression"] == null)
                 {
                     ViewState["GridSortExpression"] = "Nome";
@@ -193,7 +193,30 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
 
             if (ViewState["SITPLANDataSet"] == null)
             {
-                dataSet = new ContatoBD().Listar(Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())));
+                string dataDe = string.Empty, dataAte = string.Empty;
+
+                if (!string.IsNullOrEmpty(PeriodoDeTextBox.Text))
+                {
+                    dataDe = PeriodoDeTextBox.Text;
+                }
+                else
+                {
+                    dataDe = "01/01/1900";
+                }
+                if (!string.IsNullOrEmpty(PeriodoAteTextBox.Text))
+                {
+                    dataAte = PeriodoAteTextBox.Text;
+                }
+                else
+                {
+                    dataAte = "01/01/2100";
+                }
+                dataSet = new SitPlanBD().Listar(
+                Convert.ToDateTime(dataDe),
+                Convert.ToDateTime(dataAte),
+                Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())),
+                NomeSitPlanTextBox.Text);
+
                 // Store the DataSet in view state
                 ViewState["SITPLANDataSet"] = dataSet;
             }
