@@ -427,7 +427,7 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// <returns></returns>
         public DataSet Obter(int idContato, int idUsuario)
         {
-            comando.CommandText = @"SELECT ID_Status_Contato, ID_Tipo_Contato, Cidade, Email, Estado_Civil, Filhos, Idade,
+            comando.CommandText = @"SELECT contato.ID as ID_Contato, ID_Status_Contato, ID_Tipo_Contato, Cidade, Email, Estado_Civil, Filhos, Idade,
                                            Nome, Outras_Informacoes, Profissao, Sexo, Telefone_Alternativo_1, Telefone_Alternativo_2, Telefone_Principal, UF, u.Data_Cadastro, 
                                            (select ID from contato where contato.ID = r.ID_Recomendante) as ID_Contato_Recomendante,
                                            (select Nome from contato where contato.ID = r.ID_Recomendante) as Nome_Recomendante

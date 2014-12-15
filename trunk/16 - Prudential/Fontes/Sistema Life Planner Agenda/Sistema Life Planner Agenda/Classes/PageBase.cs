@@ -207,7 +207,25 @@ namespace Sistema_Life_Planner_Agenda.Classes
                 tripledescryptoserviceprovider = null;
                 md5cryptoserviceprovider = null;
             }
-
         }
+
+        /// <summary>
+        /// Valida as horas e minutos
+        /// </summary>
+        /// <param name="hora"></param>
+        /// <param name="minutos"></param>
+        /// <returns></returns>
+        public bool ValidaHora(int hora, int minutos)
+        {
+            if (hora > 23 || minutos > 59)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
     }
 }
