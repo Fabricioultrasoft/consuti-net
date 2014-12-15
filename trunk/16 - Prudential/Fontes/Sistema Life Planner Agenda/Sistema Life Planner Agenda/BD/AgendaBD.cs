@@ -51,6 +51,55 @@ namespace Sistema_Life_Planner_Agenda.BD
         }
 
         /// <summary>
+        /// Altera o cadastro de um compromisso
+        /// </summary>
+        /// <param name="ID_Agenda"></param>
+        /// <param name="ID_Contato"></param>
+        /// <param name="ID_Usuario"></param>
+        /// <param name="Criar_Google_Agenda"></param>
+        /// <param name="Data"></param>
+        /// <param name="Hora"></param>
+        /// <param name="Minutos"></param>
+        /// <param name="Mais_Informacoes"></param>
+        /// <param name="Preferencia_Contato"></param>
+        /// <param name="Periodo"></param>
+        public void Alterar(
+            int ID_Agenda,
+            int ID_Contato,
+            int ID_Usuario,
+            bool Criar_Google_Agenda,
+            DateTime Data,
+            int Hora,
+            int Minutos,
+            string Mais_Informacoes,
+            string Preferencia_Contato,
+            string Periodo)
+        {
+            // criar um comando para executar a alteração / executar comando
+            comando.CommandText = @"UPDATE agenda 
+                                    SET ID_Contato = @ID_Contato, Criar_Google_Agenda = @Criar_Google_Agenda, 
+                                        Data = @Data, Hora = @Hora, Minutos = @Minutos, Mais_Informacoes = @Mais_Informacoes, 
+                                        Preferencia_Contato = @Preferencia_Contato, Periodo = @Periodo 
+                                    WHERE ID = @ID_Agenda
+                                    AND ID_Usuario = @ID_Usuario";
+            comando.Parameters.AddWithValue("@ID_Agenda", ID_Agenda);
+            comando.Parameters.AddWithValue("@ID_Contato", ID_Contato);
+            comando.Parameters.AddWithValue("@ID_Usuario", ID_Usuario);
+            comando.Parameters.AddWithValue("@Criar_Google_Agenda", Criar_Google_Agenda);
+            comando.Parameters.AddWithValue("@Data", Data);
+            comando.Parameters.AddWithValue("@Hora", Hora);
+            comando.Parameters.AddWithValue("@Minutos", Minutos);
+            comando.Parameters.AddWithValue("@Mais_Informacoes", Mais_Informacoes);
+            comando.Parameters.AddWithValue("@Preferencia_Contato", Preferencia_Contato);
+            comando.Parameters.AddWithValue("@Periodo", Periodo);
+
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.ExecuteNonQuery();
+
+            this.Dispose();
+        }
+
+        /// <summary>
         /// Lista os compromissos de um usuário
         /// </summary>
         /// <param name="idContato"></param>
