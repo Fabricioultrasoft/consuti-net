@@ -101,36 +101,62 @@ namespace Sistema_Life_Planner_Agenda.Agenda
 
         protected void salvarButton_Click(object sender, EventArgs e)
         {
-            try
+            if (!string.IsNullOrEmpty(Request.QueryString["idAgenda"].ToString()))
             {
-                if (!ValidaDataSelecionada())
+                try
                 {
-                    ExibeMensagemPopUp("Selecione uma data para o compromisso no calendário.");
-                }
-                else if (!ValidaHora(Convert.ToInt32(HoraTextBox.Text), Convert.ToInt32(MinutosTextBox.Text)))
-                {
-                    ExibeMensagemPopUp("Hora e/ou Minutos inválidos! Verifique os dados e tente novamente.");
-                }
-                else
-                {
-                    new AgendaBD().Incluir(
-                        Convert.ToInt32(ContatoDropDownList.SelectedValue),
-                        Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())),
-                        CriarAgendaGoogleCheckBox.Checked,
-                        DiaCompromissoCalendar.SelectedDate,
-                        Convert.ToInt32(HoraTextBox.Text.ToString()),
-                        Convert.ToInt32(MinutosTextBox.Text),
-                        MaisInformaciesTextBox.Text,
-                        PreferenciaContato(),
-                        PeriodoCompromisso());
-
-                    LimparCampos();
+                    new AgendaBD().Alterar(
+                   Convert.ToInt32(Request.QueryString["idAgenda"].ToString()),
+                   Convert.ToInt32(ContatoDropDownList.SelectedItem.Value),
+                   Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())),
+                   CriarAgendaGoogleCheckBox.Checked,
+                   DiaCompromissoCalendar.SelectedDate,
+                   Convert.ToInt32(HoraTextBox.Text),
+                   Convert.ToInt32(MinutosTextBox.Text),
+                   MaisInformaciesTextBox.Text,
+                   PreferenciaContato(),
+                   PeriodoCompromisso());
                     ExibeMensagemPopUp("Compromisso salvo com sucesso!");
                 }
+                catch (Exception ex)
+                {
+                    ExibeMensagemPopUp("Não foi possível atualizar o compromisso na agenda. Detalhes do erro: " + ex.Message);
+                }
+
             }
-            catch (Exception ex)
+            else
             {
-                ExibeMensagemPopUp("Não foi possível criar o compromisso na agenda. Detalhes do erro: " + ex.Message);
+                try
+                {
+                    if (!ValidaDataSelecionada())
+                    {
+                        ExibeMensagemPopUp("Selecione uma data para o compromisso no calendário.");
+                    }
+                    else if (!ValidaHora(Convert.ToInt32(HoraTextBox.Text), Convert.ToInt32(MinutosTextBox.Text)))
+                    {
+                        ExibeMensagemPopUp("Hora e/ou Minutos inválidos! Verifique os dados e tente novamente.");
+                    }
+                    else
+                    {
+                        new AgendaBD().Incluir(
+                            Convert.ToInt32(ContatoDropDownList.SelectedValue),
+                            Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())),
+                            CriarAgendaGoogleCheckBox.Checked,
+                            DiaCompromissoCalendar.SelectedDate,
+                            Convert.ToInt32(HoraTextBox.Text.ToString()),
+                            Convert.ToInt32(MinutosTextBox.Text),
+                            MaisInformaciesTextBox.Text,
+                            PreferenciaContato(),
+                            PeriodoCompromisso());
+
+                        LimparCampos();
+                        ExibeMensagemPopUp("Compromisso salvo com sucesso!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    ExibeMensagemPopUp("Não foi possível criar o compromisso na agenda. Detalhes do erro: " + ex.Message);
+                }
             }
         }
 
@@ -150,6 +176,10 @@ namespace Sistema_Life_Planner_Agenda.Agenda
             }
         }
 
+        /// <summary>
+        /// Obtem e retorna o período de um compromisso
+        /// </summary>
+        /// <returns></returns>
         private string PeriodoCompromisso()
         {
             string periodo = string.Empty;
