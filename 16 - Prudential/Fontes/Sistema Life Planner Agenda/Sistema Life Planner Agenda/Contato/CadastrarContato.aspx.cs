@@ -328,7 +328,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
             }
             catch (Exception ex)
             {
-                ExibeMensagemPopUp("Erro interno ao carregar os dados de contato. Detalhes: " + ex.Message);
+                ExibeMensagemPopUp("Não foi possível carregar os dados. Parâmetros inválidos para o seu perfil. Detalhes: " + ex.Message);
             }
         }
 

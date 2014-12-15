@@ -22,6 +22,15 @@ namespace Sistema_Life_Planner_Agenda.Agenda {
         protected global::System.Web.UI.WebControls.Panel cadastroAgendaPanel;
         
         /// <summary>
+        /// calendarioUpdatePanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel calendarioUpdatePanel;
+        
+        /// <summary>
         /// DiaCompromissoCalendar control.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace Sistema_Life_Planner_Agenda.Agenda {
         protected global::System.Web.UI.WebControls.TextBox HoraTextBox;
         
         /// <summary>
+        /// HoraTextBox_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender HoraTextBox_FilteredTextBoxExtender;
+        
+        /// <summary>
         /// MinutosTextBox control.
         /// </summary>
         /// <remarks>
@@ -47,6 +65,33 @@ namespace Sistema_Life_Planner_Agenda.Agenda {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox MinutosTextBox;
+        
+        /// <summary>
+        /// MinutosTextBox_FilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender MinutosTextBox_FilteredTextBoxExtender;
+        
+        /// <summary>
+        /// HoraTextBoxRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator HoraTextBoxRequiredFieldValidator;
+        
+        /// <summary>
+        /// MinutosTextBoxRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator MinutosTextBoxRequiredFieldValidator;
         
         /// <summary>
         /// PeriodoRadioButtonList control.
@@ -65,6 +110,15 @@ namespace Sistema_Life_Planner_Agenda.Agenda {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ContatoDropDownList;
+        
+        /// <summary>
+        /// ContatoDropDownListRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ContatoDropDownListRequiredFieldValidator;
         
         /// <summary>
         /// RecomendanteTextBox control.
@@ -191,6 +245,15 @@ namespace Sistema_Life_Planner_Agenda.Agenda {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox CriarAgendaGoogleCheckBox;
+        
+        /// <summary>
+        /// VoltarButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button VoltarButton;
         
         /// <summary>
         /// cancelarButton control.

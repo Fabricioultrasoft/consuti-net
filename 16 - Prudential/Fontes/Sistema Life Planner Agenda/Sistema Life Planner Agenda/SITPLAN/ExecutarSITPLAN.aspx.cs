@@ -19,7 +19,14 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
                 ValidaUserLogado();
                 if (!string.IsNullOrEmpty(Request.QueryString["idSitPlan"]))
                 {
-                    CarregarContatos(Convert.ToInt32(Request.QueryString["idSitPlan"]));
+                    try
+                    {
+                        CarregarContatos(Convert.ToInt32(Request.QueryString["idSitPlan"]));
+                    }
+                    catch (Exception ex)
+                    {
+                        ExibeMensagemPopUp("Não foi possível carregar os dados. Parâmetros inválidos para o seu perfil. Detalhes: " + ex.Message); 
+                    }
                 }
             }
         }
@@ -52,7 +59,7 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
 
         private void CarregarContatos(int idSitPlan)
         {
-            DataSet dsContatos = new SitPlanBD().ContatosSITPLAN(idSitPlan);
+            DataSet dsContatos = new SitPlanBD().ContatosSITPLAN(idSitPlan, Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())));
 
             listaTasRepeater.DataSource = dsContatos;
             listaTasRepeater.DataBind();

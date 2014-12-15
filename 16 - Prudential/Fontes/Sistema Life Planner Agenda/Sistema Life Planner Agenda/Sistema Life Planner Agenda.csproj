@@ -119,6 +119,7 @@
     <Compile Include="Agenda\PesquisarAgenda.aspx.designer.cs">
       <DependentUpon>PesquisarAgenda.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BD\AgendaBD.cs" />
     <Compile Include="BD\BancoBase.cs" />
     <Compile Include="BD\CidadesBD.cs" />
     <Compile Include="BD\ContatoBD.cs" />
@@ -142,7 +143,6 @@
     </Compile>
     <Compile Include="Contato\CadastrarContato.aspx.cs">
       <DependentUpon>CadastrarContato.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Contato\CadastrarContato.aspx.designer.cs">
       <DependentUpon>CadastrarContato.aspx</DependentUpon>

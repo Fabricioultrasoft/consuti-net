@@ -148,7 +148,7 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// </summary>
         /// <param name="idSitPlan"></param>
         /// <returns></returns>
-        public DataSet ContatosSITPLAN(int idSitPlan)
+        public DataSet ContatosSITPLAN(int idSitPlan, int idUsuario)
         {
             comando.CommandText = @"select c.Nome, c.ID, SUBSTRING(Telefone_Principal, 1,2) as DDD_TELEFONE_CONTATO, sp.Nome as NomeSITPLAN, 
                                     SUBSTRING(Telefone_Principal, 3,10) as TELEFONE_CONTATO, sc.status as STATUS_PRE_TA
@@ -157,8 +157,10 @@ namespace Sistema_Life_Planner_Agenda.BD
                                     join sit_plan sp ON cs.ID_SIT_PLAN = sp.ID
                                     join status_contato sc ON c.ID_Status_Contato = sc.ID  
                                     where sp.ID = @idSitPlan
+                                    AND sp.ID_Usuario = @idUsuario 
                                     order by c.Nome;";
             comando.Parameters.AddWithValue("@idSitPlan", idSitPlan);
+            comando.Parameters.AddWithValue("@idUsuario", idUsuario);
             comando.CommandType = CommandType.Text;
 
             MySqlDataAdapter adap = new MySqlDataAdapter(comando);
