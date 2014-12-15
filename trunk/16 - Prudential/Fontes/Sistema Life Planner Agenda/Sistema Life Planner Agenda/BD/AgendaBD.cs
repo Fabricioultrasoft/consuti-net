@@ -127,7 +127,7 @@ namespace Sistema_Life_Planner_Agenda.BD
                                     AND Data >= @dataInicioDe
                                     AND Data <= @dataInicioAte" +
                                     filtrarContato +
-                                    " ORDER BY Data DESC ";
+                                    " ORDER BY Data ASC ";
             comando.Parameters.AddWithValue("@ID_Usuario", idUsuario);
             comando.Parameters.AddWithValue("@dataInicioDe", dataInicioDe);
             comando.Parameters.AddWithValue("@dataInicioAte", dataInicioAte.AddHours(23).AddMinutes(59).AddSeconds(59));
