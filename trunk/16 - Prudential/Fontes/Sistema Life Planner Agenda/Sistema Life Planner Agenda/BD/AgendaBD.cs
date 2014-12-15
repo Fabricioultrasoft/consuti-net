@@ -110,5 +110,30 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             this.Dispose();
         }
+
+        /// <summary>
+        /// Obtem os dados de um compromisso
+        /// </summary>
+        /// <param name="ID_Agenda"></param>
+        /// <param name="ID_Usuario"></param>
+        /// <returns></returns>
+        public DataSet Obter(string ID_Agenda, string ID_Usuario)
+        {
+            comando.CommandText = @"SELECT ID, ID_Contato, ID_Usuario, Criar_Google_Agenda, Data, Hora, Minutos, Mais_Informacoes, Preferencia_Contato, Periodo 
+                                    FROM agenda
+                                    WHERE ID_Usuario = @ID_Usuario
+                                    AND ID = @ID_Agenda;";
+            comando.Parameters.Add(new MySqlParameter("@ID_Usuario", ID_Usuario));
+            comando.Parameters.Add(new MySqlParameter("@ID_Agenda", ID_Agenda));
+            comando.CommandType = CommandType.Text;
+            // Classe que auxilia no preenchimento de um dataset
+            MySqlDataAdapter adap = new MySqlDataAdapter(comando);
+            DataSet retorno = new DataSet();
+            adap.Fill(retorno);
+
+            this.Dispose();
+
+            return retorno;
+        }
     }
 }
