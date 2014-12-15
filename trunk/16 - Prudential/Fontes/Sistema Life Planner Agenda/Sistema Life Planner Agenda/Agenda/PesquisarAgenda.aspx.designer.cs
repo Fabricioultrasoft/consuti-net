@@ -40,6 +40,15 @@ namespace Sistema_Life_Planner_Agenda.Agenda {
         protected global::System.Web.UI.WebControls.ImageButton deImageButton;
         
         /// <summary>
+        /// PeriodoDeTextBox_CalendarExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CalendarExtender PeriodoDeTextBox_CalendarExtender;
+        
+        /// <summary>
         /// PeriodoAteTextBox control.
         /// </summary>
         /// <remarks>
@@ -58,13 +67,22 @@ namespace Sistema_Life_Planner_Agenda.Agenda {
         protected global::System.Web.UI.WebControls.ImageButton AteImageButton;
         
         /// <summary>
-        /// RecomendanteDropDownList control.
+        /// PeriodoAteTextBox_CalendarExtender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList RecomendanteDropDownList;
+        protected global::AjaxControlToolkit.CalendarExtender PeriodoAteTextBox_CalendarExtender;
+        
+        /// <summary>
+        /// ContatoDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ContatoDropDownList;
         
         /// <summary>
         /// pesquisarButton control.
@@ -94,12 +112,12 @@ namespace Sistema_Life_Planner_Agenda.Agenda {
         protected global::System.Web.UI.WebControls.Button novoButton;
         
         /// <summary>
-        /// GridView1 control.
+        /// AgendaGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView AgendaGridView;
     }
 }

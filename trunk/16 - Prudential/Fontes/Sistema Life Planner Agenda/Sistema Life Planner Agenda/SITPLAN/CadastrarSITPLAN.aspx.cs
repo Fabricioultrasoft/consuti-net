@@ -30,7 +30,7 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
         {
             get
             {
-                // Initial sort expression is DepartmentID
+                //Ordenação padrão inicial
                 if (ViewState["GridSortExpression"] == null)
                 {
                     ViewState["GridSortExpression"] = "Nome";
