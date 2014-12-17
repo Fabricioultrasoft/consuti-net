@@ -509,33 +509,29 @@ namespace Sistema_Life_Planner_Agenda.Contato
 
         private void BloqueiaCampos()
         {
-            DataContatoTextBox.Enabled =
-                DDDtelefoneAlternativo1TextBox.Enabled =
-                DDDtelefoneAlternativo2TextBox.Enabled =
-                DDDTelefoneTextBox.Enabled =
-                emailTextBox.Enabled =
-                filhosTextBox.Enabled =
-                HoraTextBox.Enabled =
-                MinutosTextBox.Enabled =
-                idadeTextBox.Enabled =
-                nomeCompletoTextBox.Enabled =
-                ObservacaoTextBox.Enabled =
-                outrasInformacoesTextBox.Enabled =
-                profissaoTextBox.Enabled =
-                telefoneAlternativo1TextBox.Enabled =
-                telefoneAlternativo2TextBox.Enabled =
-                TelefoneTextBox.Enabled =
-                CidadesDropDownList.Enabled =
-                EstadoCivilDropDownList.Enabled =
-                RecomendanteDropDownList.Enabled =
-                StatusDropDownList.Enabled =
-                TipoDropDownList.Enabled =
-                UFDropDownList.Enabled =
-                SexoRadioButtonList.Enabled =
-                incluirContatoButton.Visible =
-                salvarButton.Visible =
-                cancelarButton.Visible =
-                pesquisarButton.Visible = false;
+
+            DDDtelefoneAlternativo1TextBox.Enabled =
+            DDDtelefoneAlternativo2TextBox.Enabled =
+            DDDTelefoneTextBox.Enabled =
+            emailTextBox.Enabled =
+            filhosTextBox.Enabled =
+            idadeTextBox.Enabled =
+            nomeCompletoTextBox.Enabled =
+            outrasInformacoesTextBox.Enabled =
+            profissaoTextBox.Enabled =
+            telefoneAlternativo1TextBox.Enabled =
+            telefoneAlternativo2TextBox.Enabled =
+            TelefoneTextBox.Enabled =
+            CidadesDropDownList.Enabled =
+            EstadoCivilDropDownList.Enabled =
+            RecomendanteDropDownList.Enabled =
+            StatusDropDownList.Enabled =
+            TipoDropDownList.Enabled =
+            UFDropDownList.Enabled =
+            SexoRadioButtonList.Enabled =
+            salvarButton.Visible =
+            cancelarButton.Visible =
+            pesquisarButton.Visible = false;
 
             VoltarButton.Visible = true;
         }
