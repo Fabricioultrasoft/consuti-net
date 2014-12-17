@@ -536,7 +536,17 @@ namespace Sistema_Life_Planner_Agenda.Contato
 
         protected void VoltarButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/SITPLAN/ExecutarSITPLAN.aspx?idSitPlan=" + Request.QueryString["idSitPlan"]);
+            if (string.Equals(Request.QueryString["Return"].ToString(), "ExecSitPlan"))
+            {
+                Response.Redirect("~/SITPLAN/ExecutarSITPLAN.aspx?idSitPlan=" + Request.QueryString["idSitPlan"]);
+            }
+            else
+                if (string.Equals(Request.QueryString["Return"].ToString(), "CadSitPlan"))
+                {
+                    Response.Redirect("~/SITPLAN/CadastrarSITPLAN.aspx");
+                }
+
+
         }
 
         protected void HistoricoGridView_PageIndexChanging(Object sender, GridViewPageEventArgs e)
