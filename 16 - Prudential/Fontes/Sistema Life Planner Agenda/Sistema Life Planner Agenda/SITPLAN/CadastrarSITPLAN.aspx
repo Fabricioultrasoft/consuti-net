@@ -9,6 +9,21 @@
             width: 125px;
         }
     </style>
+    <script type="text/javascript" language="javascript">
+        function SelecionaTodosChecks(spanChk) {
+            var oItem = spanChk.children;
+            var theBox = (spanChk.type == "checkbox") ?
+spanChk : spanChk.children.item[0];
+            xState = theBox.checked;
+            elm = theBox.form.elements;
+            for (i = 0; i < elm.length; i++)
+                if (elm[i].type == "checkbox" &&
+elm[i].id != theBox.id) {
+                    if (elm[i].checked != xState)
+                        elm[i].click();
+                }
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MenuContentPlaceHolder" runat="server">
     <li><a href="..\Default.aspx">Home</a></li>
@@ -155,10 +170,14 @@
                                 </ItemTemplate>
                                 <ItemStyle Width="60px" HorizontalAlign="Center" />
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="">
+                            <asp:TemplateField HeaderText="Selecionar Todos">
                                 <ItemTemplate>
                                     <asp:CheckBox ID="IncluirContatoCheckBox" runat="server" />
                                 </ItemTemplate>
+                                <HeaderTemplate>
+                                    <input id="chkAll" onclick="javascript:SelecionaTodosChecks(this);" runat="server"
+                                        type="checkbox" />
+                                </HeaderTemplate>
                                 <ItemStyle Width="30px" HorizontalAlign="Center" />
                             </asp:TemplateField>
                         </Columns>
@@ -170,7 +189,6 @@
                         <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
                         <PagerSettings Position="Bottom" Mode="Numeric" />
                     </asp:GridView>
-                    <br />
                 </fieldset>
             </asp:Panel>
             <br />
