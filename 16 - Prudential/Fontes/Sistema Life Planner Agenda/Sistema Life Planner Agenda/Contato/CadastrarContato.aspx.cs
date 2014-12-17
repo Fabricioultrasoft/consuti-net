@@ -92,7 +92,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
                             Convert.ToDateTime(DataContatoTextBox.Text).AddHours(Convert.ToInt32(HoraTextBox.Text)).AddMinutes(Convert.ToInt32(MinutosTextBox.Text)).AddSeconds(DateTime.Now.Second),
                             ObservacaoTextBox.Text);
                         CarregaHistorico();
-                        MsgHistoricoLabel.Text = "Novo registro incluído";
+                        MsgHistoricoLabel.Text = "Registro incluído com sucesso.";
                         PreencheCamposHistorico();
                     }
                     catch (Exception ex)

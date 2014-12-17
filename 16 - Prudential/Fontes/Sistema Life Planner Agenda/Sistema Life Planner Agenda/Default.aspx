@@ -63,12 +63,12 @@
                 </fieldset>
                 <fieldset>
                     <legend>Compromissos Futuros</legend>
-                    <asp:Panel runat="server" ID="CompromissosHomeGrid" ScrollBars="Vertical" Height="300px">
+                    <asp:Panel runat="server" ID="CompromissosHomeGrid">
                         <asp:GridView ID="AgendaGridView" runat="server" CellPadding="4" ForeColor="#333333"
                             GridLines="None" Width="100%" AutoGenerateColumns="False" EnableModelValidation="True"
                             OnRowCommand="AgendaGridView_Click" EmptyDataText="Nenhum compromisso nos próximos 7 dias."
-                            AllowPaging="True" AllowSorting="True" PageSize="10" BorderColor="#003366" BorderStyle="Solid"
-                            BorderWidth="1px" CellSpacing="2" RowStyle-Height="40px" Font-Size="9pt">
+                            BorderColor="#003366" BorderStyle="Solid" BorderWidth="1px" CellSpacing="2" RowStyle-Height="40px"
+                            Font-Size="9pt">
                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                             <Columns>
                                 <asp:TemplateField HeaderText="#">
@@ -113,8 +113,7 @@
                             <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
                             <PagerSettings Position="Bottom" Mode="Numeric" />
                         </asp:GridView>
-                        <br />
-                    </asp:Panel>
+                        </asp:Panel>
                 </fieldset>
             </asp:Panel>
         </div>
