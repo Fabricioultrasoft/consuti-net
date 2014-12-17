@@ -23,14 +23,15 @@ namespace Sistema_Life_Planner_Agenda.Contato
                     string.IsNullOrEmpty(Request.QueryString["Mode"]))
                 {
                     CarregaDadosCadastrais(Convert.ToInt32(Request.QueryString["idContato"]));
+                    PreencheCamposHistorico();
                 }
                 else if (!string.IsNullOrEmpty(Request.QueryString["idContato"]) &&
                     !string.IsNullOrEmpty(Request.QueryString["Mode"]))
                 {
                     CarregaDadosCadastrais(Convert.ToInt32(Request.QueryString["idContato"]));
                     BloqueiaCampos();
+                    PreencheCamposHistorico();
                 }
-
                 else
                 {
                     try
@@ -39,7 +40,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
                         CarregarStatus();
                         CarregarTipos();
                         CarregarMunicipios();
-
+                        HistoricoPanel.Visible = false;
                         DataCadastroLabel.Text = DateTime.Now.ToString();
 
                     }
@@ -49,15 +50,65 @@ namespace Sistema_Life_Planner_Agenda.Contato
                         Response.Redirect("~/Login.aspx");
                     }
                 }
-
             }
 
             //TODO: Verificar se existe histórico. se sim, ocultar o label
         }
 
+        private void PreencheCamposHistorico()
+        {
+            HistoricoPanel.Visible = true;
+            DataContatoTextBox.Text = DateTime.Now.Date.ToShortDateString();
+            HoraTextBox.Text = DateTime.Now.Hour.ToString();
+            MinutosTextBox.Text = DateTime.Now.Minute.ToString();
+            ObservacaoTextBox.Text = string.Empty;
+        }
+
+        private void CarregaHistorico()
+        {
+            if (!string.IsNullOrEmpty(Request.QueryString["idContato"]))
+            {
+                HistoricoGridView.DataSource = ViewState["HistoricoDataSet"] = new HistoricoContatoBD().Listar(Convert.ToInt32(Request.QueryString["idContato"]));
+                historicoContatosPanel.DataBind();
+            }
+        }
+
         protected void incluirHistoricoContato_Click(object sender, EventArgs e)
         {
+            try
+            {
 
+                if (!string.IsNullOrEmpty(Request.QueryString["idContato"]) &&
+                    !string.IsNullOrEmpty(DataContatoTextBox.Text) &&
+                    !string.IsNullOrEmpty(HoraTextBox.Text) &&
+                    !string.IsNullOrEmpty(MinutosTextBox.Text) &&
+                    !string.IsNullOrEmpty(ObservacaoTextBox.Text) &&
+                    ValidaHora(Convert.ToInt32(HoraTextBox.Text), Convert.ToInt32(MinutosTextBox.Text)))
+                {
+                    try
+                    {
+                        new HistoricoContatoBD().Incluir(
+                            Convert.ToInt32(Request.QueryString["idContato"]),
+                            Convert.ToDateTime(DataContatoTextBox.Text).AddHours(Convert.ToInt32(HoraTextBox.Text)).AddMinutes(Convert.ToInt32(MinutosTextBox.Text)).AddSeconds(DateTime.Now.Second),
+                            ObservacaoTextBox.Text);
+                        CarregaHistorico();
+                        MsgHistoricoLabel.Text = "Novo registro incluído";
+                        PreencheCamposHistorico();
+                    }
+                    catch (Exception ex)
+                    {
+                        throw;
+                    }
+                }
+                else
+                {
+                    MsgHistoricoLabel.Text = "Preencha os campos obrigatórios com valores válidos.";
+                }
+            }
+            catch (Exception)
+            {
+                MsgHistoricoLabel.Text = "Preencha os campos obrigatórios com valores válidos.";
+            }
         }
 
         protected void salvarButton_Click(object sender, EventArgs e)
@@ -178,7 +229,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
             {
                 retorno.Add(dadosContato.Telefone_Alternativo_2);
             }
-             if (!string.IsNullOrEmpty(dadosContato.Telefone_Principal))
+            if (!string.IsNullOrEmpty(dadosContato.Telefone_Principal))
             {
                 retorno.Add(dadosContato.Telefone_Principal);
             }
@@ -325,6 +376,8 @@ namespace Sistema_Life_Planner_Agenda.Contato
 
                 Session["ID_Contato_RecomendanteAtual"] = DrContato["ID_Contato_Recomendante"].ToString();
 
+                CarregaHistorico();
+
             }
             catch (Exception ex)
             {
@@ -462,7 +515,8 @@ namespace Sistema_Life_Planner_Agenda.Contato
                 DDDTelefoneTextBox.Enabled =
                 emailTextBox.Enabled =
                 filhosTextBox.Enabled =
-                HoraContatoTextBox.Enabled =
+                HoraTextBox.Enabled =
+                MinutosTextBox.Enabled =
                 idadeTextBox.Enabled =
                 nomeCompletoTextBox.Enabled =
                 ObservacaoTextBox.Enabled =
@@ -491,7 +545,12 @@ namespace Sistema_Life_Planner_Agenda.Contato
             Response.Redirect("~/SITPLAN/ExecutarSITPLAN.aspx?idSitPlan=" + Request.QueryString["idSitPlan"]);
         }
 
-
+        protected void HistoricoGridView_PageIndexChanging(Object sender, GridViewPageEventArgs e)
+        {
+            HistoricoGridView.PageIndex = e.NewPageIndex;
+            HistoricoGridView.DataSource = (DataSet)ViewState["HistoricoDataSet"];
+            HistoricoGridView.DataBind();
+        }
 
     }
 }

@@ -63,56 +63,58 @@
                 </fieldset>
                 <fieldset>
                     <legend>Compromissos Futuros</legend>
-                    <asp:GridView ID="AgendaGridView" runat="server" CellPadding="4" ForeColor="#333333"
-                        GridLines="None" Width="100%" AutoGenerateColumns="False" EnableModelValidation="True"
-                        OnRowCommand="AgendaGridView_Click" EmptyDataText="Nenhum compromisso nos próximos 7 dias."
-                        AllowPaging="True" AllowSorting="True" PageSize="10" BorderColor="#003366" BorderStyle="Solid"
-                        BorderWidth="1px" CellSpacing="2" RowStyle-Height="40px" Font-Size="9pt">
-                        <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-                        <Columns>
-                            <asp:TemplateField HeaderText="#">
-                                <HeaderStyle HorizontalAlign="Center" Width="35px" />
-                                <ItemStyle HorizontalAlign="Center" Font-Bold="true" />
-                                <ItemTemplate>
-                                    <%# Container.DataItemIndex + 1 %>
-                                </ItemTemplate>
-                            </asp:TemplateField>
-                            <asp:BoundField DataField="Nome" HeaderText="Contato" >
-                                <ItemStyle CssClass="espacoTabelas" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="Data" HeaderText="Data" >
-                                <ItemStyle CssClass="espacoTabelas" Width="70px" />
-                            </asp:BoundField>
-                            <asp:BoundField HeaderText="Hora" DataField="Hora" >
-                                <ItemStyle CssClass="espacoTabelas" Width="35px" />
-                            </asp:BoundField>
-                            <asp:TemplateField HeaderText="Alterar">
-                                <ItemTemplate>
-                                    <asp:ImageButton ID="imgBtnAlterar" runat="server" CausesValidation="False" CommandArgument='<%# Bind("Id") %>'
-                                        CommandName="Alterar" ImageUrl="~/Estilos/Imgs/edit.png"></asp:ImageButton>
-                                </ItemTemplate>
-                                <ItemStyle Width="50px" HorizontalAlign="Center" />
-                            </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Excluir">
-                                <ItemTemplate>
-                                    <asp:ImageButton ID="imgBtnExcluir" runat="server" CausesValidation="False" CommandArgument='<%# Bind("Id") %>'
-                                        CommandName="Excluir" ImageUrl="~/Estilos/Imgs/no.png"></asp:ImageButton>
-                                    <cc1:ConfirmButtonExtender ID="ConfirmButtonExtender" runat="server" TargetControlID="imgBtnExcluir"
-                                        ConfirmText="Confirma a exclusão do compromisso?">
-                                    </cc1:ConfirmButtonExtender>
-                                </ItemTemplate>
-                                <ItemStyle Width="50px" HorizontalAlign="Center" />
-                            </asp:TemplateField>
-                        </Columns>
-                        <EditRowStyle BackColor="#999999" />
-                        <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" Height="30px" />
-                        <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-                        <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-                        <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                        <PagerSettings Position="Bottom" Mode="Numeric" />
-                    </asp:GridView>
-                    <br />
+                    <asp:Panel runat="server" ID="CompromissosHomeGrid" ScrollBars="Vertical" Height="300px">
+                        <asp:GridView ID="AgendaGridView" runat="server" CellPadding="4" ForeColor="#333333"
+                            GridLines="None" Width="100%" AutoGenerateColumns="False" EnableModelValidation="True"
+                            OnRowCommand="AgendaGridView_Click" EmptyDataText="Nenhum compromisso nos próximos 7 dias."
+                            AllowPaging="True" AllowSorting="True" PageSize="10" BorderColor="#003366" BorderStyle="Solid"
+                            BorderWidth="1px" CellSpacing="2" RowStyle-Height="40px" Font-Size="9pt">
+                            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                            <Columns>
+                                <asp:TemplateField HeaderText="#">
+                                    <HeaderStyle HorizontalAlign="Center" Width="35px" />
+                                    <ItemStyle HorizontalAlign="Center" Font-Bold="true" />
+                                    <ItemTemplate>
+                                        <%# Container.DataItemIndex + 1 %>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:BoundField DataField="Nome" HeaderText="Contato">
+                                    <ItemStyle CssClass="espacoTabelas" />
+                                </asp:BoundField>
+                                <asp:BoundField DataField="Data" HeaderText="Data">
+                                    <ItemStyle CssClass="espacoTabelas" Width="70px" />
+                                </asp:BoundField>
+                                <asp:BoundField HeaderText="Hora" DataField="Hora">
+                                    <ItemStyle CssClass="espacoTabelas" Width="35px" />
+                                </asp:BoundField>
+                                <asp:TemplateField HeaderText="Alterar">
+                                    <ItemTemplate>
+                                        <asp:ImageButton ID="imgBtnAlterar" runat="server" CausesValidation="False" CommandArgument='<%# Bind("Id") %>'
+                                            CommandName="Alterar" ImageUrl="~/Estilos/Imgs/edit.png"></asp:ImageButton>
+                                    </ItemTemplate>
+                                    <ItemStyle Width="50px" HorizontalAlign="Center" />
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Excluir">
+                                    <ItemTemplate>
+                                        <asp:ImageButton ID="imgBtnExcluir" runat="server" CausesValidation="False" CommandArgument='<%# Bind("Id") %>'
+                                            CommandName="Excluir" ImageUrl="~/Estilos/Imgs/no.png"></asp:ImageButton>
+                                        <cc1:ConfirmButtonExtender ID="ConfirmButtonExtender" runat="server" TargetControlID="imgBtnExcluir"
+                                            ConfirmText="Confirma a exclusão do compromisso?">
+                                        </cc1:ConfirmButtonExtender>
+                                    </ItemTemplate>
+                                    <ItemStyle Width="50px" HorizontalAlign="Center" />
+                                </asp:TemplateField>
+                            </Columns>
+                            <EditRowStyle BackColor="#999999" />
+                            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" Height="30px" />
+                            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                            <PagerSettings Position="Bottom" Mode="Numeric" />
+                        </asp:GridView>
+                        <br />
+                    </asp:Panel>
                 </fieldset>
             </asp:Panel>
         </div>

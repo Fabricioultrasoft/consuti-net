@@ -37,7 +37,7 @@ namespace Sistema_Life_Planner_Agenda.RecuperarSenha
                     "<html><head></head><body>" +
                     "Olá! <br /><br /> Foi solicitado em " + DateTime.Now + " a recuperação da senha de acesso ao sistema SISLPA.<br /><br />" +
                     "Senha: " + Decriptografar(senhaRecuperada) + "<br /><br />Favor não responder este e-mail." +
-                    "<br /> <br /><br /><br />Sistema Life Planner Agenda - SISLPA </body></html>");
+                    "<br /> <br /><br /><br />Sistema Life Planner Agenda - SISLPA </body></html>", string.Empty);
 
                     ExibeMensagemPopUp("E-mail de recuperação de acesso enviado para " + emailTextBox.Text + ".");
                 }

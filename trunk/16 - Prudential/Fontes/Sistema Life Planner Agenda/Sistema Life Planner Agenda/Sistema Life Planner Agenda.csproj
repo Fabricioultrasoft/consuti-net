@@ -124,6 +124,7 @@
     <Compile Include="BD\CidadesBD.cs" />
     <Compile Include="BD\ContatoBD.cs" />
     <Compile Include="BD\ContatosSitPlanBD.cs" />
+    <Compile Include="BD\HistoricoContatoBD.cs" />
     <Compile Include="BD\RecomendanteContatoBD.cs" />
     <Compile Include="BD\SitPlanBD.cs" />
     <Compile Include="BD\StatusContatoBD.cs" />
