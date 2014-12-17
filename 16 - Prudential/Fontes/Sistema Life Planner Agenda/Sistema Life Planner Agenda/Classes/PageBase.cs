@@ -39,7 +39,8 @@ namespace Sistema_Life_Planner_Agenda.Classes
             string emailRemetente,
             string emailDestinatario,
             string assuntoMensagem,
-            string conteudoMensagem)
+            string conteudoMensagem,
+            string caminhoAnexo)
         {
             //Cria objeto com dados do e-mail.
             MailMessage objEmail = new MailMessage();
@@ -61,6 +62,12 @@ namespace Sistema_Life_Planner_Agenda.Classes
 
             //Define o corpo do e-mail.
             objEmail.Body = conteudoMensagem;
+
+            //Adciona anexo
+            if (!string.IsNullOrEmpty(caminhoAnexo))
+            {
+                objEmail.Attachments.Add(new Attachment(caminhoAnexo));
+            }
 
             //Para evitar problemas de caracteres "estranhos", configuramos o charset para "ISO-8859-1"
             objEmail.SubjectEncoding = System.Text.Encoding.GetEncoding("ISO-8859-1");

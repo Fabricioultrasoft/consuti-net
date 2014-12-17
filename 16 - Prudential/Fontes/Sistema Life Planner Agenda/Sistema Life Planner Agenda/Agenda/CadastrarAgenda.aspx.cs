@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using Sistema_Life_Planner_Agenda.Classes;
 using System.Data;
 using Sistema_Life_Planner_Agenda.BD;
+using System.Configuration;
 
 namespace Sistema_Life_Planner_Agenda.Agenda
 {
@@ -101,21 +102,25 @@ namespace Sistema_Life_Planner_Agenda.Agenda
 
         protected void salvarButton_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(Request.QueryString["idAgenda"].ToString()))
+            if (!string.IsNullOrEmpty(Request.QueryString["idAgenda"]))
             {
                 try
                 {
                     new AgendaBD().Alterar(
-                   Convert.ToInt32(Request.QueryString["idAgenda"].ToString()),
-                   Convert.ToInt32(ContatoDropDownList.SelectedItem.Value),
-                   Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())),
-                   CriarAgendaGoogleCheckBox.Checked,
-                   DiaCompromissoCalendar.SelectedDate,
-                   Convert.ToInt32(HoraTextBox.Text),
-                   Convert.ToInt32(MinutosTextBox.Text),
-                   MaisInformaciesTextBox.Text,
-                   PreferenciaContato(),
-                   PeriodoCompromisso());
+                       Convert.ToInt32(Request.QueryString["idAgenda"].ToString()),
+                       Convert.ToInt32(ContatoDropDownList.SelectedItem.Value),
+                       Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())),
+                       CriarAgendaGoogleCheckBox.Checked,
+                       DiaCompromissoCalendar.SelectedDate,
+                       Convert.ToInt32(HoraTextBox.Text),
+                       Convert.ToInt32(MinutosTextBox.Text),
+                       MaisInformaciesTextBox.Text,
+                       PreferenciaContato(),
+                       PeriodoCompromisso());
+                    if (CriarAgendaGoogleCheckBox.Checked)
+                    {
+                        //CriarCalendario();
+                    }
                     ExibeMensagemPopUp("Compromisso salvo com sucesso!");
                 }
                 catch (Exception ex)
@@ -148,6 +153,11 @@ namespace Sistema_Life_Planner_Agenda.Agenda
                             MaisInformaciesTextBox.Text,
                             PreferenciaContato(),
                             PeriodoCompromisso());
+
+                        if (CriarAgendaGoogleCheckBox.Checked)
+                        {
+                            //CriarCalendario();
+                        }
 
                         LimparCampos();
                         ExibeMensagemPopUp("Compromisso salvo com sucesso!");
@@ -326,6 +336,45 @@ namespace Sistema_Life_Planner_Agenda.Agenda
         protected void VoltarButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/SITPLAN/ExecutarSITPLAN.aspx?idSitPlan=" + Request.QueryString["ReturnSitPlanId"].ToString());
+        }
+
+        private void CriarCalendario()
+        {
+            //INITIALIZING MEETING DETAILS
+            string caminhoAnexo = Server.MapPath("SISLPACompromisso_" + DateTime.Now.ToString("yyyyMMddHHmmss") + "_" + Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())) + ".ics");
+            string schLocation = "SISLPA";
+            string schSubject = "Realizar contato com - " + ContatoDropDownList.SelectedItem.Text;
+            string schDescription = MaisInformaciesTextBox.Text;
+            DateTime schBeginDate = DiaCompromissoCalendar.SelectedDate.AddHours(Convert.ToInt32(HoraTextBox.Text)).AddMinutes(Convert.ToInt32(MinutosTextBox.Text));
+            DateTime schEndDate = DiaCompromissoCalendar.SelectedDate;
+
+            //PUTTING THE MEETING DETAILS INTO AN ARRAY OF STRING
+
+            String[] contents = { "BEGIN:VCALENDAR",
+                              "PRODID:-//Flo Inc.//FloSoft//EN",
+                              "BEGIN:VEVENT",
+                              "DTSTART:" + schBeginDate.ToUniversalTime().ToString("yyyyMMdd\\THHmmss\\Z"), 
+                              "DTEND:" + schEndDate.ToUniversalTime().ToString("yyyyMMdd\\THHmmss\\Z"), 
+                              "LOCATION:" + schLocation, 
+	                     "DESCRIPTION;ENCODING=QUOTED-PRINTABLE:" + schDescription,
+                              "SUMMARY:" + schSubject, "PRIORITY:3", 
+	                     "END:VEVENT", "END:VCALENDAR" };
+
+            /*THE METHOD 'WriteAllLines' CREATES A FILE IN THE SPECIFIED PATH WITH 
+           THE SPECIFIED NAME,WRITES THE ARRAY OF CONTENTS INTO THE FILE AND CLOSES THE
+            FILE.SUPPOSE THE FILE ALREADY EXISTS IN THE SPECIFIED LOCATION,THE CONTENTS 
+           IN THE FILE ARE OVERWRITTEN*/
+
+            System.IO.File.WriteAllLines(caminhoAnexo, contents);
+
+            //METHOD TO SEND EMAIL IS CALLED
+            EnviaEmail(
+                "Compromisso SISLPA",
+                ConfigurationManager.AppSettings["emailDestinatarioRecuperarSenha"].ToString(),
+                Session["emailUsuarioLogado"].ToString(),
+                schSubject,
+                "Evento criado a partir do Sistema Life Planner Agenda - SISLPA",
+                caminhoAnexo);
         }
     }
 }

@@ -36,7 +36,7 @@
                             </td>
                             <td style="width: 115px">
                                 <div style="width: 110px;">
-                                    <asp:TextBox ID="PeriodoDeTextBox" runat="server" Width="70px" TabIndex="1" MaxLength="100"></asp:TextBox>
+                                    <asp:TextBox ID="PeriodoDeTextBox" runat="server" Width="70px" TabIndex="1" MaxLength="10"></asp:TextBox>
                                     <cc1:CalendarExtender ID="PeriodoDeTextBox_CalendarExtender" runat="server" Enabled="True"
                                         TargetControlID="PeriodoDeTextBox" PopupButtonID="deImageButton" TodaysDateFormat=" d MMMM yyyy"
                                         Format="dd/MM/yyyy">
@@ -51,7 +51,7 @@
                             </td>
                             <td>
                                 <div style="width: 110px;">
-                                    <asp:TextBox ID="PeriodoAteTextBox" runat="server" Width="70px" TabIndex="1" MaxLength="100"></asp:TextBox>
+                                    <asp:TextBox ID="PeriodoAteTextBox" runat="server" Width="70px" TabIndex="1" MaxLength="10"></asp:TextBox>
                                     <cc1:CalendarExtender ID="PeriodoAteTextBox_CalendarExtender" runat="server" Enabled="True"
                                         TargetControlID="PeriodoAteTextBox" PopupButtonID="AteImageButton" TodaysDateFormat=" d MMMM yyyy"
                                         Format="dd/MM/yyyy">

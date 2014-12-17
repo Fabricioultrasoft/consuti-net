@@ -103,7 +103,7 @@
                         </tr>
                         <tr>
                             <td class="alinhaDireita">
-                                Outras Informações:
+                                &nbsp;Informações:
                             </td>
                             <td>
                                 <asp:TextBox ID="outrasInformacoesTextBox" runat="server" TabIndex="5" TextMode="MultiLine"
@@ -112,50 +112,6 @@
                         </tr>
                     </table>
                     <br />
-                </fieldset>
-                <fieldset>
-                    <legend>Contatos Realizados</legend>
-                    <table class="Formulario" style="background-color: #DEDEDE; margin: 0 auto">
-                        <tr>
-                            <td class="alinhaDireita">
-                                Data:
-                            </td>
-                            <td>
-                                <asp:TextBox ID="DataContatoTextBox" runat="server" MaxLength="10" TabIndex="6" TextMode="SingleLine"
-                                    Width="70px"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="alinhaDireita">
-                                Hora:
-                            </td>
-                            <td>
-                                <asp:TextBox ID="HoraContatoTextBox" runat="server" Width="36px" MaxLength="5" TabIndex="6"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="alinhaDireita">
-                                Observação:
-                            </td>
-                            <td>
-                                <asp:TextBox ID="ObservacaoTextBox" runat="server" TabIndex="7" TextMode="MultiLine"
-                                    Width="500px" Rows="5"></asp:TextBox>
-                                <br />
-                                <div style="text-align: right">
-                                    <asp:Button ID="incluirContatoButton" runat="server" Text="Incluir" CssClass="botaoNovo"
-                                        TabIndex="8" OnClick="incluirHistoricoContato_Click" /></div>
-                            </td>
-                        </tr>
-                    </table>
-                    <div style="width: 90%; margin: 0 auto">
-                        <fieldset>
-                            <legend>Histórico</legend>
-                            <asp:Panel runat="server" ID="historicoContatosPanel" ScrollBars="Vertical">
-                                <asp:Label ID="NenhumLabel" runat="server" Text="Nenhum até o momento..." Font-Italic="true"></asp:Label>
-                            </asp:Panel>
-                        </fieldset>
-                        <br />
-                    </div>
                 </fieldset>
                 <fieldset>
                     <legend>Dados Complementares</legend>
@@ -222,7 +178,7 @@
                                     </td>
                                     <td>
                                         <asp:DropDownList ID="UFDropDownList" runat="server" Width="150px" TabIndex="14"
-                                            OnSelectedIndexChanged="UFDropDownList_SelectedIndexChanged" AutoPostBack="true" >
+                                            OnSelectedIndexChanged="UFDropDownList_SelectedIndexChanged" AutoPostBack="true">
                                             <asp:ListItem Text="< Selecione >" Value=""></asp:ListItem>
                                             <asp:ListItem Text="Acre" Value="AC"></asp:ListItem>
                                             <asp:ListItem Text="Alagoas" Value="AL"></asp:ListItem>
@@ -327,6 +283,106 @@
                     </asp:UpdatePanel>
                     <br />
                 </fieldset>
+                <asp:Panel ID="HistoricoPanel" runat="server" Visible="false">
+                    <fieldset>
+                        <legend>Contatos Realizados</legend>
+                        <asp:UpdatePanel ID="HistoricoUpdatePanel" runat="server" UpdateMode="Conditional">
+                            <ContentTemplate>
+                                <table class="Formulario" style="background-color: #DEDEDE; margin: 0 auto">
+                                    <tr>
+                                        <td class="alinhaDireita">
+                                            Data:
+                                        </td>
+                                        <td>
+                                            <asp:TextBox ID="DataContatoTextBox" runat="server" Width="70px" TabIndex="1" MaxLength="10"
+                                                ValidationGroup="historico"></asp:TextBox>
+                                            &nbsp;
+                                            <asp:RequiredFieldValidator ID="DataContatoTextBoxRequiredFieldValidator" runat="server"
+                                                ControlToValidate="DataContatoTextBox" CssClass="obrigatorio" Display="Dynamic"
+                                                ErrorMessage="*" ToolTip="Campo Obrigatório!" ValidationGroup="historico"></asp:RequiredFieldValidator>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="alinhaDireita">
+                                            Hora:
+                                        </td>
+                                        <td>
+                                            <asp:TextBox ID="HoraTextBox" runat="server" Width="20px" TabIndex="4" MaxLength="2"
+                                                ValidationGroup="historico"></asp:TextBox>
+                                            :<asp:TextBox ID="MinutosTextBox" runat="server" Width="20px" TabIndex="5" MaxLength="2"
+                                                ValidationGroup="historico"></asp:TextBox>
+                                            <span class="obrigatorio">
+                                                <asp:RequiredFieldValidator ID="HoraTextBoxRequiredFieldValidator" runat="server"
+                                                    ControlToValidate="HoraTextBox" Display="Dynamic" ErrorMessage="*" CssClass="obrigatorio"
+                                                    ToolTip="Campo Obrigatório!" ValidationGroup="historico"></asp:RequiredFieldValidator>
+                                            </span><span class="obrigatorio">
+                                                <asp:RequiredFieldValidator ID="MinutosTextBoxRequiredFieldValidator" runat="server"
+                                                    ControlToValidate="MinutosTextBox" Display="Dynamic" ErrorMessage="*" CssClass="obrigatorio"
+                                                    ToolTip="Campo Obrigatório!" ValidationGroup="historico"></asp:RequiredFieldValidator></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="alinhaDireita">
+                                            Observação:
+                                        </td>
+                                        <td>
+                                            <asp:TextBox ID="ObservacaoTextBox" runat="server" TabIndex="7" TextMode="MultiLine"
+                                                Width="500px" Rows="5" ValidationGroup="historico"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="ObservacaoTextBoxRequiredFieldValidator" runat="server"
+                                                ControlToValidate="ObservacaoTextBox" Display="Dynamic" ErrorMessage="*" CssClass="obrigatorio"
+                                                ToolTip="Campo Obrigatório!" ValidationGroup="historico"></asp:RequiredFieldValidator></span>
+                                            <br />
+                                            <div style="text-align: right">
+                                                <div style="width: 400px; text-align: left; color: Red">
+                                                    <asp:Label ID="MsgHistoricoLabel" runat="server" Text=""></asp:Label></div>
+                                                <asp:Button ID="incluirContatoButton" runat="server" Text="Incluir" CssClass="botaoNovo"
+                                                    TabIndex="8" OnClientClick="return true;" OnClick="incluirHistoricoContato_Click"
+                                                    ValidationGroup="historico" CausesValidation="true" UseSubmitBehavior="true" /></div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div style="width: 90%; margin: 0 auto">
+                                    <fieldset>
+                                        <legend>Histórico</legend>
+                                        <asp:Panel runat="server" ID="historicoContatosPanel" >
+                                            <asp:GridView ID="HistoricoGridView" runat="server" CellPadding="4" ForeColor="#333333"
+                                                GridLines="None" Width="100%" AutoGenerateColumns="False" EnableModelValidation="True"
+                                                EmptyDataText="Nenhum até o momento..." AllowPaging="True" PageSize="10" BorderColor="#003366"
+                                                BorderStyle="Solid" BorderWidth="1px" CellSpacing="2" RowStyle-Height="40px"
+                                                Font-Size="9pt" OnPageIndexChanging="HistoricoGridView_PageIndexChanging">
+                                                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                                                <Columns>
+                                                    <asp:TemplateField HeaderText="#">
+                                                        <HeaderStyle HorizontalAlign="Center" Width="35px" />
+                                                        <ItemStyle HorizontalAlign="Center" Font-Bold="true" />
+                                                        <ItemTemplate>
+                                                            <%# Container.DataItemIndex + 1 %>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:BoundField DataField="Historico" HeaderText="Histórico">
+                                                        <ItemStyle CssClass="espacoTabelas" />
+                                                    </asp:BoundField>
+                                                    <asp:BoundField DataField="Data" HeaderText="Data e Hora">
+                                                        <ItemStyle CssClass="espacoTabelas" Width="100px" />
+                                                    </asp:BoundField>
+                                                </Columns>
+                                                <EditRowStyle BackColor="#999999" />
+                                                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" Height="30px" />
+                                                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                                                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                                                <PagerSettings Position="Bottom" Mode="Numeric"  />
+                                            </asp:GridView>
+                                        </asp:Panel>
+                                    </fieldset>
+                                    <br />
+                                </div>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                    </fieldset>
+                </asp:Panel>
                 <div class="barraBotoes">
                     <asp:Button ID="pesquisarButton" runat="server" Text="   Pesquisar" CssClass="botaoPesquisar"
                         TabIndex="28" OnClick="pesquisarButton_Click" Visible="false" CausesValidation="false" />
@@ -334,9 +390,8 @@
                         TabIndex="29" OnClick="cancelarButton_Click" OnClientClick="return confirm('Confirma cancelamento? Os dados não salvos serão perdidos.');" />
                     <asp:Button ID="salvarButton" runat="server" Text="Salvar" CssClass="botaoSalvar"
                         TabIndex="30" OnClick="salvarButton_Click" />
-                        <asp:Button ID="VoltarButton" runat="server" Text="Voltar" CssClass="botaoVoltar"
-                        TabIndex="39" CausesValidation="False" Visible="false" 
-                        onclick="VoltarButton_Click" />
+                    <asp:Button ID="VoltarButton" runat="server" Text="Voltar" CssClass="botaoVoltar"
+                        TabIndex="39" CausesValidation="False" Visible="false" OnClick="VoltarButton_Click" />
                 </div>
             </asp:Panel>
         </div>
