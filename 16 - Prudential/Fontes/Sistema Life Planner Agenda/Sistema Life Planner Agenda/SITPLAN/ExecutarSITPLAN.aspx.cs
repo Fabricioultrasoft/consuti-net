@@ -25,7 +25,7 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
                     }
                     catch (Exception ex)
                     {
-                        ExibeMensagemPopUp("Não foi possível carregar os dados. Parâmetros inválidos para o seu perfil. Detalhes: " + ex.Message); 
+                        ExibeMensagemPopUp("Não foi possível carregar os dados. Parâmetros inválidos para o seu perfil. Detalhes: " + ex.Message);
                     }
                 }
             }
@@ -49,9 +49,9 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
         {
             if (e.CommandName.Equals("DetalhesContato"))
             {
-                Response.Redirect("~/Contato/CadastrarContato.aspx?idContato=" + Convert.ToString(e.CommandArgument) + "&Mode=View&IdSitPlan=" + Request.QueryString["idSitPlan"], false);
+                Response.Redirect("~/Contato/CadastrarContato.aspx?idContato=" + Convert.ToString(e.CommandArgument) + "&Mode=View&Return=ExecSitPlan&IdSitPlan=" + Request.QueryString["idSitPlan"], false);
             }
-            if (e.CommandName.Equals("AgendamentoContato"))
+            else if (e.CommandName.Equals("AgendamentoContato"))
             {
                 Response.Redirect("~/Agenda/CadastrarAgenda.aspx?idContato=" + Convert.ToString(e.CommandArgument) + "&ReturnSitPlanId=" + Request.QueryString["idSitPlan"].ToString());
             }
