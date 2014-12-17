@@ -51,8 +51,6 @@ namespace Sistema_Life_Planner_Agenda.Contato
                     }
                 }
             }
-
-            //TODO: Verificar se existe histórico. se sim, ocultar o label
         }
 
         private void PreencheCamposHistorico()

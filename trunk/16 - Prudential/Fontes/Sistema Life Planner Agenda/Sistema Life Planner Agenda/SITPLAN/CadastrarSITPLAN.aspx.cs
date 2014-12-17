@@ -190,7 +190,7 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
                 if (e.CommandName == "Visualizar")
                 {
                     // o ",false" é para suprimir a chamada interna para "Response.End"
-                    Response.Redirect("CadastrarContato.aspx?idContato=" + Convert.ToString(e.CommandArgument) + "?Modo=read", false);//TODO: modo leitura do cadastro de contato
+                    Response.Redirect("CadastrarContato.aspx?idContato=" + Convert.ToString(e.CommandArgument) + "?Modo=read", false);//modo leitura do cadastro de contato
                 }
             }
             catch (Exception ex)
