@@ -76,67 +76,103 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN {
         protected global::System.Web.UI.WebControls.Label ContatosAtualizadosLabel;
         
         /// <summary>
-        /// NaoAtendeuLabel control.
+        /// TaNaoAtendeuLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label NaoAtendeuLabel;
+        protected global::System.Web.UI.WebControls.Label TaNaoAtendeuLabel;
         
         /// <summary>
-        /// JaEhClienteLabel control.
+        /// TaNaoQuerLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label JaEhClienteLabel;
+        protected global::System.Web.UI.WebControls.Label TaNaoQuerLabel;
         
         /// <summary>
-        /// NaoQuerLabel control.
+        /// TaLigacaoFuturaLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label NaoQuerLabel;
+        protected global::System.Web.UI.WebControls.Label TaLigacaoFuturaLabel;
         
         /// <summary>
-        /// AgendouOiLabel control.
+        /// TaJaEhClientLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label AgendouOiLabel;
+        protected global::System.Web.UI.WebControls.Label TaJaEhClientLabel;
         
         /// <summary>
-        /// AgendouCLabel control.
+        /// TaOiAgendadoLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label AgendouCLabel;
+        protected global::System.Web.UI.WebControls.Label TaOiAgendadoLabel;
         
         /// <summary>
-        /// LigacaoFuturaLabel control.
+        /// OiDelayLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LigacaoFuturaLabel;
+        protected global::System.Web.UI.WebControls.Label OiDelayLabel;
         
         /// <summary>
-        /// NenhumLabel control.
+        /// OiRealizadoLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label NenhumLabel;
+        protected global::System.Web.UI.WebControls.Label OiRealizadoLabel;
+        
+        /// <summary>
+        /// PcLigacaoFuturaLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PcLigacaoFuturaLabel;
+        
+        /// <summary>
+        /// PcDelayLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PcDelayLabel;
+        
+        /// <summary>
+        /// PcNLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PcNLabel;
+        
+        /// <summary>
+        /// PcC2Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PcC2Label;
         
         /// <summary>
         /// MeuClienteLabel control.
@@ -146,6 +182,15 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label MeuClienteLabel;
+        
+        /// <summary>
+        /// NenhumLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label NenhumLabel;
         
         /// <summary>
         /// ImprimirButton control.

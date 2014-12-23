@@ -47,14 +47,19 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
             DataHoraTerminoLabel.Text = DateTime.Now.ToString();
             LigacoesRealizadasLabel.Text = dados["total_ligacoes"].ToString();
             ContatosAtualizadosLabel.Text = dados["total_atualizado"].ToString();
-            NaoAtendeuLabel.Text = dados["total_nao_atendeu"].ToString();
-            JaEhClienteLabel.Text = dados["total_ja_e_cliente"].ToString();
-            NaoQuerLabel.Text = dados["total_nao_quer"].ToString();
-            AgendouOiLabel.Text = dados["total_agendou_oi"].ToString();
-            AgendouCLabel.Text = dados["total_agendou_c"].ToString();
-            LigacaoFuturaLabel.Text = dados["total_ligacao_futura"].ToString();
-            NenhumLabel.Text = dados["total_nenhum"].ToString();
-            MeuClienteLabel.Text = dados["meu_cliente"].ToString();
+            TaNaoAtendeuLabel.Text = dados["TA_NAO_ATENDEU"].ToString();
+            TaNaoQuerLabel.Text = dados["TA_NAO_QUER"].ToString();
+            TaLigacaoFuturaLabel.Text = dados["TA_LIGACAO_FUTURA"].ToString();
+            TaJaEhClientLabel.Text = dados["TA_JA_E_CLIENTE"].ToString();
+            TaOiAgendadoLabel.Text = dados["TA_OI_AGENDADO"].ToString();
+            OiDelayLabel.Text = dados["OI_DELAY"].ToString();
+            OiRealizadoLabel.Text = dados["OI_REALIZADO"].ToString();
+            PcLigacaoFuturaLabel.Text = dados["PC_LIGACAO_FUTURA"].ToString();
+            PcDelayLabel.Text = dados["PC_DELAY"].ToString();
+            PcNLabel.Text = dados["PC_N"].ToString();
+            PcC2Label.Text = dados["PC_C2"].ToString();
+            MeuClienteLabel.Text = dados["MEU_CLIENTE"].ToString();
+            NenhumLabel.Text = dados["NENHUM"].ToString();
         }
     }
 }

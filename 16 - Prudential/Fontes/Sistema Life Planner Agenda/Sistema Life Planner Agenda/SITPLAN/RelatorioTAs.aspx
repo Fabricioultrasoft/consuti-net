@@ -56,11 +56,11 @@
                 <hr />
                 <br />
                 <div id="resultadoRelatorioTAs">
-                <div class="TituloSITPLAN">
-                    <asp:Label ID="NomeSITPLANLabel" runat="server" Text=""></asp:Label>
-                    <br />
-                    <br />
-                </div>
+                    <div class="TituloSITPLAN">
+                        <asp:Label ID="NomeSITPLANLabel" runat="server" Text=""></asp:Label>
+                        <br />
+                        <br />
+                    </div>
                     <table class="Formulario">
                         <tr style="font-size: 15pt; text-decoration: underline">
                             <td class="alinhaDireita" style="width: 200px">
@@ -80,67 +80,107 @@
                         </tr>
                         <tr>
                             <td class="alinhaDireita">
-                                Não Atendeu:
+                                TA NÃO ATENDEU:
                             </td>
                             <td>
-                                <asp:Label ID="NaoAtendeuLabel" runat="server" Text=""></asp:Label>
+                                <asp:Label ID="TaNaoAtendeuLabel" runat="server" Text=""></asp:Label>
                             </td>
                         </tr>
                         <tr>
                             <td class="alinhaDireita">
-                                Já é cliente:
+                                TA NÃO QUER:
                             </td>
                             <td>
-                                <asp:Label ID="JaEhClienteLabel" runat="server" Text=""></asp:Label>
+                                <asp:Label ID="TaNaoQuerLabel" runat="server" Text=""></asp:Label>
                             </td>
                         </tr>
                         <tr>
                             <td class="alinhaDireita">
-                                Não Quer:
+                                TA LIGAÇÃO FUTURA:
                             </td>
                             <td>
-                                <asp:Label ID="NaoQuerLabel" runat="server" Text=""></asp:Label>
+                                <asp:Label ID="TaLigacaoFuturaLabel" runat="server" Text=""></asp:Label>
                             </td>
                         </tr>
                         <tr>
                             <td class="alinhaDireita">
-                                Agendou OI:
+                                TA JÁ É CLIENTE:
                             </td>
                             <td>
-                                <asp:Label ID="AgendouOiLabel" runat="server" Text=""></asp:Label>
+                                <asp:Label ID="TaJaEhClientLabel" runat="server" Text=""></asp:Label>
                             </td>
                         </tr>
                         <tr>
                             <td class="alinhaDireita">
-                                Agendou P/C:
+                                TA OI AGENDADO:
                             </td>
                             <td>
-                                <asp:Label ID="AgendouCLabel" runat="server" Text=""></asp:Label>
+                                <asp:Label ID="TaOiAgendadoLabel" runat="server" Text=""></asp:Label>
                             </td>
                         </tr>
                         <tr>
                             <td class="alinhaDireita">
-                                Ligação Futura:
+                                OI DELAY:
                             </td>
                             <td>
-                                <asp:Label ID="LigacaoFuturaLabel" runat="server" Text=""></asp:Label>
+                                <asp:Label ID="OiDelayLabel" runat="server" Text=""></asp:Label>
                             </td>
-                            </tr>
-                            <tr>
-                                <td class="alinhaDireita">
-                                    Nenhum Status:
-                                </td>
-                                <td>
-                                    <asp:Label ID="NenhumLabel" runat="server" Text=""></asp:Label>
-                                </td>
                         </tr>
                         <tr>
-                                <td class="alinhaDireita">
-                                    Meu Cliente:
-                                </td>
-                                <td>
-                                    <asp:Label ID="MeuClienteLabel" runat="server" Text=""></asp:Label>
-                                </td>
+                            <td class="alinhaDireita">
+                                OI REALIZADO:
+                            </td>
+                            <td>
+                                <asp:Label ID="OiRealizadoLabel" runat="server" Text=""></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="alinhaDireita">
+                                PC LIGAÇÃO FUTURA:
+                            </td>
+                            <td>
+                                <asp:Label ID="PcLigacaoFuturaLabel" runat="server" Text=""></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="alinhaDireita">
+                                PC DELAY:
+                            </td>
+                            <td>
+                                <asp:Label ID="PcDelayLabel" runat="server" Text=""></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="alinhaDireita">
+                                PC N:
+                            </td>
+                            <td>
+                                <asp:Label ID="PcNLabel" runat="server" Text=""></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="alinhaDireita">
+                                PC C2:
+                            </td>
+                            <td>
+                                <asp:Label ID="PcC2Label" runat="server" Text=""></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="alinhaDireita">
+                                MEU CLIENTE:
+                            </td>
+                            <td>
+                                <asp:Label ID="MeuClienteLabel" runat="server" Text=""></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="alinhaDireita">
+                                NENHUM:
+                            </td>
+                            <td>
+                                <asp:Label ID="NenhumLabel" runat="server" Text=""></asp:Label>
+                            </td>
                         </tr>
                     </table>
                 </div>
