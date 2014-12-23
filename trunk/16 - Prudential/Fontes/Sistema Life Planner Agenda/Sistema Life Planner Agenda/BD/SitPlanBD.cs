@@ -194,49 +194,79 @@ namespace Sistema_Life_Planner_Agenda.BD
                                       join contato c ON cs.ID_Contato = c.ID
                                       join status_contato sc ON c.ID_Status_Contato = sc.ID
                                       where cs.ID_SIT_PLAN = sp.ID
-                                      and sc.Status = 'Não Atendeu') as total_nao_atendeu, 
+                                      and sc.Status = 'TA NÃO ATENDEU') as TA_NAO_ATENDEU, 
                                     (select count(sc.Status)
                                       from contatos_sit_plan cs
                                       join contato c ON cs.ID_Contato = c.ID
                                       join status_contato sc ON c.ID_Status_Contato = sc.ID
                                       where cs.ID_SIT_PLAN = sp.ID
-                                      and sc.Status = 'Já é Cliente') as total_ja_e_cliente, 
+                                      and sc.Status = 'TA NÃO QUER') as TA_NAO_QUER, 
                                     (select count(sc.Status)
                                       from contatos_sit_plan cs
                                       join contato c ON cs.ID_Contato = c.ID
                                       join status_contato sc ON c.ID_Status_Contato = sc.ID
                                       where cs.ID_SIT_PLAN = sp.ID
-                                      and sc.Status = 'Não Quer') as total_nao_quer, 
+                                      and sc.Status = 'TA LIGAÇÃO FUTURA') as TA_LIGACAO_FUTURA, 
                                     (select count(sc.Status)
                                       from contatos_sit_plan cs
                                       join contato c ON cs.ID_Contato = c.ID
                                       join status_contato sc ON c.ID_Status_Contato = sc.ID
                                       where cs.ID_SIT_PLAN = sp.ID
-                                      and sc.Status = 'Agendou OI') as total_agendou_oi, 
+                                      and sc.Status = 'TA JÁ É CLIENTE') as TA_JA_E_CLIENTE, 
                                     (select count(sc.Status)
                                       from contatos_sit_plan cs
                                       join contato c ON cs.ID_Contato = c.ID
                                       join status_contato sc ON c.ID_Status_Contato = sc.ID
                                       where cs.ID_SIT_PLAN = sp.ID
-                                      and sc.Status = 'Agendou P/C') as total_agendou_c, 
+                                      and sc.Status = 'TA OI AGENDADO') as TA_OI_AGENDADO, 
                                     (select count(sc.Status)
                                       from contatos_sit_plan cs
                                       join contato c ON cs.ID_Contato = c.ID
                                       join status_contato sc ON c.ID_Status_Contato = sc.ID
                                       where cs.ID_SIT_PLAN = sp.ID
-                                      and sc.Status = 'Ligação Futura') as total_ligacao_futura, 
+                                      and sc.Status = 'OI DELAY') as OI_DELAY, 
                                     (select count(sc.Status)
                                       from contatos_sit_plan cs
                                       join contato c ON cs.ID_Contato = c.ID
                                       join status_contato sc ON c.ID_Status_Contato = sc.ID
                                       where cs.ID_SIT_PLAN = sp.ID
-                                      and sc.Status = 'Nenhum') as total_nenhum, 
+                                      and sc.Status = 'OI REALIZADO') as OI_REALIZADO, 
                                     (select count(sc.Status)
                                       from contatos_sit_plan cs
                                       join contato c ON cs.ID_Contato = c.ID
                                       join status_contato sc ON c.ID_Status_Contato = sc.ID
                                       where cs.ID_SIT_PLAN = sp.ID
-                                      and sc.Status = 'Meu Cliente') as meu_cliente
+                                      and sc.Status = 'PC LIGAÇÃO FUTURA') as PC_LIGACAO_FUTURA, 
+                                    (select count(sc.Status)
+                                      from contatos_sit_plan cs
+                                      join contato c ON cs.ID_Contato = c.ID
+                                      join status_contato sc ON c.ID_Status_Contato = sc.ID
+                                      where cs.ID_SIT_PLAN = sp.ID
+                                      and sc.Status = 'PC DELAY') as PC_DELAY, 
+                                    (select count(sc.Status)
+                                      from contatos_sit_plan cs
+                                      join contato c ON cs.ID_Contato = c.ID
+                                      join status_contato sc ON c.ID_Status_Contato = sc.ID
+                                      where cs.ID_SIT_PLAN = sp.ID
+                                      and sc.Status = 'PC N') as PC_N, 
+                                    (select count(sc.Status)
+                                      from contatos_sit_plan cs
+                                      join contato c ON cs.ID_Contato = c.ID
+                                      join status_contato sc ON c.ID_Status_Contato = sc.ID
+                                      where cs.ID_SIT_PLAN = sp.ID
+                                      and sc.Status = 'PC C2') as PC_C2, 
+                                    (select count(sc.Status)
+                                      from contatos_sit_plan cs
+                                      join contato c ON cs.ID_Contato = c.ID
+                                      join status_contato sc ON c.ID_Status_Contato = sc.ID
+                                      where cs.ID_SIT_PLAN = sp.ID
+                                      and sc.Status = 'MEU CLIENTE') as MEU_CLIENTE, 
+                                    (select count(sc.Status)
+                                      from contatos_sit_plan cs
+                                      join contato c ON cs.ID_Contato = c.ID
+                                      join status_contato sc ON c.ID_Status_Contato = sc.ID
+                                      where cs.ID_SIT_PLAN = sp.ID
+                                      and sc.Status = 'NENHUM') as NENHUM
                                     from sit_plan sp
                                     where sp.ID = @idSitPlan;";
             comando.Parameters.AddWithValue("@idSitPlan", idSitPlan);
