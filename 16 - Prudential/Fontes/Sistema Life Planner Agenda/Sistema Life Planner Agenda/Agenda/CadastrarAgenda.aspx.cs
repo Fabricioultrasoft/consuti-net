@@ -240,6 +240,7 @@ namespace Sistema_Life_Planner_Agenda.Agenda
             else
             {
                 ContatoDropDownList.Items.Add(new ListItem(contato["Nome"].ToString(), contato["ID_Contato"].ToString()));
+                ContatoDropDownList.SelectedValue = idContato.ToString();
                 ContatoDropDownList.Enabled = false;
             }
             RecomendanteTextBox.Text = contato["Nome_Recomendante"].ToString();

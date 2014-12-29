@@ -57,8 +57,8 @@ namespace Sistema_Life_Planner_Agenda.Contato
         {
             HistoricoPanel.Visible = true;
             DataContatoTextBox.Text = DateTime.Now.Date.ToShortDateString();
-            HoraTextBox.Text = DateTime.Now.Hour.ToString();
-            MinutosTextBox.Text = DateTime.Now.Minute.ToString();
+            HoraTextBox.Text = DateTime.Now.Hour.ToString("D2");
+            MinutosTextBox.Text = DateTime.Now.Minute.ToString("D2");
             ObservacaoTextBox.Text = string.Empty;
         }
 
