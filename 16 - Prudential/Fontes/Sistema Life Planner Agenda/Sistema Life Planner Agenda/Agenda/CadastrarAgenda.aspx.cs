@@ -8,6 +8,7 @@ using Sistema_Life_Planner_Agenda.Classes;
 using System.Data;
 using Sistema_Life_Planner_Agenda.BD;
 using System.Configuration;
+using System.IO;
 
 namespace Sistema_Life_Planner_Agenda.Agenda
 {
@@ -119,7 +120,7 @@ namespace Sistema_Life_Planner_Agenda.Agenda
                        PeriodoCompromisso());
                     if (CriarAgendaGoogleCheckBox.Checked)
                     {
-                        //CriarCalendario();
+                        CriarCalendario();
                     }
                     ExibeMensagemPopUp("Compromisso salvo com sucesso!");
                 }
@@ -156,7 +157,7 @@ namespace Sistema_Life_Planner_Agenda.Agenda
 
                         if (CriarAgendaGoogleCheckBox.Checked)
                         {
-                            //CriarCalendario();
+                            CriarCalendario();
                         }
 
                         LimparCampos();
@@ -365,7 +366,7 @@ namespace Sistema_Life_Planner_Agenda.Agenda
             FILE.SUPPOSE THE FILE ALREADY EXISTS IN THE SPECIFIED LOCATION,THE CONTENTS 
            IN THE FILE ARE OVERWRITTEN*/
 
-            System.IO.File.WriteAllLines(caminhoAnexo, contents);
+            File.WriteAllLines(caminhoAnexo, contents);
 
             //METHOD TO SEND EMAIL IS CALLED
             EnviaEmail(
@@ -375,6 +376,8 @@ namespace Sistema_Life_Planner_Agenda.Agenda
                 schSubject,
                 "Evento criado a partir do Sistema Life Planner Agenda - SISLPA",
                 caminhoAnexo);
+
+            File.Delete(caminhoAnexo);
         }
     }
 }

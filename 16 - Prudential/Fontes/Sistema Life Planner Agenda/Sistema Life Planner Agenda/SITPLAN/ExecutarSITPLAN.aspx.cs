@@ -84,7 +84,7 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
             DataSet dtsStatusContatos = new StatusContatoBD().Listar();
             for (int i = 0; i < qtdContatos; i++)
             {
-                DropDownList ddlStatus = (DropDownList)FindControl("ctl00$ContentPlaceHolder1$listaTasRepeater$ctl0" + i + "$StatusDropDownList");//TODO: bug: se passar de 9 não vai encontrar o controle
+                DropDownList ddlStatus = (DropDownList)FindControl("ctl00$ContentPlaceHolder1$listaTasRepeater$ctl" + i.ToString("D2") + "$StatusDropDownList");
                 ddlStatus.DataSource = dtsStatusContatos;
                 ddlStatus.DataTextField = "Status";
                 ddlStatus.DataValueField = "Id";
