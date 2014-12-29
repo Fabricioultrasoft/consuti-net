@@ -117,9 +117,9 @@
                                             Telefone Principal:
                                         </td>
                                         <td>
-                                            <asp:TextBox ID="TelefonePrincipalTextBox" runat="server" MaxLength="2" TabIndex="7"
+                                            <asp:TextBox ID="DDDTelefonePrincipalTextBox" runat="server" MaxLength="2" TabIndex="7"
                                                 Width="20px" Enabled="false"></asp:TextBox>
-                                            &nbsp;<asp:TextBox ID="DDDTelefonePrincipalTextBox" runat="server" MaxLength="9"
+                                            &nbsp;<asp:TextBox ID="TelefonePrincipalTextBox" runat="server" MaxLength="9"
                                                 TabIndex="7" Width="70px" Enabled="false"></asp:TextBox>
                                         </td>
                                         <td class="style1">
@@ -173,14 +173,13 @@
                 <fieldset>
                     <legend>Mais Informações</legend>
                     <div style="padding: 10px">
-                        <asp:TextBox ID="MaisInformaciesTextBox" runat="server" TextMode="MultiLine" Rows="10"
-                            Width="100%" TabIndex="15"></asp:TextBox>
+                        <asp:TextBox ID="MaisInformaciesTextBox" runat="server" TextMode="SingleLine" Width="100%" TabIndex="15" MaxLength="300"></asp:TextBox>
                     </div>
                 </fieldset>
                 <fieldset>
                     <legend>Compromisso na Agenda do E-mail</legend>
                     <div style="margin: 10px;">
-                        <asp:CheckBox ID="CriarAgendaGoogleCheckBox" runat="server" Text=" Enviar compromisso na agenda do e-mail quando Salvar"
+                        <asp:CheckBox ID="CriarAgendaGoogleCheckBox" runat="server" Text=" Enviar compromisso na agenda do e-mail quando salvar"
                             Checked="true" TabIndex="16" />
                         <br />
                     </div>
