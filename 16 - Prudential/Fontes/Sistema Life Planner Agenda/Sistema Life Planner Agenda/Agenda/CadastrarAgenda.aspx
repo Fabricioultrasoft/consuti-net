@@ -178,9 +178,9 @@
                     </div>
                 </fieldset>
                 <fieldset>
-                    <legend>Agenda do Google</legend>
+                    <legend>Compromisso na Agenda do E-mail</legend>
                     <div style="margin: 10px;">
-                        <asp:CheckBox ID="CriarAgendaGoogleCheckBox" runat="server" Text=" Criar compromisso na agenda do Google quando Salvar"
+                        <asp:CheckBox ID="CriarAgendaGoogleCheckBox" runat="server" Text=" Enviar compromisso na agenda do e-mail quando Salvar"
                             Checked="true" TabIndex="16" />
                         <br />
                     </div>

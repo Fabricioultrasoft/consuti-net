@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using Sistema_Life_Planner_Agenda.BD;
 using System.Data;
+using Sistema_Life_Planner_Agenda.BD;
 using Sistema_Life_Planner_Agenda.Classes;
 
 namespace Sistema_Life_Planner_Agenda.Usuario
@@ -31,8 +26,7 @@ namespace Sistema_Life_Planner_Agenda.Usuario
                         Criptografar(confirmaSenhaTextBox.Text),
                         nomeCompletoTextBox.Text,
                         DDDTextBox.Text + telefoneTextBox.Text,
-                        emailGoogleTextBox.Text,
-                        SenhaEmailGoogleTextBox.Text, Session["emailUsuarioLogado"].ToString()
+                        Session["emailUsuarioLogado"].ToString()
                         );
                     CarregarDados();
                     ExibeMensagemPopUp("Dados atualizados com sucesso!");
@@ -65,8 +59,6 @@ namespace Sistema_Life_Planner_Agenda.Usuario
                 nomeCompletoTextBox.Text = DrUser["Nome"].ToString();
                 DDDTextBox.Text = DrUser["Telefone"].ToString().Substring(0, 2);
                 telefoneTextBox.Text = DrUser["Telefone"].ToString().Substring(2);
-                emailGoogleTextBox.Text = DrUser["AgendaGoogleEmail"].ToString();
-                SenhaEmailGoogleTextBox.Text = DrUser["AgendaGoogleSenha"].ToString();
             }
             catch (Exception ex)
             {

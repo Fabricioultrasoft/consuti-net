@@ -116,29 +116,6 @@
                     </table>
                     <br />
                 </fieldset>
-                <fieldset>
-                    <legend>Configurações de Agenda do Google</legend>
-                    <table class="Formulario" >
-                        <tr>
-                            <td class="alinhaDireita">
-                                E-mail do Google:
-                            </td>
-                            <td>
-                                <asp:TextBox ID="emailGoogleTextBox" runat="server" Width="300px" TabIndex="7" MaxLength="100"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="alinhaDireita">
-                                Senha do E-mail:
-                            </td>
-                            <td>
-                                <asp:TextBox ID="SenhaEmailGoogleTextBox" runat="server" Width="100px" TabIndex="8"
-                                    MaxLength="100" TextMode="Password"></asp:TextBox>
-                            </td>
-                        </tr>
-                    </table>
-                    <br />
-                </fieldset>
                 <div class="barraBotoes">
                     <asp:Button ID="cancelarButton" runat="server" Text="Cancelar" CssClass="botaoCancelar"
                         TabIndex="9" OnClick="cancelarButton_Click" CausesValidation="false" />

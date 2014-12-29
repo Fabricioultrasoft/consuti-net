@@ -108,32 +108,6 @@
                     </table>
                     <br />
                 </fieldset>
-                <fieldset>
-                    <legend>Configurações de Agenda do Google</legend>
-                    <table class="Formulario">
-                        <tr>
-                            <td class="alinhaDireita">
-                                E-mail do Google:
-                            </td>
-                            <td>
-                                <asp:TextBox ID="emailGoogleTextBox" runat="server" Width="300px" TabIndex="7" MaxLength="100"></asp:TextBox>
-                                &nbsp;<asp:RegularExpressionValidator ID="EmailTextBoxRegularExpressionValidator0"
-                                    runat="server" ControlToValidate="emailGoogleTextBox" Display="Dynamic" ErrorMessage="*"
-                                    ToolTip="Email Inválido" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="alinhaDireita">
-                                Senha do E-mail:
-                            </td>
-                            <td>
-                                <asp:TextBox ID="SenhaEmailGoogleTextBox" runat="server" Width="100px" TabIndex="8"
-                                    MaxLength="100" TextMode="Password"></asp:TextBox>
-                            </td>
-                        </tr>
-                    </table>
-                    <br />
-                </fieldset>
                 <div class="barraBotoes">
                     <asp:Button ID="cancelarButton" runat="server" Text="Voltar" CssClass="botaoVoltar"
                         TabIndex="9" OnClick="cancelarButton_Click" CausesValidation="False" />

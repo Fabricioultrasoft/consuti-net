@@ -347,7 +347,7 @@ namespace Sistema_Life_Planner_Agenda.Agenda
             string schSubject = "Realizar contato com - " + ContatoDropDownList.SelectedItem.Text;
             string schDescription = MaisInformaciesTextBox.Text;
             DateTime schBeginDate = DiaCompromissoCalendar.SelectedDate.AddHours(Convert.ToInt32(HoraTextBox.Text)).AddMinutes(Convert.ToInt32(MinutosTextBox.Text));
-            DateTime schEndDate = DiaCompromissoCalendar.SelectedDate;
+            DateTime schEndDate = DiaCompromissoCalendar.SelectedDate.AddHours(Convert.ToInt32(HoraTextBox.Text) + 1).AddMinutes(Convert.ToInt32(MinutosTextBox.Text));
 
             //PUTTING THE MEETING DETAILS INTO AN ARRAY OF STRING
 
