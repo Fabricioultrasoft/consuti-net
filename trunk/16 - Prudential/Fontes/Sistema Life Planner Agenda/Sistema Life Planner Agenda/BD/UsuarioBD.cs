@@ -12,25 +12,19 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// <summary>
         /// Cadastro de usuário SISLPA
         /// </summary>
-        /// <param name="AgendaGoogleEmail"></param>
-        /// <param name="AgendaGoogleSenha"></param>
         /// <param name="Email"></param>
         /// <param name="Nome"></param>
         /// <param name="Senha"></param>
         /// <param name="Telefone"></param>
         public void Incluir(
-            string AgendaGoogleEmail,
-            string AgendaGoogleSenha,
             string Email,
             string Nome,
             string Senha,
             string Telefone)
         {
             comando.CommandText = @"INSERT INTO usuario
-                                    (AgendaGoogleEmail, AgendaGoogleSenha, Email, Nome, Senha, Telefone) 
-                                    VALUES (@AgendaGoogleEmail, @AgendaGoogleSenha, @Email, @Nome, @Senha, @Telefone);";
-            comando.Parameters.AddWithValue("@AgendaGoogleEmail", AgendaGoogleEmail);
-            comando.Parameters.AddWithValue("@AgendaGoogleSenha", AgendaGoogleSenha);
+                                    (Email, Nome, Senha, Telefone) 
+                                    VALUES (@Email, @Nome, @Senha, @Telefone);";
             comando.Parameters.AddWithValue("@Email", Email);
             comando.Parameters.AddWithValue("@Nome", Nome);
             comando.Parameters.AddWithValue("@Senha", Senha);
@@ -66,27 +60,20 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// <param name="senha"></param>
         /// <param name="nomeCompleto"></param>
         /// <param name="telefone"></param>
-        /// <param name="emailGoogleAgenda"></param>
-        /// <param name="senhaGoogleAgenda"></param>
         /// <param name="email"></param>
         public void Alterar(
             string senha,
             string nomeCompleto,
             string telefone,
-            string emailGoogleAgenda,
-            string senhaGoogleAgenda,
             string email)
         {
             // criar um comando para executar a alteração / executar comando
             comando.CommandText = @"UPDATE usuario 
-                                    SET AgendaGoogleEmail = @AgendaGoogleEmail , AgendaGoogleSenha = @AgendaGoogleSenha, 
-                                        Nome = @Nome, Senha = @Senha, Telefone = @Telefone 
+                                    SET Nome = @Nome, Senha = @Senha, Telefone = @Telefone 
                                     WHERE Email = @Email";
             comando.Parameters.AddWithValue("@Senha", senha);
             comando.Parameters.AddWithValue("@Nome", nomeCompleto);
             comando.Parameters.AddWithValue("@Telefone", telefone);
-            comando.Parameters.AddWithValue("@AgendaGoogleEmail", emailGoogleAgenda);
-            comando.Parameters.AddWithValue("@AgendaGoogleSenha", senhaGoogleAgenda);
             comando.Parameters.AddWithValue("@Email", email);
 
             comando.CommandType = System.Data.CommandType.Text;
@@ -134,7 +121,7 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// <returns>DataSet com os dados cadastrais do usuário</returns>
         public DataSet Obter(string email)
         {
-            comando.CommandText = @"SELECT AgendaGoogleEmail, AgendaGoogleSenha, Email, Nome, Senha, Telefone 
+            comando.CommandText = @"SELECT Email, Nome, Senha, Telefone 
                                     FROM usuario
                                     WHERE email = @email;";
             comando.Parameters.Add(new MySqlParameter("@email", email));

@@ -101,13 +101,11 @@ namespace SislpaTests
         public void IncluirTest()
         {
             UsuarioBD target = new UsuarioBD();
-            string AgendaGoogleEmail = DateTime.Now.Millisecond.ToString() + "@testeunitario.com";
-            string AgendaGoogleSenha = "123456";
             string Email = DateTime.Now.Millisecond.ToString() + "@testeunitario.com";
             string Nome = "TesteUnitario";
             string Senha = "123456";
             string Telefone = "(31) 97653922";
-            target.Incluir(AgendaGoogleEmail, AgendaGoogleSenha, Email, Nome, Senha, Telefone);
+            target.Incluir(Email, Nome, Senha, Telefone);
         }
 
         /// <summary>

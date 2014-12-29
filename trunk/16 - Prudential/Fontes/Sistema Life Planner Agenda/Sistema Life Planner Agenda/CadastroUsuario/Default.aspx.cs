@@ -31,9 +31,7 @@ namespace Sistema_Life_Planner_Agenda.CadastroUsuario
                     SalvarUsuario(emailTextBox.Text,
                     Criptografar(senhaTextBox.Text),
                     nomeCompletoTextBox.Text,
-                    DDDTextBox.Text + telefoneTextBox.Text,
-                    emailGoogleTextBox.Text,
-                    SenhaEmailGoogleTextBox.Text);
+                    DDDTextBox.Text + telefoneTextBox.Text);
                     ExibeMensagemPopUp("Salvo com sucesso!");
 
                     //DEPOIS QUE CADASTRAR O USUÁRIO, CADASTRAR O MESMO COMO CONTATO DO SISTEMA, PARA QUE SEJA POSSÍVEL SER O RECOMENDANTE
@@ -57,20 +55,14 @@ namespace Sistema_Life_Planner_Agenda.CadastroUsuario
         /// <param name="senha"></param>
         /// <param name="nomeCompleto"></param>
         /// <param name="telefone"></param>
-        /// <param name="emailGoogle"></param>
-        /// <param name="senhaEmailGoogle"></param>
         /// <returns></returns>
         private void SalvarUsuario(
             string email,
             string senha,
             string nomeCompleto,
-            string telefone,
-            string emailGoogle,
-            string senhaEmailGoogle)
+            string telefone)
         {
             new UsuarioBD().Incluir(
-                emailGoogle,
-                senhaEmailGoogle,
                 email,
                 nomeCompleto,
                 senha,
@@ -99,8 +91,6 @@ namespace Sistema_Life_Planner_Agenda.CadastroUsuario
                 nomeCompletoTextBox.Text =
                 telefoneTextBox.Text =
                 DDDTextBox.Text =
-                emailGoogleTextBox.Text =
-                SenhaEmailGoogleTextBox.Text =
                 string.Empty;
         }
 
