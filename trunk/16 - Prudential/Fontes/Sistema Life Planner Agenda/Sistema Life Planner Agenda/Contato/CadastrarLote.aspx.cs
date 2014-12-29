@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using Sistema_Life_Planner_Agenda.Classes;
-using Sistema_Life_Planner_Agenda.BD;
 using System.Data;
+using System.Web.UI.WebControls;
+using Sistema_Life_Planner_Agenda.BD;
+using Sistema_Life_Planner_Agenda.Classes;
 
 namespace Sistema_Life_Planner_Agenda.Contato
 {
@@ -28,7 +25,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
         }
 
         protected void salvarButton_Click(object sender, EventArgs e)
-        {   
+        {
             List<string> contatosDuplicados = new List<string>();
             try
             {
@@ -41,26 +38,33 @@ namespace Sistema_Life_Planner_Agenda.Contato
                     {
                         contatosDuplicados.Add("Novo Contato: " + item.Nome.ToUpper() + " - Contato Existente: " + NomeContatoExistente.Tables[0].Rows[0]["Nome"].ToString().ToUpper());
                     }
-                    
-                        int novoContatoID = new ContatoBD().IncluirLote(
-                           item.Nome,
-                           item.Outras_Informacoes,
-                           item.Sexo,
-                           item.Telefone_Principal);
 
-                        new ContatosUsuarioBD().Incluir(
-                            novoContatoID,
-                            Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())),
-                            DateTime.Now);
+                    int novoContatoID = new ContatoBD().IncluirLote(
+                       item.Nome,
+                       item.Outras_Informacoes,
+                       item.Sexo,
+                       item.Telefone_Principal);
 
-                        new RecomendanteContatoBD().Incluir(
-                            novoContatoID,
-                            item.ID_Contato_Recomendante);
+                    new ContatosUsuarioBD().Incluir(
+                        novoContatoID,
+                        Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())),
+                        DateTime.Now);
+
+                    new RecomendanteContatoBD().Incluir(
+                        novoContatoID,
+                        item.ID_Contato_Recomendante);
                 }
-                
-                ExibeMensagemPopUp("Contatos Salvos com Sucesso! " +
-                    "\\nAtenção! O(s) contato(s) a seguir foi(ram) salvo(s) com o(s) telefone(s) duplicado(s) por algum(ns) de seus contatos já cadastrados: \\n " +
-                    ListaNomesString(contatosDuplicados));
+
+                if (contatosDuplicados.Count.Equals(0))
+                {
+                    ExibeMensagemPopUp("Contatos Salvos com Sucesso!");
+                }
+                else
+                {
+                    ExibeMensagemPopUp("Contatos Salvos com Sucesso! " +
+                        "\\nAtenção! O(s) contato(s) a seguir foi(ram) salvo(s) com o(s) telefone(s) duplicado(s) por algum(ns) de seus contatos já cadastrados: \\n " +
+                        ListaNomesString(contatosDuplicados));
+                }
                 LimparCampos();
             }
             catch (Exception ex)
