@@ -6,9 +6,9 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MenuContentPlaceHolder" runat="server">
     <li class="selected"><a href="Default.aspx">Home</a></li>
-    <li><a href="Contato\PesquisarContato.aspx">Contatos</a></li>
-    <li><a href="Agenda\PesquisarAgenda.aspx">Agenda do LP</a></li>
-    <li><a href="SITPLAN\PesquisarSITPLAN.aspx">SIT PLAN</a></li>
+    <li><a href="Contato/PesquisarContato.aspx">Contatos</a></li>
+    <li><a href="Agenda/PesquisarAgenda.aspx">Agenda do LP</a></li>
+    <li><a href="SITPLAN/PesquisarSITPLAN.aspx">SIT PLAN</a></li>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="home">
