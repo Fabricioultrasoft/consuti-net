@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="c8c742cc-31ea-403a-b57b-2b70355ad64b" name="Cristian Gomes@NOTE-CRISTIAN 2014-12-11 17:03:00" runUser="NOTE-CRISTIAN\Cristian Gomes" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="17f09b63-edf0-4d4e-84e1-147954c099a3">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Cristian Gomes_NOTE-CRISTIAN 2014-12-11 17_03_00">
+      <DeploymentItem filename="C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\Utilidades\Libs\MySql.Data.dll" />
+      <DeploymentItem filename="C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\16 - Prudential\Fontes\Sistema Life Planner Agenda\Sistema Life Planner Agenda\bin\Sistema Life Planner Agenda.dll" />
+      <DeploymentItem filename="C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\16 - Prudential\Fontes\Sistema Life Planner Agenda\SislpaTests\bin\Release\AjaxControlToolkit.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-12-11T17:03:00.3105081-02:00" queuing="2014-12-11T17:03:00.3434814-02:00" start="2014-12-11T17:03:00.3591079-02:00" finish="2014-12-11T17:03:00.5857931-02:00" />
+  <ResultSummary outcome="Inconclusive">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="1" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CodificarTest" storage="c:\users\cristian gomes\documents\consuti\_gcode\16 - prudential\fontes\sistema life planner agenda\sislpatests\bin\release\sislpatests.dll" id="fee9b5ae-945b-a440-b463-59f7064e4b07">
+      <Execution id="9c25ee53-e5b3-4f55-90a3-aa745f72b7ea" />
+      <TestMethod codeBase="C:/Users/Cristian Gomes/Documents/ConsuTI/_GCODE/16 - Prudential/Fontes/Sistema Life Planner Agenda/SislpaTests/bin/Release/SislpaTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SislpaTests.PageBaseTest, SislpaTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CodificarTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="fee9b5ae-945b-a440-b463-59f7064e4b07" executionId="9c25ee53-e5b3-4f55-90a3-aa745f72b7ea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="9c25ee53-e5b3-4f55-90a3-aa745f72b7ea" testId="fee9b5ae-945b-a440-b463-59f7064e4b07" testName="CodificarTest" computerName="NOTE-CRISTIAN" duration="00:00:00.0243672" startTime="2014-12-11T17:03:00.3591079-02:00" endTime="2014-12-11T17:03:00.5389211-02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9c25ee53-e5b3-4f55-90a3-aa745f72b7ea">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive failed. a senha beto10 criptografada é: QEnNyCL9j4s=</Message>
+          <StackTrace>   em SislpaTests.PageBaseTest.CodificarTest() na C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\16 - Prudential\Fontes\Sistema Life Planner Agenda\SislpaTests\PageBaseTest.cs:linha 77
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
