@@ -461,22 +461,23 @@ namespace Sistema_Life_Planner_Agenda.Contato
         /// </summary>
         private void LimparCampos()
         {
-            DataCadastroLabel.Text =
-                nomeCompletoTextBox.Text =
 
-                emailTextBox.Text =
-                DDDtelefoneAlternativo1TextBox.Text =
-                telefoneAlternativo1TextBox.Text =
-                DDDtelefoneAlternativo2TextBox.Text =
-                telefoneAlternativo2TextBox.Text =
-                filhosTextBox.Text =
-                DDDTelefoneTextBox.Text =
-                TelefoneTextBox.Text =
-                outrasInformacoesTextBox.Text =
-                idadeTextBox.Text =
-                profissaoTextBox.Text = string.Empty;
+            nomeCompletoTextBox.Text =
+            emailTextBox.Text =
+            DDDtelefoneAlternativo1TextBox.Text =
+            telefoneAlternativo1TextBox.Text =
+            DDDtelefoneAlternativo2TextBox.Text =
+            telefoneAlternativo2TextBox.Text =
+            filhosTextBox.Text =
+            DDDTelefoneTextBox.Text =
+            TelefoneTextBox.Text =
+            outrasInformacoesTextBox.Text =
+            idadeTextBox.Text =
+            profissaoTextBox.Text = string.Empty;
 
             SexoRadioButtonList.SelectedValue = "M";
+
+            DataCadastroLabel.Text = DateTime.Now.ToString();
 
             RecomendanteDropDownList.SelectedItem.Value = "";
             StatusDropDownList.SelectedIndex =
