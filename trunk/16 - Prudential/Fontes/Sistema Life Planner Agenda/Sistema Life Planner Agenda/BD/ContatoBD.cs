@@ -489,8 +489,8 @@ namespace Sistema_Life_Planner_Agenda.BD
                                     VALUES (@ID_Status_Contato, @ID_Tipo_Contato, @Cidade,
                                         @Email, @Estado_Civil, @Filhos, @Idade, @Nome, @Outras_Informacoes, @Profissao,
                                         @Sexo, @Telefone_Alternativo_1, @Telefone_Alternativo_2, @Telefone_Principal, @UF);";
-            comando.Parameters.AddWithValue("@ID_Status_Contato", 13); //7 - Nenhum
-            comando.Parameters.AddWithValue("@ID_Tipo_Contato", 4); // 4 - Nenhum
+            comando.Parameters.AddWithValue("@ID_Status_Contato", 13); // Nenhum
+            comando.Parameters.AddWithValue("@ID_Tipo_Contato", 4); // Nenhum
             comando.Parameters.AddWithValue("@Cidade", string.Empty);
             comando.Parameters.AddWithValue("@Email", string.Empty);
             comando.Parameters.AddWithValue("@Estado_Civil", string.Empty);
@@ -511,7 +511,7 @@ namespace Sistema_Life_Planner_Agenda.BD
             this.Dispose();
 
             return new ContatoBD().ObterID(
-                7,
+                13,
                 4,
                 string.Empty,
                 Nome,
