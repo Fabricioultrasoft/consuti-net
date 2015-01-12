@@ -405,7 +405,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
             if (!string.IsNullOrEmpty(StatusDropDownList.SelectedItem.Value))
                 dados.ID_Status_Contato = Convert.ToInt32(StatusDropDownList.SelectedItem.Value);
             else
-                dados.ID_Status_Contato = 7; // 7 - Nenhum
+                dados.ID_Status_Contato = 13; // 13 - Nenhum
 
             if (!string.IsNullOrEmpty(CidadesDropDownList.SelectedItem.Text))
                 dados.Cidade = CidadesDropDownList.SelectedItem.Text;
