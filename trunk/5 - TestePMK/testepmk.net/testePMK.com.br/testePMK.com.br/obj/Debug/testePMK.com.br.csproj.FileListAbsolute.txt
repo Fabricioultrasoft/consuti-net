@@ -52,3 +52,9 @@ C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\5 - TestePMK\testepmk.net\tes
 C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\obj\Debug\testePMK.com.br.dll
 C:\Users\Cristian Gomes\Documents\ConsuTI\Clientes\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\obj\Debug\testePMK.com.br.pdb
+C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\obj\Debug\testePMK.com.br.csprojResolveAssemblyReference.cache
+C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\obj\Debug\testePMK.com.br.dll
+C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\obj\Debug\testePMK.com.br.pdb
+C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\testePMK.com.br.dll
+C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\testePMK.com.br.pdb
+C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\5 - TestePMK\testepmk.net\testePMK.com.br\testePMK.com.br\bin\MySql.Data.dll

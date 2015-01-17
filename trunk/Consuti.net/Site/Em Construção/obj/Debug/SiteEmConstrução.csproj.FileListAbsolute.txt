@@ -1,0 +1,5 @@
+E:\Meus Documentos\ConsuTI\Peças\Site em Construção\SiteEmConstrução\SiteEmConstrução\bin\SiteEmConstrução.dll
+E:\Meus Documentos\ConsuTI\Peças\Site em Construção\SiteEmConstrução\SiteEmConstrução\bin\SiteEmConstrução.pdb
+E:\Meus Documentos\ConsuTI\Peças\Site em Construção\SiteEmConstrução\SiteEmConstrução\obj\Debug\ResolveAssemblyReference.cache
+E:\Meus Documentos\ConsuTI\Peças\Site em Construção\SiteEmConstrução\SiteEmConstrução\obj\Debug\SiteEmConstrução.dll
+E:\Meus Documentos\ConsuTI\Peças\Site em Construção\SiteEmConstrução\SiteEmConstrução\obj\Debug\SiteEmConstrução.pdb
