@@ -13,7 +13,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
         <div class="tituloTela">
-            PESQUISAR COMPROMISSO NA AGENDA DO LIFE PLANNER
+            PESQUISAR COMPROMISSO NA AGENDA
         </div>
         <div class="conteudoTela">
             <asp:Panel ID="PesquisaAgendaPanel" runat="server">
