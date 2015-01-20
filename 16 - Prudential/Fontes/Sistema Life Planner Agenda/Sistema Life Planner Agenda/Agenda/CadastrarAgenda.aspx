@@ -19,7 +19,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
         <div class="tituloTela">
-            CADASTRAR COMPROMISSO NA AGENDA DO LIFE PLANNER
+            CADASTRAR COMPROMISSO NA AGENDA
         </div>
         <div class="conteudoTela">
             <asp:Panel ID="cadastroAgendaPanel" runat="server">
