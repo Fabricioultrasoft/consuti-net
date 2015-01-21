@@ -12,18 +12,40 @@ namespace Consuti.net
 
         protected void submitButton_Click(object sender, EventArgs e)
         {
-            EnviaEmail(
-                name.Text,
-                email.Text,
-                "cristian.co.gomes@gmail.com",
-                subject.Text,
-                message.Text,
-                string.Empty);
+            try
+            {
+                if (string.IsNullOrEmpty(name.Text)
+                && string.IsNullOrEmpty(email.Text)
+                && string.IsNullOrEmpty(subject.Text)
+                && string.IsNullOrEmpty(message.Text))
+                {
+                    ExibeMensagemPopUp("Prencha todos os campos para enviar.");
+                }
+                else
+                {
+                    EnviaEmail(
+                        name.Text,
+                        "consuti@consuti.net",
+                        "cristian.co.gomes@gmail.com",
+                        "Contato ConsuTI - " + subject.Text,
+                        email.Text + " - " + message.Text,
+                        string.Empty);
+                    ExibeMensagemPopUp("Mensagem enviada com sucesso!");
+                }
+            }
+            catch (Exception)
+            {
+                ExibeMensagemPopUp("Prencha o e-mail corretamente para enviar.");
+            }
         }
 
         protected void resetButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Default.aspx");
+            subject.Text =
+                email.Text =
+                name.Text =
+                message.Text =
+                string.Empty;
         }
 
         /// <summary>
@@ -94,6 +116,19 @@ namespace Consuti.net
                 //excluímos o objeto de e-mail da memória
                 objEmail.Dispose();
             }
+        }
+
+        /// <summary>
+        /// Exibe mensgem resultado
+        /// </summary>
+        /// <param name="mensagem">mensagem a ser exibida</param>
+        public void ExibeMensagemPopUp(string mensagem)
+        {
+            ClientScript.RegisterStartupScript(
+                            this.GetType(),
+                            "arquivo",
+                            "alert('" + mensagem + "');",
+                            true);
         }
     }
 }
