@@ -56,6 +56,7 @@
     <Content Include="css\style-desktop.css" />
     <Content Include="css\style-mobile.css" />
     <Content Include="css\style.css" />
+    <Content Include="Default.aspx" />
     <Content Include="fonts\jquery.min.js" />
     <Content Include="images\antt.png" />
     <Content Include="images\Capgemini-GCE.jpg" />
@@ -66,7 +67,7 @@
     <Content Include="images\Pru_Vert_RGB.jpg" />
     <Content Include="images\ufmg-logo.jpg" />
     <Content Include="images\Yazigi.jpg" />
-    <Content Include="index.html" />
+    <Content Include="index2.html" />
     <Content Include="js\font-awesome.min.css" />
     <Content Include="js\init.js" />
     <Content Include="js\jquery.min.js" />
@@ -81,6 +82,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
