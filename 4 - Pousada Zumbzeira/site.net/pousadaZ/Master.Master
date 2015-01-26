@@ -130,7 +130,7 @@ pageTracker._trackPageview();
             <br />
             Desenvolvido por:<br />
             <asp:ImageButton ID="ImageButton1" runat="server" 
-                ImageUrl="../Graficos/ConsuTI.png" onclick="ImageButton1_Click" />
+                ImageUrl="http://www.consuti.net/Consuti.png" onclick="ImageButton1_Click" />
 &nbsp;</div>
     
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 2010 - 2013&nbsp; Pousada Zumbzeira © - All Rights 
