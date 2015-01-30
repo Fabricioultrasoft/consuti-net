@@ -41,7 +41,7 @@ article, aside, details, footer, header, menu, nav, section { display: block; }
 #navigation { height: 52px; padding-top: 4px; font-family: 'Ubuntu', sans-serif; font-weight: 700; background: url(images/navigation.png) repeat-x 0 0; box-shadow: 0px -1px 2px rgba(0,0,0,0.1); -moz-box-shadow: 0px -1px 2px rgba(0,0,0,0.1); -webkit-box-shadow: 0px -1px 2px rgba(0,0,0,0.1); -o-box-shadow: 0px -1px 2px rgba(0,0,0,0.1);  }
 #navigation ul { list-style: none; list-style-position: outside; }
 #navigation ul li { float: left; padding-right: 2px; line-height: 52px; background: url(images/nav-border.png) no-repeat right 0;  font-size: 13px; text-transform: uppercase; }
-#navigation ul li a { display: block; padding: 0 32px 0 28px; color: #878787;  }
+#navigation ul li a { display: block; padding: 0 20px 0 20px; color: #878787;  }
 #navigation ul li a:hover,
 #navigation ul li.active a  { text-decoration: none; color: #2b9208; }
 #navigation ul li.first a { padding-left: 38px; }
@@ -95,15 +95,14 @@ article, aside, details, footer, header, menu, nav, section { display: block; }
 .testimonial p.author { text-align: right; }
 
 .socials { background: url(images/socials-bg.png) repeat-x 0 0;  height: 49px;  }
-.socials-inner { background: url(images/socials-inner.png) repeat-x 0 0; padding-left: 158px;}
+.socials-inner { background: url(images/socials-inner.png) repeat-x 0 0; padding-left: 40%;}
 .socials h3 { float: left; font-size: 18px; line-height: 49px; padding-right: 19px; padding-bottom: 0; font-family: 'Ubuntu', sans-serif; font-weight: 500;  }
 .socials ul { list-style: none; list-style-position: outside; line-height: 49px;  }
-.socials ul li { font-size: 11px; padding-right: 18px;  color: #7c7c7c; background: transparent; text-transform: uppercase; float: left; }
+.socials ul li { font-size: 11px; padding-right: 35px;  color: #7c7c7c; background: transparent; text-transform: uppercase; float: left; }
 .socials ul li a { color: #7c7c7c; text-decoration: none; display: block; padding-left: 28px; position: relative;  }
 .socials ul li a span { background: url(images/socials.png) no-repeat 0 0; position: absolute; width: 20px; height: 20px; top: 13px; left: 0; }
 .socials ul li a:hover { color: #333; }
 
- 0 2px;}
 .socials ul li a.linkedin-ico span { background: url(images/linkedin.png) no-repeat; background-position: 0 2px;}
 .socials ul li a.twitter-ico span { background-position: -22px 0; }
 .socials ul li a.rss-feed-ico span {}
@@ -115,7 +114,7 @@ article, aside, details, footer, header, menu, nav, section { display: block; }
 #footer { background: url(images/footer-cols.png) repeat 0 0; }
 #footer h2 { font-size: 23px; color: #fff; font-family: 'Ubuntu', sans-serif; font-weight: 400; padding-bottom: 18px;  }
 .footer-cols { padding: 46px 24px; background: url(images/footer-lights.png) no-repeat center 0px; }
-.footer-cols .col { float: left; width: 195px; }
+.footer-cols .col { float: left; width: 270px; }
 .footer-cols .col + .col { padding-left: 54px;  }
 .footer-cols .col ul { list-style: none; list-style-position: outside; }
 .footer-cols .col ul li { color: #7dc33a; font-size: 16px;  padding-bottom: 4px; background: url(images/arr-footer-col.png) no-repeat 0 8px; padding-left: 9px;  }
@@ -136,6 +135,10 @@ article, aside, details, footer, header, menu, nav, section { display: block; }
 .footer-bottom p.copy a:hover { text-decoration: none; }
 .footer-bottom p.copy strong { font-weight: normal; }
 
+.content{ margin: 10px 0 10px 50px; }
+.content ul{ margin-left: 35px; margin-bottom: 10px;}
+.content h2{ text-decoration: underline;}
+.content h3{ margin: 10px;}
 /* #Media Queries
 ================================================== */
 
@@ -251,7 +254,7 @@ article, aside, details, footer, header, menu, nav, section { display: block; }
 
 	#footer h2 { padding-bottom: 12px; }
 	.footer-cols { padding-left: 10px; padding-right: 0; padding-bottom: 0; }
-	.footer-cols .col { width: 150px; float: none; display: block; padding-bottom: 22px; }
+	.footer-cols .col { width: 190px; float: none; display: block; padding-bottom: 22px; }
 	.footer-cols .col + .col { padding-left: 0px; }
 	.footer-cols .col ul li { font-size: 12px; }
 
@@ -278,4 +281,16 @@ article, aside, details, footer, header, menu, nav, section { display: block; }
 
 
 ackground-size: 81px 33px; -moz-background-size: 81px 33px; background-size: 81px 33px;  }
+
+
+
+
+
+
+
+
+
+
+
+  }
 }
