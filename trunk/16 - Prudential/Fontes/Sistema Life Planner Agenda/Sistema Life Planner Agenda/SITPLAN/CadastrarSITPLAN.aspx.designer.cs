@@ -40,13 +40,31 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN {
         protected global::System.Web.UI.WebControls.Panel PesquisaContatoPanel;
         
         /// <summary>
-        /// RecomendanteDropDownList control.
+        /// FiltroContatoUpdatePanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList RecomendanteDropDownList;
+        protected global::System.Web.UI.UpdatePanel FiltroContatoUpdatePanel;
+        
+        /// <summary>
+        /// RecomendanteListBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListBox RecomendanteListBox;
+        
+        /// <summary>
+        /// TodosRecomendantesCheckBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox TodosRecomendantesCheckBox;
         
         /// <summary>
         /// StatusDropDownList control.

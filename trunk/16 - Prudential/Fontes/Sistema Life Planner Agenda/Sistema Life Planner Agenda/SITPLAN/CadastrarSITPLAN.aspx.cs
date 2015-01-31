@@ -56,7 +56,11 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
 
         protected void pesquisarButton_Click(object sender, EventArgs e)
         {
-            if (ValidarIntervaloDatas(PeriodoDeTextBox.Text, PeriodoAteTextBox.Text))
+            if (RecomendanteListBox.GetSelectedIndices().Length.Equals(0))
+            {
+                ExibeMensagemPopUp("Selecione pele menos um recomendante para pesquisar.");
+            }
+            else if (ValidarIntervaloDatas(PeriodoDeTextBox.Text, PeriodoAteTextBox.Text))
             {
                 CarregarGridView();
             }
@@ -96,7 +100,7 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
         /// </summary>
         private void CarregarStatus()
         {
-            StatusDropDownList.DataSource = new StatusContatoBD().Listar();
+            StatusDropDownList.DataSource = new StatusContatoBD().ListarStatusSITPLAN();
             StatusDropDownList.DataTextField = "Status";
             StatusDropDownList.DataValueField = "Id";
             StatusDropDownList.DataBind();
@@ -112,16 +116,13 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
         {
             try
             {
-                RecomendanteDropDownList.DataSource = new ContatoBD().Listar(Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())));
-                RecomendanteDropDownList.DataTextField = "Nome";
-                RecomendanteDropDownList.DataValueField = "Id";
-                RecomendanteDropDownList.DataBind();
-
-                ListItem selecione = new ListItem("< Todos >", "");
-                RecomendanteDropDownList.Items.Insert(0, selecione);
+                RecomendanteListBox.DataSource = new ContatoBD().Listar(Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())));
+                RecomendanteListBox.DataTextField = "Nome";
+                RecomendanteListBox.DataValueField = "Id";
+                RecomendanteListBox.DataBind();
 
                 ListItem usuarioLogado = new ListItem(Session["nomeUsuarioLogado"].ToString() + " (EU)", new ContatoBD().ObterID(Session["nomeUsuarioLogado"].ToString(), Session["emailUsuarioLogado"].ToString()).ToString());
-                RecomendanteDropDownList.Items.Insert(1, usuarioLogado);
+                RecomendanteListBox.Items.Insert(0, usuarioLogado);
             }
             catch (Exception)
             {
@@ -134,12 +135,19 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
         /// </summary>
         private void CarregarGridView()
         {
-            string idRecomendante = string.Empty, idStatus = string.Empty, sexo = string.Empty, dataDe = string.Empty, dataAte = string.Empty;
+            string idStatus = string.Empty, sexo = string.Empty, dataDe = string.Empty, dataAte = string.Empty;
+            List<string> idsRecomendantes = new List<string>();
 
 
-            if (!string.IsNullOrEmpty(RecomendanteDropDownList.SelectedItem.Value))
+            if (!string.IsNullOrEmpty(RecomendanteListBox.SelectedItem.Value))
             {
-                idRecomendante = RecomendanteDropDownList.SelectedItem.Value.ToString();
+                foreach (ListItem item in RecomendanteListBox.Items)
+                {
+                    if (item.Selected)
+                    {
+                        idsRecomendantes.Add(item.Value.ToString());
+                    }
+                }
             }
             if (!string.IsNullOrEmpty(StatusDropDownList.SelectedItem.Value))
             {
@@ -167,7 +175,7 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
             }
 
             ContatosGridView.DataSource = ViewState["ContatosSITPLANDataSet"] = new ContatoBD().Listar(
-                idRecomendante,
+                idsRecomendantes,
                 idStatus,
                 Convert.ToDateTime(dataDe),
                 Convert.ToDateTime(dataAte),
@@ -283,12 +291,12 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
             new SitPlanBD().Incluir(
                 new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString()),
                 dataInicio,
-                "Iniciado", 
-                chave.ToString(), 
+                "Iniciado",
+                chave.ToString(),
                 NomeSitPlanTextBox.Text);
 
             int idSITPLAN = new SitPlanBD().ObterID(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString()),
-                "Iniciado", 
+                "Iniciado",
                 chave.ToString());
 
 
@@ -299,7 +307,7 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
                 CheckBox cb = (CheckBox)ContatosGridView.Rows[i].FindControl("IncluirContatoCheckBox");
                 if (cb.Checked)
                 {
-                    listaContatos.Add(ds.Tables[0].Rows[i]["ID"].ToString());                    
+                    listaContatos.Add(ds.Tables[0].Rows[i]["ID"].ToString());
                 }
             }
 
@@ -332,7 +340,22 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
             {
                 new ContatosSitPlanBD().Incluir(
                     Convert.ToInt32(contato),
-                    idSITPLAN, new ContatoBD().ObtemIDStatus(Convert.ToInt32(contato)));               
+                    idSITPLAN, new ContatoBD().ObtemIDStatus(Convert.ToInt32(contato)));
+            }
+        }
+
+        protected void TodosRecomendantesCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (TodosRecomendantesCheckBox.Checked)
+            {
+                foreach (ListItem item in RecomendanteListBox.Items)
+                {
+                    item.Selected = true;
+                }
+            }
+            else
+            {
+                RecomendanteListBox.ClearSelection();
             }
         }
     }

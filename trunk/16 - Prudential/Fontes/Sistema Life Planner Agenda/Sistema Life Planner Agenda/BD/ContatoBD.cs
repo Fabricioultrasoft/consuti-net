@@ -356,7 +356,7 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// <summary>
         /// Listagem de contatos para SITPLAN
         /// </summary>
-        /// <param name="idRecomendante"></param>
+        /// <param name="idsRecomendantes"></param>
         /// <param name="idStatus"></param>
         /// <param name="dataCadastroDe"></param>
         /// <param name="dataCadastroAte"></param>
@@ -364,7 +364,7 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// <param name="idUsuario"></param>
         /// <returns></returns>
         public DataSet Listar(
-            string idRecomendante,
+            List<string> idsRecomendantes,
             string idStatus,
             DateTime dataCadastroDe,
             DateTime dataCadastroAte,
@@ -374,9 +374,11 @@ namespace Sistema_Life_Planner_Agenda.BD
             #region Lógica de filtros
 
             string filtrarRecomendante = string.Empty, filtrarStatus = string.Empty, filtrarSexo = string.Empty;
-            if (!string.IsNullOrEmpty(idRecomendante))
+            filtrarRecomendante += " AND r.ID_Recomendante = " + idsRecomendantes[0].ToString();
+
+            foreach (var item in idsRecomendantes)
             {
-                filtrarRecomendante = " AND r.ID_Recomendante = " + idRecomendante;
+                filtrarRecomendante += " OR r.ID_Recomendante = " + item;
             }
             if (!string.IsNullOrEmpty(idStatus))
             {

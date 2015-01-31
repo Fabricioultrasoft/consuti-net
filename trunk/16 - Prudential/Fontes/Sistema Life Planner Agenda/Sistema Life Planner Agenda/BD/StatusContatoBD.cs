@@ -30,5 +30,31 @@ namespace Sistema_Life_Planner_Agenda.BD
 
             return retorno;
         }
+
+        /// <summary>
+        /// Lista os status de contato cadastrados e seus ID's
+        /// </summary>
+        /// <returns></returns>
+        public DataSet ListarStatusSITPLAN()
+        {
+            comando.CommandText = @"SELECT ID, Status 
+                                    FROM status_contato
+                                    WHERE Status <> 'PC N'
+                                        AND Status <> 'TA JÁ É CLIENTE'
+                                        AND Status <> 'TA LIGAÇÃO FUTURA'
+                                        AND Status <> 'TA NÃO QUER'
+                                    ORDER BY ID ASC";
+            comando.CommandType = CommandType.Text;
+
+            // Classe que auxilia no preenchimento de um dataset
+            MySqlDataAdapter adap = new MySqlDataAdapter(comando);
+
+            DataSet retorno = new DataSet();
+            adap.Fill(retorno);
+
+            this.Dispose();
+
+            return retorno;
+        }
     }
 }
