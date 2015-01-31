@@ -22,7 +22,7 @@ elm[i].id != theBox.id) {
                     if (elm[i].checked != xState)
                         elm[i].click();
                 }
-        }
+    }
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MenuContentPlaceHolder" runat="server">
@@ -56,29 +56,43 @@ elm[i].id != theBox.id) {
             <asp:Panel ID="PesquisaContatoPanel" runat="server">
                 <fieldset>
                     <legend>Filtro para Seleção de Contatos</legend>
+                    <asp:UpdatePanel ID="FiltroContatoUpdatePanel" runat="server">
+                        <ContentTemplate>
+                            <table class="Formulario">
+                                <tr>
+                                    <td class="alinhaDireita2">
+                                        <span class="obrigatorio">*</span>Recomendantes:
+                                    </td>
+                                    <td>
+                                        <div style="width: 402px; text-align: left; float: left">
+                                            <asp:ListBox ID="RecomendanteListBox" runat="server" Width="400px" SelectionMode="Multiple"
+                                                TabIndex="1" Rows="5"></asp:ListBox>
+                                        </div>
+                                        <div style="width: 100px; text-align: left; float: left; margin-left: 10px; height: 90px">
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <asp:CheckBox ID="TodosRecomendantesCheckBox" runat="server" Text=" Todos" OnCheckedChanged="TodosRecomendantesCheckBox_CheckedChanged"
+                                                AutoPostBack="true" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="alinhaDireita2">
+                                        Status:
+                                    </td>
+                                    <td>
+                                        <asp:DropDownList ID="StatusDropDownList" runat="server" TabIndex="2" Width="200px">
+                                        </asp:DropDownList>
+                                    </td>
+                                </tr>
+                            </table>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
                     <table class="Formulario">
                         <tr>
-                            <td class="alinhaDireita">
-                                Recomendante:
-                            </td>
-                            <td>
-                                <asp:DropDownList ID="RecomendanteDropDownList" runat="server" Width="400px" TabIndex="1">
-                                </asp:DropDownList>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="alinhaDireita">
-                                Status:
-                            </td>
-                            <td>
-                                <asp:DropDownList ID="StatusDropDownList" runat="server" TabIndex="2" Width="200px">
-                                </asp:DropDownList>
-                            </td>
-                        </tr>
-                    </table>
-                    <table class="Formulario">
-                        <tr>
-                            <td class="alinhaDireita" style="width: 140px">
+                            <td class="alinhaDireita2" style="width: 140px">
                                 Data Cadastro De:
                             </td>
                             <td class="style1">
@@ -109,7 +123,7 @@ elm[i].id != theBox.id) {
                             </td>
                         </tr>
                         <tr>
-                            <td class="alinhaDireita">
+                            <td class="alinhaDireita2">
                                 Sexo:
                             </td>
                             <td class="style1">
