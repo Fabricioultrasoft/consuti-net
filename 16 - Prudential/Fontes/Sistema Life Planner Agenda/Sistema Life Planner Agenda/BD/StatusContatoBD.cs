@@ -41,8 +41,9 @@ namespace Sistema_Life_Planner_Agenda.BD
                                     FROM status_contato
                                     WHERE Status <> 'PC N'
                                         AND Status <> 'TA JÁ É CLIENTE'
-                                        AND Status <> 'TA LIGAÇÃO FUTURA'
+                                        AND Status <> 'MEU CLIENTE'
                                         AND Status <> 'TA NÃO QUER'
+                                        AND Status <> 'TA OI AGENDADO'
                                     ORDER BY ID ASC";
             comando.CommandType = CommandType.Text;
 

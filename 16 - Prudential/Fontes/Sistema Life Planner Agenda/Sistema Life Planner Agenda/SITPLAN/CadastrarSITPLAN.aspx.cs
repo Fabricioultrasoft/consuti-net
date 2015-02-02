@@ -56,18 +56,30 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
 
         protected void pesquisarButton_Click(object sender, EventArgs e)
         {
-            if (RecomendanteListBox.GetSelectedIndices().Length.Equals(0))
-            {
-                ExibeMensagemPopUp("Selecione pele menos um recomendante para pesquisar.");
-            }
-            else if (ValidarIntervaloDatas(PeriodoDeTextBox.Text, PeriodoAteTextBox.Text))
+            if (ValidarIntervalos())
             {
                 CarregarGridView();
             }
-            else
+        }
+
+        private bool ValidarIntervalos()
+        {
+            if (!ValidarIntervaloDatas(PeriodoDeTextBox.Text, PeriodoAteTextBox.Text))
             {
-                ExibeMensagemPopUp("Data DE deve ser menor que a data ATÉ. Verifique os dados e tente novamente.");
+                ExibeMensagemPopUp("DATA DE CADASTRO DE deve ser menor que a DATA DE CADASTRO ATÉ. Verifique os dados e tente novamente.");
+                return false;
             }
+            else if (!ValidarIntervalo(filhosTextBoxDe.Text, filhosTextBoxAte.Text))
+            {
+                ExibeMensagemPopUp("FILHOS DE deve ser menor que FILHOS ATÉ. Verifique os dados e tente novamente.");
+                return false;
+            }
+            else if (!ValidarIntervalo(IdadeDeTextBox.Text, IdadeAteTextBox.Text))
+            {
+                ExibeMensagemPopUp("IDADE DE deve ser menor que IDADE ATÉ. Verifique os dados e tente novamente.");
+                return false;
+            }
+            return true;
         }
 
         protected void limparButton_Click(object sender, EventArgs e)
@@ -100,13 +112,10 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
         /// </summary>
         private void CarregarStatus()
         {
-            StatusDropDownList.DataSource = new StatusContatoBD().ListarStatusSITPLAN();
-            StatusDropDownList.DataTextField = "Status";
-            StatusDropDownList.DataValueField = "Id";
-            StatusDropDownList.DataBind();
-
-            ListItem selecione = new ListItem("< Todos >", "");
-            StatusDropDownList.Items.Insert(0, selecione);
+            StatusListBox.DataSource = new StatusContatoBD().ListarStatusSITPLAN();
+            StatusListBox.DataTextField = "Status";
+            StatusListBox.DataValueField = "Id";
+            StatusListBox.DataBind();
         }
 
         /// <summary>
@@ -135,11 +144,16 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
         /// </summary>
         private void CarregarGridView()
         {
-            string idStatus = string.Empty, sexo = string.Empty, dataDe = string.Empty, dataAte = string.Empty;
+            string profissao = string.Empty, dataDe = string.Empty, dataAte = string.Empty,
+                uf = string.Empty, idadeDe = string.Empty, idadeAte = string.Empty, 
+                filhosDe = string.Empty, filhosAte = string.Empty;
             List<string> idsRecomendantes = new List<string>();
+            List<string> idsStatus = new List<string>();
+            List<string> NomesCidades = new List<string>();
 
+            #region Montagem de Filtros
 
-            if (!string.IsNullOrEmpty(RecomendanteListBox.SelectedItem.Value))
+            if (RecomendanteListBox.GetSelectedIndices().Length > 0)
             {
                 foreach (ListItem item in RecomendanteListBox.Items)
                 {
@@ -149,13 +163,54 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
                     }
                 }
             }
-            if (!string.IsNullOrEmpty(StatusDropDownList.SelectedItem.Value))
+
+            if (StatusListBox.GetSelectedIndices().Length > 0)
             {
-                idStatus = StatusDropDownList.SelectedItem.Value.ToString();
+                foreach (ListItem item in StatusListBox.Items)
+                {
+                    if (item.Selected)
+                    {
+                        idsStatus.Add(item.Value.ToString());
+                    }
+                }
             }
-            if (!string.IsNullOrEmpty(SexoDropDownList.SelectedItem.Value))
+
+            if (CidadesListBox.GetSelectedIndices().Length > 0)
             {
-                sexo = SexoDropDownList.SelectedItem.Value.ToString();
+                foreach (ListItem item in CidadesListBox.Items)
+                {
+                    if (item.Selected)
+                    {
+                        NomesCidades.Add(item.Text.ToString());
+                    }
+                }
+            }
+
+            if (!string.IsNullOrEmpty(UFDropDownList.SelectedItem.Value))
+            {
+                uf = UFDropDownList.SelectedItem.Value.ToString();
+            }
+            
+            if (!string.IsNullOrEmpty(ProfissaoTextBox.Text))
+            {
+                profissao = ProfissaoTextBox.Text;
+            }
+
+            if (!string.IsNullOrEmpty(IdadeDeTextBox.Text))
+            {
+                idadeDe = IdadeDeTextBox.Text;
+            }
+            if (!string.IsNullOrEmpty(IdadeAteTextBox.Text))
+            {
+                idadeAte = IdadeAteTextBox.Text;
+            }
+            if (!string.IsNullOrEmpty(filhosTextBoxDe.Text))
+            {
+                filhosDe = filhosTextBoxDe.Text;
+            }
+            if (!string.IsNullOrEmpty(filhosTextBoxAte.Text))
+            {
+                filhosAte = filhosTextBoxAte.Text;
             }
             if (!string.IsNullOrEmpty(PeriodoDeTextBox.Text))
             {
@@ -174,12 +229,20 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
                 dataAte = "01/01/2100";
             }
 
+            #endregion
+
             ContatosGridView.DataSource = ViewState["ContatosSITPLANDataSet"] = new ContatoBD().Listar(
                 idsRecomendantes,
-                idStatus,
+                idsStatus,
+                NomesCidades,
                 Convert.ToDateTime(dataDe),
                 Convert.ToDateTime(dataAte),
-                sexo,
+                profissao,
+                uf,
+                idadeDe,
+                idadeAte,
+                filhosDe,
+                filhosAte,
                 Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())));
             ContatosGridView.DataBind();
         }
@@ -344,19 +407,17 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
             }
         }
 
-        protected void TodosRecomendantesCheckBox_CheckedChanged(object sender, EventArgs e)
+        protected void UFDropDownList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (TodosRecomendantesCheckBox.Checked)
-            {
-                foreach (ListItem item in RecomendanteListBox.Items)
-                {
-                    item.Selected = true;
-                }
-            }
-            else
-            {
-                RecomendanteListBox.ClearSelection();
-            }
+            CarregarMunicipios();
+        }
+
+        private void CarregarMunicipios()
+        {
+            CidadesListBox.DataSource = new CidadesBD().Listar(UFDropDownList.SelectedItem.Value);
+            CidadesListBox.DataTextField = "Nome";
+            CidadesListBox.DataValueField = "id_cidade";
+            CidadesListBox.DataBind();
         }
     }
 }

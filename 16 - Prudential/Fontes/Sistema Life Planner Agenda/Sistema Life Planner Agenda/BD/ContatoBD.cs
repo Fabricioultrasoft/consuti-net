@@ -365,33 +365,85 @@ namespace Sistema_Life_Planner_Agenda.BD
         /// <returns></returns>
         public DataSet Listar(
             List<string> idsRecomendantes,
-            string idStatus,
+            List<string> idsStatus,
+            List<string> NomesCidades,
             DateTime dataCadastroDe,
             DateTime dataCadastroAte,
-            string sexo,
+            string profissao,
+            string uf,
+            string idadeDe,
+            string idadeAte,
+            string filhosDe,
+            string filhosAte,
             int idUsuario)
         {
             #region Lógica de filtros
 
-            string filtrarRecomendante = string.Empty, filtrarStatus = string.Empty, filtrarSexo = string.Empty;
-            filtrarRecomendante += " AND r.ID_Recomendante = " + idsRecomendantes[0].ToString();
+            string filtrarRecomendante = string.Empty, filtrarStatus = string.Empty, filtrarUf = string.Empty, filtrarCidades = string.Empty, filtrarProfissao = string.Empty,
+                filtrarIdade = string.Empty, filtrarFilhos = string.Empty;
 
-            foreach (var item in idsRecomendantes)
+            if (idsRecomendantes.Count > 0)
             {
-                filtrarRecomendante += " OR r.ID_Recomendante = " + item;
+                filtrarRecomendante = " r.ID_Recomendante IN (" + idsRecomendantes[0].ToString();
+
+                foreach (var item in idsRecomendantes)
+                {
+                    filtrarRecomendante += " ," + item;
+                }
+                filtrarRecomendante += ") AND ";
             }
-            if (!string.IsNullOrEmpty(idStatus))
+
+            if (idsStatus.Count > 0)
             {
-                filtrarStatus = " AND c.ID_Status_Contato = " + idStatus;
+                filtrarStatus = " c.ID_Status_Contato IN (" + idsStatus[0].ToString();
+
+                foreach (var item in idsStatus)
+                {
+                    filtrarStatus += " ," + item;
+                }
+                filtrarStatus += ") AND";
             }
-            if (!string.IsNullOrEmpty(sexo))
+
+            if (NomesCidades.Count > 0)
             {
-                filtrarSexo = " AND c.Sexo = '" + sexo + "'";
+                filtrarCidades = " c.Cidade IN ('" + NomesCidades[0].ToString();
+
+                foreach (var item in NomesCidades)
+                {
+                    filtrarCidades += "' ,'" + item;
+                }
+                filtrarCidades += "') AND ";
+            }
+
+            if (!string.IsNullOrEmpty(profissao))
+            {
+                filtrarProfissao = " AND c.Profissao LIKE '%" + profissao + "%' ";
+            }
+            if (!string.IsNullOrEmpty(uf))
+            {
+                filtrarUf = " AND c.UF = '" + uf + "' ";
+            }
+            if (!string.IsNullOrEmpty(idadeDe))
+            {
+                filtrarIdade += " AND c.Idade >= " + idadeDe;
+            }
+            if (!string.IsNullOrEmpty(idadeAte))
+            {
+                filtrarIdade += " AND c.Idade <= " + idadeAte;
+            }
+
+            if (!string.IsNullOrEmpty(filhosDe))
+            {
+                filtrarFilhos += " AND c.Filhos >= " + filhosDe;
+            }
+            if (!string.IsNullOrEmpty(filhosAte))
+            {
+                filtrarFilhos += " AND c.Filhos <= " + filhosAte;
             }
 
             #endregion
 
-            comando.CommandText = @"SELECT c.ID, c.nome, s.Status, c.Sexo,
+            comando.CommandText = @"SELECT c.ID, c.nome, s.Status, c.Profissao, c.Cidade, c.Filhos, c.Idade, c.UF,
                                             CONCAT('(', SUBSTRING(Telefone_Principal, 1,2), ')',' ', SUBSTRING(Telefone_Principal, 3,4), '-',SUBSTRING(Telefone_Principal, 7,5) ) AS telefonePrincipal, 
                                             uc.Data_Cadastro AS DataCadastro,  
                                             (SELECT status FROM status_contato WHERE status_contato.id = c.ID_Status_Contato) AS status,
@@ -400,12 +452,18 @@ namespace Sistema_Life_Planner_Agenda.BD
                                     JOIN contatos_usuario uc ON uc.ID_Contato = c.ID
                                     JOIN recomendantes_contato r ON r.ID_Contato = c.ID 
                                     JOIN status_contato s ON c.ID_Status_Contato = s.ID
-                                    WHERE uc.ID_Usuario = @idUsuario
+                                    WHERE " +
+                                            filtrarRecomendante +
+                                            filtrarStatus +
+                                            filtrarCidades +
+                                    @" uc.ID_Usuario = @idUsuario
                                     AND uc.Data_Cadastro >= @dataCadastroDe
-                                    AND uc.Data_Cadastro <= @dataCadastroAte " +
-                                    filtrarRecomendante +
-                                    filtrarStatus +
-                                    filtrarSexo +
+                                    AND uc.Data_Cadastro <= @dataCadastroAte 
+                                    AND c.ID_Status_Contato NOT IN (2, 4, 5, 10,12) " + //status que não entram no sitPlan
+                                    filtrarUf +
+                                    filtrarProfissao +
+                                    filtrarIdade +
+                                    filtrarFilhos +
                                     " ORDER BY c.Nome ASC";
             comando.Parameters.AddWithValue("@idUsuario", idUsuario);
             comando.Parameters.AddWithValue("@dataCadastroDe", dataCadastroDe);

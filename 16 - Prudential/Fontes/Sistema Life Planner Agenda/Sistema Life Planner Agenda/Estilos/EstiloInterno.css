@@ -277,13 +277,6 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
     font-weight: bold;
 }
 
-.alinhaDireita2
-{
-    text-align: right;
-    font-weight: bold;
-    width: 140px;
-}
-
 fieldset
 {
     border: 1px solid #DEDEDE;

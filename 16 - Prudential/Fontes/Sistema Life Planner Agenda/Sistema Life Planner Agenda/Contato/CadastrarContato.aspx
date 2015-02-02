@@ -345,7 +345,7 @@
                                 <div style="width: 90%; margin: 0 auto">
                                     <fieldset>
                                         <legend>Histórico</legend>
-                                        <asp:Panel runat="server" ID="historicoContatosPanel" >
+                                        <asp:Panel runat="server" ID="historicoContatosPanel">
                                             <asp:GridView ID="HistoricoGridView" runat="server" CellPadding="4" ForeColor="#333333"
                                                 GridLines="None" Width="100%" AutoGenerateColumns="False" EnableModelValidation="True"
                                                 EmptyDataText="Nenhum até o momento..." AllowPaging="True" PageSize="10" BorderColor="#003366"
@@ -373,7 +373,7 @@
                                                 <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
                                                 <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
                                                 <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                                                <PagerSettings Position="Bottom" Mode="Numeric"  />
+                                                <PagerSettings Position="Bottom" Mode="Numeric" />
                                             </asp:GridView>
                                         </asp:Panel>
                                     </fieldset>
