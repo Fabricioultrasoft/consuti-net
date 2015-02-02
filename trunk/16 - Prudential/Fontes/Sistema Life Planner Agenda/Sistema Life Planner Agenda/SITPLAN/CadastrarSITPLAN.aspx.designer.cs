@@ -58,22 +58,40 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN {
         protected global::System.Web.UI.WebControls.ListBox RecomendanteListBox;
         
         /// <summary>
-        /// TodosRecomendantesCheckBox control.
+        /// StatusListBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox TodosRecomendantesCheckBox;
+        protected global::System.Web.UI.WebControls.ListBox StatusListBox;
         
         /// <summary>
-        /// StatusDropDownList control.
+        /// UFDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList StatusDropDownList;
+        protected global::System.Web.UI.WebControls.DropDownList UFDropDownList;
+        
+        /// <summary>
+        /// CidadesListBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListBox CidadesListBox;
+        
+        /// <summary>
+        /// ProfissaoTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ProfissaoTextBox;
         
         /// <summary>
         /// PeriodoDeTextBox control.
@@ -130,13 +148,76 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN {
         protected global::System.Web.UI.WebControls.ImageButton AteImageButton;
         
         /// <summary>
-        /// SexoDropDownList control.
+        /// IdadeDeTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList SexoDropDownList;
+        protected global::System.Web.UI.WebControls.TextBox IdadeDeTextBox;
+        
+        /// <summary>
+        /// IdadeDeTextBoxFilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender IdadeDeTextBoxFilteredTextBoxExtender;
+        
+        /// <summary>
+        /// IdadeAteTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox IdadeAteTextBox;
+        
+        /// <summary>
+        /// IdadeAteTextBoxFilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender IdadeAteTextBoxFilteredTextBoxExtender;
+        
+        /// <summary>
+        /// filhosTextBoxDe control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox filhosTextBoxDe;
+        
+        /// <summary>
+        /// filhosTextBoxDeFilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender filhosTextBoxDeFilteredTextBoxExtender;
+        
+        /// <summary>
+        /// filhosTextBoxAte control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox filhosTextBoxAte;
+        
+        /// <summary>
+        /// filhosTextBoxAteFilteredTextBoxExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender filhosTextBoxAteFilteredTextBoxExtender;
         
         /// <summary>
         /// pesquisarButton control.
@@ -155,6 +236,15 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button limparButton;
+        
+        /// <summary>
+        /// Panel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
         /// ContatosGridView control.

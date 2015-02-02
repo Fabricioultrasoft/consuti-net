@@ -138,6 +138,23 @@ namespace Sistema_Life_Planner_Agenda.Classes
             return true;
         }
 
+        /// <summary>
+        /// Valida qualquer invalo
+        /// </summary>
+        /// <param name="De"></param>
+        /// <param name="Ate"></param>
+        /// <returns></returns>
+        public bool ValidarIntervalo(string De, string Ate)
+        {
+            if (!string.IsNullOrEmpty(De) &&
+               !string.IsNullOrEmpty(Ate) &&
+                Convert.ToInt32(Ate) < Convert.ToInt32(De))
+            {
+                return false;
+            }
+            return true;
+        }
+
         public DataSet Municipios(string UF)
         {
             return new CidadesBD().Listar(UF);
