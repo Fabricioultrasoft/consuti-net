@@ -204,6 +204,7 @@ namespace Sistema_Life_Planner_Agenda.Contato
 
                         ExibeMensagemPopUp("Contato salvo com sucesso!");
                         LimparCampos();
+                        pesquisarButton.Visible = true;
                     }
 
                 }
@@ -212,7 +213,6 @@ namespace Sistema_Life_Planner_Agenda.Contato
                     ExibeMensagemPopUp("Falha ao tentar salvar o contato. Tente novamente. Detalhes: " + ex.Message);
                 }
             }
-            pesquisarButton.Visible = true;
             cancelarButton.Visible = false;
         }
 
@@ -509,27 +509,6 @@ namespace Sistema_Life_Planner_Agenda.Contato
 
         private void BloqueiaCampos()
         {
-
-            DDDtelefoneAlternativo1TextBox.Enabled =
-            DDDtelefoneAlternativo2TextBox.Enabled =
-            DDDTelefoneTextBox.Enabled =
-            emailTextBox.Enabled =
-            filhosTextBox.Enabled =
-            idadeTextBox.Enabled =
-            nomeCompletoTextBox.Enabled =
-            outrasInformacoesTextBox.Enabled =
-            profissaoTextBox.Enabled =
-            telefoneAlternativo1TextBox.Enabled =
-            telefoneAlternativo2TextBox.Enabled =
-            TelefoneTextBox.Enabled =
-            CidadesDropDownList.Enabled =
-            EstadoCivilDropDownList.Enabled =
-            RecomendanteDropDownList.Enabled =
-            StatusDropDownList.Enabled =
-            TipoDropDownList.Enabled =
-            UFDropDownList.Enabled =
-            SexoRadioButtonList.Enabled =
-            salvarButton.Visible =
             cancelarButton.Visible =
             pesquisarButton.Visible = false;
 
@@ -542,13 +521,10 @@ namespace Sistema_Life_Planner_Agenda.Contato
             {
                 Response.Redirect("~/SITPLAN/ExecutarSITPLAN.aspx?idSitPlan=" + Request.QueryString["idSitPlan"]);
             }
-            else
-                if (string.Equals(Request.QueryString["Return"].ToString(), "CadSitPlan"))
-                {
-                    Response.Redirect("~/SITPLAN/CadastrarSITPLAN.aspx");
-                }
-
-
+            else if (string.Equals(Request.QueryString["Return"].ToString(), "CadSitPlan"))
+            {
+                Response.Redirect("~/SITPLAN/CadastrarSITPLAN.aspx");
+            }
         }
 
         protected void HistoricoGridView_PageIndexChanging(Object sender, GridViewPageEventArgs e)

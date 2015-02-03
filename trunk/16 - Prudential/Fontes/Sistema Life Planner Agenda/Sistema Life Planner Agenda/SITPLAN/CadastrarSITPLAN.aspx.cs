@@ -364,13 +364,13 @@ namespace Sistema_Life_Planner_Agenda.SITPLAN
 
 
             List<string> listaContatos = new List<string>();
-            DataSet ds = (DataSet)ViewState["ContatosSITPLANDataSet"];
+            //DataSet ds = (DataSet)ViewState["ContatosSITPLANDataSet"];
             for (int i = 0; i < ContatosGridView.Rows.Count; i++)
             {
                 CheckBox cb = (CheckBox)ContatosGridView.Rows[i].FindControl("IncluirContatoCheckBox");
                 if (cb.Checked)
                 {
-                    listaContatos.Add(ds.Tables[0].Rows[i]["ID"].ToString());
+                    listaContatos.Add(ContatosGridView.Rows[i].Cells[0].Text);
                 }
             }
 
