@@ -8,6 +8,10 @@
         {
             width: 100px;
         }
+        .noprint
+        {
+            display: none;
+        }
     </style>
     <script type="text/javascript" language="javascript">
         function SelecionaTodosChecks(spanChk) {
@@ -226,79 +230,82 @@ elm[i].id != theBox.id) {
                 <fieldset>
                     <legend>Resultado</legend>
                     <asp:Panel ID="Panel1" runat="server" Width="820px" ScrollBars="Horizontal">
-                    
-                    <br />
-                    <asp:GridView ID="ContatosGridView" runat="server" CellPadding="4" ForeColor="#333333"
-                        GridLines="None" Width="150%" AutoGenerateColumns="False" EnableModelValidation="True"
-                        OnRowCommand="ContatosGridView_Click" EmptyDataText="Nenhum resultado encontrado."
-                        AllowPaging="True" AllowSorting="True" PageSize="1000" BorderColor="#003366"
-                        BorderStyle="Solid" BorderWidth="1px" CellSpacing="2" OnPageIndexChanging="ContatosGridView_PageIndexChanging"
-                        OnSorting="ContatosGridView_Sorting" RowStyle-Height="40px" Font-Size="10pt">
-                        <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-                        <Columns>
-                            <asp:TemplateField HeaderText="Selecionar Todos">
-                                <ItemTemplate>
-                                    <asp:CheckBox ID="IncluirContatoCheckBox" runat="server" />
-                                </ItemTemplate>
-                                <HeaderTemplate>
-                                    <input id="chkAll" onclick="javascript:SelecionaTodosChecks(this);" runat="server"
-                                        type="checkbox" />
-                                </HeaderTemplate>
-                                <ItemStyle Width="30px" HorizontalAlign="Center" />
-                            </asp:TemplateField>
-                            <asp:TemplateField HeaderText="#">
-                                <HeaderStyle HorizontalAlign="Center" Width="30px" />
-                                <ItemStyle HorizontalAlign="Center" Font-Bold="true" />
-                                <ItemTemplate>
-                                    <%# Container.DataItemIndex + 1 %>
-                                </ItemTemplate>
-                            </asp:TemplateField>
-                            <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome">
-                                <ItemStyle CssClass="espacoTabelas" />
-                            </asp:BoundField>
-                            <asp:BoundField HeaderText="Recomendante" DataField="Recomendante" SortExpression="Recomendante">
-                                <ItemStyle CssClass="espacoTabelas" />
-                            </asp:BoundField>
-                            <asp:BoundField HeaderText="Status" DataField="Status" SortExpression="Status">
-                                <ItemStyle CssClass="espacoTabelas" Width="95px" />
-                            </asp:BoundField>
-                            <asp:BoundField HeaderText="Profissão" DataField="Profissao" SortExpression="Profissao">
-                                <ItemStyle CssClass="espacoTabelas" HorizontalAlign="Center" />
-                            </asp:BoundField>
-                            <asp:BoundField HeaderText="Idade" DataField="Idade" SortExpression="Idade">
-                                <ItemStyle CssClass="espacoTabelas" HorizontalAlign="Center" />
-                            </asp:BoundField>
-                            <asp:BoundField HeaderText="Filhos" DataField="Filhos" SortExpression="Filhos">
-                                <ItemStyle CssClass="espacoTabelas" HorizontalAlign="Center" />
-                            </asp:BoundField>
-                            <asp:BoundField HeaderText="Telefone Princ." DataField="TelefonePrincipal" SortExpression="TelefonePrincipal">
-                                <ItemStyle CssClass="espacoTabelas" Width="110px" />
-                            </asp:BoundField>
-                            <asp:BoundField HeaderText="UF" DataField="UF" SortExpression="UF">
-                                <ItemStyle CssClass="espacoTabelas" />
-                            </asp:BoundField>
-                            <asp:BoundField HeaderText="Cidade" DataField="Cidade" SortExpression="Cidade">
-                                <ItemStyle CssClass="espacoTabelas" />
-                            </asp:BoundField>
-                            <asp:BoundField HeaderText="Data do Cadastro" DataField="DataCadastro" SortExpression="DataCadastro">
-                                <ItemStyle CssClass="espacoTabelas" Width="80px" />
-                            </asp:BoundField>
-                            <asp:TemplateField HeaderText="Detalhe">
-                                <ItemTemplate>
-                                    <asp:ImageButton ID="imgBtnVisualizar" runat="server" CausesValidation="False" CommandArgument='<%# Bind("Id") %>'
-                                        CommandName="Visualizar" ImageUrl="~/Estilos/Imgs/search.png"></asp:ImageButton>
-                                </ItemTemplate>
-                                <ItemStyle Width="60px" HorizontalAlign="Center" />
-                            </asp:TemplateField>
-                        </Columns>
-                        <EditRowStyle BackColor="#999999" />
-                        <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" Height="30px" />
-                        <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-                        <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-                        <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                        <PagerSettings Position="Bottom" Mode="Numeric" />
-                    </asp:GridView>
+                        <br />
+                        <asp:GridView ID="ContatosGridView" runat="server" CellPadding="4" ForeColor="#333333"
+                            GridLines="None" Width="150%" AutoGenerateColumns="False" EnableModelValidation="True"
+                            OnRowCommand="ContatosGridView_Click" EmptyDataText="Nenhum resultado encontrado."
+                            AllowPaging="True" AllowSorting="True" PageSize="1000" BorderColor="#003366"
+                            BorderStyle="Solid" BorderWidth="1px" CellSpacing="2" OnPageIndexChanging="ContatosGridView_PageIndexChanging"
+                            OnSorting="ContatosGridView_Sorting" RowStyle-Height="40px" Font-Size="10pt">
+                            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                            <Columns>
+                                <asp:BoundField DataField="Id" HeaderText="ID">
+                                    <ItemStyle CssClass="noprint" />
+                                    <HeaderStyle CssClass="noprint" />
+                                </asp:BoundField>
+                                <asp:TemplateField HeaderText="Selecionar Todos">
+                                    <ItemTemplate>
+                                        <asp:CheckBox ID="IncluirContatoCheckBox" runat="server" />
+                                    </ItemTemplate>
+                                    <HeaderTemplate>
+                                        <input id="chkAll" onclick="javascript:SelecionaTodosChecks(this);" runat="server"
+                                            type="checkbox" />
+                                    </HeaderTemplate>
+                                    <ItemStyle Width="30px" HorizontalAlign="Center" />
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="#">
+                                    <HeaderStyle HorizontalAlign="Center" Width="30px" />
+                                    <ItemStyle HorizontalAlign="Center" Font-Bold="true" />
+                                    <ItemTemplate>
+                                        <%# Container.DataItemIndex + 1 %>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome">
+                                    <ItemStyle CssClass="espacoTabelas" />
+                                </asp:BoundField>
+                                <asp:BoundField HeaderText="Recomendante" DataField="Recomendante" SortExpression="Recomendante">
+                                    <ItemStyle CssClass="espacoTabelas" />
+                                </asp:BoundField>
+                                <asp:BoundField HeaderText="Status" DataField="Status" SortExpression="Status">
+                                    <ItemStyle CssClass="espacoTabelas" Width="95px" />
+                                </asp:BoundField>
+                                <asp:BoundField HeaderText="Profissão" DataField="Profissao" SortExpression="Profissao">
+                                    <ItemStyle CssClass="espacoTabelas" HorizontalAlign="Center" />
+                                </asp:BoundField>
+                                <asp:BoundField HeaderText="Idade" DataField="Idade" SortExpression="Idade">
+                                    <ItemStyle CssClass="espacoTabelas" HorizontalAlign="Center" />
+                                </asp:BoundField>
+                                <asp:BoundField HeaderText="Filhos" DataField="Filhos" SortExpression="Filhos">
+                                    <ItemStyle CssClass="espacoTabelas" HorizontalAlign="Center" />
+                                </asp:BoundField>
+                                <asp:BoundField HeaderText="Telefone Princ." DataField="TelefonePrincipal" SortExpression="TelefonePrincipal">
+                                    <ItemStyle CssClass="espacoTabelas" Width="110px" />
+                                </asp:BoundField>
+                                <asp:BoundField HeaderText="UF" DataField="UF" SortExpression="UF">
+                                    <ItemStyle CssClass="espacoTabelas" />
+                                </asp:BoundField>
+                                <asp:BoundField HeaderText="Cidade" DataField="Cidade" SortExpression="Cidade">
+                                    <ItemStyle CssClass="espacoTabelas" />
+                                </asp:BoundField>
+                                <asp:BoundField HeaderText="Data do Cadastro" DataField="DataCadastro" SortExpression="DataCadastro">
+                                    <ItemStyle CssClass="espacoTabelas" Width="80px" />
+                                </asp:BoundField>
+                                <asp:TemplateField HeaderText="Detalhe">
+                                    <ItemTemplate>
+                                        <asp:ImageButton ID="imgBtnVisualizar" runat="server" CausesValidation="False" CommandArgument='<%# Bind("Id") %>'
+                                            CommandName="Visualizar" ImageUrl="~/Estilos/Imgs/search.png"></asp:ImageButton>
+                                    </ItemTemplate>
+                                    <ItemStyle Width="60px" HorizontalAlign="Center" />
+                                </asp:TemplateField>
+                            </Columns>
+                            <EditRowStyle BackColor="#999999" />
+                            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" Height="30px" />
+                            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                            <PagerSettings Position="Bottom" Mode="Numeric" />
+                        </asp:GridView>
                     </asp:Panel>
                 </fieldset>
             </asp:Panel>
