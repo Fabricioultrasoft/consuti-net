@@ -1,6 +1,98 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
-  <publishProfile publishUrl="ftp://ftp.consuti.net/Web/testepmk.com.br/" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="TestePMK - Prod" publishMethod="FTP" replaceMatchingFiles="False" userName="consuti" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGyKc3G7erEesM933Hc9zAQAAAAACAAAAAAAQZgAAAAEAACAAAAAYw4v8+VK/hjplxkrIU8DrL1xVoKKS6Nn5Cd0qwAzrOwAAAAAOgAAAAAIAACAAAABAKdNHCzlCW9YcWaQAYBqRnRHLRwIl+fMTiU0/qd7XiyAAAACyZK/BbbgtIh5W2bKKEx7GeFaYEq1GHnfYNfBfL+FAnUAAAAC07VlgxIfei9XPHQeQZ09+Injk+LhGZEEWYpjlO0CBThZn1+Lv+YcUHmOq78uu9nrQEHLoilpLhTyq79sJy85s" SelectedForPublish="True">
+  <publishProfile publishUrl="ftp://ftp.consuti.net/Web/testepmk.com.br/" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="TestePMK - Prod" publishMethod="FTP" replaceMatchingFiles="False" userName="consuti" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGyKc3G7erEesM933Hc9zAQAAAAACAAAAAAAQZgAAAAEAACAAAAAYw4v8+VK/hjplxkrIU8DrL1xVoKKS6Nn5Cd0qwAzrOwAAAAAOgAAAAAIAACAAAABAKdNHCzlCW9YcWaQAYBqRnRHLRwIl+fMTiU0/qd7XiyAAAACyZK/BbbgtIh5W2bKKEx7GeFaYEq1GHnfYNfBfL+FAnUAAAAC07VlgxIfei9XPHQeQZ09+Injk+LhGZEEWYpjlO0CBThZn1+Lv+YcUHmOq78uu9nrQEHLoilpLhTyq79sJy85s" SelectedForPublish="False">
+    <file relUrl="Graficos/RelEstoq.png" publishTime="10/26/2014 23:37:28" />
+    <file relUrl="PedidosUserExt.aspx" publishTime="10/26/2014 23:37:14" />
+    <file relUrl="Default.aspx" publishTime="10/26/2014 23:37:30" />
+    <file relUrl="Adm/CategoriasProds/AddCategoria.aspx" publishTime="10/26/2014 23:36:47" />
+    <file relUrl="Adm/Relatorios/RelatorioVendas.aspx" publishTime="10/26/2014 23:36:39" />
+    <file relUrl="Graficos/Logomarca.png" publishTime="10/26/2014 23:37:25" />
+    <file relUrl="Graficos/Sair32x32.png" publishTime="10/26/2014 23:37:24" />
+    <file relUrl="Graficos/AtBann.png" publishTime="10/26/2014 23:37:24" />
+    <file relUrl="Sedex.aspx" publishTime="10/26/2014 23:37:14" />
+    <file relUrl="Adm/Relatorios/RelatorioEstoque.aspx" publishTime="10/26/2014 23:36:38" />
+    <file relUrl="Web.config" publishTime="01/20/2015 17:28:03" />
+    <file relUrl="Graficos/verImgs_32x32.png" publishTime="10/26/2014 23:37:26" />
+    <file relUrl="Adm/Banners/Default.aspx" publishTime="10/26/2014 23:36:44" />
+    <file relUrl="Adm/CategoriasProds/AlterCatProd.aspx" publishTime="10/26/2014 23:36:48" />
+    <file relUrl="Estilos.css" publishTime="10/26/2014 23:37:11" />
+    <file relUrl="Graficos/pagSeguroLogo.png" publishTime="10/26/2014 23:37:29" />
+    <file relUrl="Graficos/FundoSite.jpg" publishTime="10/26/2014 23:37:23" />
+    <file relUrl="Graficos/indique.png" publishTime="10/26/2014 23:37:28" />
+    <file relUrl="bin/AjaxControlToolkit.dll" publishTime="10/26/2014 23:36:51" />
+    <file relUrl="Graficos/todos_animado_550_50.gif" publishTime="10/26/2014 23:37:24" />
+    <file relUrl="bin/testePMK.com.br.pdb" publishTime="01/14/2015 11:10:27" />
+    <file relUrl="Adm/Produtos/CadastraProduto.aspx" publishTime="10/26/2014 23:36:36" />
+    <file relUrl="Adm/Relatorios/DetalhesEstoque.aspx" publishTime="10/26/2014 23:36:39" />
+    <file relUrl="Graficos/Detalhes_32x32.png" publishTime="10/26/2014 23:37:27" />
+    <file relUrl="Adm/Pedidos/StatusPedidos.aspx" publishTime="10/26/2014 23:36:40" />
+    <file relUrl="Graficos/OK_32x32.png" publishTime="10/26/2014 23:37:25" />
+    <file relUrl="Graficos/FAIL_32x32.png" publishTime="10/26/2014 23:37:26" />
+    <file relUrl="Graficos/link.jpg" publishTime="10/26/2014 23:37:27" />
+    <file relUrl="Graficos/Voltar_32x32.png" publishTime="10/26/2014 23:37:29" />
+    <file relUrl="bin/testePMK.com.br.dll" publishTime="01/14/2015 11:10:27" />
+    <file relUrl="Adm/Relatorios/RelatorioClientes.aspx" publishTime="10/26/2014 23:36:38" />
+    <file relUrl="LoginUserExt.aspx" publishTime="10/26/2014 23:37:31" />
+    <file relUrl="Adm/Relatorios/DetalhesCliente.aspx" publishTime="10/26/2014 23:36:39" />
+    <file relUrl="Graficos/Avancar.png" publishTime="10/26/2014 23:37:25" />
+    <file relUrl="Adm/AdmMaster.Master" publishTime="10/26/2014 23:36:41" />
+    <file relUrl="Adm/Relatorios/Detalhes.css" publishTime="10/26/2014 23:36:38" />
+    <file relUrl="Adm/Produtos/ImagensProduto.aspx" publishTime="10/26/2014 23:36:36" />
+    <file relUrl="Graficos/AlProds.png" publishTime="10/26/2014 23:37:28" />
+    <file relUrl="Graficos/BannTopAdm.jpg" publishTime="10/26/2014 23:37:29" />
+    <file relUrl="RetornoCompra.aspx" publishTime="10/26/2014 23:37:32" />
+    <file relUrl="Links.aspx" publishTime="10/26/2014 23:37:23" />
+    <file relUrl="Graficos/Home32x32.png" publishTime="10/26/2014 23:37:27" />
+    <file relUrl="Graficos/compras.png" publishTime="10/26/2014 23:37:28" />
+    <file relUrl="Graficos/Voltar.png" publishTime="10/26/2014 23:37:25" />
+    <file relUrl="Contato.aspx" publishTime="10/26/2014 23:36:31" />
+    <file relUrl="Graficos/logo_sedex.gif" publishTime="10/26/2014 23:37:29" />
+    <file relUrl="Graficos/fotoMeioAmbiente.jpg" publishTime="10/26/2014 23:37:27" />
+    <file relUrl="Graficos/selo.png" publishTime="10/26/2014 23:37:24" />
+    <file relUrl="Graficos/carrinho.png" publishTime="10/26/2014 23:37:25" />
+    <file relUrl="Graficos/pedidos.png" publishTime="10/26/2014 23:37:29" />
+    <file relUrl="Graficos/calendario_32x32.PNG" publishTime="10/26/2014 23:37:28" />
+    <file relUrl="Graficos/fundoPromoc.jpg" publishTime="10/26/2014 23:37:27" />
+    <file relUrl="Graficos/compSegura.png" publishTime="10/26/2014 23:37:25" />
+    <file relUrl="Graficos/verImgs_128x128.png" publishTime="10/26/2014 23:37:27" />
+    <file relUrl="Graficos/localizacao2.png" publishTime="10/26/2014 23:37:24" />
+    <file relUrl="listagemProdutos.aspx" publishTime="10/26/2014 23:36:31" />
+    <file relUrl="DetalhesPedido.aspx" publishTime="10/26/2014 23:36:32" />
+    <file relUrl="Graficos/login.png" publishTime="10/26/2014 23:37:25" />
+    <file relUrl="Graficos/pagSeguroLogo.jpg" publishTime="10/26/2014 23:37:29" />
+    <file relUrl="statusCarrinho.aspx" publishTime="10/26/2014 23:36:31" />
+    <file relUrl="CadUser.aspx" publishTime="10/26/2014 23:37:30" />
+    <file relUrl="Graficos/see.gif" publishTime="10/26/2014 23:37:28" />
+    <file relUrl="Graficos/linkMenu.png" publishTime="10/26/2014 23:37:27" />
+    <file relUrl="Adm/Produtos/EstoqueProds.aspx" publishTime="10/26/2014 23:36:35" />
+    <file relUrl="Empresa.aspx" publishTime="10/26/2014 23:37:32" />
+    <file relUrl="Graficos/AtStatusPedido.png" publishTime="10/26/2014 23:37:23" />
+    <file relUrl="Graficos/ImagemNaoDisponivel.jpg" publishTime="10/26/2014 23:37:29" />
+    <file relUrl="Adm/Default.aspx" publishTime="10/26/2014 23:36:48" />
+    <file relUrl="Adm/Produtos/videoProduto.aspx" publishTime="10/26/2014 23:36:33" />
+    <file relUrl="Graficos/Pause.png" publishTime="10/26/2014 23:37:29" />
+    <file relUrl="Graficos/contato.png" publishTime="10/26/2014 23:37:25" />
+    <file relUrl="Adm/EstilosAdm.css" publishTime="10/26/2014 23:36:48" />
+    <file relUrl="Graficos/RelUser.png" publishTime="10/26/2014 23:37:26" />
+    <file relUrl="bin/MySql.Data.dll" publishTime="10/26/2014 23:28:14" />
+    <file relUrl="LoginAdm.aspx" publishTime="10/26/2014 23:36:50" />
+    <file relUrl="Graficos/SedexDemo.png" publishTime="10/26/2014 23:37:26" />
+    <file relUrl="Graficos/testePmkLogo.jpg" publishTime="10/26/2014 23:37:25" />
+    <file relUrl="Graficos/FundoMenu.png" publishTime="10/26/2014 23:37:24" />
+    <file relUrl="Graficos/addItem.png" publishTime="10/26/2014 23:37:28" />
+    <file relUrl="Graficos/SedexCobrar.gif" publishTime="10/26/2014 23:37:27" />
+    <file relUrl="Graficos/logo.png" publishTime="10/26/2014 23:37:24" />
+    <file relUrl="Graficos/ADD_32x32.png" publishTime="10/26/2014 23:37:27" />
+    <file relUrl="Adm/Produtos/EditProdutos.aspx" publishTime="10/26/2014 23:36:35" />
+    <file relUrl="Graficos/localizacao.png" publishTime="10/26/2014 23:37:26" />
+    <file relUrl="Master.Master" publishTime="10/26/2014 23:36:31" />
+    <file relUrl="Graficos/RelVendas.png" publishTime="10/26/2014 23:37:29" />
+    <file relUrl="Graficos/Play.png" publishTime="10/26/2014 23:37:28" />
+    <file relUrl="Localizacao.aspx" publishTime="10/26/2014 23:36:32" />
+    <file relUrl="Adm/Usuario/ConfigUser.aspx" publishTime="10/26/2014 23:36:42" />
+    <file relUrl="bin/UOL.PagSeguro.dll" publishTime="10/26/2014 23:36:52" />
+  </publishProfile>
+  <publishProfile publishUrl="C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\5 - TestePMK\testepmk.net\Publish" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Local" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
     <file relUrl="Graficos/indique.png" publishTime="10/26/2014 23:37:28" />
     <file relUrl="PedidosUserExt.aspx" publishTime="10/26/2014 23:37:14" />
     <file relUrl="Default.aspx" publishTime="10/26/2014 23:37:30" />
@@ -13,7 +105,7 @@
     <file relUrl="Sedex.aspx" publishTime="10/26/2014 23:37:14" />
     <file relUrl="Graficos/see.gif" publishTime="10/26/2014 23:37:28" />
     <file relUrl="Adm/Relatorios/RelatorioEstoque.aspx" publishTime="10/26/2014 23:36:38" />
-    <file relUrl="Web.config" publishTime="01/20/2015 17:28:03" />
+    <file relUrl="Web.config" publishTime="02/24/2015 12:09:38" />
     <file relUrl="Graficos/verImgs_32x32.png" publishTime="10/26/2014 23:37:26" />
     <file relUrl="Adm/Banners/Default.aspx" publishTime="10/26/2014 23:36:44" />
     <file relUrl="Adm/CategoriasProds/AlterCatProd.aspx" publishTime="10/26/2014 23:36:48" />
@@ -24,14 +116,14 @@
     <file relUrl="Graficos/pedidos.png" publishTime="10/26/2014 23:37:29" />
     <file relUrl="bin/AjaxControlToolkit.dll" publishTime="10/26/2014 23:36:51" />
     <file relUrl="Adm/Relatorios/RelatorioVendas.aspx" publishTime="10/26/2014 23:36:39" />
-    <file relUrl="bin/testePMK.com.br.pdb" publishTime="01/14/2015 11:10:27" />
+    <file relUrl="bin/testePMK.com.br.pdb" publishTime="02/24/2015 12:08:16" />
     <file relUrl="Adm/Produtos/CadastraProduto.aspx" publishTime="10/26/2014 23:36:36" />
     <file relUrl="Adm/Relatorios/DetalhesEstoque.aspx" publishTime="10/26/2014 23:36:39" />
     <file relUrl="Graficos/Detalhes_32x32.png" publishTime="10/26/2014 23:37:27" />
     <file relUrl="Adm/Pedidos/StatusPedidos.aspx" publishTime="10/26/2014 23:36:40" />
     <file relUrl="Graficos/contato.png" publishTime="10/26/2014 23:37:25" />
     <file relUrl="Graficos/Voltar_32x32.png" publishTime="10/26/2014 23:37:29" />
-    <file relUrl="bin/testePMK.com.br.dll" publishTime="01/14/2015 11:10:27" />
+    <file relUrl="bin/testePMK.com.br.dll" publishTime="02/24/2015 12:08:17" />
     <file relUrl="Adm/Relatorios/RelatorioClientes.aspx" publishTime="10/26/2014 23:36:38" />
     <file relUrl="Adm/Relatorios/DetalhesCliente.aspx" publishTime="10/26/2014 23:36:39" />
     <file relUrl="Graficos/Avancar.png" publishTime="10/26/2014 23:37:25" />
