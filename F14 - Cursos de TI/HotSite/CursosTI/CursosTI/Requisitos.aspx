@@ -28,26 +28,26 @@
             <br />
     </div>
         <h2>Descrição do Curso</h2>
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;A situação na qual se encontra o mercado de tecnologia da informação, com milhares de vagas em aberto e com bons profissionais cada vez escassos, 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;A situação na qual se encontra o mercado de tecnologia da informação, com milhares de vagas em aberto e com escassez de profissionais competentes, 
         motivou a ConsuTI e o Yázigi a firmarem uma parceria para oferecer um novo modelo de preparação profissional. 
-        Após estudar o real motivo da dificuldade em encontrar profissionais bem preparados e capazes de atuar aplicando seu conhecimento teórico. 
-        O resultado desse estudo foi usado na preparação de cursos com no mínimo 75% de prática e exposição da teoria mais adequada ao cenário corporativo 
-        brasileiro de tecnologia da informação. TODAS  as aulas são simulações da realidade de uma empresa de tecnologia. Além disso, o aluno também será preparado para demonstrar melhor sua competência nas exigentes entrevistas de emprego.
-        Dessa forma o aluno além de aprender a trabalhar de uma forma otimizada, poderá consolidar toda a teoria estudada, seja ela durante o próprio curso, 
-        na faculdade ou até mesmo sozinho.
+        Investigou-se o real motivo da dificuldade em encontrar profissionais qualificados e capazes de atuar aplicando seus conhecimentos teóricos e
+        o resultado desse estudo foi usado na elaboração de cursos com no mínimo 75% de prática e exposição da teoria mais adequada ao cenário corporativo 
+        brasileiro de tecnologia da informação. Todas as aulas são simulações da realidade de uma empresa de tecnologia o que permite aliar teoria e prática. E, além disso, o aluno também será preparado para demonstrar melhor as suas competências nas exigentes entrevistas de emprego.
+        Dessa forma, o aluno além de aprender a trabalhar de uma forma otimizada, poderá consolidar todo o seu conhecimento durante o curso, 
+        na graduação e até mesmo sozinho.
         <br />
         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;O Curso de Análise de Requisitos tem o objetivo de preparar os alunos para atuar à frente de projetos de TI, traduzindo o desejo dos clientes para
-        a linguagem técnica dos profissionais de desenvolvimento, testes, coordenação e outros, ao mesmo tempo que mantém coerente o foco do projeto e ajuda na validação do produto final.
-        Tudo sem depender da tecnologia do projeto e ou sequer da metodologia de trabalho da empresa. 
-        O papel de analista de requisitos é um dos que possui maior escassez no mercado e com isso o salário oferecido para o cargo é cada vez mais interessante. 
-        Estar preparado para a entrevista de emprego e para o dia-a-dia de um analista de requisitos é o objetivo de cada um dos dias de aula. 
+        a linguagem técnica dos profissionais de desenvolvimento, testes, coordenação e outros, ao mesmo tempo em que mantém coerente o foco do projeto e ajuda na validação do produto final.
+        Tudo sem depender da tecnologia do projeto e sequer da metodologia de trabalho da empresa. 
+        O profissional que atua no papel de analista de requisitos é um dos mais escassos no mercado e, com isso, o salário oferecido para o cargo torna-se cada vez mais atrativo. 
+        Estar preparado para a entrevista de emprego e para o dia a dia de um analista de requisitos é o objetivo do curso. 
         <br />
         <br />
         <h2>Público Alvo</h2>
             <ul>
-            <li>Estudantes da área de tecnologia que desejam entrar no mercado de trabalho ou consolidar a teoria vista em sala de aula à pratica do dia-a-dia das empresas de TI.</li>
+            <li>Estudantes da área de tecnologia que desejam entrar no mercado de trabalho ou consolidar a teoria vista em sala de aula com a pratica do dia a dia das empresas de TI.</li>
 			<li>Profissionais da área de tecnologia da informação que almejam melhor colocação profissional, consolidação de suas qualificações e/ou mesmo mudar de área de atuação.</li>
-			<li>Amantes da tecnologia mas que ainda não atuam na área porém buscam novos conhecimentos e desafios em uma das milhares vagas de emprego do setor.</li>
+			<li>Amantes da tecnologia que ainda não atuam na área porém buscam novos conhecimentos e desafios em uma dentre as milhares de vagas de emprego do setor.</li>
         </ul>
         <br />
 
@@ -64,7 +64,7 @@
 			    <li>Matrícula:
                     <br />&nbsp;&nbsp;- R$250,00</li>
 			    <li>Curso: 
-			        <br />&nbsp;&nbsp;- R$1050,00 parcelado em até 4 vezes de R$262,50 OU 
+			        <br />&nbsp;&nbsp;- R$1.050,00 parcelado em até 4 vezes de R$262,50 OU 
 			        <br />&nbsp;&nbsp;- R$976,50 à vista com 7% de desconto </li>
 			</ul>
         <br />
@@ -84,15 +84,15 @@
 			<ul>
 			    <li>Turma 1: 
                     <br />&nbsp;&nbsp;- Aulas aos sábados                    
-                    <br />&nbsp;&nbsp;- Horário de 13:00 às 17:00 
+                    <br />&nbsp;&nbsp;- Horário de 13:00 as 17:00 
                     <br />&nbsp;&nbsp;- Início em 28 de março de 2015
-                    <br />&nbsp;&nbsp;- Término em 30 de maio
+                    <br />&nbsp;&nbsp;- Término em 30 de maio de 2015
                 </li>
                 <li>Turma 2: 
-                    <br />&nbsp;&nbsp;- Aulas às segundas e quartas
-                    <br />&nbsp;&nbsp;- Horário de 19:30 às 21:30
-                    <br />&nbsp;&nbsp;- Início em 30 de março
-                    <br />&nbsp;&nbsp;- Término em 3 de junho
+                    <br />&nbsp;&nbsp;- Aulas às segundas e quartas feiras
+                    <br />&nbsp;&nbsp;- Horário de 19:30 as 21:30
+                    <br />&nbsp;&nbsp;- Início em 30 de março de 2015
+                    <br />&nbsp;&nbsp;- Término em 3 de junho de 2015
                 </li>
 			</ul>            
             <br />
@@ -116,7 +116,7 @@
             </li>
                 <li>Dificuldades e Desafios
             </li>
-                <li>Networking Realmente “Existe”?</li>
+                <li>Networking Realmente Existe?</li>
             </ul>            
             <h3>2. Processo de Software</h3>
             <ul>
@@ -171,7 +171,7 @@
                 <li>Ferramentas de Trabalho - CASE </li>
 
                 </ul>
-            <h3>4. Técnicas de Analise de Requisitos</h3>
+            <h3>4. Técnicas de Análise de Requisitos</h3>
             <ul>
                 
                 <li>O que é Elicitação de Requisitos
@@ -180,7 +180,7 @@
 </li>
                 <li>Entrevista
 </li>
-                <li>Pesquisas (manuais, referências, internet, concorrência, etc.)
+                <li>Pesquisas (manuais, referências, internet, concorrência etc.)
 </li>
                 <li>Glossário
 </li>
@@ -194,7 +194,7 @@
 </li>
                 <li>User Story
 </li>
-                <li>Questionários e fóruns
+                <li>Questionários e Fóruns
 </li>
                 <li>JAD (Joint Application Design)
 </li>
