@@ -55,9 +55,9 @@
     <Content Include="css\images\arr-footer-col.png" />
     <Content Include="css\images\arr-ico.png" />
     <Content Include="css\images\body.png" />
-    <Content Include="css\images\col-img1.png" />
-    <Content Include="css\images\col-img2.png" />
-    <Content Include="css\images\col-img3.png" />
+    <Content Include="css\images\col-img1.jpg" />
+    <Content Include="css\images\col-img2.jpg" />
+    <Content Include="css\images\col-img3.jpg" />
     <Content Include="css\images\cols-shadow.png" />
     <Content Include="css\images\control-nav.png" />
     <Content Include="css\images\Cristian.png" />
@@ -103,6 +103,7 @@
     <Content Include="css\images\t-slide-img1.png" />
     <Content Include="css\images\t-slide-img2.png" />
     <Content Include="css\images\t-slider-bottom.png" />
+    <Content Include="css\images\Testes.jpg" />
     <Content Include="css\images\twitter-ico.png" />
     <Content Include="css\images\video-img.png" />
     <Content Include="css\style.css" />
