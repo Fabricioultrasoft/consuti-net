@@ -266,15 +266,17 @@
 
         <h2>Instrutor</h2>
         <div>
-        <div id="foto" style="width:160px; float: left; text-align:left; margin-left: -4px; ">
+        <div id="foto" style="width:160px; height: 150px; float: left; text-align:left; margin-left: -4px; ">
         <img src="css/images/Cristian.png" alt="" /></div>
-        <div id="competencias" style="text-align: justify">Graduado em Sistemas de Informação pela PUC Minas. Pós-Graduado em Arquitetura de Sistemas distribuídos pela PUC Minas.
-        <br />Certificado em Testes de Software pelo BSTQB. Certificado em Desenvolvimento WEB pela Microsoft.
-        <br />Analista de Requisitos e SCRUM Master na UFMG. Nos últimos 10 anos, atuou em grandes empresas de TI de Belo Horizonte como Analista de Testes,
-         Desenvolvedor, Analista de Sistemas, Gerente de Configuração e Líder Técnico.
-        <br />Fundador e proprietário da ConsuTI. 
+        <div id="competencias" style="text-align: justify"><strong><span class="style1">Cristian Gomes</span></strong> - Graduado em Sistemas de Informação pela PUC Minas. Pós-Graduado em Arquitetura de Sistemas 
+            Distribuídos pela PUC Minas.
+        <br />Certificado em Testes de Software pelo BSTQB (ISTQB). Certificado em Desenvolvimento WEB pela Microsoft.
+        <br />Analista de Requisitos e SCRUM Master na UFMG. Nos últimos 10 anos, atuou como Analista de Testes,
+         Analista Desenvolvedor, Analista de Sistemas, Gerente de Configuração e Líder Técnico em grandes empresas do Rio de Janeiro, Brasília, Belo Horizonte e Região.
+        <br />Fundador e proprietário da <a href="http://www.consuti.net" target="_blank">ConsuTI</a>. 
             <br />
-            Mais em <a href="http://www.cristiangomes.com.br" target="_blank">www.cristiangomes.com.br</a></div></div>
+            Mais em <a href="http://www.cristiangomes.com.br" target="_blank">www.cristiangomes.com.br</a></div>
+        </div>
 
     </div>
     <br />

@@ -82,7 +82,7 @@
         <a href="#" class="m-btn-grey grey-btn">request a demo</a>
         <section class="cols">
 						<div class="col">
-							<img src="css/images/col-img1.png" alt="" />
+							<img src="css/images/col-img1.jpg" alt="" />
 							<div class="col-cnt">
 								<h2>Análise de Requisitos</h2>
 								<p>Técnicas de levantamento e gestão de requisitos mais eficientes e de maior procura no mercado.</p>
@@ -90,7 +90,7 @@
 							</div>
 						</div>
 						<div class="col">
-							<img src="css/images/col-img2.png" alt="" />
+							<img src="css/images/col-img2.jpg" alt="" />
 							<div class="col-cnt">
 								<h2>Lógica e Programação</h2>
 								<p>Aprenda a desenvolver um sistema ou site, seja para recolocação profissional ou para seu negócio próprio.</p>
@@ -98,7 +98,7 @@
 							</div>
 						</div>
 						<div class="col">
-							<img src="css/images/col-img3.png" alt="" />
+							<img src="css/images/col-img3.jpg" alt="" />
 							<div class="col-cnt">
 								<h2>Testes de Sistemas</h2>
 								<p>Estude e pratique a qualidade de software, hoje uma das principais portas de entrada no mercado de Tecnologia.</p>
@@ -128,7 +128,7 @@
         <section class="testimonial">
 						<h2>Nossa Motivação é Fruto do Nosso Desafio</h2>
 
-						<p><strong class="quote">“</strong>Esta cada vez mais difícil encontrar bons profissionais no mercado. Cansei de procurá-los por aí. Vamos produzí-los!”</p>
+						<p><strong class="quote">“</strong>Esta cada vez mais difícil encontrar bons profissionais no mercado. Cansei de procurá-los por aí. Vamos formá-los!”</p>
 
 						<p class="author">Cristian Gomes, <strong>ConsuTI - Consultoria e Soluções em Tecnologia da Informação</strong></p>
 					</section>
