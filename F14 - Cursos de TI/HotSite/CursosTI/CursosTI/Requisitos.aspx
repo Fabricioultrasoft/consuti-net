@@ -78,6 +78,9 @@
                 Máximo: 10 alunos
 			    </li>
 		</ul>
+        Quantidade de vagas já preenchiadas até o momento para o curso do 1º semestre: 2
+        Quantidade de vagas já preenchiadas até o momento para o curso de férias: 0
+        Quantidade de vagas já preenchiadas até o momento para o curso do 2º semestre: 0
         <br />
 
         <h2>Calendário de Aulas</h2>
