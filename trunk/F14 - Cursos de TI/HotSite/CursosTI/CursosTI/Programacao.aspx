@@ -1,4 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Programacao.aspx.cs" Inherits="CursosTI.Programacao" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true"
+    CodeBehind="Programacao.aspx.cs" Inherits="CursosTI.Programacao" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -76,6 +78,9 @@
                 Máximo: 15 alunos
 			    </li>
 		</ul>
+        Quantidade de vagas já preenchiadas até o momento para o curso do 1º semestre: 3
+        Quantidade de vagas já preenchiadas até o momento para o curso de férias: 2
+        Quantidade de vagas já preenchiadas até o momento para o curso do 2º semestre: 0
         <br />
 
         <h2>Calendário de Aulas</h2>

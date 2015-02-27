@@ -80,10 +80,14 @@
                 Máximo: 15 alunos
 			    </li>
 		</ul>
+        Quantidade de vagas já preenchiadas até o momento para o curso do 1º semestre: 3
+        Quantidade de vagas já preenchiadas até o momento para o curso de férias: 1
+        Quantidade de vagas já preenchiadas até o momento para o curso do 2º semestre: 0
         <br />
 
         <h2>Calendário de Aulas</h2>
-			<ul>
+			1º semestre
+            <ul>
 			    <li>Turma 1: 
                     <br />&nbsp;&nbsp;- Aulas aos sábados                    
                     <br />&nbsp;&nbsp;- Horário de 13:00 as 17:00 
