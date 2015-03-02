@@ -42,7 +42,10 @@
         Dessa forma, o aluno além de aprender a trabalhar de uma forma otimizada, poderá consolidar todo o seu conhecimento durante o curso, 
         na graduação e até mesmo sozinho.
         <br />
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;O Curso de Testes de Sistemas . 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;O Curso de Testes de Sistemas irá preparar os alunos para atuar em projetos de sistemas de qualquer tecnologia ou metodologia. 
+        A area de testes, também chamada qualidade ou QA, é uma das portas de entrada em empresas de Tecnologia. É muito comum em profissionais de alto nível do setor, casos em que 
+        o começo da carreira foi em uma equipe de testes.
+        Atualmente o mercado exige cada vez mais qualidade do produtos e isso resulta em um bom número da oferta de emprego, além de salários cada vez mais interessantes.
         <br />
         <br />
         <h2>Público Alvo</h2>
@@ -80,13 +83,38 @@
                 Máximo: 15 alunos
 			    </li>
 		</ul>
-        Quantidade de vagas já preenchiadas até o momento para o curso do 1º semestre: 3
-        Quantidade de vagas já preenchiadas até o momento para o curso de férias: 1
-        Quantidade de vagas já preenchiadas até o momento para o curso do 2º semestre: 0
+        Quantidade de vagas já preenchiadas até o momento para o curso do 1º semestre: <strong>3</strong>
+        <br />Quantidade de vagas já preenchiadas até o momento para o curso de férias: <strong>1</strong>
+        <br />Quantidade de vagas já preenchiadas até o momento para o curso do 2º semestre: <strong>0</strong>
+        <br />
         <br />
 
         <h2>Calendário de Aulas</h2>
-			1º semestre
+			<h3>1º semestre</h3>
+            <ul>
+                <li>Turma 1: 
+                    <br />&nbsp;&nbsp;- Aulas às segundas e quartas feiras
+                    <br />&nbsp;&nbsp;- Horário de 19:30 as 21:30
+                    <br />&nbsp;&nbsp;- Início em 6 de abril de 2015
+                    <br />&nbsp;&nbsp;- Término em 10 de junho de 2015
+                </li>
+                <li>Turma 2: 
+                    <br />&nbsp;&nbsp;- Aulas aos sábados                    
+                    <br />&nbsp;&nbsp;- Horário de 13:00 as 17:00 
+                    <br />&nbsp;&nbsp;- Início em 11 de abril de 2015
+                    <br />&nbsp;&nbsp;- Término em 13 de junho de 2015
+                </li>
+			</ul>
+            <h3>Curso de Férias</h3>
+            <ul>
+			    <li>Turma 1: 
+                    <br />&nbsp;&nbsp;- Aulas às segundas, terças e quartas feiras
+                    <br />&nbsp;&nbsp;- Horário de 19:00 as 22:00
+                    <br />&nbsp;&nbsp;- Início em 1º de julho de 2015
+                    <br />&nbsp;&nbsp;- Término em 29 de julho de 2015
+                </li>
+            </ul>
+            <h3>2º Semestre</h3>
             <ul>
 			    <li>Turma 1: 
                     <br />&nbsp;&nbsp;- Aulas aos sábados                    
@@ -97,12 +125,11 @@
                 <li>Turma 2: 
                     <br />&nbsp;&nbsp;- Aulas às segundas e quartas feiras
                     <br />&nbsp;&nbsp;- Horário de 19:30 as 21:30
-                    <br />&nbsp;&nbsp;- Início em 30 de março de 2015
-                    <br />&nbsp;&nbsp;- Término em 3 de junho de 2015
+                    <br />&nbsp;&nbsp;- Início em 2 de setembro de 2015
+                    <br />&nbsp;&nbsp;- Término em 9 de novembro de 2015
                 </li>
-			</ul>            
+			</ul>
             <br />
-
          <h2>Conteúdo Programático</h2>
             <h3>1. Introdução</h3>            
             <ul>
@@ -114,13 +141,11 @@
             </li>
                 <li>Mercado de Trabalho
             </li>
-                <li>(Des)Organização das Profissões de Tecnologia
+                <li>Realidade e Perspectiva do Mercado de Trabalho
             </li>
                 <li>Oportunidades de Trabalho
             </li>
-                <li>Carreira do Engenheiro/Analista de Requisitos
-            </li>
-                <li>Dificuldades e Desafios
+                <li>Carreira do Analista de Testes
             </li>
                 <li>Networking Realmente Existe?</li>
             </ul>            
@@ -148,125 +173,77 @@
             </li>
             <li>Ausência de Processos
 </li>
-            <li>Papéis Ligados ao Engenheiro de Requisitos </li>
+            <li>Papéis Ligados ao Analista de Testes </li>
             </ul>
-            <h3>3. Conceitos Gerais da Engenharia de Requisitos</h3>
+            <h3>3. Fundamentos e Objetivos do Teste de Software</h3>
             <ul>
-                <li>O que é Engenharia de Software
+                <li>O que é Qualidade de Software
 </li>
-                <li>O que é Engenharia de Requisitos
+                <li>Motivação do Analista de Testes
 </li>
-                <li>Identificação das Partes Interessadas (Stakeholders)
+                <li>O dia a dia do teste
 </li>
-                <li>O que é Escopo
+                <li>Requisitos de teste
 </li>
-                <li>O que é um Requisito
+                <li>Etapas do teste
 </li>
-                <li>Importância da Engenharia de Requisitos para Projetos de Desenvolvimento de Software
+                <li>Psicologia de testes e o relacionamento profissional
                 </li>
-                <li>Classificação de Requisitos
-</li>
-                <li>Qualidade do Requisito
-</li>
-                <li>O que é um caso de uso
-</li>
-                <li>Orientação a Objeto, Abstração e Dependências de Tecnologia
-</li>
-                <li>UML – Linguagem de Modelagem Unificada
-</li>
-                <li>Ferramentas de Trabalho - CASE </li>
-
-                </ul>
-            <h3>4. Técnicas de Análise de Requisitos</h3>
+            </ul>
+            <h3>4. Preparação e Execução dos Testes</h3>
             <ul>
                 
-                <li>O que é Elicitação de Requisitos
+                <li>Testes em artefatos estáticos
 </li>
-                <li>Organização e Rastreabilidade de Requisitos
+                <li>Testes caixa-preta
 </li>
-                <li>Entrevista
+                <li>Testes caixa-branca
 </li>
-                <li>Pesquisas (manuais, referências, internet, concorrência etc.)
+                <li>Abordagens e estratégias de teste</li>
+                <li>Os casos de teste
 </li>
-                <li>Glossário
+                <li>Testes Exploratórios
 </li>
-                <li>Observação
-</li>
-                <li>Brainstorming
-</li>
-                <li>Role Playing
-</li>
-                <li>Workshop
-</li>
-                <li>User Story
-</li>
-                <li>Questionários e Fóruns
-</li>
-                <li>JAD (Joint Application Design)
-</li>
-                <li>Check-lists
-</li>
-                <li>Prototipagem
-</li>
-                <li>Modelagem de Processos
-</li>
-                <li>Validação de Requisitos 	
-</li>
-                <li>Casos de Uso como Linha de Abordagem Básica
-</li>
-                <li>Casos de Uso x User Stories
-                </li>
+                
 </ul>
-            <h3>5. Produtos de Trabalho</h3>
+            <h3>5. Gestão de Testes</h3>
             <ul>
                 
-                <li>Especificação de Requisitos
+                <li>Organização do teste
 </li>
-                <li>Protipagem de Sistema
+                <li>Estimativas
 </li>
-                <li>Especificação Funcional
-                    <ul>
-                        <li>Fluxos
-</li>
-                        <li>Regras
-</li>
-                        <li>Exceções
-</li>
-                    </ul>
+                <li>Controle e Monitoração do Progresso do Teste
                 </li>
-                <li>Diagramas
-                    <ul>
-                        <li>Caso de Uso
-</li>
-                        <li>Fluxo de Atividades
-</li>
-                        <li>Entidade Relacionamento
-</li>
-                        <li>Classes
-</li>
-                        <li>Estados
-</li>
-                    </ul>
+                <li>Gestão de Configuração
                 </li>
-                <li>Modelo de Processos
+                <li>Riscos e Teste, Projetos e Produtos</li>
+                <li>Gestão de Incidentes
 </li>
-                <li>Mapa de Rastreabilidade de Requisitos</li>
                     </ul>                    
-            <h3>6. Gestão de Requisitos</h3>
+            <h3>6. Ferramentas de Testes </h3>
             <ul>
                 
-        <li>Porque Gerenciar Requisitos
+        <li>Organização das ferramentas de teste
 </li>
-        <li>Gerenciar Escopo da Solução/Requisitos
+        <li>Ferramentas de gerenciamento e controle
 </li>
-        <li>Gerenciar Rastreabilidade dos Requisitos
+        <li>Ferramentas para execução dos testes
 </li>
-        <li>Preparar Pacotes de Requisitos
+        <li>Ferramentas de gestão de incidentes
 </li>
-        <li>Priorizar Requisitos </li>
+        <li>Ferramentas de testes de performance </li>
+        <li>Ferramentas de testes de stress </li>
+        <li>Ferramentas de automação de testes  </li>
 
-
-
+</ul>
+<h3>7. Testes Ágeis</h3>
+            <ul>
+                
+        <li>O desenvolvimento ágil
+</li>
+        <li>Teste prescritivo  vs. teste ágil
+</li>
 </ul>
         <br />
 
@@ -275,8 +252,7 @@
         <div id="foto" style="width:160px; height: 150px; float: left; text-align:left; margin-left: -4px; ">
         <img src="css/images/Cristian.png" alt="" /></div>
         <div id="competencias" style="text-align: justify"><strong><span class="style1">Cristian Gomes</span></strong> - Graduado em Sistemas de Informação pela PUC Minas. Pós-Graduado em Arquitetura de Sistemas 
-            Distribuídos pela PUC Minas.
-        <br />Certificado em Testes de Software pelo BSTQB (ISTQB). Certificado em Desenvolvimento WEB pela Microsoft.
+            Distribuídos pela PUC Minas. Certificado em Testes de Software pelo BSTQB (ISTQB). Certificado em Desenvolvimento WEB pela Microsoft.
         <br />Analista de Requisitos e SCRUM Master na UFMG. Nos últimos 10 anos, atuou como Analista de Testes,
          Analista Desenvolvedor, Analista de Sistemas, Gerente de Configuração e Líder Técnico em grandes empresas do Rio de Janeiro, Brasília, Belo Horizonte e Região.
         <br />Fundador e proprietário da <a href="http://www.consuti.net" target="_blank">ConsuTI</a>. 

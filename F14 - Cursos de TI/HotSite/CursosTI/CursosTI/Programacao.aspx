@@ -36,11 +36,7 @@
         Dessa forma, o aluno além de aprender a trabalhar de uma forma otimizada, poderá consolidar todo o seu conhecimento durante o curso, 
         na graduação e até mesmo sozinho.
         <br />
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;O Curso de Análise de Requisitos tem o objetivo de preparar os alunos para atuar à frente de projetos de TI, traduzindo o desejo dos clientes para
-        a linguagem técnica dos profissionais de desenvolvimento, testes, coordenação e outros, ao mesmo tempo em que mantém coerente o foco do projeto e ajuda na validação do produto final.
-        Tudo sem depender da tecnologia do projeto e sequer da metodologia de trabalho da empresa. 
-        O profissional que atua no papel de analista de requisitos é um dos mais escassos no mercado e, com isso, o salário oferecido para o cargo torna-se cada vez mais atrativo. 
-        Estar preparado para a entrevista de emprego e para o dia a dia de um analista de requisitos é o objetivo do curso. 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;O Curso de Lógica e Programação tem o objetivo de preparar os alunos . 
         <br />
         <br />
         <h2>Público Alvo</h2>
@@ -64,8 +60,8 @@
 			    <li>Matrícula:
                     <br />&nbsp;&nbsp;- R$250,00</li>
 			    <li>Curso: 
-			        <br />&nbsp;&nbsp;- R$1.050,00 parcelado em até 4 vezes de R$262,50 OU 
-			        <br />&nbsp;&nbsp;- R$976,50 à vista com 7% de desconto </li>
+			        <br />&nbsp;&nbsp;- R$900,00 parcelado em até 4 vezes de R$225,00 OU 
+			        <br />&nbsp;&nbsp;- R$837,00 à vista com 7% de desconto </li>
 			</ul>
         <br />
 
@@ -78,26 +74,52 @@
                 Máximo: 15 alunos
 			    </li>
 		</ul>
-        Quantidade de vagas já preenchiadas até o momento para o curso do 1º semestre: 3
-        Quantidade de vagas já preenchiadas até o momento para o curso de férias: 2
-        Quantidade de vagas já preenchiadas até o momento para o curso do 2º semestre: 0
+        Quantidade de vagas já preenchiadas até o momento para o curso do 1º semestre: <strong>3</strong>
+        <br />Quantidade de vagas já preenchiadas até o momento para o curso de férias: <strong>2</strong>
+        <br />Quantidade de vagas já preenchiadas até o momento para o curso do 2º semestre: <strong>0</strong>
+        <br />
         <br />
 
         <h2>Calendário de Aulas</h2>
-			<ul>
-			    <li>Turma 1: 
-                    <br />&nbsp;&nbsp;- Aulas aos sábados                    
-                    <br />&nbsp;&nbsp;- Horário de 13:00 as 17:00 
-                    <br />&nbsp;&nbsp;- Início em 28 de março de 2015
-                    <br />&nbsp;&nbsp;- Término em 30 de maio de 2015
-                </li>
-                <li>Turma 2: 
+			<h3>1º semestre</h3>
+            <ul>
+                <li>Turma 1: 
                     <br />&nbsp;&nbsp;- Aulas às terças e quintas feiras
                     <br />&nbsp;&nbsp;- Horário de 19:30 as 21:30
-                    <br />&nbsp;&nbsp;- Início em 31 de março de 2015
-                    <br />&nbsp;&nbsp;- Término em 4 de junho de 2015
+                    <br />&nbsp;&nbsp;- Início em 7 de abril de 2015
+                    <br />&nbsp;&nbsp;- Término em 11 de junho de 2015
                 </li>
-			</ul>            
+                <li>Turma 2: 
+                    <br />&nbsp;&nbsp;- Aulas aos sábados                    
+                    <br />&nbsp;&nbsp;- Horário de 08:00 as 12:00 
+                    <br />&nbsp;&nbsp;- Início em 11 de abril de 2015
+                    <br />&nbsp;&nbsp;- Término em 13 de junho de 2015
+                </li>
+			</ul>
+            <h3>Curso de Férias</h3>
+            <ul>
+			    <li>Turma 1: 
+                    <br />&nbsp;&nbsp;- Aulas às segundas, terças e quartas feiras
+                    <br />&nbsp;&nbsp;- Horário de 19:00 as 22:00
+                    <br />&nbsp;&nbsp;- Início em 1º de julho de 2015
+                    <br />&nbsp;&nbsp;- Término em 29 de julho de 2015
+                </li>
+            </ul>
+            <h3>2º Semestre</h3>
+            <ul>
+                <li>Turma 1: 
+                    <br />&nbsp;&nbsp;- Aulas às terças e quintas feiras
+                    <br />&nbsp;&nbsp;- Horário de 19:30 as 21:30
+                    <br />&nbsp;&nbsp;- Início em 3 de setembro de 2015
+                    <br />&nbsp;&nbsp;- Término em 10 de novembro de 2015
+                </li>
+                <li>Turma 2: 
+                    <br />&nbsp;&nbsp;- Aulas aos sábados                    
+                    <br />&nbsp;&nbsp;- Horário de 13:00 as 17:00 
+                    <br />&nbsp;&nbsp;- Início em 5 de setembro de 2015
+                    <br />&nbsp;&nbsp;- Término em 14 de novembro de 2015
+                </li>
+			</ul>
             <br />
 
          <h2>Conteúdo Programático</h2>
@@ -272,8 +294,7 @@
         <div id="foto" style="width:160px; height: 150px; float: left; text-align:left; margin-left: -4px; ">
         <img src="css/images/Cristian.png" alt="" /></div>
         <div id="competencias" style="text-align: justify"><strong><span class="style1">Cristian Gomes</span></strong> - Graduado em Sistemas de Informação pela PUC Minas. Pós-Graduado em Arquitetura de Sistemas 
-            Distribuídos pela PUC Minas.
-        <br />Certificado em Testes de Software pelo BSTQB (ISTQB). Certificado em Desenvolvimento WEB pela Microsoft.
+            Distribuídos pela PUC Minas. Certificado em Testes de Software pelo BSTQB (ISTQB). Certificado em Desenvolvimento WEB pela Microsoft.
         <br />Analista de Requisitos e SCRUM Master na UFMG. Nos últimos 10 anos, atuou como Analista de Testes,
          Analista Desenvolvedor, Analista de Sistemas, Gerente de Configuração e Líder Técnico em grandes empresas do Rio de Janeiro, Brasília, Belo Horizonte e Região.
         <br />Fundador e proprietário da <a href="http://www.consuti.net" target="_blank">ConsuTI</a>. 

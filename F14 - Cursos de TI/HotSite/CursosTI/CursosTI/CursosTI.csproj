@@ -106,6 +106,7 @@
     <Content Include="css\images\Testes.jpg" />
     <Content Include="css\images\twitter-ico.png" />
     <Content Include="css\images\video-img.png" />
+    <Content Include="css\images\Wilker.jpg" />
     <Content Include="css\style.css" />
     <Content Include="home.html" />
     <Content Include="js\functions.js" />
