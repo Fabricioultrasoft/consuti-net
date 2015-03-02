@@ -13,5 +13,15 @@ namespace CursosTI
         {
 
         }
+
+        protected void submitButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void resetButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

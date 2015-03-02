@@ -78,13 +78,39 @@
                 Máximo: 10 alunos
 			    </li>
 		</ul>
-        Quantidade de vagas já preenchiadas até o momento para o curso do 1º semestre: 2
-        Quantidade de vagas já preenchiadas até o momento para o curso de férias: 0
-        Quantidade de vagas já preenchiadas até o momento para o curso do 2º semestre: 0
+        Quantidade de vagas já preenchiadas até o momento para o curso do 1º semestre: <strong>2</strong>
+        <br />Quantidade de vagas já preenchiadas até o momento para o curso de férias: <strong>0</strong>
+        <br />Quantidade de vagas já preenchiadas até o momento para o curso do 2º semestre: <strong>0</strong>
+        <br />
         <br />
 
         <h2>Calendário de Aulas</h2>
-			<ul>
+			<h3>1º semestre</h3>
+            <ul>
+                <li>Turma 1: 
+                    <br />&nbsp;&nbsp;- Aulas às segundas e quartas feiras
+                    <br />&nbsp;&nbsp;- Horário de 19:30 as 21:30
+                    <br />&nbsp;&nbsp;- Início em 6 de abril de 2015
+                    <br />&nbsp;&nbsp;- Término em 10 de junho de 2015
+                </li>
+			    <li>Turma 2: 
+                    <br />&nbsp;&nbsp;- Aulas aos sábados                    
+                    <br />&nbsp;&nbsp;- Horário de 13:00 as 17:00 
+                    <br />&nbsp;&nbsp;- Início em 11 de abril de 2015
+                    <br />&nbsp;&nbsp;- Término em 13 de junho de 2015
+                </li>
+			</ul>
+            <h3>Curso de Férias</h3>
+            <ul>
+			    <li>Turma 1: 
+                    <br />&nbsp;&nbsp;- Aulas às segundas, terças e quartas feiras
+                    <br />&nbsp;&nbsp;- Horário de 19:00 as 22:00
+                    <br />&nbsp;&nbsp;- Início em 1º de julho de 2015
+                    <br />&nbsp;&nbsp;- Término em 29 de julho de 2015
+                </li>
+            </ul>
+            <h3>2º Semestre</h3>
+            <ul>
 			    <li>Turma 1: 
                     <br />&nbsp;&nbsp;- Aulas aos sábados                    
                     <br />&nbsp;&nbsp;- Horário de 13:00 as 17:00 
@@ -94,10 +120,10 @@
                 <li>Turma 2: 
                     <br />&nbsp;&nbsp;- Aulas às segundas e quartas feiras
                     <br />&nbsp;&nbsp;- Horário de 19:30 as 21:30
-                    <br />&nbsp;&nbsp;- Início em 30 de março de 2015
-                    <br />&nbsp;&nbsp;- Término em 3 de junho de 2015
+                    <br />&nbsp;&nbsp;- Início em 2 de setembro de 2015
+                    <br />&nbsp;&nbsp;- Término em 9 de novembro de 2015
                 </li>
-			</ul>            
+			</ul>
             <br />
 
          <h2>Conteúdo Programático</h2>
@@ -272,8 +298,7 @@
         <div id="foto" style="width:160px; height: 150px; float: left; text-align:left; margin-left: -4px; ">
         <img src="css/images/Cristian.png" alt="" /></div>
         <div id="competencias" style="text-align: justify"><strong><span class="style1">Cristian Gomes</span></strong> - Graduado em Sistemas de Informação pela PUC Minas. Pós-Graduado em Arquitetura de Sistemas 
-            Distribuídos pela PUC Minas.
-        <br />Certificado em Testes de Software pelo BSTQB (ISTQB). Certificado em Desenvolvimento WEB pela Microsoft.
+            Distribuídos pela PUC Minas. Certificado em Testes de Software pelo BSTQB (ISTQB). Certificado em Desenvolvimento WEB pela Microsoft.
         <br />Analista de Requisitos e SCRUM Master na UFMG. Nos últimos 10 anos, atuou como Analista de Testes,
          Analista Desenvolvedor, Analista de Sistemas, Gerente de Configuração e Líder Técnico em grandes empresas do Rio de Janeiro, Brasília, Belo Horizonte e Região.
         <br />Fundador e proprietário da <a href="http://www.consuti.net" target="_blank">ConsuTI</a>. 
