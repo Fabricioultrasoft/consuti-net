@@ -317,7 +317,6 @@
         <li><a href="Programacao.aspx">Lógica e Programação</a></li>
         <li><a href="Testes.aspx">Testes de Sistemas</a></li>
         <li><a href="Localizacao.aspx">Localização</a></li>
-        <li><a href="Localizacao.aspx">Localização</a></li>
         <li><a href="Contato.aspx">Contato</a></li>
     </ul>
 </asp:Content>
