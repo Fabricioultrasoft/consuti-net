@@ -375,6 +375,7 @@ article, aside, details, footer, header, menu, nav, section
 {
     width: 314px;
     float: left;
+    padding-left: 10px;
 }
 .main .cols .col:after
 {
@@ -384,13 +385,14 @@ article, aside, details, footer, header, menu, nav, section
 }
 .main .cols .col + .col
 {
-    padding-left: 20px;
+    padding-left: 10px;
 }
 .main .cols .col img
 {
     float: left;
     width: 129px;
     height: 108px;
+    margin-top: 52px;
 }
 .main .cols .col-cnt
 {
@@ -406,7 +408,7 @@ article, aside, details, footer, header, menu, nav, section
 }
 .main .post .video-holder
 {
-    width: 435px;
+    width: 335px;
     height: 245px;
     float: left;
     margin-right: 20px;
@@ -426,7 +428,7 @@ article, aside, details, footer, header, menu, nav, section
 .main .post-cnt
 {
     float: right;
-    width: 475px;
+    width: 575px;
 }
 
 .main .testimonial
@@ -817,7 +819,7 @@ article, aside, details, footer, header, menu, nav, section
     }
     .main .post .video-holder
     {
-        width: 435px;
+        width: 35px;
         height: 245px;
         float: none;
         display: block;
@@ -889,6 +891,8 @@ article, aside, details, footer, header, menu, nav, section
         z-index: 1000;
         padding-left: 0;
         padding-right: 0;
+        height: 80px;
+        text-align: center;
     }
     #logo
     {

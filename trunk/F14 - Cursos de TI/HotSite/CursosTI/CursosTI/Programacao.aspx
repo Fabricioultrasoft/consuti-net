@@ -36,7 +36,7 @@
         Dessa forma, o aluno além de aprender a trabalhar de uma forma otimizada, poderá consolidar todo o seu conhecimento durante o curso, 
         na graduação e até mesmo sozinho.
         <br />
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;O Curso de Lógica e Programação tem o objetivo de preparar os alunos . 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;O Curso de Lógica e Programação tem o objetivo de preparar os alunos para trabalhar em projetos de desenvolvimento de software. 
         <br />
         <br />
         <h2>Público Alvo</h2>
@@ -123,7 +123,8 @@
             <br />
 
          <h2>Conteúdo Programático</h2>
-            <h3>1. Introdução</h3>            
+         Em breve.
+            <%--<h3>1. Introdução</h3>            
             <ul>
                 <li>Apresentação
             </li>
@@ -286,9 +287,9 @@
 
 
 
-</ul>
+</ul>--%>
         <br />
-
+        <br />
         <h2>Instrutor</h2>
         <div>
         <div id="foto" style="width:160px; height: 150px; float: left; text-align:left; margin-left: -4px; ">

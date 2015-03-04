@@ -83,6 +83,7 @@
     <Content Include="css\images\nav-arr.png" />
     <Content Include="css\images\nav-border.png" />
     <Content Include="css\images\navigation.png" />
+    <Content Include="css\images\Parceria.png" />
     <Content Include="css\images\Programacao.jpg" />
     <Content Include="css\images\rss-ico.png" />
     <Content Include="css\images\search-btn.png" />

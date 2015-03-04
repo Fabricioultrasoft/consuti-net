@@ -31,8 +31,22 @@
     <!-- end of navigation -->
     <div>
         <form id="form1" runat="server">
-        <BR />
-        <table style="width: 400px; margin: 0 auto">
+        <div id="titulo" style="text-align: center; font-size: 17pt; font-weight: bold">
+            <br />
+            Contato
+            <br />
+            <br />
+        </div>
+        <div style="width: 410px; margin: 0 auto; background-color: #C2DBBF; padding: 10px">
+            De segunda a sexta, das 09:00 às 21:00 ligue: <strong>(31) 2526-2122</strong>
+            <br />
+            Ou no Whatsapp: <strong>(31) 9313-2793</strong>
+            <br />
+            Também pelo e-mail: <a href="mailto:consuti@consuti.net"><strong>consuti@consuti.net</strong></a>
+            <br />
+        </div>
+        <br />
+        <table style="width: 410px; margin: 0 auto">
             <tr class="style2">
                 <td class="style1">
                     Nome:
@@ -47,6 +61,11 @@
                 </td>
                 <td>
                     <asp:TextBox ID="email" runat="server" Width="300px"></asp:TextBox>
+                    &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidatoremail" runat="server"
+                        ControlToValidate="email" Display="Dynamic" ErrorMessage="*" ToolTip="Campo Obrigatório!"></asp:RequiredFieldValidator>
+                    &nbsp;<asp:RegularExpressionValidator ID="EmailTextBoxRegularExpressionValidator"
+                        runat="server" Display="Dynamic" ErrorMessage="*" ToolTip="Email Inválido" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
+                        ControlToValidate="email"></asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr class="style2">
@@ -69,10 +88,11 @@
             </tr>
         </table>
         <div id="botoes" style="width: 400px; margin: 0 auto; text-align: right">
-        <br />
-            <asp:Button ID="EnviaraButton" runat="server" Text="Enviar" Width="100px" />
+            <br />
+            <asp:Button ID="EnviaraButton" runat="server" Text="Enviar" Width="100px" OnClick="EnviaraButton_Click" />
             &nbsp;
-            <asp:Button ID="LimparButton" runat="server" Text="Limpar" Width="100px" />
+            <asp:Button ID="LimparButton" runat="server" Text="Limpar" Width="100px" CausesValidation="false"
+                OnClick="LimparButton_Click" />
         </div>
         </form>
     </div>
@@ -81,7 +101,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <ul>
         <li><a href="Default.aspx">Home</a></li>
-        <li class="active"><a href="Requisitos.aspx">Análise de Requisitos</a></li>
+        <li><a href="Requisitos.aspx">Análise de Requisitos</a></li>
         <li><a href="Programacao.aspx">Lógica e Programação</a></li>
         <li><a href="Testes.aspx">Testes de Sistemas</a></li>
         <li><a href="Localizacao.aspx">Localização</a></li>

@@ -82,6 +82,7 @@
         <a href="#" class="m-btn-grey grey-btn">request a demo</a>
         <section class="cols">
 						<div class="col">
+                        
 							<img src="css/images/col-img1.jpg" alt="" />
 							<div class="col-cnt">
 								<h2>Análise de Requisitos</h2>
@@ -109,7 +110,7 @@
 					</section>
         <section class="post">
 						<div class="video-holder">
-							<img src="css/images/video-img.png" alt="" />
+							<img src="css/images/Parceria.png" alt="" />
 						</div>
 
 						<div class="post-cnt">
