@@ -42,10 +42,10 @@
         Dessa forma, o aluno além de aprender a trabalhar de uma forma otimizada, poderá consolidar todo o seu conhecimento durante o curso, 
         na graduação e até mesmo sozinho.
         <br />
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;O Curso de Testes de Sistemas irá preparar os alunos para atuar em projetos de sistemas de qualquer tecnologia ou metodologia. 
-        A area de testes, também chamada qualidade ou QA, é uma das portas de entrada em empresas de Tecnologia. É muito comum em profissionais de alto nível do setor, casos em que 
-        o começo da carreira foi em uma equipe de testes.
-        Atualmente o mercado exige cada vez mais qualidade do produtos e isso resulta em um bom número da oferta de emprego, além de salários cada vez mais interessantes.
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;O Curso de Testes de Sistemas irá preparar os alunos para atuar em projetos de sistemas de qualquer tecnologia ou metodologia.
+         A área de testes, também chamada Qualidade ou QA, é uma das portas de entrada em empresas de Tecnologia. É muito comum em profissionais de alto nível do setor, 
+         sendo que o começo da carreira foi em equipes de testes. Atualmente o mercado exige cada vez mais qualidade dos produtos e isso resulta em grande oferta de emprego,
+          além de salários cada vez mais interessantes.
         <br />
         <br />
         <h2>Público Alvo</h2>
