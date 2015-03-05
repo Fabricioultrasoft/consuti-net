@@ -75,7 +75,6 @@
     <Content Include="css\images\m-btn-grey.png" />
     <Content Include="css\images\m-section-post.png" />
     <Content Include="css\images\m-section-shadow.png" />
-    <Content Include="css\images\m-slide-img.png" />
     <Content Include="css\images\m-slider-bottom.png" />
     <Content Include="css\images\main.png" />
     <Content Include="css\images\my-space-ico.png" />
@@ -83,14 +82,12 @@
     <Content Include="css\images\nav-arr.png" />
     <Content Include="css\images\nav-border.png" />
     <Content Include="css\images\navigation.png" />
-    <Content Include="css\images\Parceria.png" />
     <Content Include="css\images\Programacao.jpg" />
     <Content Include="css\images\rss-ico.png" />
     <Content Include="css\images\search-btn.png" />
     <Content Include="css\images\section-shadow%402x.png" />
     <Content Include="css\images\section-shadow.png" />
     <Content Include="css\images\slide-img%402x.png" />
-    <Content Include="css\images\slide-img.png" />
     <Content Include="css\images\slide-img1.png" />
     <Content Include="css\images\slide-img2.png" />
     <Content Include="css\images\slider-bottom.png" />
@@ -100,13 +97,9 @@
     <Content Include="css\images\socials.png" />
     <Content Include="css\images\t-section-post.png" />
     <Content Include="css\images\t-section-shadow.png" />
-    <Content Include="css\images\t-slide-img.png" />
-    <Content Include="css\images\t-slide-img1.png" />
-    <Content Include="css\images\t-slide-img2.png" />
     <Content Include="css\images\t-slider-bottom.png" />
     <Content Include="css\images\Testes.jpg" />
     <Content Include="css\images\twitter-ico.png" />
-    <Content Include="css\images\video-img.png" />
     <Content Include="css\images\Wilker.jpg" />
     <Content Include="css\style.css" />
     <Content Include="home.html" />

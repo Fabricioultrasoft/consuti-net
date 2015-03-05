@@ -110,7 +110,7 @@ article, aside, details, footer, header, menu, nav, section
 }
 #logo
 {
-    width: 81px;
+    width: 120px;
     float: left;
     font-size: 0;
     line-height: 0;
@@ -235,7 +235,7 @@ article, aside, details, footer, header, menu, nav, section
     width: 990px;
     height: 378px;
     position: relative;
-    background: url(images/slide-img.png) no-repeat 0 0;
+    background: url(images/slide-img.jpg) no-repeat 0 0;
 }
 .slider ul.slides
 {
@@ -724,7 +724,7 @@ article, aside, details, footer, header, menu, nav, section
         width: 748px;
         height: 292px;
         position: relative;
-        background: url(images/t-slide-img.png) no-repeat 0 0;
+        background: url(images/t-slide-img.jpg) no-repeat 0 0;
     }
     .slider ul.slides
     {
@@ -1009,7 +1009,7 @@ article, aside, details, footer, header, menu, nav, section
         height: 181px;
         overflow: hidden;
         position: relative;
-        background: url(images/m-slide-img.png) no-repeat 0 0;
+        background: url(images/m-slide-img.jpg) no-repeat 0 0;
     }
     .slider ul.slides li
     {

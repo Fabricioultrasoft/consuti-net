@@ -2,6 +2,12 @@
     CodeBehind="Default.aspx.cs" Inherits="CursosTI.WebForm1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .style1
+        {
+            text-align: justify;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!-- navigation -->
@@ -25,35 +31,35 @@
                 <ul class="slides">
                     <li>
                         <div class="img-holder">
-                            <img src="css/images/slide-img1.png" alt="" />
-                        </div>
-                        <div class="slide-cnt">
-                            <h2>
-                                Invista em sua carreira</h2>
-                            <div class="box-cnt">
-                                <p>
-                                    Escolha uma nova direção na sua carreira e começe a decolar. Estudando mais suas
-                                    possibilididades se multiplicam. O mercado de T.I. possui milhares de oportunidades.
-                                    Uma delas será sua!</p>
-                            </div>
-                            <a href="#" class="grey-btn">Oportunidades</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="img-holder">
                             <img src="css/images/slide-img2.png" alt="" />
                         </div>
                         <div class="slide-cnt">
                             <h2>
-                                Melhores preços do mercado</h2>
+                                Melhores Preços
+                            </h2>
                             <div class="box-cnt">
                                 <p>
-                                    Ofereçemos cursos com a maior carga horária do mercado e preços que cabem no seu
-                                    bolso. Parcelas a partir de R$187,00. Um investimento que lhe trará retorno instantâneo.
-                                    Parcelamos em até 4 vezes no cartão. Oferecemos 7% de desconto para pagamento à
-                                    vista.</p>
+                                    Maior carga horária do mercado e preços acessíveis. Parcelas a partir de <b>R$187,00</b>
+                                    em até 4 vezes. Descontos para pagamento à vista e indicações de novos alunos. Isenção
+                                    de Matrícula no 2º curso.</p>
                             </div>
-                            <a href="#" class="grey-btn">request a demo</a>
+                            <%--<a href="#" class="grey-btn">request a demo</a>--%>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-holder">
+                            <img src="css/images/slide-img3.png" alt="" />
+                        </div>
+                        <div class="slide-cnt">
+                            <h2>
+                                Ensino Inovador</h2>
+                            <div class="box-cnt">
+                                <p>
+                                    Teoria e prática combinadas em um abiente que simula o dia a dia de uma empresa
+                                    de Tecnologia da Informação. O aluno será preparado tanto para a entrevista de emprego
+                                    quanto para o trabalho.</p>
+                            </div>
+                            <%--<a href="#" class="grey-btn">request a demo</a>--%>
                         </div>
                     </li>
                     <li>
@@ -62,14 +68,15 @@
                         </div>
                         <div class="slide-cnt">
                             <h2>
-                                Conteúdo, Dinâmica e Excelência</h2>
+                                Turbine sua Carreira</h2>
                             <div class="box-cnt">
                                 <p>
-                                    O conteúdo dos cursos possui enfoque na excelência do aluno. Foi estudado e preparado
-                                    com O mercado para profissionais bem preparados é cada vez mais amplo. Nossos professores
-                                    são diferenciais do mercado atual.</p>
+                                    Faça um dos nossos cursos e aumente seus conhecimentos e sucesso no trabalho. Estudando
+                                    mais suas possibilididades se multiplicam. O mercado de T.I. possui milhares de
+                                    oportunidades, uma delas pode ser sua.
+                                </p>
                             </div>
-                            <a href="#" class="grey-btn">request a demo</a>
+                            <%--<a href="#" class="grey-btn">Oportunidades</a>--%>
                         </div>
                     </li>
                 </ul>
@@ -79,14 +86,14 @@
     <!-- end of slider -->
     <!-- main -->
     <div class="main">
-        <a href="#" class="m-btn-grey grey-btn">request a demo</a>
+        <%--<a href="#" class="m-btn-grey grey-btn">request a demo</a>--%>
         <section class="cols">
 						<div class="col">
                         
 							<img src="css/images/col-img1.jpg" alt="" />
 							<div class="col-cnt">
 								<h2>Análise de Requisitos</h2>
-								<p>Técnicas de levantamento e gestão de requisitos mais eficientes e de maior procura no mercado.</p>
+								<p class="style1">Técnicas de levantamento e gestão de requisitos mais eficientes e de maior procura no mercado.</p>
 								<a href="Requisitos.aspx" class="more">Saiba mais</a>
 							</div>
 						</div>
@@ -94,42 +101,47 @@
 							<img src="css/images/col-img2.jpg" alt="" />
 							<div class="col-cnt">
 								<h2>Lógica e Programação</h2>
-								<p>Aprenda a desenvolver um sistema ou site, seja para recolocação profissional ou para seu negócio próprio.</p>
-								<a href="#" class="more">Saiba mais</a>
+								<p class="style1">Aprenda a desenvolver um sistema ou site, seja para recolocação profissional ou para seu negócio próprio.</p>
+								<a href="Programacao.aspx" class="more">Saiba mais</a>
 							</div>
 						</div>
 						<div class="col">
 							<img src="css/images/col-img3.jpg" alt="" />
 							<div class="col-cnt">
 								<h2>Testes de Sistemas</h2>
-								<p>Estude e pratique a qualidade de software, hoje uma das principais portas de entrada no mercado de Tecnologia.</p>
-								<a href="#" class="more">Saiba mais</a>
+								<p class="style1">Estude e pratique a qualidade de software, hoje uma das principais portas de entrada no mercado de Tecnologia.</p>
+								<a href="Testes.aspx" class="more">Saiba mais</a>
 							</div>
 						</div>
 						<div class="cl">&nbsp;</div>
 					</section>
         <section class="post">
 						<div class="video-holder">
-							<img src="css/images/Parceria.png" alt="" />
+							<img src="css/images/Parceria.jpg" alt="" />
 						</div>
 
 						<div class="post-cnt">
 							<h2>Uma parceria da ConsuTI com o Yázigi</h2>
-							<p>A parceria firmada entre a ConsuTI - Empresa especializada no ramo de tecnologia da informação e o Yázigi Cras molestie condimentum consequat. Nam leo libero, scelerisque tincidunt amet nsectetur adipiscing elit. Cras molestie condimentum nsectetur adipiscing elit. Cras molestie condimentum consequat pretium donec dictum mattis elit, nec:</p>
+							<p class="style1">A parceria firmada entre a ConsuTI - Empresa especializada no ramo de tecnologia da informação 
+                            e o Yázigi - Uma das mais tradicionais empresas de ensino de línguas do país, oferece um novo modelo 
+                            de preparação profissional para Belo Horizonte e região. São cursos voltados para a prática correta e 
+                            eficiente do trabalho, aplicando o conteúdo mais exigido pelo mercado de tecnologia da informação brasileiro.
+                            Além disso, uma série de benefícios também são oferecidos aos alunos como por exemplo a inseção de matrícula em qualquer um dos 
+                            modelos de curso de inglês do Yázigi ou mesmo num segundo curso de TI. Conheça mais sobre os cursos e entre em contato conosco. Não espere mais por um futuro melhor, faça acontecer!</p>
 
-							<ul>
-								<li><a href="#">jQuery Fader</a></li>
-								<li><a href="#">Various column options</a></li>
-								<li><a href="#">Valid XHTML and CSS tableless Design</a></li>
-								<li><a href="#">Tested on Mac &amp; PC</a></li>
-							</ul>
+							<%--<ul>
+								<li><a href="Requisitos.aspx">Análise de Requisitos </a></li>
+								<li><a href="Programacao.aspx">Lógica e Programação</a></li>
+								<li><a href="Testes.aspx">Testes de Sistemas</a></li>
+								
+							</ul>--%>
 						</div>
 						<div class="cl">&nbsp;</div>
 					</section>
         <section class="testimonial">
 						<h2>Nossa Motivação é Fruto do Nosso Desafio</h2>
 
-						<p><strong class="quote">“</strong>Esta cada vez mais difícil encontrar bons profissionais no mercado. Cansei de procurá-los por aí. Vamos formá-los!”</p>
+						<p><strong class="quote">&quot;</strong>Esta cada vez mais difícil encontrar bons profissionais no mercado. Cansei de procurá-los por aí. Vamos formá-los!  <strong>&quot;</strong></p>
 
 						<p class="author">Cristian Gomes, <strong>ConsuTI - Consultoria e Soluções em Tecnologia da Informação</strong></p>
 					</section>
