@@ -101,7 +101,7 @@
 							<img src="css/images/col-img2.jpg" alt="" />
 							<div class="col-cnt">
 								<h2>Lógica e Programação</h2>
-								<p class="style1">Aprenda a desenvolver um sistema ou site, seja para recolocação profissional ou para seu negócio próprio.</p>
+								<p class="style1">Aprenda a desenvolver sistemas e sites, seja para recolocação profissional ou para seu negócio próprio.</p>
 								<a href="Programacao.aspx" class="more">Saiba mais</a>
 							</div>
 						</div>
@@ -122,12 +122,12 @@
 
 						<div class="post-cnt">
 							<h2>Uma parceria da ConsuTI com o Yázigi</h2>
-							<p class="style1">A parceria firmada entre a ConsuTI - Empresa especializada no ramo de tecnologia da informação 
-                            e o Yázigi - Uma das mais tradicionais empresas de ensino de línguas do país, oferece um novo modelo 
-                            de preparação profissional para Belo Horizonte e região. São cursos voltados para a prática correta e 
-                            eficiente do trabalho, aplicando o conteúdo mais exigido pelo mercado de tecnologia da informação brasileiro.
-                            Além disso, uma série de benefícios também são oferecidos aos alunos como por exemplo a inseção de matrícula em qualquer um dos 
-                            modelos de curso de inglês do Yázigi ou mesmo num segundo curso de TI. Conheça mais sobre os cursos e entre em contato conosco. Não espere mais por um futuro melhor, faça acontecer!</p>
+							<p class="style1">A parceria firmada entre a ConsuTI - empresa especializada no ramo de tecnologia da informação - 
+                            e o Yázigi - empresa tradicional em ensino de línguas do país -, oferece um novo modelo de preparação profissional 
+                            para Belo Horizonte e região. São cursos voltados para a prática correta e eficiente do trabalho, aplicando o conteúdo 
+                            mais exigido pelo mercado brasileiro de tecnologia da informação. Além disso, uma série de benefícios também são oferecidos 
+                            aos alunos como, por exemplo, a isenção de matrícula em qualquer um dos modelos de curso de inglês do Yázigi ou mesmo no 
+                            segundo curso de TI. Conheça mais sobre os cursos e entre em contato conosco. Não espere mais por um futuro melhor, faça acontecer!</p>
 
 							<%--<ul>
 								<li><a href="Requisitos.aspx">Análise de Requisitos </a></li>
@@ -141,7 +141,7 @@
         <section class="testimonial">
 						<h2>Nossa Motivação é Fruto do Nosso Desafio</h2>
 
-						<p><strong class="quote">&quot;</strong>Esta cada vez mais difícil encontrar bons profissionais no mercado. Cansei de procurá-los por aí. Vamos formá-los!  <strong>&quot;</strong></p>
+						<p><strong>&quot;</strong>Esta cada vez mais difícil encontrar bons profissionais no mercado. Cansei de procurá-los por aí. Vamos formá-los!  <strong>&quot;</strong></p>
 
 						<p class="author">Cristian Gomes, <strong>ConsuTI - Consultoria e Soluções em Tecnologia da Informação</strong></p>
 					</section>
