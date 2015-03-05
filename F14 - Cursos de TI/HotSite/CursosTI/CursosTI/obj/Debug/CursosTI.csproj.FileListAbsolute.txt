@@ -2,4 +2,3 @@ C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\F14 - Cursos de TI\HotSite\Curs
 C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\F14 - Cursos de TI\HotSite\CursosTI\CursosTI\bin\CursosTI.pdb
 C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\F14 - Cursos de TI\HotSite\CursosTI\CursosTI\obj\Debug\CursosTI.dll
 C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\F14 - Cursos de TI\HotSite\CursosTI\CursosTI\obj\Debug\CursosTI.pdb
-C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\F14 - Cursos de TI\HotSite\CursosTI\CursosTI\obj\Debug\CursosTI.csprojResolveAssemblyReference.cache
