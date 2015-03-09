@@ -29,7 +29,11 @@
             <div class="container">
                 <!-- header -->
                 <header id="header">
-					<h2 style="margin-left: 10px">Cursos em Tecnologia da Informação - (31) 2526.2122</h2>
+                <h1 id="logo"><a href="Default.aspx"></a></h1>
+					<h2 style="margin-left: 10px; font-size: 25px; margin-top: 5px">Cursos em Tecnologia</h2>
+                    <div class="search">
+						<h2>(31) 2526-2122</h2>
+					</div>
 				</header>
                 <!-- end of header -->
                 
@@ -57,7 +61,7 @@
                             <ul>
                                 <li>Turmas reduzidas</li>
                                 <li>Carga horária ampliada</li>
-                                <li>70% de prática</li>
+                                <li>75% de prática</li>
                                 <li>Professores certificados</li>
                             </ul>
                         </div>
@@ -67,7 +71,7 @@
                             <ul>
                                 <li>7% para pagamento à vista</li>
                                 <li>Parcelamento em até 4 vezes</li>
-                                <li>Ganhe a matrícula no inglês</li>
+                                <li>Ganhe a matrícula nos cursos de inglês do Yázigi</li>
                                 <li>Carta de indicação de emprego</li>
                             </ul>
                         </div>
@@ -75,8 +79,8 @@
                             <h2>
                                 Parceiros</h2>
                             <ul>
-                                <li><a href="http://www.consuti.net/">Acesse ConsuTI</a></li>
-                                <li><a href="http://www.yazigi.com.br/">Acesse Yázigi</a></li>
+                                <li><a href="http://www.consuti.net/" target="_blank">Acesse ConsuTI</a></li>
+                                <li><a href="http://www.yazigi.com.br/" target="_blank">Acesse Yázigi</a></li>
                             </ul>
                         </div>
                         <div class="cl">

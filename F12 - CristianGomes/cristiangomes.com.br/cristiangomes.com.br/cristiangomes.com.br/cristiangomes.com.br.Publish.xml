@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\F12 - CristianGomes\cristiangomes.com.br\cristiangomes.com.br\publish" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Local" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/cristiangomes.com.br.dll" publishTime="12/11/2014 14:48:03" />
+    <file relUrl="Casado.htm" publishTime="12/11/2014 16:51:17" />
+    <file relUrl="bin/cristiangomes.com.br.pdb" publishTime="12/11/2014 14:48:03" />
+    <file relUrl="Style/paperclip.png" publishTime="10/26/2014 23:32:42" />
+    <file relUrl="Style/style.css" publishTime="10/26/2014 23:32:42" />
+    <file relUrl="experienciaProfissional.html" publishTime="10/26/2014 23:32:40" />
+    <file relUrl="Web.config" publishTime="03/09/2015 15:06:27" />
+    <file relUrl="contato.html" publishTime="10/26/2014 23:32:45" />
+    <file relUrl="Style/pattern.png" publishTime="10/26/2014 23:32:42" />
+    <file relUrl="index.html" publishTime="01/16/2015 20:40:07" />
+    <file relUrl="Style/bullet.png" publishTime="10/26/2014 23:32:42" />
+    <file relUrl="Curriculo_Crstn.html" publishTime="10/26/2014 23:32:40" />
+  </publishProfile>
+</publishData>
