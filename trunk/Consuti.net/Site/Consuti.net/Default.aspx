@@ -241,7 +241,7 @@
 							</div>
                             <div class="12u">
 								<img src="images/whatsapp.png" alt="" />
-								<h3>Ou no WhatsApp </h3>
+								<h3>WhatsApp </h3>
 								<ul class="social">
                                 <div id="div1">
                                 
