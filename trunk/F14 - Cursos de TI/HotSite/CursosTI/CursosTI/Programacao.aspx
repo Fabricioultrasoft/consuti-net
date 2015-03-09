@@ -123,7 +123,7 @@
             <br />
 
          <h2>Conteúdo Programático</h2>
-         Em breve.
+         Disponível em breve.
             <%--<h3>1. Introdução</h3>            
             <ul>
                 <li>Apresentação
