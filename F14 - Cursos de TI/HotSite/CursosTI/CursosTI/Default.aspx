@@ -141,7 +141,7 @@
         <section class="testimonial">
 						<h2>Nossa Motivação é Fruto do Nosso Desafio</h2>
 
-						<p><strong>&quot;</strong>Esta cada vez mais difícil encontrar bons profissionais no mercado. Cansei de procurá-los por aí. Vamos formá-los!  <strong>&quot;</strong></p>
+						<p><strong>&quot;</strong>Está cada vez mais difícil encontrar bons profissionais no mercado. Cansei de procurá-los por aí. Vamos formá-los!<strong>&quot;</strong></p>
 
 						<p class="author">Cristian Gomes, <strong>ConsuTI - Consultoria e Soluções em Tecnologia da Informação</strong></p>
 					</section>

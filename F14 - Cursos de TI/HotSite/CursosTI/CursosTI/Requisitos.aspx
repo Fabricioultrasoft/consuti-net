@@ -195,7 +195,7 @@
 </li>
                 <li>Orientação a Objeto, Abstração e Dependências de Tecnologia
 </li>
-                <li>UML – Linguagem de Modelagem Unificada
+                <li>UML - Linguagem de Modelagem Unificada
 </li>
                 <li>Ferramentas de Trabalho - CASE </li>
 

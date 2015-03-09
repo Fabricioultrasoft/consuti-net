@@ -65,6 +65,7 @@
     <Content Include="images\logo_INFLUX1.jpg" />
     <Content Include="images\Pru_Vert_RGB.jpg" />
     <Content Include="images\ufmg-logo.jpg" />
+    <Content Include="images\whatsapp.png" />
     <Content Include="images\Yazigi.jpg" />
     <Content Include="index2.html" />
     <Content Include="js\font-awesome.min.css" />

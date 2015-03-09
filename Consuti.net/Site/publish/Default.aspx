@@ -75,7 +75,8 @@
 									<span class="icon featured fa-comments-o"></span>
 									<h3>Cursos e Treinamentos</h3>
                                     <div style="text-align: justify">
-									<p>Fornecemos treinamento em diversas tecnologias e disciplinas da área de informática.
+									<p>Fornecemos treinamento em diversas tecnologias e disciplinas da área de informática. 
+                                        <a href="http://www.consuti.net/cursos" target="_blabk">Confira! </a>
 									<br />Trabalhamos em parceria com empresas tradicionais, profissionais qualificados e metodologias de ensino modernas voltadas para o mercado.</p>
                                     </div>
 								</section>
@@ -235,6 +236,19 @@
 								<ul class="social">
 									<li><a href="https://www.facebook.com/consuti" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 									<li><a href="https://www.linkedin.com/company/consuti-net" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								</ul>
+								<hr />
+							</div>
+                            <div class="12u">
+								<img src="images/whatsapp.png" alt="" />
+								<h3>Ou no WhatsApp </h3>
+								<ul class="social">
+                                <div id="div1">
+                                
+                                    <a href="#" onclick="document.getElementById('div1').innerHTML = '<h1>+55 (31)9313-2793</h1>';">
+                                        Exibir</a>
+                            </div>
+									
 								</ul>
 								<hr />
 							</div>
