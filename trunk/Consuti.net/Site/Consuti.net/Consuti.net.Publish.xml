@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
-  <publishProfile publishUrl="C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\Consuti.net\Site\publish" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+  <publishProfile publishUrl="C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\Consuti.net\Site\publish" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Test" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
     <file relUrl="images/Logo.png" publishTime="01/13/2015 18:18:01" />
-    <file relUrl="css/images/bg.png" publishTime="01/13/2015 17:38:29" />
+    <file relUrl="css/font-awesome.min.css" publishTime="01/16/2015 20:03:47" />
     <file relUrl="js/jquery.scrolly.min.js" publishTime="01/13/2015 17:23:20" />
     <file relUrl="images/logo_INFLUX1.jpg" publishTime="01/19/2015 18:06:45" />
-    <file relUrl="bin/Consuti.net.pdb" publishTime="03/08/2015 22:30:16" />
+    <file relUrl="bin/Consuti.net.pdb" publishTime="03/09/2015 14:09:51" />
     <file relUrl="js/font-awesome.min.css" publishTime="01/16/2015 20:03:47" />
     <file relUrl="images/Capgemini-GCE.jpg" publishTime="01/19/2015 18:08:26" />
     <file relUrl="images/whatsapp.png" publishTime="03/08/2015 22:27:51" />
     <file relUrl="css/style-desktop.css" publishTime="01/14/2015 00:36:11" />
     <file relUrl="images/Yazigi.jpg" publishTime="01/19/2015 18:02:50" />
     <file relUrl="images/antt.jpg" publishTime="01/19/2015 18:08:55" />
-    <file relUrl="Default.aspx" publishTime="03/08/2015 22:28:49" />
+    <file relUrl="Default.aspx" publishTime="03/09/2015 14:19:00" />
     <file relUrl="js/init.js" publishTime="01/13/2015 17:23:13" />
     <file relUrl="index2.html" publishTime="01/19/2015 18:13:25" />
     <file relUrl="css/images/font-awesome.min.css" publishTime="01/16/2015 20:03:47" />
     <file relUrl="images/ufmg-logo.jpg" publishTime="01/19/2015 18:10:14" />
-    <file relUrl="css/font-awesome.min.css" publishTime="01/16/2015 20:03:47" />
+    <file relUrl="css/images/bg.png" publishTime="01/13/2015 17:38:29" />
     <file relUrl="js/jquery.min.js" publishTime="01/13/2015 17:23:17" />
     <file relUrl="fonts/jquery.min.js" publishTime="01/16/2015 20:11:10" />
-    <file relUrl="Web.config" publishTime="01/21/2015 20:22:43" />
-    <file relUrl="bin/Consuti.net.dll" publishTime="03/08/2015 22:30:17" />
+    <file relUrl="Web.config" publishTime="03/09/2015 14:09:52" />
+    <file relUrl="bin/Consuti.net.dll" publishTime="03/09/2015 14:09:51" />
     <file relUrl="images/Pru_Vert_RGB.jpg" publishTime="01/19/2015 18:05:41" />
     <file relUrl="css/style-mobile.css" publishTime="01/13/2015 18:25:46" />
     <file relUrl="images/favicon.ico" publishTime="06/12/2009 19:25:52" />
