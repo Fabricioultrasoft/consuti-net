@@ -345,7 +345,7 @@ namespace Sistema_Life_Planner_Agenda.Agenda
             //INITIALIZING MEETING DETAILS
             string caminhoAnexo = Server.MapPath("SISLPACompromisso_" + DateTime.Now.ToString("yyyyMMddHHmmss") + "_" + Convert.ToInt32(new UsuarioBD().ObterID(Session["emailUsuarioLogado"].ToString())) + ".ics");
             string schLocation = "SISLPA";
-            string schSubject = "Realizar contato com - " + ContatoDropDownList.SelectedItem.Text;
+            string schSubject = "OI - " + ContatoDropDownList.SelectedItem.Text;
             string schDescription = MaisInformaciesTextBox.Text;
             DateTime schBeginDate = DiaCompromissoCalendar.SelectedDate.AddHours(Convert.ToInt32(HoraTextBox.Text)).AddMinutes(Convert.ToInt32(MinutosTextBox.Text));
             DateTime schEndDate = DiaCompromissoCalendar.SelectedDate.AddHours(Convert.ToInt32(HoraTextBox.Text) + 1).AddMinutes(Convert.ToInt32(MinutosTextBox.Text));
