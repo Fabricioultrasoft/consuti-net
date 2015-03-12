@@ -50,7 +50,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Casado.htm" />
+    <Content Include="casado\ease.js" />
+    <Content Include="casado\ge1doot.js" />
+    <Content Include="casado\images\ct132.jpg" />
+    <Content Include="casado\images\ct133.jpg" />
+    <Content Include="casado\images\ct15.jpg" />
+    <Content Include="casado\images\go21.jpg" />
+    <Content Include="casado\images\go26.jpg" />
+    <Content Include="casado\images\N3.jpg" />
+    <Content Include="casado\images\sf42.jpg" />
+    <Content Include="casado\imageTransform.js" />
+    <Content Include="casado\index.html" />
+    <Content Include="Motivos.htm" />
     <Content Include="experienciaProfissional.html" />
     <Content Include="contato.html" />
     <Content Include="Curriculo_Crstn.html" />
@@ -74,6 +85,7 @@
     <None Include="Cristian_Gomes_Curriculo.pdf" />
     <None Include="Curriculo_Crstn25.pdf" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>
