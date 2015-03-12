@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{858B4849-A63B-4703-9304-9B056CEA478A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SiteEmContrucao</RootNamespace>
+    <AssemblyName>SiteEmContrucao</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\main.css" />
+    <Content Include="css\vendor\fluidbox.css" />
+    <Content Include="css\vendor\fluidbox.min.css" />
+    <Content Include="img\Consuti.png" />
+    <Content Include="img\escudo 04.png" />
+    <Content Include="img\example-photo-a.jpg" />
+    <Content Include="img\example-photo-b.jpg" />
+    <Content Include="img\example-photo-c.jpg" />
+    <Content Include="img\favicon.ico" />
+    <Content Include="img\Jv.png" />
+    <Content Include="index.html" />
+    <Content Include="js\main.js" />
+    <Content Include="js\vendor\jquery.1.11.min.js" />
+    <Content Include="js\vendor\jquery.fluidbox.js" />
+    <Content Include="js\vendor\jquery.fluidbox.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="css\bourbon\addons\_button.scss" />
+    <None Include="css\bourbon\addons\_clearfix.scss" />
+    <None Include="css\bourbon\addons\_directional-values.scss" />
+    <None Include="css\bourbon\addons\_ellipsis.scss" />
+    <None Include="css\bourbon\addons\_font-family.scss" />
+    <None Include="css\bourbon\addons\_hide-text.scss" />
+    <None Include="css\bourbon\addons\_html5-input-types.scss" />
+    <None Include="css\bourbon\addons\_position.scss" />
+    <None Include="css\bourbon\addons\_prefixer.scss" />
+    <None Include="css\bourbon\addons\_retina-image.scss" />
+    <None Include="css\bourbon\addons\_size.scss" />
+    <None Include="css\bourbon\addons\_timing-functions.scss" />
+    <None Include="css\bourbon\addons\_triangle.scss" />
+    <None Include="css\bourbon\addons\_word-wrap.scss" />
+    <None Include="css\bourbon\css3\_animation.scss" />
+    <None Include="css\bourbon\css3\_appearance.scss" />
+    <None Include="css\bourbon\css3\_backface-visibility.scss" />
+    <None Include="css\bourbon\css3\_background-image.scss" />
+    <None Include="css\bourbon\css3\_background.scss" />
+    <None Include="css\bourbon\css3\_border-image.scss" />
+    <None Include="css\bourbon\css3\_border-radius.scss" />
+    <None Include="css\bourbon\css3\_box-sizing.scss" />
+    <None Include="css\bourbon\css3\_calc.scss" />
+    <None Include="css\bourbon\css3\_columns.scss" />
+    <None Include="css\bourbon\css3\_filter.scss" />
+    <None Include="css\bourbon\css3\_flex-box.scss" />
+    <None Include="css\bourbon\css3\_font-face.scss" />
+    <None Include="css\bourbon\css3\_font-feature-settings.scss" />
+    <None Include="css\bourbon\css3\_hidpi-media-query.scss" />
+    <None Include="css\bourbon\css3\_hyphens.scss" />
+    <None Include="css\bourbon\css3\_image-rendering.scss" />
+    <None Include="css\bourbon\css3\_keyframes.scss" />
+    <None Include="css\bourbon\css3\_linear-gradient.scss" />
+    <None Include="css\bourbon\css3\_perspective.scss" />
+    <None Include="css\bourbon\css3\_placeholder.scss" />
+    <None Include="css\bourbon\css3\_radial-gradient.scss" />
+    <None Include="css\bourbon\css3\_transform.scss" />
+    <None Include="css\bourbon\css3\_transition.scss" />
+    <None Include="css\bourbon\css3\_user-select.scss" />
+    <None Include="css\bourbon\functions\_assign.scss" />
+    <None Include="css\bourbon\functions\_color-lightness.scss" />
+    <None Include="css\bourbon\functions\_flex-grid.scss" />
+    <None Include="css\bourbon\functions\_golden-ratio.scss" />
+    <None Include="css\bourbon\functions\_grid-width.scss" />
+    <None Include="css\bourbon\functions\_modular-scale.scss" />
+    <None Include="css\bourbon\functions\_px-to-em.scss" />
+    <None Include="css\bourbon\functions\_px-to-rem.scss" />
+    <None Include="css\bourbon\functions\_strip-units.scss" />
+    <None Include="css\bourbon\functions\_tint-shade.scss" />
+    <None Include="css\bourbon\functions\_transition-property-name.scss" />
+    <None Include="css\bourbon\functions\_unpack.scss" />
+    <None Include="css\bourbon\helpers\_convert-units.scss" />
+    <None Include="css\bourbon\helpers\_gradient-positions-parser.scss" />
+    <None Include="css\bourbon\helpers\_is-num.scss" />
+    <None Include="css\bourbon\helpers\_linear-angle-parser.scss" />
+    <None Include="css\bourbon\helpers\_linear-gradient-parser.scss" />
+    <None Include="css\bourbon\helpers\_linear-positions-parser.scss" />
+    <None Include="css\bourbon\helpers\_linear-side-corner-parser.scss" />
+    <None Include="css\bourbon\helpers\_radial-arg-parser.scss" />
+    <None Include="css\bourbon\helpers\_radial-gradient-parser.scss" />
+    <None Include="css\bourbon\helpers\_radial-positions-parser.scss" />
+    <None Include="css\bourbon\helpers\_render-gradients.scss" />
+    <None Include="css\bourbon\helpers\_shape-size-stripper.scss" />
+    <None Include="css\bourbon\helpers\_str-to-num.scss" />
+    <None Include="css\bourbon\settings\_asset-pipeline.scss" />
+    <None Include="css\bourbon\settings\_prefixer.scss" />
+    <None Include="css\bourbon\settings\_px-to-em.scss" />
+    <None Include="css\bourbon\_bourbon-deprecated-upcoming.scss" />
+    <None Include="css\bourbon\_bourbon.scss" />
+    <None Include="css\main.css.map" />
+    <None Include="css\main.scss" />
+    <None Include="css\neat\functions\_new-breakpoint.scss" />
+    <None Include="css\neat\functions\_private.scss" />
+    <None Include="css\neat\grid\_box-sizing.scss" />
+    <None Include="css\neat\grid\_direction-context.scss" />
+    <None Include="css\neat\grid\_display-context.scss" />
+    <None Include="css\neat\grid\_fill-parent.scss" />
+    <None Include="css\neat\grid\_media.scss" />
+    <None Include="css\neat\grid\_omega.scss" />
+    <None Include="css\neat\grid\_outer-container.scss" />
+    <None Include="css\neat\grid\_pad.scss" />
+    <None Include="css\neat\grid\_private.scss" />
+    <None Include="css\neat\grid\_row.scss" />
+    <None Include="css\neat\grid\_shift.scss" />
+    <None Include="css\neat\grid\_span-columns.scss" />
+    <None Include="css\neat\grid\_to-deprecate.scss" />
+    <None Include="css\neat\grid\_visual-grid.scss" />
+    <None Include="css\neat\settings\_disable-warnings.scss" />
+    <None Include="css\neat\settings\_grid.scss" />
+    <None Include="css\neat\settings\_visual-grid.scss" />
+    <None Include="css\neat\_neat-helpers.scss" />
+    <None Include="css\neat\_neat.scss" />
+    <None Include="css\_config.scss" />
+    <None Include="css\_grid-settings.scss" />
+    <None Include="css\_reset.scss" />
+    <None Include="css\_typography.scss" />
+    <None Include="LICENSE.md" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>14482</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,4 @@
+C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\19 - Espanhol FC\Site\SiteEmContrucao\SiteEmContrucao\bin\SiteEmContrucao.dll
+C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\19 - Espanhol FC\Site\SiteEmContrucao\SiteEmContrucao\bin\SiteEmContrucao.pdb
+C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\19 - Espanhol FC\Site\SiteEmContrucao\SiteEmContrucao\obj\Debug\SiteEmContrucao.dll
+C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\19 - Espanhol FC\Site\SiteEmContrucao\SiteEmContrucao\obj\Debug\SiteEmContrucao.pdb
