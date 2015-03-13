@@ -58,12 +58,12 @@
     <Content Include="css\style.css" />
     <Content Include="Default.aspx" />
     <Content Include="fonts\jquery.min.js" />
-    <Content Include="images\antt.jpg" />
     <Content Include="images\Capgemini-GCE.jpg" />
     <Content Include="images\favicon.ico" />
     <Content Include="images\Logo.gif" />
     <Content Include="images\Logo.png" />
     <Content Include="images\logo_INFLUX1.jpg" />
+    <Content Include="images\ms.jpg" />
     <Content Include="images\Pru_Vert_RGB.jpg" />
     <Content Include="images\ufmg-logo.jpg" />
     <Content Include="images\whatsapp.png" />

@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>ConsuTI.net</title>
+    <title>ConsuTI</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="ConsuTI, ConsuTI.net, Consultoria e Soluções em Tecnologia da Informação" />
     <meta name="keywords" content="ConsuTI, ConsuTI.net, Treinamentos, Desenvolvimento, Sistemas, Consultoria, Tecnologia, Informação" />
@@ -36,11 +36,11 @@
         <article class="container" id="top">
 					<div class="row">
 						<div class="4u">
-							<span class="image fit"><img src="images/Logo.gif" alt="ConsuTI.net" /></span>
+							<span class="image fit"><img src="images/Logo.gif" alt="ConsuTI" /></span>
 						</div>
 						<div class="8u">
 							<header>
-								<h1>Consu<strong>TI</strong>.net</h1>
+								<h1>Consu<strong>TI</strong></h1>
 							</header>
 							<p>Consultoria e Soluções em <strong>Tecnologia da Informação</strong>.
 							<br /></p>
@@ -150,10 +150,10 @@
 							</div>
 							<div class="4u">
 								<article class="box style2">
-									<a href="http://www.antt.gov.br/" target="_blank" class="image featured"><img src="images/antt.jpg" alt="" /></a>
-									<h3><a href="http://www.antt.gov.br/" target="_blank">ANTT</a></h3>
+									<a href="http://portalsaude.saude.gov.br/" target="_blank" class="image featured"><img src="images/ms.jpg" alt="Ministério da Saúde" /></a>
+									<h3><a href="http://portalsaude.saude.gov.br/" target="_blank">Ministério da Saúde</a></h3>
                                     <div style="text-align: justify">
-									<p>Autarquia federal brasileira responsável pela regulação das atividades que envolve a exploração federal dos transportes terrestres.</p>
+									<p>Setor governamental responsável pela administração e manutenção da Saúde pública do país.<br /><br /></p>
                                     </div>
 								</article>
 							</div>
