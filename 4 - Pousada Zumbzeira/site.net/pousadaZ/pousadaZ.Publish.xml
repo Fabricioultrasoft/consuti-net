@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
-  <publishProfile publishUrl="C:\Users\Cristian Gomes\Desktop\pousadazumbzeira.com.br" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+  <publishProfile publishUrl="C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\4 - Pousada Zumbzeira\Publish" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
     <file relUrl="Graficos/Pousada1.jpg" publishTime="10/26/2014 23:27:35" />
     <file relUrl="Graficos/GaleriaAvan.png" publishTime="10/26/2014 23:27:35" />
-    <file relUrl="bin/pousadaZ.pdb" publishTime="03/08/2015 21:47:51" />
+    <file relUrl="bin/pousadaZ.pdb" publishTime="03/15/2015 16:01:07" />
     <file relUrl="Graficos/Fotos/Galeria/28.JPG" publishTime="10/26/2014 23:27:28" />
     <file relUrl="Graficos/Fotos/Galeria/24.JPG" publishTime="10/26/2014 23:27:28" />
     <file relUrl="Graficos/Ser7.JPG" publishTime="10/26/2014 23:27:36" />
@@ -14,31 +14,30 @@
     <file relUrl="CartaoFidelidade.aspx" publishTime="10/26/2014 23:27:09" />
     <file relUrl="Graficos/Fotos/Galeria/18.JPG" publishTime="10/26/2014 23:27:28" />
     <file relUrl="Galeria.aspx" publishTime="10/26/2014 23:27:03" />
-    <file relUrl="Graficos/Fotos/Galeria/26.JPG" publishTime="10/26/2014 23:27:28" />
+    <file relUrl="Graficos/Fotos/Galeria/23.JPG" publishTime="10/26/2014 23:27:28" />
     <file relUrl="Graficos/Ser9.jpg" publishTime="10/26/2014 23:27:37" />
-    <file relUrl="Graficos/Ser5.jpg" publishTime="10/26/2014 23:27:37" />
+    <file relUrl="Graficos/Fotos/Galeria/13.JPG" publishTime="10/26/2014 23:27:27" />
     <file relUrl="Graficos/Ser7.png" publishTime="10/26/2014 23:27:37" />
     <file relUrl="Galeria3.aspx" publishTime="10/26/2014 23:27:38" />
     <file relUrl="Graficos/VisaVale.png" publishTime="10/26/2014 23:27:37" />
     <file relUrl="Graficos/Fotos/Acomodacoes/12.jpg" publishTime="10/26/2014 23:27:30" />
     <file relUrl="Graficos/Fotos/Galeria/21.JPG" publishTime="10/26/2014 23:27:28" />
+    <file relUrl="Graficos/Fotos/Galeria/43.jpg" publishTime="10/26/2014 23:27:27" />
     <file relUrl="Graficos/bgTopPrincSite.png" publishTime="10/26/2014 23:27:37" />
     <file relUrl="bin/AjaxControlToolkit.dll" publishTime="10/26/2014 23:28:14" />
     <file relUrl="Graficos/Voltar_32x32.png" publishTime="10/26/2014 23:27:37" />
     <file relUrl="Master.Master" publishTime="01/21/2015 21:51:34" />
     <file relUrl="Graficos/Fotos/Acomodacoes/23.jpg" publishTime="10/26/2014 23:27:30" />
-    <file relUrl="Web.config" publishTime="10/26/2014 23:27:01" />
+    <file relUrl="Web.config" publishTime="03/15/2015 16:00:55" />
     <file relUrl="Graficos/Fotos/Galeria/20.JPG" publishTime="10/26/2014 23:27:28" />
     <file relUrl="MasterGaleria.Master" publishTime="10/26/2014 23:27:03" />
     <file relUrl="Graficos/Ser3.jpg" publishTime="10/26/2014 23:27:37" />
     <file relUrl="Graficos/Fotos/Galeria/16.JPG" publishTime="10/26/2014 23:27:27" />
     <file relUrl="Graficos/Ser8.jpg" publishTime="10/26/2014 23:27:37" />
+    <file relUrl="Graficos/Fotos/Galeria/3.JPG" publishTime="10/26/2014 23:27:27" />
     <file relUrl="Graficos/Ser4.jpg" publishTime="10/26/2014 23:27:37" />
-    <file relUrl="Graficos/Fotos/Galeria/7.JPG" publishTime="10/26/2014 23:27:27" />
     <file relUrl="PreReserva.aspx" publishTime="10/26/2014 23:26:56" />
-    <file relUrl="Graficos/Fotos/Galeria/23.JPG" publishTime="10/26/2014 23:27:28" />
     <file relUrl="Graficos/Fotos/Galeria/2.jpg" publishTime="10/26/2014 23:27:28" />
-    <file relUrl="Graficos/Fotos/Galeria/47.jpg" publishTime="10/26/2014 23:27:28" />
     <file relUrl="Graficos/Fotos/Galeria/5.JPG" publishTime="10/26/2014 23:27:27" />
     <file relUrl="Graficos/Fotos/Galeria/6.JPG" publishTime="10/26/2014 23:27:27" />
     <file relUrl="Graficos/Fotos/Acomodacoes/24.jpg" publishTime="10/26/2014 23:27:30" />
@@ -50,14 +49,13 @@
     <file relUrl="NatalZumbzeira/Default.aspx" publishTime="10/26/2014 23:27:11" />
     <file relUrl="Graficos/Ser15.JPG" publishTime="10/26/2014 23:27:36" />
     <file relUrl="Graficos/cut.png" publishTime="10/26/2014 23:27:37" />
-    <file relUrl="Graficos/Fotos/Acomodacoes/19.jpg" publishTime="10/26/2014 23:27:31" />
     <file relUrl="Graficos/Fotos/Galeria/22.JPG" publishTime="10/26/2014 23:27:28" />
     <file relUrl="Contato.aspx" publishTime="10/26/2014 23:27:04" />
-    <file relUrl="bin/pousadaZ.dll" publishTime="03/08/2015 21:47:51" />
+    <file relUrl="bin/pousadaZ.dll" publishTime="03/15/2015 16:01:07" />
     <file relUrl="Graficos/Fotos/Galeria/14.JPG" publishTime="10/26/2014 23:27:27" />
     <file relUrl="Graficos/Fotos/Acomodacoes/8.jpg" publishTime="10/26/2014 23:27:30" />
     <file relUrl="Graficos/Fotos/Galeria/8.jpg" publishTime="10/26/2014 23:27:28" />
-    <file relUrl="Graficos/Fotos/Acomodacoes/16.jpg" publishTime="10/26/2014 23:27:30" />
+    <file relUrl="Graficos/Fotos/Acomodacoes/19.jpg" publishTime="10/26/2014 23:27:31" />
     <file relUrl="Graficos/Macaco.png" publishTime="10/26/2014 23:27:36" />
     <file relUrl="Localizacao.aspx" publishTime="10/26/2014 23:27:05" />
     <file relUrl="Graficos/Loading.swf" publishTime="10/26/2014 23:27:38" />
@@ -75,6 +73,7 @@
     <file relUrl="Graficos/Fotos/Galeria/15.JPG" publishTime="10/26/2014 23:27:27" />
     <file relUrl="Graficos/Fotos/Acomodacoes/13.jpg" publishTime="10/26/2014 23:27:30" />
     <file relUrl="Graficos/Fotos/Acomodacoes/18.jpg" publishTime="10/26/2014 23:27:31" />
+    <file relUrl="Graficos/Fotos/Galeria/26.JPG" publishTime="10/26/2014 23:27:28" />
     <file relUrl="Graficos/Pause.png" publishTime="10/26/2014 23:27:37" />
     <file relUrl="Graficos/Fotos/Galeria/39.jpg" publishTime="10/26/2014 23:27:28" />
     <file relUrl="Graficos/Fotos/Acomodacoes/29.jpg" publishTime="10/26/2014 23:27:31" />
@@ -90,24 +89,24 @@
     <file relUrl="Graficos/Ser11.JPG" publishTime="10/26/2014 23:27:36" />
     <file relUrl="Graficos/Home32x32.png" publishTime="10/26/2014 23:27:36" />
     <file relUrl="Graficos/CartaoPrata.png" publishTime="10/26/2014 23:27:17" />
-    <file relUrl="Graficos/Fotos/Galeria/10.JPG" publishTime="10/26/2014 23:27:27" />
-    <file relUrl="Graficos/Fotos/Acomodacoes/9.jpg" publishTime="10/26/2014 23:27:30" />
     <file relUrl="Default.aspx" publishTime="10/26/2014 23:27:02" />
-    <file relUrl="favicon.ico" publishTime="10/26/2014 23:27:06" />
     <file relUrl="Graficos/Ser14.JPG" publishTime="10/26/2014 23:27:36" />
+    <file relUrl="Graficos/Fotos/Acomodacoes/9.jpg" publishTime="10/26/2014 23:27:30" />
+    <file relUrl="favicon.ico" publishTime="10/26/2014 23:27:06" />
+    <file relUrl="Graficos/visa.png" publishTime="10/26/2014 23:27:17" />
     <file relUrl="Graficos/CartaoOuro.png" publishTime="10/26/2014 23:27:36" />
-    <file relUrl="Graficos/Fotos/Galeria/43.jpg" publishTime="10/26/2014 23:27:27" />
-    <file relUrl="Graficos/Fotos/Galeria/13.JPG" publishTime="10/26/2014 23:27:27" />
+    <file relUrl="Graficos/Fotos/Galeria/7.JPG" publishTime="10/26/2014 23:27:27" />
     <file relUrl="Graficos/Fotos/Acomodacoes/22.jpg" publishTime="10/26/2014 23:27:30" />
     <file relUrl="Graficos/Fotos/Galeria/37.jpg" publishTime="10/26/2014 23:27:28" />
     <file relUrl="Graficos/ZumbFundo.png" publishTime="10/26/2014 23:27:35" />
     <file relUrl="Graficos/master.png" publishTime="10/26/2014 23:27:37" />
     <file relUrl="Precos.aspx" publishTime="10/26/2014 23:27:38" />
+    <file relUrl="Fideliza.aspx" publishTime="10/26/2014 23:27:02" />
     <file relUrl="Graficos/mapaDesenho.jpg" publishTime="10/26/2014 23:27:36" />
     <file relUrl="Graficos/Fotos/Acomodacoes/3.jpg" publishTime="10/26/2014 23:27:29" />
     <file relUrl="Graficos/Fotos/Galeria/11.JPG" publishTime="10/26/2014 23:27:27" />
+    <file relUrl="Graficos/Fotos/Galeria/10.JPG" publishTime="10/26/2014 23:27:27" />
     <file relUrl="Graficos/Fotos/Acomodacoes/17.jpg" publishTime="10/26/2014 23:27:30" />
-    <file relUrl="Graficos/visa.png" publishTime="10/26/2014 23:27:17" />
     <file relUrl="Graficos/bgTopPrincSite4.png" publishTime="10/26/2014 23:27:37" />
     <file relUrl="Graficos/Ser10.jpg" publishTime="10/26/2014 23:27:38" />
     <file relUrl="Graficos/CartaoBronze.png" publishTime="10/26/2014 23:27:36" />
@@ -125,12 +124,14 @@
     <file relUrl="App_Data/jquery-1.7.1.js" publishTime="10/26/2014 23:26:57" />
     <file relUrl="Galeria2.aspx" publishTime="10/26/2014 23:27:06" />
     <file relUrl="Graficos/Fotos/Acomodacoes/4.jpg" publishTime="10/26/2014 23:27:29" />
+    <file relUrl="Graficos/Fotos/Acomodacoes/16.jpg" publishTime="10/26/2014 23:27:30" />
     <file relUrl="NatalZumbzeira/FundoNatal2.png" publishTime="10/26/2014 23:27:10" />
+    <file relUrl="Graficos/Ser5.jpg" publishTime="10/26/2014 23:27:37" />
     <file relUrl="Graficos/Fotos/Acomodacoes/15.jpg" publishTime="10/26/2014 23:27:30" />
     <file relUrl="Acomodacoes.aspx" publishTime="10/26/2014 23:27:10" />
     <file relUrl="Graficos/curtir.jpg" publishTime="01/19/2015 18:18:16" />
     <file relUrl="IframeLazerServ.aspx" publishTime="10/26/2014 23:27:01" />
-    <file relUrl="Graficos/Fotos/Galeria/3.JPG" publishTime="10/26/2014 23:27:27" />
+    <file relUrl="Graficos/Fotos/Galeria/47.jpg" publishTime="10/26/2014 23:27:28" />
     <file relUrl="Graficos/Fotos/Galeria/34.JPG" publishTime="10/26/2014 23:27:27" />
     <file relUrl="Graficos/Fotos/Acomodacoes/26.jpg" publishTime="10/26/2014 23:27:30" />
     <file relUrl="Graficos/Fotos/Acomodacoes/10.jpg" publishTime="10/26/2014 23:27:30" />
@@ -156,14 +157,13 @@
     <file relUrl="Graficos/Fotos/Galeria/44.jpg" publishTime="10/26/2014 23:27:28" />
     <file relUrl="Graficos/ZumbFundo.jpg" publishTime="10/26/2014 23:27:17" />
     <file relUrl="Graficos/Fotos/Galeria/38.jpg" publishTime="10/26/2014 23:27:28" />
-    <file relUrl="Graficos/Fotos/Acomodacoes/5.jpg" publishTime="10/26/2014 23:27:29" />
     <file relUrl="Graficos/Fotos/Galeria/27.JPG" publishTime="10/26/2014 23:27:28" />
     <file relUrl="Graficos/Ser2.jpg" publishTime="10/26/2014 23:27:37" />
     <file relUrl="Graficos/Fotos/Galeria/17.JPG" publishTime="10/26/2014 23:27:27" />
     <file relUrl="Graficos/Fotos/Galeria/36.jpg" publishTime="10/26/2014 23:27:28" />
     <file relUrl="NatalZumbzeira/sair.png" publishTime="10/26/2014 23:27:11" />
     <file relUrl="Graficos/MenuPrincipal.swf" publishTime="10/26/2014 23:27:36" />
-    <file relUrl="Fideliza.aspx" publishTime="10/26/2014 23:27:02" />
+    <file relUrl="Graficos/Fotos/Acomodacoes/5.jpg" publishTime="10/26/2014 23:27:29" />
     <file relUrl="Graficos/calendario_32x32.PNG" publishTime="10/26/2014 23:27:37" />
     <file relUrl="Graficos/flashprinc.swf" publishTime="10/26/2014 23:27:37" />
     <file relUrl="Graficos/bannerSuperior.png" publishTime="10/26/2014 23:27:37" />
