@@ -1,0 +1,4 @@
+C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\3 - BrasilandiaDeMinas\Site\EmConstrucao\Brasilandiademinas.com.br\Brasilandiademinas.com.br\bin\Brasilandiademinas.com.br.dll
+C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\3 - BrasilandiaDeMinas\Site\EmConstrucao\Brasilandiademinas.com.br\Brasilandiademinas.com.br\bin\Brasilandiademinas.com.br.pdb
+C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\3 - BrasilandiaDeMinas\Site\EmConstrucao\Brasilandiademinas.com.br\Brasilandiademinas.com.br\obj\Debug\Brasilandiademinas.com.br.dll
+C:\Users\Cristian Gomes\Documents\ConsuTI\_GCODE\3 - BrasilandiaDeMinas\Site\EmConstrucao\Brasilandiademinas.com.br\Brasilandiademinas.com.br\obj\Debug\Brasilandiademinas.com.br.pdb

@@ -26,7 +26,8 @@
     <section class="post">
     <div  class="content" style="padding-right: 20px; text-align:justify">
         <div id="titulo" style="text-align:center; font-size: 17pt; font-weight:bold"> 
-            <br />Testes de Sistemas
+            <br />Testes de Sistemas 
+            <br /><span style="color: Red">(vagas limitadas)</span>
             <br />
             <br />
             <img src="css/images/Testes.jpg" alt="Testes de Sistemas" />
@@ -90,7 +91,7 @@
         <br />
 
         <h2>Calendário de Aulas</h2>
-			<h3>1º semestre</h3>
+			<h3>1º semestre <span style="color: Red">(matrículas até 3 de abril)</span></h3>
             <ul>
                 <li>Turma 1: 
                     <br />&nbsp;&nbsp;- Aulas às segundas e quartas feiras
@@ -105,7 +106,7 @@
                     <br />&nbsp;&nbsp;- Término em 13 de junho de 2015
                 </li>
 			</ul>
-            <h3>Curso de Férias</h3>
+            <h3>Curso de Férias <span style="color: Red">(matrículas até 26 de junho)</span></h3>
             <ul>
 			    <li>Turma 1: 
                     <br />&nbsp;&nbsp;- Aulas às segundas, terças e quartas feiras
@@ -114,13 +115,13 @@
                     <br />&nbsp;&nbsp;- Término em 29 de julho de 2015
                 </li>
             </ul>
-            <h3>2º Semestre</h3>
+            <h3>2º Semestre <span style="color: Red">(matrículas até 28 de agosto)</span></h3>
             <ul>
 			    <li>Turma 1: 
                     <br />&nbsp;&nbsp;- Aulas aos sábados                    
                     <br />&nbsp;&nbsp;- Horário de 13:00 as 17:00 
-                    <br />&nbsp;&nbsp;- Início em 28 de março de 2015
-                    <br />&nbsp;&nbsp;- Término em 30 de maio de 2015
+                    <br />&nbsp;&nbsp;- Início em 5 de setembro de 2015
+                    <br />&nbsp;&nbsp;- Término em 7 de novembro de 2015
                 </li>
                 <li>Turma 2: 
                     <br />&nbsp;&nbsp;- Aulas às segundas e quartas feiras

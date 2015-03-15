@@ -21,6 +21,7 @@
     <div  class="content" style="padding-right: 20px; text-align:justify">
         <div id="titulo" style="text-align:center; font-size: 17pt; font-weight:bold"> 
             <br />Lógica e Programação
+            <br /><span style="color: Red">(vagas limitadas)</span>
             <br />
             <br />
             <img src="css/images/Programacao.jpg" alt="Análise de Requisitos" />
@@ -81,7 +82,7 @@
         <br />
 
         <h2>Calendário de Aulas</h2>
-			<h3>1º semestre</h3>
+			<h3>1º semestre <span style="color: Red">(matrículas até 3 de abril)</span></h3>
             <ul>
                 <li>Turma 1: 
                     <br />&nbsp;&nbsp;- Aulas às terças e quintas feiras
@@ -96,7 +97,7 @@
                     <br />&nbsp;&nbsp;- Término em 13 de junho de 2015
                 </li>
 			</ul>
-            <h3>Curso de Férias</h3>
+            <h3>Curso de Férias <span style="color: Red">(matrículas até 26 de junho)</span></h3>
             <ul>
 			    <li>Turma 1: 
                     <br />&nbsp;&nbsp;- Aulas às segundas, terças e quartas feiras
@@ -105,7 +106,7 @@
                     <br />&nbsp;&nbsp;- Término em 29 de julho de 2015
                 </li>
             </ul>
-            <h3>2º Semestre</h3>
+            <h3>2º Semestre <span style="color: Red">(matrículas até 28 de agosto)</span></h3>
             <ul>
                 <li>Turma 1: 
                     <br />&nbsp;&nbsp;- Aulas às terças e quintas feiras
