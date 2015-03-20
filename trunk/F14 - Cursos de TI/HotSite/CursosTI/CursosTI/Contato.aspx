@@ -52,7 +52,7 @@
                     Nome:
                 </td>
                 <td>
-                    <asp:TextBox ID="name" runat="server" Width="300px"></asp:TextBox>
+                    <asp:TextBox ID="name" runat="server" Width="300px" TabIndex="1"></asp:TextBox>
                 </td>
             </tr>
             <tr class="style2">
@@ -60,7 +60,7 @@
                     E-mail:
                 </td>
                 <td>
-                    <asp:TextBox ID="email" runat="server" Width="300px"></asp:TextBox>
+                    <asp:TextBox ID="email" runat="server" Width="300px" TabIndex="2"></asp:TextBox>
                     &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidatoremail" runat="server"
                         ControlToValidate="email" Display="Dynamic" ErrorMessage="*" ToolTip="Campo Obrigatório!"></asp:RequiredFieldValidator>
                     &nbsp;<asp:RegularExpressionValidator ID="EmailTextBoxRegularExpressionValidator"
@@ -74,7 +74,7 @@
                 </td>
                 <td>
                     <asp:TextBox ID="DDDTelefoneTextBox1" runat="server" MaxLength="2" TabIndex="3" Width="16px"></asp:TextBox>
-                    &nbsp;<asp:TextBox ID="TelefoneTextBox1" runat="server" MaxLength="9" TabIndex="3"
+                    &nbsp;<asp:TextBox ID="TelefoneTextBox1" runat="server" MaxLength="9" TabIndex="4"
                         Width="65px"></asp:TextBox>
                 </td>
             </tr>
@@ -83,16 +83,16 @@
                     Mensagem:
                 </td>
                 <td>
-                    <asp:TextBox ID="message" runat="server" TextMode="MultiLine" Width="300px" Height="100px"></asp:TextBox>
+                    <asp:TextBox ID="message" runat="server" TextMode="MultiLine" Width="300px" Height="100px" TabIndex="5"></asp:TextBox>
                 </td>
             </tr>
         </table>
         <div id="botoes" style="width: 400px; margin: 0 auto; text-align: right">
             <br />
-            <asp:Button ID="EnviaraButton" runat="server" Text="Enviar" Width="100px" OnClick="EnviaraButton_Click" />
+            <asp:Button ID="EnviaraButton" runat="server" Text="Enviar" Width="100px" OnClick="EnviaraButton_Click" TabIndex="6" />
             &nbsp;
             <asp:Button ID="LimparButton" runat="server" Text="Limpar" Width="100px" CausesValidation="false"
-                OnClick="LimparButton_Click" />
+                OnClick="LimparButton_Click" TabIndex="7" />
         </div>
         </form>
     </div>
