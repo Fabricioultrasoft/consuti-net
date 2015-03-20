@@ -68,7 +68,7 @@
         <h2>Valor</h2>
 			<ul>
 			    <li>Matrícula:
-                    <br />&nbsp;&nbsp;- R$250,00</li>
+                    <br />&nbsp;&nbsp;- R$290,00</li>
 			    <li>Curso: 
 			        <br />&nbsp;&nbsp;- R$750,00 parcelado em até 4 vezes de  R$ 187,50 OU 
 			        <br />&nbsp;&nbsp;- R$697,50 à vista com 7% de desconto </li>
