@@ -126,99 +126,113 @@
          <h2>Conteúdo Programático</h2>
 
             <h3>1. Introdução</h3>            
-            <ul>
-                <li>Apresentação</li>
-                <li>Objetivos do Curso</li>
-                <li>Metodologia de Ensino</li>
-                <li>Mercado de Trabalho</li>
-                <li>(Des)Organização das Profissões de Tecnologia</li>
-                <li>Oportunidades de Trabalho</li>
-                <li>Carreira do Programador/Analista de Desenvolvimento</li>
-                <li>Dificuldades e Desafios</li>
-                <li>Networking Realmente Existe?</li>
-            </ul>            
+                <ul>
+                    <li>Apresentação</li>
+                    <li>Objetivos do Curso</li>
+                    <li>Metodologia de Ensino</li>
+                    <li>Mercado de Trabalho</li>
+                    <li>(Des)Organização das Profissões de Tecnologia</li>
+                    <li>Oportunidades de Trabalho</li>
+                    <li>Carreira do Programador/Analista de Desenvolvimento</li>
+                    <li>Dificuldades e Desafios</li>
+                    <li>Networking Realmente Existe?</li>
+                </ul>            
+
             <h3>2. Processo de Software</h3>
-            <ul>
+                <ul>
+                    <li>Ciclo de Vida do Software</li>
+                    <li>Processos</li>
+                    <li>RUP
+                        <ul>
+                            <li>CMMI</li>
+                            <li>MPS-Br</li>
+                        </ul>
+                    </li>
+                    <li>Ágeis
+                        <ul>
+                            <li>Scrum</li>
+                            <li>ScrumBut</li>
+                        </ul>   
+                    </li>
+                    <li>Ausência de Processos</li>
+                    <li>Papéis Ligados ao Desenvolvedor </li>
+                </ul>
 
-            <li>Ciclo de Vida do Software
-</li>
-            <li>Processos
-</li>
-            <li>RUP
-                <ul>
-                    <li>CMMI
-</li>
-                    <li>MPS-Br
-</li>
-                </ul>
-            </li>
-            <li>Ágeis
-                <ul>
-                    <li>Scrum</li>
-                    <li>ScrumBut 
-</li>
-                </ul>
-            </li>
-            <li>Ausência de Processos
-</li>
-            <li>Papéis Ligados ao Desenvolvedor </li>
-            </ul>
             <h3>3. Lógica e Algoritmos </h3>
-            <ul>
-                <li>Lógica e a Programação
-</li>
-                <li>O que são Algoritimos
-</li>
-                <li>O que é Abstração
-</li>
-                <li>Como Pensar a Programação</li>
+                <ul>
+                    <li>Lógica e a Programação</li>
+                    <li>O que são Algoritimos</li>
+                    <li>O que é Abstração</li>
+                    <li>Como Pensar a Programação</li>
                 </ul>
+
             <h3>4. Configuração do Ambiente de Desenvolvimento</h3>
-            <ul>
-                
-                <li>Linguagens de Programação
-</li>
-                <li>O que são compiladores?
-</li>
-                <li>Frameworks e IDEs
-</li>
-                
-</ul>
-            <h3>5. Programação Orientada a Objetos</h3>
-            <ul>
-                <li>Apresentando a orientação a objetos</li>
-                <li>Modelos orientados a objeto X modelos estruturados</li>
-                <li>Objetos computacionais</li>
-                <li>Concepção de um sistema orientado a objeto</li>
-                <li>Conceitos de orientação a objetos</li>
-                <li>Objetos</li>
-                <li>Atributos</li>
-                <li>Operações e Métodos</li>
-                <li>Classes</li>
-                <li>Herança</li>
-                <li>Classes abstratas</li>
-                <li>Generalização e herança</li>
-                <li>Analisando artefatos de um projeto</li>
+                <ul>                
+                    <li>Linguagens de Programação</li>
+                    <li>O Que São Compiladores?</li>
+                    <li>Frameworks e IDEs</li>
                 </ul>
-            <h3>6. Gestão de Requisitos</h3>
-            <ul>
-                
-        <li>Porque Gerenciar Requisitos
-</li>
-        <li>Gerenciar Escopo da Solução/Requisitos
-</li>
-        <li>Gerenciar Rastreabilidade dos Requisitos
-</li>
-        <li>Preparar Pacotes de Requisitos
-</li>
-        <li>Priorizar Requisitos </li>
+            
+            <h3>5. Programação Orientada a Objetos</h3>
+                <ul>
+                    <li>Apresentando a Orientação a Objetos</li>
+                    <li>Modelos Orientados a Objeto X Modelos Estruturados</li>
+                    <li>Objetos Computacionais</li>
+                    <li>Concepção de um Sistema Orientado a Objeto</li>
+                    <li>Conceitos de Orientação a Objetos</li>
+                    <li>Objetos</li>
+                    <li>Atributos</li>
+                    <li>Operações e Métodos</li>
+                    <li>Classes</li>
+                    <li>Herança</li>
+                    <li>Classes Abstratas</li>
+                    <li>Generalização e Herança</li>
+                    <li>Analisando Artefatos de um Projeto</li>
+                </ul>
+            
+            <h3>6. Banco de Dados</h3>
+                <ul>
+                    <li>Definições de Banco de dados</li>
+                    <li>Linguagem SQL</li>
+                    <li>Banco de Dados MySQL
+                        <ul>
+                            <li>Instalação e Configuração</li>
+                            <li>Execução de Consultas no MySQL</li>                        
+                        </ul>
+                    </li>
+                    <li>Outros Bancos de Dados
+                        <ul>
+                            <li>SQL Seerver</li>
+                            <li>ORACLE</li>
+                        </ul>
+                    </li>
+                    <li>Conectando o Sistema em um Banco de Dados</li>
+                </ul>
 
+            <h3>7. Programação para Web</h3>
+                <ul>
+                    <li>A linguagem HTML</li>
+                    <li>Protocolo HTTP</li>
+                    <li>Programação no Lado Servidor</li>
+                    <li>Programação no Lado Cliente</li>
+                    <li>Criando um Website</li>
+                    <li>Master Pages</li>
+                    <li>Controles HTML</li>
+                    <li>Controles Ricos</li>
+                    <li>Controles de Navegação</li>
+                    <li>JavaScript</li>
+                    <li>AJAX</li>
+                    <li>Aparência do Website</li>
+                    <li>Folhas de Estilos CSS</li>
+                    <li>Publicando o Website</li>
+                </ul>
 
-
-</ul>
-
-
-
+            <h3>8. Testes de Unidade</h3>
+                <ul>
+                    <li>O que são testes de unidade</li>
+                    <li>TDD (desenvolvimento orientado a testes)</li>
+                    <li>Depuração de Código</li>
+                </ul>
         <br />
         <br />
         <h2>Instrutor</h2>
