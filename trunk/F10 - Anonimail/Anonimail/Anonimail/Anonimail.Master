@@ -40,7 +40,7 @@
             <h1>
                 ANÔNI<span>Mail.com.br</span></h1>
             <h2>
-                envio e resposta de emails anônimos</h2>
+                envio e resposta de e-mails anônimos</h2>
         </div>
         <div style="width: 700px;" class="centered">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
@@ -55,7 +55,7 @@
                 <strong>AnôniMail</strong> é...</h3>
             <p>
                 &nbsp;&nbsp;&nbsp;&nbsp; ...uma ferramenta para envio de e-mails anônimos, destinada
-                a ajudar os usuários a se comunicarem mas sen revelar sua identidade.
+                a ajudar os usuários a se comunicarem mas sem revelar sua identidade.
             </p>
             <p>
                 &nbsp;&nbsp;&nbsp;&nbsp; Ao enviar um AnôniMail, o remetente não tem seus dados

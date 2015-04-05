@@ -94,6 +94,7 @@
     <Content Include="Graficos\contato.png" />
     <Content Include="Graficos\Detalhes_32x32.png" />
     <Content Include="Graficos\FAIL_32x32.png" />
+    <Content Include="Graficos\favicon.ico" />
     <Content Include="Graficos\fotoMeioAmbiente.jpg" />
     <Content Include="Graficos\FundoMenu.png" />
     <Content Include="Graficos\fundoPromoc.jpg" />
@@ -102,6 +103,7 @@
     <Content Include="Graficos\ImagemNaoDisponivel.jpg" />
     <Content Include="Graficos\indique.png" />
     <Content Include="Graficos\link.jpg" />
+    <Content Include="Graficos\link.png" />
     <Content Include="Graficos\linkMenu.png" />
     <Content Include="Graficos\localizacao.png" />
     <Content Include="Graficos\localizacao2.png" />
@@ -109,6 +111,8 @@
     <Content Include="Graficos\logo.png" />
     <Content Include="Graficos\Logomarca.png" />
     <Content Include="Graficos\logo_sedex.gif" />
+    <Content Include="Graficos\OK.jpg" />
+    <Content Include="Graficos\OK.png" />
     <Content Include="Graficos\OK_32x32.png" />
     <Content Include="Graficos\pagSeguroLogo.jpg" />
     <Content Include="Graficos\pagSeguroLogo.png" />
@@ -124,11 +128,13 @@
     <Content Include="Graficos\see.gif" />
     <Content Include="Graficos\selo.png" />
     <Content Include="Graficos\testePmkLogo.jpg" />
+    <Content Include="Graficos\time.gif" />
     <Content Include="Graficos\todos_animado_550_50.gif" />
     <Content Include="Graficos\verImgs_128x128.png" />
     <Content Include="Graficos\verImgs_32x32.png" />
     <Content Include="Graficos\Voltar.png" />
     <Content Include="Graficos\Voltar_32x32.png" />
+    <Content Include="Graficos\YouTube.png" />
     <Content Include="Links.aspx" />
     <Content Include="listagemProdutos.aspx" />
     <Content Include="LoginUserExt.aspx" />
