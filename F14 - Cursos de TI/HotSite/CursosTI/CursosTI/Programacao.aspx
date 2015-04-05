@@ -75,8 +75,8 @@
                 Máximo: 15 alunos
 			    </li>
 		</ul>
-        Quantidade de vagas já preenchiadas até o momento para o curso do 1º semestre: <strong>3</strong>
-        <br />Quantidade de vagas já preenchiadas até o momento para o curso de férias: <strong>2</strong>
+        Quantidade de vagas já preenchiadas até o momento para o curso do 1º semestre: <strong>2</strong>
+        <br />Quantidade de vagas já preenchiadas até o momento para o curso de férias: <strong>1</strong>
         <br />Quantidade de vagas já preenchiadas até o momento para o curso do 2º semestre: <strong>0</strong>
         <br />
         <br />
@@ -124,25 +124,17 @@
             <br />
 
          <h2>Conteúdo Programático</h2>
-         Disponível em breve.
-            <%--<h3>1. Introdução</h3>            
+
+            <h3>1. Introdução</h3>            
             <ul>
-                <li>Apresentação
-            </li>
-                <li>Objetivos do Curso
-            </li>
-                <li>Metodologia de Ensino
-            </li>
-                <li>Mercado de Trabalho
-            </li>
-                <li>(Des)Organização das Profissões de Tecnologia
-            </li>
-                <li>Oportunidades de Trabalho
-            </li>
-                <li>Carreira do Engenheiro/Analista de Requisitos
-            </li>
-                <li>Dificuldades e Desafios
-            </li>
+                <li>Apresentação</li>
+                <li>Objetivos do Curso</li>
+                <li>Metodologia de Ensino</li>
+                <li>Mercado de Trabalho</li>
+                <li>(Des)Organização das Profissões de Tecnologia</li>
+                <li>Oportunidades de Trabalho</li>
+                <li>Carreira do Programador/Analista de Desenvolvimento</li>
+                <li>Dificuldades e Desafios</li>
                 <li>Networking Realmente Existe?</li>
             </ul>            
             <h3>2. Processo de Software</h3>
@@ -169,110 +161,45 @@
             </li>
             <li>Ausência de Processos
 </li>
-            <li>Papéis Ligados ao Engenheiro de Requisitos </li>
+            <li>Papéis Ligados ao Desenvolvedor </li>
             </ul>
-            <h3>3. Conceitos Gerais da Engenharia de Requisitos</h3>
+            <h3>3. Lógica e Algoritmos </h3>
             <ul>
-                <li>O que é Engenharia de Software
+                <li>Lógica e a Programação
 </li>
-                <li>O que é Engenharia de Requisitos
+                <li>O que são Algoritimos
 </li>
-                <li>Identificação das Partes Interessadas (Stakeholders)
+                <li>O que é Abstração
 </li>
-                <li>O que é Escopo
-</li>
-                <li>O que é um Requisito
-</li>
-                <li>Importância da Engenharia de Requisitos para Projetos de Desenvolvimento de Software
-                </li>
-                <li>Classificação de Requisitos
-</li>
-                <li>Qualidade do Requisito
-</li>
-                <li>O que é um caso de uso
-</li>
-                <li>Orientação a Objeto, Abstração e Dependências de Tecnologia
-</li>
-                <li>UML – Linguagem de Modelagem Unificada
-</li>
-                <li>Ferramentas de Trabalho - CASE </li>
-
+                <li>Como Pensar a Programação</li>
                 </ul>
-            <h3>4. Técnicas de Análise de Requisitos</h3>
+            <h3>4. Configuração do Ambiente de Desenvolvimento</h3>
             <ul>
                 
-                <li>O que é Elicitação de Requisitos
+                <li>Linguagens de Programação
 </li>
-                <li>Organização e Rastreabilidade de Requisitos
+                <li>O que são compiladores?
 </li>
-                <li>Entrevista
+                <li>Frameworks e IDEs
 </li>
-                <li>Pesquisas (manuais, referências, internet, concorrência etc.)
-</li>
-                <li>Glossário
-</li>
-                <li>Observação
-</li>
-                <li>Brainstorming
-</li>
-                <li>Role Playing
-</li>
-                <li>Workshop
-</li>
-                <li>User Story
-</li>
-                <li>Questionários e Fóruns
-</li>
-                <li>JAD (Joint Application Design)
-</li>
-                <li>Check-lists
-</li>
-                <li>Prototipagem
-</li>
-                <li>Modelagem de Processos
-</li>
-                <li>Validação de Requisitos 	
-</li>
-                <li>Casos de Uso como Linha de Abordagem Básica
-</li>
-                <li>Casos de Uso x User Stories
-                </li>
+                
 </ul>
-            <h3>5. Produtos de Trabalho</h3>
+            <h3>5. Programação Orientada a Objetos</h3>
             <ul>
-                
-                <li>Especificação de Requisitos
-</li>
-                <li>Protipagem de Sistema
-</li>
-                <li>Especificação Funcional
-                    <ul>
-                        <li>Fluxos
-</li>
-                        <li>Regras
-</li>
-                        <li>Exceções
-</li>
-                    </ul>
-                </li>
-                <li>Diagramas
-                    <ul>
-                        <li>Caso de Uso
-</li>
-                        <li>Fluxo de Atividades
-</li>
-                        <li>Entidade Relacionamento
-</li>
-                        <li>Classes
-</li>
-                        <li>Estados
-</li>
-                    </ul>
-                </li>
-                <li>Modelo de Processos
-</li>
-                <li>Mapa de Rastreabilidade de Requisitos</li>
-                    </ul>                    
+                <li>Apresentando a orientação a objetos</li>
+                <li>Modelos orientados a objeto X modelos estruturados</li>
+                <li>Objetos computacionais</li>
+                <li>Concepção de um sistema orientado a objeto</li>
+                <li>Conceitos de orientação a objetos</li>
+                <li>Objetos</li>
+                <li>Atributos</li>
+                <li>Operações e Métodos</li>
+                <li>Classes</li>
+                <li>Herança</li>
+                <li>Classes abstratas</li>
+                <li>Generalização e herança</li>
+                <li>Analisando artefatos de um projeto</li>
+                </ul>
             <h3>6. Gestão de Requisitos</h3>
             <ul>
                 
@@ -288,7 +215,10 @@
 
 
 
-</ul>--%>
+</ul>
+
+
+
         <br />
         <br />
         <h2>Instrutor</h2>
